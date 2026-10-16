@@ -1,0 +1,241 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chronicle_4"
+	group: "1DAFAF2C5B9599CE"
+	icon: {
+		count: 1
+		id: "minecraft:ender_eye"
+	}
+	id: "39FA59637A1641CD"
+	order_index: 11
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["66D4870256884787"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "47FDC7C4171566D1"
+			rewards: [
+				{
+					id: "5ACA07DE0EB6427E"
+					item: {
+						count: 1
+						id: "kubejs:pilgrim_guide"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "4C11E30DC389979C"
+					structure: "#tm:strongholds"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["66D4870256884787"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "69837311FEB20468"
+			rewards: [
+				{
+					id: "67C5D6C0357F4BD8"
+					item: {
+						count: 1
+						id: "kubejs:choir_message"
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1AD1BBDA7E1B95F0"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					entity: "minecraft:ender_dragon"
+					id: "0D2D1681CE33B4C0"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["69837311FEB20468"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "2C8DE2CCEF056DA4"
+			rewards: [
+				{
+					id: "5E689ADB3DD3AD66"
+					item: {
+						count: 1
+						id: "kubejs:station_log"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "612F2E553AFE5585"
+					structure: "minecraft:end_city"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["69837311FEB20468"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "39C26747C0C9E705"
+			optional: true
+			rewards: [
+				{
+					id: "5FA93407B0CAEC9E"
+					item: {
+						count: 1
+						id: "kubejs:bridge_shard"
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0CD78110E4F480B8"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					entity: "bosses_of_mass_destruction:obsidilith"
+					id: "1A831F686BE64192"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["66D4870256884787"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "0AF240152105236C"
+			rewards: [
+				{
+					id: "58916D082C4330B5"
+					item: {
+						count: 1
+						id: "kubejs:surgeon_report"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "7ACD408D32B8781D"
+					item: {
+						count: 1
+						id: "cyber_ware_port:surgery_chamber"
+					}
+					type: "item"
+				}
+				{
+					id: "1FF2F4DCDE19A397"
+					item: {
+						count: 1
+						id: "cyber_ware_port:robo_surgeon"
+					}
+					type: "item"
+				}
+				{
+					id: "4004A169A3A04164"
+					item: {
+						count: 1
+						id: "cyber_ware_port:brain_upgrades_cortical_stack"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0AF240152105236C"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "2C5A63D9D9ECE94B"
+			rewards: [
+				{
+					id: "00E87252A308FB25"
+					item: {
+						count: 1
+						id: "kubejs:note_m_6"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "5D5238711928EDE1"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["69837311FEB20468", "2C5A63D9D9ECE94B"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "1EF006949CF74B83"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "26899E116D136A38"
+					table_id: 7227490514009532499L
+					type: "random"
+				}
+				{
+					id: "2E888939462A7FAC"
+					type: "xp_levels"
+					xp_levels: 25
+				}
+				{
+					command: "/scoreboard players set {p} tm_story 7"
+					elevate_perms: true
+					id: "7AC00A20DFBC8A71"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "1AEAD1016C91A286"
+					type: "checkmark"
+				}
+			]
+			x: 4.0d
+			y: -1.0d
+		}
+	]
+}

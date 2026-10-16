@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "minecraft:fortress",
+      "required": false
+    },
+    {
+      "id": "betterfortresses:fortress",
+      "required": false
+    }
+  ]
+}

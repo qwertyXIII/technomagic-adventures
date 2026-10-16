@@ -1,0 +1,226 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "logistics"
+	group: "1F502AD00DE992B1"
+	icon: {
+		count: 1
+		id: "storagedrawers:controller"
+	}
+	id: "23E574726C2B8E31"
+	order_index: 24
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "4B6F3D23239F0086"
+			rewards: [
+				{
+					count: 4
+					id: "1D13A427D24290CA"
+					item: {
+						count: 1
+						id: "storagedrawers:obsidian_storage_upgrade"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "64449AE2B1C848D0"
+					item: {
+						count: 1
+						id: "storagedrawers:compacting_drawers_3"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -2.4000000000000004d
+		}
+		{
+			dependencies: ["4B6F3D23239F0086"]
+			hide_until_deps_visible: true
+			id: "46B565210C96253A"
+			rewards: [
+				{
+					count: 4
+					id: "0FB5724BB25E276A"
+					item: {
+						count: 1
+						id: "storagedrawers:iron_storage_upgrade"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "51AA550CD3260DCF"
+					item: {
+						count: 1
+						id: "storagedrawers:controller"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["1C22425171D429BF"]
+			hide_until_deps_complete: true
+			id: "2032D2B2FA8A14F6"
+			rewards: [
+				{
+					count: 4
+					id: "47D613A0190F4260"
+					item: {
+						count: 1
+						id: "laserio:logic_chip"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "21C0B540D3BF566B"
+					item: {
+						count: 1
+						id: "laserio:laser_node"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "5980B48ED1510F02"
+					item: {
+						count: 1
+						id: "laserio:card_item"
+					}
+					type: "item"
+				}
+				{
+					id: "7401DFEFC3E856BB"
+					item: {
+						count: 1
+						id: "laserio:laser_wrench"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["2032D2B2FA8A14F6"]
+			hide_until_deps_visible: true
+			id: "3E7AD9D0F526F756"
+			optional: true
+			rewards: [
+				{
+					id: "42BA3A0E332CADB7"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "46CB01FF66D89E00"
+					item: {
+						count: 1
+						id: "laserio:card_fluid"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "44FCF67F152F78ED"
+					item: {
+						count: 1
+						id: "laserio:card_energy"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["1C22425171D429BF"]
+			hide_until_deps_complete: true
+			id: "2472D9B425327213"
+			optional: true
+			rewards: [
+				{
+					count: 2
+					id: "2592FC4D11F0E225"
+					item: {
+						count: 1
+						id: "xnet:advanced_connector_red"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "25E9D48817008B69"
+					item: {
+						count: 1
+						id: "xnet:controller"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "3622639DBE314160"
+					item: {
+						count: 1
+						id: "xnet:connector_red"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "04DEC41F29E72076"
+					item: {
+						count: 1
+						id: "xnet:netcable_routing"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["48492850DF438E00"]
+			hide_until_deps_complete: true
+			id: "0443BDF42ADC8035"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "008E7D2EA63A6D6D"
+					table_id: 5242348113741014990L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "2C0DC0CF240D1257"
+					item: {
+						count: 1
+						id: "mekanism:basic_logistical_transporter"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.4000000000000004d
+		}
+	]
+}

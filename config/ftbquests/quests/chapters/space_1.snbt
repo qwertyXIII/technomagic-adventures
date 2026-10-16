@@ -1,0 +1,391 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "space_1"
+	group: "481034207D248476"
+	icon: {
+		count: 1
+		id: "ad_astra:launch_pad"
+	}
+	id: "74E843769BD56F61"
+	order_index: 43
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["2CBDA0237AD7A657", "0A52EC4403EC3BDE"]
+			hide_until_deps_complete: true
+			id: "2AC6E28ED18544C0"
+			rewards: [
+				{
+					count: 8
+					id: "34BF5A4B7632440C"
+					item: {
+						count: 1
+						id: "immersiveengineering:plate_steel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "4D21FAEBFF384BC3"
+					item: {
+						count: 1
+						id: "ad_astra:nasa_workbench"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2AC6E28ED18544C0"]
+			hide_until_deps_visible: true
+			id: "79522A5278EF33AC"
+			rewards: [
+				{
+					count: 8
+					id: "09C8121C813C6785"
+					item: {
+						count: 1
+						id: "immersiveengineering:ingot_steel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "252B76DC806C0D03"
+					item: {
+						components: {
+							"ftbfiltersystem:filter": "item_tag(c:plates/steel)"
+						}
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "54DBC12B281761D1"
+					item: {
+						components: {
+							"ftbfiltersystem:filter": "item_tag(c:rods/steel)"
+						}
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["2AC6E28ED18544C0"]
+			hide_until_deps_visible: true
+			id: "6BFEC010216DBEAC"
+			rewards: [
+				{
+					count: 16
+					id: "74F0AA332A780799"
+					item: {
+						count: 1
+						id: "create:iron_sheet"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "2EE26213AE8A3E37"
+					item: {
+						count: 1
+						id: "ad_astra:compressor"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6BFEC010216DBEAC"]
+			hide_until_deps_visible: true
+			id: "426AED0A8053E440"
+			rewards: [
+				{
+					count: 2
+					id: "6AEA88608E612186"
+					item: {
+						count: 1
+						id: "ad_astra:oxygen_bucket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5AB0DACE2CDC92E3"
+					item: {
+						count: 1
+						id: "ad_astra:oxygen_loader"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "6654DB3B1FE65E52"
+					item: {
+						count: 1
+						id: "ad_astra:gas_tank"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["426AED0A8053E440"]
+			hide_until_deps_visible: true
+			id: "5EFFA61B60C77D1C"
+			rewards: [
+				{
+					id: "2E442B708159C4A8"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					id: "6075E2FF04900C47"
+					item: {
+						count: 1
+						id: "ad_astra:space_helmet"
+					}
+					type: "item"
+				}
+				{
+					id: "5087195289344ABC"
+					item: {
+						count: 1
+						id: "ad_astra:space_suit"
+					}
+					type: "item"
+				}
+				{
+					id: "30BA62B13622705A"
+					item: {
+						count: 1
+						id: "ad_astra:space_pants"
+					}
+					type: "item"
+				}
+				{
+					id: "6826A57D45634454"
+					item: {
+						count: 1
+						id: "ad_astra:space_boots"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["2AC6E28ED18544C0", "3D074AF8CED80897"]
+			hide_until_deps_complete: true
+			id: "387DD6FF5DF0DB0C"
+			rewards: [
+				{
+					count: 2
+					id: "647C90526A397C10"
+					item: {
+						count: 1
+						id: "ad_astra:fuel_bucket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1F6E462E62AF892B"
+					item: {
+						count: 1
+						id: "ad_astra:fuel_refinery"
+					}
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "31AE2729B1259D3C"
+					item: {
+						count: 1
+						id: "ad_astra:fuel_bucket"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["79522A5278EF33AC"]
+			hide_until_deps_visible: true
+			id: "4612D6E5FB2899DB"
+			rewards: [
+				{
+					id: "7F7AAC8B8766C99E"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					id: "3CDC40B3221E1726"
+					item: {
+						count: 1
+						id: "ad_astra:steel_engine"
+					}
+					type: "item"
+				}
+				{
+					id: "3F41C354BAECAD41"
+					item: {
+						count: 1
+						id: "ad_astra:steel_tank"
+					}
+					type: "item"
+				}
+				{
+					id: "02D5459A41764CA4"
+					item: {
+						count: 1
+						id: "ad_astra:rocket_nose_cone"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "3106C764999C5D17"
+					item: {
+						count: 1
+						id: "ad_astra:rocket_fin"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["79522A5278EF33AC"]
+			hide_until_deps_visible: true
+			id: "345E6FD7EE405963"
+			rewards: [
+				{
+					id: "00F4ADBB2ED343F2"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			tasks: [
+				{
+					id: "37970B06CB615BE4"
+					item: {
+						count: 1
+						id: "ad_astra:launch_pad"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["5EFFA61B60C77D1C", "387DD6FF5DF0DB0C", "4612D6E5FB2899DB", "345E6FD7EE405963"]
+			hide_until_deps_visible: true
+			id: "5D22194E25222CB4"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "55B7650BB9142047"
+					table_id: 4169577723705550567L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "64BD79A9E882C942"
+					item: {
+						count: 1
+						id: "ad_astra:tier_1_rocket"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D22194E25222CB4"]
+			hide_until_deps_visible: true
+			id: "71F0ED9D34786F50"
+			rewards: [
+				{
+					id: "0101F5CAE4A94AB6"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					dimension: "ad_astra:earth_orbit"
+					id: "23796DAE23C4638B"
+					type: "dimension"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["426AED0A8053E440"]
+			hide_until_deps_visible: true
+			id: "58C044178E22B82D"
+			optional: true
+			rewards: [
+				{
+					id: "18CA5C5A7C58831E"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					id: "4B378695F6089C6A"
+					item: {
+						count: 1
+						id: "ad_astra:oxygen_distributor"
+					}
+					type: "item"
+				}
+				{
+					id: "0CD1CEE66F0F54AC"
+					item: {
+						count: 1
+						id: "ad_astra:oxygen_sensor"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.8d
+		}
+	]
+}

@@ -1,0 +1,339 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "arsenal"
+	group: "4A22861DEBA369C9"
+	icon: {
+		count: 1
+		id: "tacz:gun_smith_table"
+	}
+	id: "15B6E2E87A652BAC"
+	order_index: 42
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6F5A8856676AA527"]
+			hide_until_deps_complete: true
+			id: "7CA19628B8ACA5E1"
+			rewards: [
+				{
+					count: 8
+					id: "4E0B3B3C2724870E"
+					item: {
+						count: 1
+						id: "immersiveengineering:ingot_steel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "6E5A1568AF64AD7C"
+					item: {
+						count: 1
+						id: "tacz:gun_smith_table"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["7CA19628B8ACA5E1"]
+			hide_until_deps_visible: true
+			id: "07FEC56AA186D5BE"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0E8AC139069E3EA7"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "638D8A8C71A563C9"
+					item: {
+						count: 1
+						id: "tacz:modern_kinetic_gun"
+					}
+					match_components: "none"
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["07FEC56AA186D5BE"]
+			hide_until_deps_visible: true
+			id: "658E77615C5BAEF7"
+			rewards: [
+				{
+					count: 32
+					id: "1E576DE15E2E76AF"
+					item: {
+						count: 1
+						id: "minecraft:gunpowder"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 64L
+					id: "1739ABB651A4D481"
+					item: {
+						count: 1
+						id: "tacz:ammo"
+					}
+					match_components: "none"
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -2.4000000000000004d
+		}
+		{
+			dependencies: ["07FEC56AA186D5BE"]
+			hide_until_deps_visible: true
+			id: "70C5AD173E47219E"
+			optional: true
+			rewards: [
+				{
+					id: "2688BE4E20CD0132"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "267D96A5AA5C5BEC"
+					item: {
+						count: 1
+						id: "tacz:attachment"
+					}
+					match_components: "none"
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["6AC30F8D3C2C37AB"]
+			hide_until_deps_complete: true
+			id: "7E92D65E2F0FF8FB"
+			rewards: [
+				{
+					count: 32
+					id: "7FEE77F837D7F18D"
+					item: {
+						count: 1
+						id: "immersiveengineering:empty_casing"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "immersiveengineering:tools/craft_revolver"
+					criterion: ""
+					id: "07603334D135057A"
+					type: "advancement"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E92D65E2F0FF8FB", "78C8E6AB856AC48A"]
+			hide_until_deps_visible: true
+			id: "00BABE4CDED67EA2"
+			rewards: [
+				{
+					count: 16
+					id: "15E2B70C2F66226D"
+					item: {
+						count: 1
+						id: "immersiveengineering:stick_steel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "immersiveengineering:tools/craft_railgun"
+					criterion: ""
+					id: "26470F35C52B25B9"
+					type: "advancement"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0BB345628D3732B0"]
+			hide_until_deps_complete: true
+			id: "6CC4916ABA961D43"
+			rewards: [
+				{
+					count: 8
+					id: "2804366CD64C4703"
+					item: {
+						count: 1
+						id: "createbigcannons:powder_charge"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "51F281D3EE424326"
+					item: {
+						count: 1
+						id: "createbigcannons:log_cannon_chamber"
+					}
+					type: "item"
+				}
+				{
+					id: "5AC5F6A025092330"
+					item: {
+						count: 1
+						id: "createbigcannons:cannon_mount"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["6CC4916ABA961D43"]
+			hide_until_deps_visible: true
+			id: "7C282AECDEE8790B"
+			rewards: [
+				{
+					count: 16
+					id: "108DE72663A530A1"
+					item: {
+						count: 1
+						id: "createbigcannons:casting_sand"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "646C401B767A36D2"
+					item: {
+						count: 1
+						id: "createbigcannons:cast_iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "0F4644C10F7E7965"
+					item: {
+						count: 1
+						id: "createbigcannons:basin_foundry_lid"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["7C282AECDEE8790B"]
+			hide_until_deps_visible: true
+			id: "03EFEA0285C765D4"
+			rewards: [
+				{
+					count: 8
+					id: "6EC3477D7BE806F4"
+					item: {
+						count: 1
+						id: "createbigcannons:packed_gunpowder"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "1D27DB5B84EE29FB"
+					item: {
+						count: 1
+						id: "createbigcannons:solid_shot"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "20D16AFCB00340EB"
+					item: {
+						count: 1
+						id: "createbigcannons:he_shell"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7856DA494E179DE5"
+					item: {
+						count: 1
+						id: "createbigcannons:impact_fuze"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["7C282AECDEE8790B"]
+			hide_until_deps_visible: true
+			id: "2606C33142AED2CD"
+			rewards: [
+				{
+					id: "0A0D5865467DDEA7"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
+			tasks: [
+				{
+					id: "21E2EDE46A6136EB"
+					item: {
+						count: 1
+						id: "createbigcannons:bronze_autocannon_barrel"
+					}
+					type: "item"
+				}
+				{
+					id: "68FABECEF80A272C"
+					item: {
+						count: 1
+						id: "createbigcannons:bronze_autocannon_breech"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "3928C527435F872E"
+					item: {
+						count: 1
+						id: "createbigcannons:autocannon_cartridge"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 2.4000000000000004d
+		}
+	]
+}

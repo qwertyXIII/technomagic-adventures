@@ -1,0 +1,297 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "dragons"
+	group: "3E8CE53568A27E9D"
+	icon: {
+		count: 1
+		id: "dmr:dragon_egg"
+	}
+	id: "38765CC4A6CA9D98"
+	order_index: 47
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "06405A18E0EF3DEC"
+			rewards: [
+				{
+					id: "4949B88A334600EB"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					advancement: "dmr:find_egg"
+					criterion: ""
+					id: "78C20B885FA2C7A4"
+					type: "advancement"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["06405A18E0EF3DEC"]
+			hide_until_deps_visible: true
+			id: "705E9A35A155719F"
+			rewards: [
+				{
+					count: 16
+					id: "2A455117B97FA097"
+					item: {
+						count: 1
+						id: "minecraft:cooked_porkchop"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "dmr:hatch_1_dragon_egg"
+					criterion: ""
+					id: "2E239551E0B8CABE"
+					type: "advancement"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["705E9A35A155719F"]
+			hide_until_deps_visible: true
+			id: "6D7C7206FD791744"
+			rewards: [
+				{
+					id: "00757F7DF8FDD6D4"
+					item: {
+						count: 1
+						id: "minecraft:saddle"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "dmr:tame_dragon"
+					criterion: ""
+					id: "3BBDC0458D19A951"
+					type: "advancement"
+				}
+			]
+			x: 4.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["705E9A35A155719F"]
+			hide_until_deps_visible: true
+			id: "17B3EA1DA407C930"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "57BEF9F76A20E853"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "5281517679915962"
+					item: {
+						components: {
+							"dmr:dragon_breed": "fire"
+						}
+						count: 1
+						id: "dmr:dragon_egg"
+					}
+					match_components: "strict"
+					type: "item"
+				}
+				{
+					id: "30F8070276C232D0"
+					item: {
+						components: {
+							"dmr:dragon_breed": "ice"
+						}
+						count: 1
+						id: "dmr:dragon_egg"
+					}
+					match_components: "strict"
+					type: "item"
+				}
+				{
+					id: "2B0B62631AE530C8"
+					item: {
+						components: {
+							"dmr:dragon_breed": "water"
+						}
+						count: 1
+						id: "dmr:dragon_egg"
+					}
+					match_components: "strict"
+					type: "item"
+				}
+				{
+					id: "55A03B1FB31461F2"
+					item: {
+						components: {
+							"dmr:dragon_breed": "forest"
+						}
+						count: 1
+						id: "dmr:dragon_egg"
+					}
+					match_components: "strict"
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["17B3EA1DA407C930", "12C4E3E13498359C"]
+			hide_until_deps_complete: true
+			id: "76435FF772BE2123"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4CB8A3391AB1E845"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "0A4D08B7E3C5C5B3"
+					item: {
+						components: {
+							"dmr:dragon_breed": "nether"
+						}
+						count: 1
+						id: "dmr:dragon_egg"
+					}
+					match_components: "strict"
+					type: "item"
+				}
+				{
+					id: "49B188F90FFB406C"
+					item: {
+						components: {
+							"dmr:dragon_breed": "end"
+						}
+						count: 1
+						id: "dmr:dragon_egg"
+					}
+					match_components: "strict"
+					type: "item"
+				}
+				{
+					id: "3A42FCFE70121E43"
+					item: {
+						components: {
+							"dmr:dragon_breed": "ghost"
+						}
+						count: 1
+						id: "dmr:dragon_egg"
+					}
+					match_components: "strict"
+					type: "item"
+				}
+				{
+					id: "5DBD8AA001BF3BA9"
+					item: {
+						components: {
+							"dmr:dragon_breed": "sculk"
+						}
+						count: 1
+						id: "dmr:dragon_egg"
+					}
+					match_components: "strict"
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["17B3EA1DA407C930", "115DBA0F52DCDBC2"]
+			hide_until_deps_complete: true
+			id: "490393F7B6F33B74"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4532A65F6CB3D5D8"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "7B06828F78E5C82D"
+					item: {
+						components: {
+							"dmr:dragon_breed": "aether"
+						}
+						count: 1
+						id: "dmr:dragon_egg"
+					}
+					match_components: "strict"
+					type: "item"
+				}
+				{
+					id: "25F6E0A97B3016C0"
+					item: {
+						components: {
+							"dmr:dragon_breed": "amethyst"
+						}
+						count: 1
+						id: "dmr:dragon_egg"
+					}
+					match_components: "strict"
+					type: "item"
+				}
+				{
+					id: "6205873759FCAF62"
+					item: {
+						components: {
+							"dmr:dragon_breed": "lush"
+						}
+						count: 1
+						id: "dmr:dragon_egg"
+					}
+					match_components: "strict"
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["17B3EA1DA407C930"]
+			hide_until_deps_visible: true
+			id: "14955444BB1B2664"
+			optional: true
+			rewards: [
+				{
+					id: "4A5C254350D07064"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			tasks: [
+				{
+					advancement: "dmr:hatch_hybrid_dragon_egg"
+					criterion: ""
+					id: "04E441789FA22349"
+					type: "advancement"
+				}
+			]
+			x: 6.0d
+			y: 1.6d
+		}
+	]
+}

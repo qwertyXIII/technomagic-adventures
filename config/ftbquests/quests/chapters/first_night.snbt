@@ -1,0 +1,399 @@
+{
+	autofocus_id: "58CECB882C01A3E5"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "first_night"
+	group: "576BF1E4F3AF42DD"
+	icon: {
+		count: 1
+		id: "minecraft:campfire"
+	}
+	id: "5893EFB2624E0BA4"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "58CECB882C01A3E5"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7A8F4125FCD9A347"
+					table_id: 1784375549479603621L
+					type: "choice"
+				}
+				{
+					id: "5EF12EFC16B55BFA"
+					item: {
+						count: 1
+						id: "minecraft:white_bed"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "69A24132693B8B3E"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["58CECB882C01A3E5"]
+			hide_until_deps_visible: true
+			id: "732CE612AB58F1ED"
+			rewards: [
+				{
+					count: 8
+					id: "4550D69DE8F1E705"
+					item: {
+						count: 1
+						id: "minecraft:apple"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "12D957CC095145C4"
+					item: {
+						count: 1
+						id: "minecraft:crafting_table"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["732CE612AB58F1ED"]
+			hide_until_deps_visible: true
+			id: "504C8C7FF45F0974"
+			rewards: [
+				{
+					count: 32
+					id: "6D6CA19809D1673A"
+					item: {
+						count: 1
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:story/mine_stone"
+					criterion: ""
+					id: "160D9375BE48E828"
+					type: "advancement"
+				}
+			]
+			x: 4.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["504C8C7FF45F0974"]
+			hide_until_deps_visible: true
+			id: "0FD87040C78BBDB5"
+			rewards: [
+				{
+					count: 16
+					id: "0BF33DF965B86DC0"
+					item: {
+						count: 1
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "2747522DD08FC363"
+					item: {
+						count: 1
+						id: "minecraft:furnace"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0FD87040C78BBDB5"]
+			hide_until_deps_visible: true
+			id: "5D315FAA32E98CD6"
+			rewards: [
+				{
+					count: 8
+					id: "5A11A321AFE03E8A"
+					item: {
+						count: 1
+						id: "minecraft:raw_iron"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:story/smelt_iron"
+					criterion: ""
+					id: "49BFF5B9C623BF81"
+					type: "advancement"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D315FAA32E98CD6"]
+			hide_until_deps_visible: true
+			id: "5155074932DE239E"
+			rewards: [
+				{
+					count: 6
+					id: "36C8D0FE57F5AE38"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "3464731D44B81003"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:story/iron_tools"
+					criterion: ""
+					id: "2D2E755346873C14"
+					type: "advancement"
+				}
+			]
+			x: 10.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["5D315FAA32E98CD6"]
+			hide_until_deps_visible: true
+			id: "6419871CC383823B"
+			rewards: [
+				{
+					id: "2240057E9291A5A6"
+					item: {
+						count: 1
+						id: "minecraft:shield"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:story/obtain_armor"
+					criterion: ""
+					id: "4CBF2B7D1047D2D9"
+					type: "advancement"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["58CECB882C01A3E5"]
+			hide_until_deps_visible: true
+			id: "5C9F0A57D3C54EBD"
+			rewards: [
+				{
+					count: 16
+					id: "66A44B9F5C25D43F"
+					item: {
+						count: 1
+						id: "minecraft:cooked_beef"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:adventure/sleep_in_bed"
+					criterion: ""
+					id: "2A0E6F254BA4D3C5"
+					type: "advancement"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["732CE612AB58F1ED"]
+			hide_until_deps_visible: true
+			id: "3413893660A62EAE"
+			rewards: [
+				{
+					id: "611FEE38D2E72D5F"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:feeding_upgrade"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 32L
+					id: "30D2D3B1BE4ADE5D"
+					item: {
+						count: 1
+						id: "minecraft:wheat"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["5155074932DE239E"]
+			hide_until_deps_visible: true
+			id: "2962677794E588B4"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4F2D8FD061A53A30"
+					table_id: 6955002610390794063L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:story/mine_diamond"
+					criterion: ""
+					id: "4A8D971C07233E29"
+					type: "advancement"
+				}
+			]
+			x: 12.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["5D315FAA32E98CD6"]
+			hide_until_deps_visible: true
+			id: "5E543D6A5F58673E"
+			rewards: [
+				{
+					count: 4
+					id: "1E6F73082469A16B"
+					item: {
+						count: 1
+						id: "waystones:return_scroll"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1EEF2509F3216181"
+					item: {
+						count: 1
+						id: "waystones:warp_stone"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["58CECB882C01A3E5"]
+			hide_until_deps_visible: true
+			id: "36C7A3F8C73D72E3"
+			rewards: [
+				{
+					count: 8
+					id: "4D66595AF55C4199"
+					item: {
+						count: 1
+						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:adventure/trade"
+					criterion: ""
+					id: "141E42E0B12597EE"
+					type: "advancement"
+				}
+			]
+			x: 2.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["2962677794E588B4"]
+			hide_until_deps_visible: true
+			id: "7608BA5295D20CA0"
+			rewards: [
+				{
+					count: 32
+					id: "335C989E3E79662C"
+					item: {
+						count: 1
+						id: "minecraft:lapis_lazuli"
+					}
+					type: "item"
+				}
+				{
+					id: "3A38F416B7C7B5F0"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:story/enchant_item"
+					criterion: ""
+					id: "6E34FC82DF648A47"
+					type: "advancement"
+				}
+			]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5155074932DE239E", "6419871CC383823B", "5C9F0A57D3C54EBD", "3413893660A62EAE"]
+			hide_until_deps_visible: true
+			id: "48D385EEA1123AED"
+			rewards: [
+				{
+					id: "4F83D0FFC281556E"
+					item: {
+						count: 1
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+				{
+					id: "190ACC41DAAC3B07"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "147A6EA6415321AD"
+					type: "checkmark"
+				}
+			]
+			x: 12.0d
+			y: 0.8d
+		}
+	]
+}

@@ -1,0 +1,202 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "aircraft"
+	group: "4A22861DEBA369C9"
+	icon: {
+		count: 1
+		id: "immersive_aircraft:biplane"
+	}
+	id: "0823A079EA75596B"
+	order_index: 41
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6AC30F8D3C2C37AB"]
+			hide_until_deps_complete: true
+			id: "1F9FDA2A7DA69316"
+			rewards: [
+				{
+					count: 2
+					id: "583D7E938A51C4C9"
+					item: {
+						count: 1
+						id: "immersive_aircraft:industrial_gears"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "6A87AB8D45831FA0"
+					item: {
+						count: 1
+						id: "immersive_aircraft:hull"
+					}
+					type: "item"
+				}
+				{
+					id: "7FFB61BDF9385A08"
+					item: {
+						count: 1
+						id: "immersive_aircraft:engine"
+					}
+					type: "item"
+				}
+				{
+					id: "38974A6AD64E9C63"
+					item: {
+						count: 1
+						id: "immersive_aircraft:propeller"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "362B35D1C6854301"
+					item: {
+						count: 1
+						id: "immersive_aircraft:sail"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["1F9FDA2A7DA69316"]
+			hide_until_deps_visible: true
+			id: "6EF5F43C39C8F5F0"
+			rewards: [
+				{
+					id: "27A1E9C7F93CD9CD"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					id: "02161C24B1D9E973"
+					item: {
+						count: 1
+						id: "immersive_aircraft:quadrocopter"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["1F9FDA2A7DA69316"]
+			hide_until_deps_visible: true
+			id: "090B29DAFC1AA516"
+			rewards: [
+				{
+					id: "0345B0B06A9C7521"
+					item: {
+						count: 1
+						id: "immersive_aircraft:gyroscope"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "461F70EF03332451"
+					item: {
+						count: 1
+						id: "immersive_aircraft:biplane"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F9FDA2A7DA69316"]
+			hide_until_deps_visible: true
+			id: "47E9C7E56C799677"
+			rewards: [
+				{
+					id: "664B4C91C2B6CDB2"
+					item: {
+						count: 1
+						id: "immersive_aircraft:hull_reinforcement"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "18A642654C92F3E1"
+					item: {
+						count: 1
+						id: "immersive_aircraft:airship"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["47E9C7E56C799677", "2606C33142AED2CD"]
+			hide_until_deps_complete: true
+			id: "196D093EFB192D5E"
+			rewards: [
+				{
+					count: 2
+					id: "13A6EB4615BC40EF"
+					item: {
+						count: 1
+						id: "immersive_aircraft:rotary_cannon"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "4737E04C7BC53719"
+					item: {
+						count: 1
+						id: "immersive_aircraft:warship"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2CBDA0237AD7A657"]
+			hide_until_deps_complete: true
+			id: "3CB83197DA26C0C0"
+			rewards: [
+				{
+					id: "590F428E727FD59B"
+					item: {
+						count: 1
+						id: "immersivepetroleum:upgrade_paddles"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "651E6B71CFBC2603"
+					item: {
+						count: 1
+						id: "immersivepetroleum:speedboat"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.8d
+		}
+	]
+}

@@ -1,0 +1,37 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "betterdungeons:skeleton_dungeon",
+      "required": false
+    },
+    {
+      "id": "betterdungeons:small_dungeon",
+      "required": false
+    },
+    {
+      "id": "betterdungeons:spider_dungeon",
+      "required": false
+    },
+    {
+      "id": "betterdungeons:zombie_dungeon",
+      "required": false
+    },
+    {
+      "id": "valhelsia_structures:spawner_dungeon",
+      "required": false
+    },
+    {
+      "id": "nova_structures:creeping_crypt",
+      "required": false
+    },
+    {
+      "id": "nova_structures:undead_crypt",
+      "required": false
+    },
+    {
+      "id": "terralith:underground/frosted_dungeon",
+      "required": false
+    }
+  ]
+}

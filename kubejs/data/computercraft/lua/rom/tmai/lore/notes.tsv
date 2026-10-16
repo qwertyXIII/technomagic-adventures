@@ -1,0 +1,48 @@
+# Находки, которые ЛОЦМАН «читает» из Ящика памяти (СГЕНЕРИРОВАНО). layer — с какого слоя он их понимает.
+item	layer	title	file
+kubejs:capsule_log	0	Аварийный журнал	n_f01
+kubejs:note_m_1	0	Записка из четвёртого ложемента	n_f02
+kubejs:crew_tag	0	Жетоны экипажа	n_f03
+kubejs:cargo_stencil	0	Грузовой отсек	n_f04
+kubejs:song_lullaby	0	Колыбельная	n_f05
+kubejs:untitled_book	0	Книга без названия	n_f06
+kubejs:raider_order	2	Приказ с заставы	n_f07
+kubejs:copper_plaque	2	Табличка палаты испытаний	n_f08
+kubejs:shift_list	2	Список смены	n_f09
+kubejs:note_m_2	0	Записка «М.» №2	n_f10
+kubejs:gold_tally	2	Зарубки	n_f12
+kubejs:scorched_journal	3	Опалённый журнал	n_f13
+kubejs:operator_log	2	Журнал оператора	n_f15
+kubejs:ark_label	3	Наклейка ковчега	n_f16
+kubejs:deep_song	2	Легенда глубинников	n_f17
+kubejs:zealot_sermon	3	Проповедь	n_f18
+kubejs:warden_plate	3	Камера 112	n_f21
+kubejs:oldest_tablet	3	Камень, который слышит	n_f22
+kubejs:note_m_margin	2	Пометки на полях	n_f24
+irons_spellbooks:archevoker_logbook_translated	2	Дневник исследования	n_f25
+kubejs:note_m_3	1	Записка «М.» №3	n_f26
+kubejs:chronicle_1	3	Хроника, том первый	n_f28
+kubejs:aurellan_last_page	3	Последняя страница	n_f29
+kubejs:sky_sample	4	Клятва валькирий	n_f30
+kubejs:glider_log	4	Бортовой журнал	n_f31
+kubejs:lethe_sample	4	Расшифрованный образец	n_f32
+kubejs:note_m_4	3	Кровь — это адрес	n_f33
+kubejs:echo_chronicle	3	Хроника, том второй	n_f37
+kubejs:diary_ko	4	Дневник	n_f38
+kubejs:note_m_5	4	Записка «М.» №4	n_f39
+kubejs:watch_log	3	Вахтенный журнал «Северной звезды»	n_f40
+kubejs:pilgrim_guide	5	Путеводитель паломника	n_f44
+kubejs:station_log	5	Журнал станции	n_f45
+kubejs:choir_message	5	Послание	n_f46
+kubejs:bridge_shard	5	Обломок	n_f47
+kubejs:surgeon_report	6	Отчёт робохирурга	n_f48
+kubejs:note_m_6	6	Записка «М.» №5	n_f49
+kubejs:belsky_log_1	7	Журнал коменданта, часть первая	n_f51
+kubejs:belsky_log_2	8	Журнал коменданта, часть вторая	n_f52
+kubejs:exodus_manifesto	7	Манифест	n_f53
+kubejs:cradle_lab_log	8	Лабораторный журнал	n_f54
+kubejs:solar_session	8	Последний сеанс	n_f55
+kubejs:glacio_letter	8	Последнее письмо	n_f56
+kubejs:growth_record	9	Метрика	n_f57
+kubejs:stack_zero	9	Показания стека №0	n_f58
+kubejs:note_m_7	9	Последняя записка	n_f59

@@ -1,0 +1,423 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "computer"
+	group: "576BF1E4F3AF42DD"
+	icon: {
+		count: 1
+		id: "computercraft:computer_advanced"
+	}
+	id: "23527CE56C3864BC"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["623555AF697AD047"]
+			hide_until_deps_complete: true
+			id: "26F66062BB0D8DF2"
+			rewards: [
+				{
+					count: 2
+					id: "6CD7490BCF885346"
+					item: {
+						count: 1
+						id: "minecraft:coal_block"
+					}
+					team_reward: true
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "05DF004263BFC416"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["26F66062BB0D8DF2"]
+			hide_until_deps_visible: true
+			id: "284367BD14685E4D"
+			optional: true
+			tasks: [
+				{
+					id: "7ACA5ABEBE189567"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["26F66062BB0D8DF2"]
+			hide_until_deps_visible: true
+			id: "2695B82EA4B9C407"
+			rewards: [
+				{
+					count: 16
+					id: "49ABE0252FF9E528"
+					item: {
+						count: 1
+						id: "minecraft:paper"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "03A6F6CB4C8E5697"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2695B82EA4B9C407"]
+			hide_until_deps_visible: true
+			id: "396A5F7DFDFA6DD1"
+			rewards: [
+				{
+					count: 3
+					id: "5CC00218C6DF7478"
+					item: {
+						count: 1
+						id: "minecraft:map"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3E43CD874A53CE88"
+					type: "checkmark"
+				}
+			]
+			x: 4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["396A5F7DFDFA6DD1"]
+			hide_until_deps_visible: true
+			id: "0E21400FFD8DEAAC"
+			rewards: [
+				{
+					id: "7A6251EF51704482"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "268D001BF596879D"
+					table_id: 5242348113741014990L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "05C7A7F594430663"
+					item: {
+						count: 1
+						id: "kubejs:ai_repair_cooling"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0E21400FFD8DEAAC"]
+			hide_until_deps_visible: true
+			id: "188A5E9E8D195945"
+			rewards: [
+				{
+					id: "77330FEDE1748781"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1D61D544D689F131"
+					table_id: 5242348113741014990L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "0C0B7A5431E8729C"
+					item: {
+						count: 1
+						id: "kubejs:ai_repair_memory_1"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["188A5E9E8D195945"]
+			hide_until_deps_visible: true
+			id: "3DF2FA0050E31013"
+			rewards: [
+				{
+					id: "6288497F036A1D3A"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5AC179739728261B"
+					table_id: 7227490514009532499L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "38922640589C8FC5"
+					item: {
+						count: 1
+						id: "kubejs:ai_repair_memory_2"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3DF2FA0050E31013"]
+			hide_until_deps_visible: true
+			id: "5B0DAC47C343A26C"
+			rewards: [
+				{
+					id: "08DD659573235681"
+					type: "xp_levels"
+					xp_levels: 25
+				}
+				{
+					exclude_from_claim_all: true
+					id: "31ACD407EE37B0DD"
+					table_id: 7227490514009532499L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "4D0D58C373319923"
+					item: {
+						count: 1
+						id: "kubejs:ai_repair_quantum"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["26F66062BB0D8DF2"]
+			hide_until_deps_visible: true
+			id: "473BDC367B27E8AE"
+			rewards: [
+				{
+					id: "7B25DFFB1C4B6704"
+					item: {
+						components: {
+							"computercraft:pocket_upgrade": {
+								id: "computercraft:wireless_modem_normal"
+							}
+							"minecraft:custom_name": "{\"text\":\"КПК [KPK]\",\"italic\":false}"
+						}
+						count: 1
+						id: "computercraft:pocket_computer_advanced"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1DB061D194FE85F7"
+					item: {
+						count: 1
+						id: "computercraft:wireless_modem_normal"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["473BDC367B27E8AE"]
+			hide_until_deps_visible: true
+			id: "492B28CB0430C32A"
+			rewards: [
+				{
+					count: 2
+					id: "02BE69AB13C51D38"
+					item: {
+						count: 1
+						id: "computercraft:wireless_modem_normal"
+					}
+					type: "item"
+				}
+				{
+					count: 32
+					id: "2E4C4FAA927BC62E"
+					item: {
+						count: 1
+						id: "minecraft:ladder"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "2DB9BEDB41085FD6"
+					item: {
+						count: 1
+						id: "computercraft:computer_normal"
+					}
+					type: "item"
+				}
+				{
+					id: "75677AAE5D09BDB2"
+					item: {
+						count: 1
+						id: "computercraft:wireless_modem_normal"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["492B28CB0430C32A"]
+			hide_until_deps_visible: true
+			id: "71F47F4680AD9867"
+			rewards: [
+				{
+					id: "34D775B17393DC42"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "3738396A56EA720C"
+					item: {
+						count: 1
+						id: "computercraft:wireless_modem_advanced"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["26F66062BB0D8DF2"]
+			hide_until_deps_visible: true
+			id: "0BAAA1E684A27ECE"
+			optional: true
+			rewards: [
+				{
+					id: "15277F3744731022"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					id: "4B43DAC03F30111C"
+					item: {
+						count: 1
+						id: "advancedperipherals:me_bridge"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["26F66062BB0D8DF2"]
+			hide_until_deps_visible: true
+			id: "26525E12408472AA"
+			optional: true
+			rewards: [
+				{
+					count: 32
+					id: "65E39C1FD1BDF5B6"
+					item: {
+						count: 1
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "61A91803C6F06832"
+					item: {
+						components: {
+							"ftbfiltersystem:filter": "or(item(computercraft:turtle_normal)item(computercraft:turtle_advanced)item(computercraft:computer_normal))"
+						}
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["26F66062BB0D8DF2"]
+			hide_until_deps_visible: true
+			id: "7CF2D2ECC7DA0146"
+			optional: true
+			rewards: [
+				{
+					count: 32
+					id: "035920794226E98A"
+					item: {
+						count: 1
+						id: "minecraft:paper"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "09E7838C386D0ADE"
+					item: {
+						count: 1
+						id: "minecraft:black_dye"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3DFF597933BDD0BE"
+					item: {
+						count: 1
+						id: "computercraft:printer"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 3.5d
+		}
+	]
+}

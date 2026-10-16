@@ -1,0 +1,504 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "energy"
+	group: "592F40102295DC55"
+	icon: {
+		count: 1
+		id: "powah:energizing_orb"
+	}
+	id: "49D57EC3056D4AD8"
+	order_index: 18
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["42B89C8DCAE36174", "49DD2283D2BBB881", "0C62A35C057421B9", "163503B31E722BE6"]
+			dependency_requirement: "one_completed"
+			hide_until_deps_complete: true
+			id: "1C22425171D429BF"
+			rewards: [
+				{
+					id: "1121636357C238F5"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "53FCD247F1269E09"
+					table_id: 5242348113741014990L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "46CCC5E9828A95A0"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "49DD2283D2BBB881"
+			rewards: [
+				{
+					count: 32
+					id: "11811FC9E4CFEB81"
+					item: {
+						count: 1
+						id: "minecraft:glass"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "2713ED7B4B710572"
+					item: {
+						count: 1
+						id: "solarflux:sp_1"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -2.4000000000000004d
+		}
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "0C62A35C057421B9"
+			rewards: [
+				{
+					count: 16
+					id: "08D2D58BFE364922"
+					item: {
+						count: 1
+						id: "powah:energy_cable_starter"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "12264E05F1B28EB1"
+					item: {
+						count: 1
+						id: "powah:furnator_starter"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["0C62A35C057421B9"]
+			hide_until_deps_visible: true
+			id: "645FD0DFFEF2D363"
+			rewards: [
+				{
+					count: 32
+					id: "70A055ACFF59FB43"
+					item: {
+						count: 1
+						id: "powah:dielectric_paste"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5C0D563D007422D6"
+					item: {
+						count: 1
+						id: "powah:energizing_orb"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1B9B4339EC9559FA"
+					item: {
+						count: 1
+						id: "powah:energizing_rod_basic"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "6C0DC239D762C77D"
+					item: {
+						count: 1
+						id: "powah:steel_energized"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["645FD0DFFEF2D363", "3EEB1D8EF10692D3"]
+			hide_until_deps_complete: true
+			id: "54A409C81C75F907"
+			rewards: [
+				{
+					count: 2
+					id: "5935E0CD8361FA28"
+					item: {
+						count: 1
+						id: "powah:capacitor_hardened"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "5FE7C98484193345"
+					item: {
+						count: 1
+						id: "powah:crystal_blazing"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "7E172DC02E31D47C"
+					item: {
+						count: 1
+						id: "powah:crystal_niotic"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "45D59951A63D0E35"
+					item: {
+						count: 1
+						id: "powah:crystal_spirited"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -2.4000000000000004d
+		}
+		{
+			dependencies: ["54A409C81C75F907", "7FDA6E6AF9FD7BD1"]
+			hide_until_deps_complete: true
+			id: "0CA121396F26BA1C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1199A1DA80515278"
+					table_id: 7227490514009532499L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "39EAA5034EAFDD45"
+					item: {
+						count: 1
+						id: "powah:crystal_nitro"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4DEA8616781C24CD"]
+			hide_until_deps_complete: true
+			id: "17A184A02DBE9C46"
+			rewards: [
+				{
+					id: "798B71C72B16C20C"
+					item: {
+						count: 1
+						id: "mekanism:basic_energy_cube"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5E1CCF1E5263E2E4"
+					item: {
+						count: 1
+						id: "mekanismgenerators:heat_generator"
+					}
+					type: "item"
+				}
+				{
+					id: "559E3A5D8CE9D796"
+					item: {
+						count: 1
+						id: "mekanismgenerators:wind_generator"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["6421C526FEDB50BE"]
+			hide_until_deps_complete: true
+			id: "2540338ED5EDCE4A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5CA96797441F69AE"
+					table_id: 5242348113741014990L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "29D1D5D9660BF88B"
+					item: {
+						count: 1
+						id: "mekanismgenerators:turbine_casing"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "15CDFF5C7F2B0CA3"
+					item: {
+						count: 1
+						id: "mekanismgenerators:turbine_rotor"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "19973D60A405BB35"
+					item: {
+						count: 1
+						id: "mekanismgenerators:turbine_blade"
+					}
+					type: "item"
+				}
+				{
+					id: "5C1CAA5B48C2C4FF"
+					item: {
+						count: 1
+						id: "mekanismgenerators:electromagnetic_coil"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "57311AC6437306C7"
+					item: {
+						count: 1
+						id: "mekanismgenerators:saturating_condenser"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.4000000000000004d
+		}
+		{
+			dependencies: ["1C22425171D429BF"]
+			hide_until_deps_complete: true
+			id: "5536F9D19C1D6F87"
+			rewards: [
+				{
+					count: 16
+					id: "0E5711AD94DBA75A"
+					item: {
+						count: 1
+						id: "bigreactors:basic_reactorcasing"
+					}
+					team_reward: true
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "2379035E008B5C32"
+					item: {
+						count: 1
+						id: "bigreactors:yellorium_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "5256BE70ECE0A184"
+					item: {
+						count: 1
+						id: "bigreactors:basic_reactorcontroller"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "77CF3B630FB2D3A7"
+					item: {
+						count: 1
+						id: "bigreactors:basic_reactorfuelrod"
+					}
+					type: "item"
+				}
+				{
+					id: "6AED8FB161B42868"
+					item: {
+						count: 1
+						id: "bigreactors:basic_reactorcontrolrod"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["6421C526FEDB50BE", "2540338ED5EDCE4A"]
+			hide_until_deps_complete: true
+			id: "3E5C0A88867674C6"
+			rewards: [
+				{
+					count: 16
+					id: "05F880150CE18789"
+					item: {
+						count: 1
+						id: "mekanism:yellow_cake_uranium"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "6B6AC0E8F7CF9AA5"
+					item: {
+						count: 1
+						id: "mekanismgenerators:fission_reactor_casing"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "76471A1F9E6B26FE"
+					item: {
+						count: 1
+						id: "mekanismgenerators:fission_fuel_assembly"
+					}
+					type: "item"
+				}
+				{
+					id: "03FC20BE5F821999"
+					item: {
+						count: 1
+						id: "mekanismgenerators:control_rod_assembly"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["3E5C0A88867674C6"]
+			hide_until_deps_visible: true
+			id: "7BD6AA967567A40A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6627A5624100EB8B"
+					table_id: 7227490514009532499L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "69CE040BE754D715"
+					item: {
+						count: 1
+						id: "mekanismgenerators:fusion_reactor_controller"
+					}
+					type: "item"
+				}
+				{
+					id: "1F726E6F98735D7A"
+					item: {
+						count: 1
+						id: "mekanismgenerators:laser_focus_matrix"
+					}
+					type: "item"
+				}
+				{
+					id: "4E4D4F00718321D8"
+					item: {
+						count: 1
+						id: "mekanismgenerators:hohlraum"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["1C22425171D429BF"]
+			hide_until_deps_complete: true
+			id: "18FBEA800B7F1E09"
+			rewards: [
+				{
+					count: 4
+					id: "06269F159C4FADF5"
+					item: {
+						count: 1
+						id: "fluxnetworks:flux_core"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3700913FB8A2088E"
+					item: {
+						count: 1
+						id: "fluxnetworks:flux_controller"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1304739857AB3765"
+					item: {
+						count: 1
+						id: "fluxnetworks:flux_point"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "268930F38E6D9C18"
+					item: {
+						count: 1
+						id: "fluxnetworks:flux_plug"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 2.4000000000000004d
+		}
+	]
+}

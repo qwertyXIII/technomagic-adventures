@@ -1,0 +1,244 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chronicle_5"
+	group: "1DAFAF2C5B9599CE"
+	icon: {
+		count: 1
+		id: "ad_astra:tier_1_rocket"
+	}
+	id: "46BE5930CCE3FF21"
+	order_index: 12
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["1EF006949CF74B83"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "2BEEE42FC441EF3E"
+			shape: "diamond"
+			tasks: [
+				{
+					dimension: "ad_astra:earth_orbit"
+					id: "22AF1143A47AE4C3"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2BEEE42FC441EF3E"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "500E8AB2A7C096CB"
+			rewards: [
+				{
+					id: "4E25BD044B312CAE"
+					item: {
+						count: 1
+						id: "kubejs:belsky_log_1"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					dimension: "ad_astra:moon"
+					id: "76A0D0A98077B4C0"
+					type: "dimension"
+				}
+			]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["500E8AB2A7C096CB"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "3ACE7563D658AEFC"
+			rewards: [
+				{
+					id: "64ED731CED119E0A"
+					item: {
+						count: 1
+						id: "kubejs:belsky_log_2"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "2E610D28C119B828"
+					observe_type: 5
+					timer: 0L
+					to_observe: "ad_astra:lunarian"
+					type: "observation"
+				}
+			]
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["500E8AB2A7C096CB"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "34B8ECB1447A4DDB"
+			optional: true
+			shape: "circle"
+			tasks: [
+				{
+					id: "48DDB5B24B3AE37C"
+					structure: "ad_astra:lunarian_village"
+					type: "structure"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["500E8AB2A7C096CB"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "462EDDDA5D88CEAC"
+			rewards: [
+				{
+					id: "7C8321ECF913594B"
+					item: {
+						count: 1
+						id: "kubejs:exodus_manifesto"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					dimension: "ad_astra:mars"
+					id: "409AAF5171EFE4E3"
+					type: "dimension"
+				}
+			]
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["462EDDDA5D88CEAC"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "4303265B6CD93091"
+			rewards: [
+				{
+					id: "6CAEA0920F501D41"
+					item: {
+						count: 1
+						id: "kubejs:cradle_lab_log"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					dimension: "ad_astra:venus"
+					id: "479F0A5F80A229FC"
+					type: "dimension"
+				}
+			]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["462EDDDA5D88CEAC"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "62C79131E5F29B1C"
+			rewards: [
+				{
+					id: "499F4D5F5EA61C90"
+					item: {
+						count: 1
+						id: "kubejs:solar_session"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					dimension: "ad_astra:mercury"
+					id: "5C366C89C5576A8B"
+					type: "dimension"
+				}
+			]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["462EDDDA5D88CEAC"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "4A07B9CFB49B1BC8"
+			rewards: [
+				{
+					id: "7ECF6F1BA0398ADA"
+					item: {
+						count: 1
+						id: "kubejs:glacio_letter"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					dimension: "ad_astra:glacio"
+					id: "07FCE3A5235B3154"
+					type: "dimension"
+				}
+			]
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A07B9CFB49B1BC8"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "6EB390A5338159B5"
+			rewards: [
+				{
+					id: "7B9FF07757E3D86C"
+					item: {
+						count: 1
+						id: "kubejs:stack_zero"
+					}
+					type: "item"
+				}
+				{
+					id: "238C563D0AE4C322"
+					item: {
+						count: 1
+						id: "kubejs:growth_record"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					count: 16L
+					id: "5474693062BB7D6C"
+					item: {
+						count: 1
+						id: "ad_astra:ice_shard"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 3.0d
+		}
+	]
+}

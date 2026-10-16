@@ -1,0 +1,350 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "factory"
+	group: "592F40102295DC55"
+	icon: {
+		count: 1
+		id: "industrialforegoing:machine_frame_simple"
+	}
+	id: "61B9E8BF425E64D7"
+	order_index: 20
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["1C22425171D429BF"]
+			hide_until_deps_complete: true
+			id: "3C4D2DC5A4899683"
+			rewards: [
+				{
+					count: 16
+					id: "1F382575AF3814D7"
+					item: {
+						count: 1
+						id: "enderio:conduit"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "21CCCCAD89428FAC"
+					item: {
+						count: 1
+						id: "enderio:alloy_smelter"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "0E1FD5D91B543C98"
+					item: {
+						count: 1
+						id: "enderio:conductive_alloy_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -3.2d
+		}
+		{
+			dependencies: ["3C4D2DC5A4899683"]
+			hide_until_deps_visible: true
+			id: "3E5633FAE47F63DD"
+			rewards: [
+				{
+					count: 4
+					id: "3703096BD574E9EF"
+					item: {
+						count: 1
+						id: "enderio:basic_capacitor"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "05AB2A74DB82E1A3"
+					item: {
+						count: 1
+						id: "enderio:dark_steel_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["3E5633FAE47F63DD"]
+			hide_until_deps_visible: true
+			id: "68C057502524B72B"
+			rewards: [
+				{
+					id: "431CB15EEADD947B"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					id: "4E831988AD2247DA"
+					item: {
+						count: 1
+						id: "enderio:soul_binder"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "57B790E2469168F9"
+					item: {
+						count: 1
+						id: "enderio:soul_vial"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1C22425171D429BF"]
+			hide_until_deps_complete: true
+			id: "2D7B6C792B1E7A7E"
+			rewards: [
+				{
+					count: 16
+					id: "225052BC150B8C2E"
+					item: {
+						count: 1
+						id: "industrialforegoing:dryrubber"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "1ADFA3827BE072A3"
+					item: {
+						count: 1
+						id: "industrialforegoing:plastic"
+					}
+					type: "item"
+				}
+				{
+					id: "1DB01AF7E54E4478"
+					item: {
+						count: 1
+						id: "industrialforegoing:machine_frame_simple"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["2D7B6C792B1E7A7E"]
+			hide_until_deps_visible: true
+			id: "5A23007A13C3D746"
+			rewards: [
+				{
+					id: "3893AF7B2A979090"
+					item: {
+						count: 1
+						id: "industrialforegoing:machine_frame_advanced"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "10379734EE53DAB3"
+					item: {
+						count: 1
+						id: "industrialforegoing:ore_laser_base"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "227A318B1B469C3A"
+					item: {
+						count: 1
+						id: "industrialforegoing:laser_drill"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1C22425171D429BF"]
+			hide_until_deps_complete: true
+			id: "7B672E0A73083814"
+			rewards: [
+				{
+					count: 2
+					id: "5C954C5718368093"
+					item: {
+						count: 1
+						id: "rftoolsbase:infused_diamond"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "54C922D82275F147"
+					item: {
+						count: 1
+						id: "rftoolsbase:machine_frame"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "71B01F7ABC8FEFBD"
+					item: {
+						count: 1
+						id: "rftoolsbase:dimensionalshard"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7B672E0A73083814"]
+			hide_until_deps_visible: true
+			id: "3BD524C72E8F827E"
+			rewards: [
+				{
+					count: 4
+					id: "2002F8EA301F721A"
+					item: {
+						count: 1
+						id: "rftoolsbuilder:shape_card_def"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "75B29F5673DC3E1C"
+					item: {
+						count: 1
+						id: "rftoolsbuilder:builder"
+					}
+					type: "item"
+				}
+				{
+					id: "2BBB254C5450A1B2"
+					item: {
+						count: 1
+						id: "rftoolsbuilder:shape_card_quarry"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "72200B3385451F1D"
+			rewards: [
+				{
+					count: 16
+					id: "0B45DC8F63486F00"
+					item: {
+						count: 1
+						id: "mysticalagriculture:prosperity_shard"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 64L
+					id: "3D44311F415DA606"
+					item: {
+						count: 1
+						id: "mysticalagriculture:inferium_essence"
+					}
+					type: "item"
+				}
+				{
+					id: "587AE6C0F15662CF"
+					item: {
+						count: 1
+						id: "mysticalagriculture:infusion_altar"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "56D37B57E014C03F"
+					item: {
+						count: 1
+						id: "mysticalagriculture:infusion_pedestal"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["79F57C466CCEDE99", "303E595B495D1035"]
+			hide_until_deps_complete: true
+			id: "5F49C8CD46D8C9B6"
+			rewards: [
+				{
+					count: 4
+					id: "18F308D0895822E8"
+					item: {
+						count: 1
+						id: "replication:memory_chip"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3EAA4369338285ED"
+					item: {
+						count: 1
+						id: "replication:replicator"
+					}
+					type: "item"
+				}
+				{
+					id: "78C31E1141DBEE86"
+					item: {
+						count: 1
+						id: "replication:identification_chamber"
+					}
+					type: "item"
+				}
+				{
+					id: "4FC838F461CF7A29"
+					item: {
+						count: 1
+						id: "replication:matter_tank"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.2d
+		}
+	]
+}

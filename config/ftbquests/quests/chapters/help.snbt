@@ -1,0 +1,105 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "help"
+	group: ""
+	icon: {
+		count: 1
+		id: "minecraft:writable_book"
+	}
+	id: "4BD9623770D120B3"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "576D4EA0DD7E9CC9"
+			rewards: [
+				{
+					id: "687CFE35FCC4EB75"
+					item: {
+						count: 1
+						id: "minecraft:cake"
+					}
+					team_reward: true
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "50151045964ED5D2"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "0849D334FCCBAD39"
+			optional: true
+			rewards: [
+				{
+					id: "20BF2AC715BCC0D2"
+					item: {
+						count: 1
+						id: "minecraft:spyglass"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "433426E49A971261"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			id: "2C1CA0A8697CA78A"
+			optional: true
+			rewards: [
+				{
+					count: 3
+					id: "1255AEF8DCA3179E"
+					item: {
+						count: 1
+						id: "minecraft:book"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "62BA1E96F282F6A4"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			id: "2310393E54C81B63"
+			optional: true
+			rewards: [
+				{
+					count: 8
+					id: "40864A993720A5C7"
+					item: {
+						count: 1
+						id: "minecraft:golden_carrot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "520EB4136EEE65A0"
+					type: "checkmark"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+	]
+}

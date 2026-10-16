@@ -1,0 +1,369 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "nether_end"
+	group: "0297AE1DA7725E71"
+	icon: {
+		count: 1
+		id: "minecraft:obsidian"
+	}
+	id: "3ACB44675549787D"
+	order_index: 34
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "59876CEF95CC175D"
+			rewards: [
+				{
+					count: 10
+					id: "7336D800CD67FB49"
+					item: {
+						count: 1
+						id: "minecraft:obsidian"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "18E6CD865407A114"
+					item: {
+						count: 1
+						id: "minecraft:golden_carrot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:the_nether"
+					id: "208231EC930F632E"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["59876CEF95CC175D"]
+			hide_until_deps_visible: true
+			id: "14617EC0BF6751DC"
+			rewards: [
+				{
+					id: "268B3773C8E5ABAD"
+					item: {
+						count: 1
+						id: "minecraft:netherite_scrap"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "659AD01811C39450"
+					structure: "#tm:nether_fortresses"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["14617EC0BF6751DC"]
+			hide_until_deps_visible: true
+			id: "3EEB1D8EF10692D3"
+			rewards: [
+				{
+					count: 4
+					id: "528A316D2343B0DD"
+					item: {
+						count: 1
+						id: "minecraft:blaze_rod"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "52E5C62702A5E586"
+					item: {
+						count: 1
+						id: "minecraft:blaze_rod"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["59876CEF95CC175D"]
+			hide_until_deps_visible: true
+			id: "0423693F0C9B0CE1"
+			optional: true
+			rewards: [
+				{
+					count: 16
+					id: "4ECF29BC9E703207"
+					item: {
+						count: 1
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:nether/loot_bastion"
+					criterion: ""
+					id: "4A90E5850D9BAB99"
+					type: "advancement"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["59876CEF95CC175D"]
+			hide_until_deps_visible: true
+			id: "34DF7C72B2E048D6"
+			rewards: [
+				{
+					id: "6271F37232E64E5C"
+					item: {
+						count: 1
+						id: "minecraft:netherite_upgrade_smithing_template"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "53F2CDAA70E2C224"
+					item: {
+						count: 1
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["14617EC0BF6751DC"]
+			hide_until_deps_visible: true
+			id: "4A928966095278AE"
+			rewards: [
+				{
+					count: 2
+					id: "3698C403FDAE240F"
+					item: {
+						count: 1
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "27DEB33DE43738EF"
+					item: {
+						count: 1
+						id: "minecraft:wither_skeleton_skull"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["4A928966095278AE"]
+			hide_until_deps_visible: true
+			id: "7FDA6E6AF9FD7BD1"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0863B6D0E6B5EF1F"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "minecraft:wither"
+					id: "34FB15CE4F5C7C77"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["3EEB1D8EF10692D3", "71D8BB99E5D88603"]
+			hide_until_deps_visible: true
+			id: "326C96770BBAB2C1"
+			rewards: [
+				{
+					count: 8
+					id: "45A32C9C3A62008A"
+					item: {
+						count: 1
+						id: "minecraft:ender_pearl"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 12L
+					id: "02162414A84B810F"
+					item: {
+						count: 1
+						id: "minecraft:ender_eye"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["7FDA6E6AF9FD7BD1"]
+			hide_until_deps_visible: true
+			id: "3A2677C7B8D2C863"
+			optional: true
+			rewards: [
+				{
+					id: "448646F37CE65745"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:nether/create_beacon"
+					criterion: ""
+					id: "73ECF32BDD80054A"
+					type: "advancement"
+				}
+			]
+			x: 8.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["326C96770BBAB2C1"]
+			hide_until_deps_visible: true
+			id: "12C4E3E13498359C"
+			rewards: [
+				{
+					count: 2
+					id: "05D420F30C0BA0F0"
+					item: {
+						count: 1
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:the_end"
+					id: "752BA62F3F6B16E9"
+					type: "dimension"
+				}
+			]
+			x: 8.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["12C4E3E13498359C"]
+			hide_until_deps_visible: true
+			id: "6B65D9C434A94C3A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "20106E720B40ABDE"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "minecraft:ender_dragon"
+					id: "2DDBED4F774B4FBB"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6B65D9C434A94C3A"]
+			hide_until_deps_visible: true
+			id: "3CD8468EF8A30256"
+			rewards: [
+				{
+					count: 4
+					id: "19BCB3564823FF80"
+					item: {
+						count: 1
+						id: "minecraft:shulker_shell"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "52AFDAB7BBD398C8"
+					structure: "minecraft:end_city"
+					type: "structure"
+				}
+				{
+					id: "301C815EDE0D5A21"
+					item: {
+						count: 1
+						id: "minecraft:elytra"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["6B65D9C434A94C3A"]
+			hide_until_deps_visible: true
+			id: "5478D0FB370A839E"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "536E551E15C82AE5"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "35F0F98DA32AB97B"
+					structure: "mes:mega_ship_crashed"
+					type: "structure"
+				}
+			]
+			x: 12.0d
+			y: 0.8d
+		}
+	]
+}

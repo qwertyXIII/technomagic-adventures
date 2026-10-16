@@ -1,0 +1,43 @@
+{
+	filename: "specialization"
+	id: "18C3601BB49FCDA5"
+	loot_size: 1
+	order_index: 9
+	rewards: [
+		{
+			id: "1C000BA0F49C46C3"
+			item: {
+				count: 1
+				id: "immersiveengineering:hammer"
+			}
+		}
+		{
+			id: "65015DD13AE2C896"
+			item: {
+				count: 1
+				id: "ars_nouveau:novice_spell_book"
+			}
+		}
+		{
+			id: "056815055FF40F39"
+			item: {
+				count: 1
+				id: "minecraft:iron_sword"
+			}
+		}
+		{
+			id: "628D204E68492D06"
+			item: {
+				count: 1
+				id: "naturescompass:naturescompass"
+			}
+		}
+		{
+			id: "00D89690CB813843"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:backpack"
+			}
+		}
+	]
+}

@@ -1,0 +1,471 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chronicle_3"
+	group: "1DAFAF2C5B9599CE"
+	icon: {
+		count: 1
+		id: "minecraft:echo_shard"
+	}
+	id: "381B16232ECF1039"
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["332390974F946CE5"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "0EDE50C4EB9E6D61"
+			shape: "diamond"
+			tasks: [
+				{
+					dimension: "aether:the_aether"
+					id: "3E140140EC61F3F5"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0EDE50C4EB9E6D61"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "1D6BECB9ABF101AB"
+			rewards: [
+				{
+					id: "3558F6CAB1EDFBF6"
+					item: {
+						count: 1
+						id: "kubejs:sky_sample"
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0CB002FC07C3114D"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					entity: "aether:valkyrie_queen"
+					id: "4E25396472E0FBDE"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0EDE50C4EB9E6D61"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "368966E9EAA59AEA"
+			rewards: [
+				{
+					id: "218E236A698CA495"
+					item: {
+						count: 1
+						id: "kubejs:glider_log"
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1209B982B85C3721"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					entity: "aether:sun_spirit"
+					id: "7505549CFABFBAEB"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["332390974F946CE5"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "769DE442E4A23F8E"
+			rewards: [
+				{
+					count: 2
+					id: "4F6D756EEE0FB681"
+					item: {
+						count: 1
+						id: "bosses_of_mass_destruction:void_lily"
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "495220B19757DCE7"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					entity: "bosses_of_mass_destruction:void_blossom"
+					id: "02295666CC2B81BE"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["769DE442E4A23F8E"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "24156A3BB0E7142D"
+			shape: "diamond"
+			tasks: [
+				{
+					id: "76FED5233F4F2277"
+					item: {
+						count: 1
+						id: "kubejs:lethe_sample"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["332390974F946CE5"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "2A4BFC5D86366F23"
+			rewards: [
+				{
+					id: "0DD6319B1821C4D1"
+					item: {
+						count: 1
+						id: "kubejs:note_m_4"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "575AA39F4946B61E"
+					item: {
+						count: 1
+						id: "neovitae:ara_vitae"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["332390974F946CE5"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "1BCE305A5F58D1A5"
+			optional: true
+			shape: "circle"
+			tasks: [
+				{
+					dimension: "eternal_starlight:starlight"
+					id: "3FE903CDFF75CB6E"
+					type: "dimension"
+				}
+			]
+			x: 4.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["332390974F946CE5"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "187FAD0C23C43B72"
+			optional: true
+			shape: "circle"
+			tasks: [
+				{
+					dimension: "the_bumblezone:the_bumblezone"
+					id: "4097F191C89DAD77"
+					type: "dimension"
+				}
+			]
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["332390974F946CE5"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "6D6C17F4FC5B6552"
+			shape: "diamond"
+			tasks: [
+				{
+					id: "229EB3B578E0B9C0"
+					structure: "minecraft:ancient_city"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["6D6C17F4FC5B6552"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "02BDAAA2CE59494C"
+			rewards: [
+				{
+					id: "00EE2C83A620BD27"
+					item: {
+						count: 1
+						id: "kubejs:echo_chronicle"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					count: 4L
+					id: "6B81FC767E8B24EE"
+					item: {
+						count: 1
+						id: "minecraft:echo_shard"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["332390974F946CE5"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "54BB59B0C46381F3"
+			rewards: [
+				{
+					id: "029CEA9B0FEDF335"
+					item: {
+						count: 1
+						id: "kubejs:diary_ko"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "18E09D924C70AF68"
+					structure: "dungeons_arise:plague_asylum"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["54BB59B0C46381F3", "3FB0E498BE5F7490"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "698287A8E4FFB01B"
+			rewards: [
+				{
+					id: "0708ED696393F77E"
+					item: {
+						count: 1
+						id: "kubejs:note_m_5"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "3695C02843CAD83C"
+					item: {
+						count: 1
+						id: "kubejs:cargo_stencil"
+					}
+					type: "item"
+				}
+				{
+					id: "2EB2A412389686F9"
+					item: {
+						count: 1
+						id: "kubejs:diary_ko"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["332390974F946CE5"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "45E6A49925EB7FB2"
+			optional: true
+			rewards: [
+				{
+					id: "2A9ABE3A479DE5F8"
+					item: {
+						count: 1
+						id: "kubejs:watch_log"
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "67D1D81426AFF5D5"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					entity: "aquamirae:captain_cornelia"
+					id: "3CAF887B4FC444D8"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["332390974F946CE5"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "112DD0905A5AE8B2"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7478944E581682D1"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					entity: "cataclysm:the_harbinger"
+					id: "71163FE396F0EBA3"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["332390974F946CE5"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "126B5B26F7781A6A"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0896190E8FDB237A"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					entity: "cataclysm:maledictus"
+					id: "468F42E09A6C9734"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["332390974F946CE5"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "40BB0FB34BEA9700"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0A4F7355912C7985"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					entity: "cataclysm:ancient_remnant"
+					id: "6F38B38D68C07481"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["24156A3BB0E7142D", "698287A8E4FFB01B"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "66D4870256884787"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2E82F3ADB5772F1B"
+					table_id: 7227490514009532499L
+					type: "random"
+				}
+				{
+					id: "471A973FF6B1CBB6"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+				{
+					command: "/scoreboard players set {p} tm_story 6"
+					elevate_perms: true
+					id: "502A0A617700D972"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "3BD93836F80717CE"
+					type: "checkmark"
+				}
+			]
+			x: 6.0d
+			y: 3.0d
+		}
+	]
+}

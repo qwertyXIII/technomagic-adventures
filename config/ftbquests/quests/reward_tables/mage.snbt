@@ -1,0 +1,107 @@
+{
+	filename: "mage"
+	id: "2DD52000843E51A8"
+	loot_size: 3
+	order_index: 2
+	rewards: [
+		{
+			count: 16
+			id: "2EBB819E061E15E1"
+			item: {
+				count: 1
+				id: "ars_nouveau:source_gem"
+			}
+			weight: 15.0d
+		}
+		{
+			count: 16
+			id: "53E408014E791E94"
+			item: {
+				count: 1
+				id: "irons_spellbooks:arcane_essence"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 16
+			id: "457D52ACFD2EE9A4"
+			item: {
+				count: 1
+				id: "minecraft:experience_bottle"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 32
+			id: "75D1ED64F18F1975"
+			item: {
+				count: 1
+				id: "minecraft:lapis_lazuli"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 32
+			id: "226478B3B95429D6"
+			item: {
+				count: 1
+				id: "minecraft:amethyst_shard"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 8
+			id: "395AE9B2553409AA"
+			item: {
+				count: 1
+				id: "ars_nouveau:magebloom_fiber"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 8
+			id: "151BE6F9BFD3487A"
+			item: {
+				count: 1
+				id: "occultism:demons_dream_essence"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 4
+			id: "6A1D888D99C34E2B"
+			item: {
+				count: 1
+				id: "irons_spellbooks:common_ink"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 16
+			id: "096084B58F055EED"
+			item: {
+				count: 1
+				id: "malum:arcane_spirit"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 8
+			id: "15892F15CC384E9D"
+			item: {
+				count: 1
+				id: "forbidden_arcanus:arcane_crystal"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 16
+			id: "03D6184AE62DC411"
+			item: {
+				count: 1
+				id: "theurgy:mercury_shard"
+			}
+			weight: 6.0d
+		}
+	]
+}

@@ -134,7 +134,7 @@
 		# Hard limit for the number of chunks a team can force-load, regardless of how many members. Default of 0 means no hard limit.
 		# Default: 0
 		# Range: 0 ~ 2147483647
-		hard_team_force_limit: 0
+		hard_team_force_limit: 64
 		
 		# Max force loaded chunks.
 		# You can override this with FTB Ranks 'ftbchunks.max_force_loaded' permission
@@ -190,7 +190,7 @@
 		
 		# Default allow-fake-player setting for team properties
 		# Default: false
-		def_fake_players: false
+		def_fake_players: true
 		
 		# Default mob griefing protection for claimed chunks
 		# Default: false

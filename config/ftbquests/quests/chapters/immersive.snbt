@@ -1,0 +1,382 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "immersive"
+	group: "592F40102295DC55"
+	icon: {
+		count: 1
+		id: "immersiveengineering:hammer"
+	}
+	id: "50B1DBAD617A053D"
+	order_index: 15
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "749DD0A5DAE9B1DE"
+			rewards: [
+				{
+					id: "6E7F41EA25B5BC30"
+					item: {
+						count: 1
+						id: "immersiveengineering:manual"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "019BEA36FA27CC44"
+					item: {
+						count: 1
+						id: "immersiveengineering:hammer"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["749DD0A5DAE9B1DE"]
+			hide_until_deps_visible: true
+			id: "623E83FCBB4B5C17"
+			rewards: [
+				{
+					count: 32
+					id: "05FB3096E8BC5D47"
+					item: {
+						count: 1
+						id: "minecraft:clay_ball"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "immersiveengineering:main/mb_cokeoven"
+					criterion: ""
+					id: "77C7BC5E278BC463"
+					type: "advancement"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["623E83FCBB4B5C17"]
+			hide_until_deps_visible: true
+			id: "375D4519C0DE7288"
+			rewards: [
+				{
+					count: 16
+					id: "2BAF7D7230236E6A"
+					item: {
+						count: 1
+						id: "immersiveengineering:coal_coke"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "immersiveengineering:main/creosote"
+					criterion: ""
+					id: "5ED70420DE8D9F09"
+					type: "advancement"
+				}
+				{
+					count: 16L
+					id: "42D2FE4847B14447"
+					item: {
+						count: 1
+						id: "immersiveengineering:treated_wood_horizontal"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["623E83FCBB4B5C17"]
+			hide_until_deps_visible: true
+			id: "364127AC27609A41"
+			rewards: [
+				{
+					count: 16
+					id: "70917906DEF85728"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "immersiveengineering:main/mb_blastfurnace"
+					criterion: ""
+					id: "06CE626DDC6C65EF"
+					type: "advancement"
+				}
+			]
+			x: 4.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["364127AC27609A41"]
+			hide_until_deps_visible: true
+			id: "6F5A8856676AA527"
+			rewards: [
+				{
+					count: 4
+					id: "4357A657027FD042"
+					item: {
+						count: 1
+						id: "immersiveengineering:plate_steel"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "7D553DCB2AF2BE85"
+					item: {
+						count: 1
+						id: "immersiveengineering:stick_steel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "38123DD1F2D1B12E"
+					item: {
+						count: 1
+						id: "immersiveengineering:ingot_steel"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["375D4519C0DE7288"]
+			hide_until_deps_visible: true
+			id: "42B89C8DCAE36174"
+			rewards: [
+				{
+					count: 16
+					id: "482BCCE65CD045CF"
+					item: {
+						count: 1
+						id: "immersiveengineering:wire_copper"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "6B2F5EDF3FE4B342"
+					item: {
+						count: 1
+						id: "immersiveengineering:dynamo"
+					}
+					type: "item"
+				}
+				{
+					id: "55E3E63048C7B6CD"
+					item: {
+						count: 1
+						id: "immersiveengineering:watermill"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["42B89C8DCAE36174"]
+			hide_until_deps_visible: true
+			id: "3DD310DA00B7EA28"
+			rewards: [
+				{
+					count: 2
+					id: "7DA3A93FAC5E5962"
+					item: {
+						count: 1
+						id: "immersiveengineering:wirecoil_copper"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "immersiveengineering:main/connect_wire"
+					criterion: ""
+					id: "2B07CE93AB008200"
+					type: "advancement"
+				}
+				{
+					count: 4L
+					id: "75F859DDA2A9CDDF"
+					item: {
+						count: 1
+						id: "immersiveengineering:connector_lv"
+					}
+					type: "item"
+				}
+				{
+					id: "52D023F5A3644602"
+					item: {
+						count: 1
+						id: "immersiveengineering:capacitor_lv"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["6F5A8856676AA527"]
+			hide_until_deps_visible: true
+			id: "6AC30F8D3C2C37AB"
+			rewards: [
+				{
+					count: 4
+					id: "302224A7048862AF"
+					item: {
+						count: 1
+						id: "immersiveengineering:component_steel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5F8D0DC1B83DD3E2"
+					item: {
+						count: 1
+						id: "immersiveengineering:workbench"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "79F964963C804181"
+					item: {
+						count: 1
+						id: "immersiveengineering:component_iron"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["6AC30F8D3C2C37AB"]
+			hide_until_deps_visible: true
+			id: "1B1774140E2B3A93"
+			rewards: [
+				{
+					count: 4
+					id: "7BEEF5051B71DFAB"
+					item: {
+						count: 1
+						id: "immersiveengineering:heavy_engineering"
+					}
+					team_reward: true
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "immersiveengineering:multiblocks/mb_metalpress"
+					criterion: ""
+					id: "4A6FC4113A0FCC4A"
+					type: "advancement"
+				}
+				{
+					advancement: "immersiveengineering:multiblocks/mb_crusher"
+					criterion: ""
+					id: "2386C8E15638F7F5"
+					type: "advancement"
+				}
+			]
+			x: 10.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["3DD310DA00B7EA28", "6F5A8856676AA527"]
+			hide_until_deps_visible: true
+			id: "78C8E6AB856AC48A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1C15F33F4FCB035F"
+					table_id: 5242348113741014990L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "1DAC12D7CC543E74"
+					item: {
+						count: 1
+						id: "immersiveengineering:wirecoil_steel"
+					}
+					type: "item"
+				}
+				{
+					id: "1120ABBA9EA33242"
+					item: {
+						count: 1
+						id: "immersiveengineering:transformer_hv"
+					}
+					type: "item"
+				}
+				{
+					id: "338EB58373FEE9B2"
+					item: {
+						count: 1
+						id: "immersiveengineering:capacitor_hv"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["1B1774140E2B3A93", "78C8E6AB856AC48A"]
+			hide_until_deps_visible: true
+			id: "248A6209D635D643"
+			rewards: [
+				{
+					id: "07B6466B58DFA38A"
+					item: {
+						count: 1
+						id: "immersiveengineering:graphite_electrode"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "immersiveengineering:multiblocks/mb_arcfurnace"
+					criterion: ""
+					id: "1C354DEB8B8897EF"
+					type: "advancement"
+				}
+			]
+			x: 12.0d
+			y: 0.0d
+		}
+	]
+}

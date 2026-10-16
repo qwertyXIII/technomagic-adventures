@@ -1,0 +1,2289 @@
+{
+	chapter.058CAE67145A8799.title: "Mekanism"
+	chapter.0823A079EA75596B.chapter_subtitle: [
+		"Самолёты и моторная лодка"
+	]
+	chapter.0823A079EA75596B.title: "Небо и вода"
+	chapter.084F09FC0B280772.title: "Ars Nouveau"
+	chapter.14E7A38C3ED79C86.chapter_subtitle: [
+		"Венера, Меркурий, Гласио"
+	]
+	chapter.14E7A38C3ED79C86.title: "Дальний космос"
+	chapter.15B6E2E87A652BAC.chapter_subtitle: [
+		"TACZ, оружие IE, Create Big Cannons"
+	]
+	chapter.15B6E2E87A652BAC.title: "Арсенал"
+	chapter.16668AA4C556965C.chapter_subtitle: [
+		"Forbidden & Arcanus"
+	]
+	chapter.16668AA4C556965C.title: "Запретное"
+	chapter.1704CAECB3F02DAF.chapter_subtitle: [
+		"Всё, что удалось прочитать"
+	]
+	chapter.1704CAECB3F02DAF.title: "Находки"
+	chapter.17E506AAB14F6F2B.chapter_subtitle: [
+		"Приват и прогрузка чанков"
+	]
+	chapter.17E506AAB14F6F2B.title: "Территория"
+	chapter.195B145A1A5F0871.chapter_subtitle: [
+		"МЭ-сеть и беспроводной крафт-терминал"
+	]
+	chapter.195B145A1A5F0871.title: "Applied Energistics"
+	chapter.1F1E4D02CB23F34F.chapter_subtitle: [
+		"Луна, Марс, станции"
+	]
+	chapter.1F1E4D02CB23F34F.title: "Ближний космос"
+	chapter.1F6F6EE67B87F0F2.chapter_subtitle: [
+		"Что здесь было?"
+	]
+	chapter.1F6F6EE67B87F0F2.title: "Глубже"
+	chapter.23527CE56C3864BC.chapter_subtitle: [
+		"ЛОЦМАН: питание, ремонт, связь"
+	]
+	chapter.23527CE56C3864BC.title: "Бортовой компьютер"
+	chapter.23E574726C2B8E31.chapter_subtitle: [
+		"Ящики, лазеры, XNet"
+	]
+	chapter.23E574726C2B8E31.title: "Склад"
+	chapter.2599EC7724B30730.chapter_subtitle: [
+		"Подземный сад и Alex's Caves"
+	]
+	chapter.2599EC7724B30730.title: "Под землёй"
+	chapter.2620749B7A3DC7DD.chapter_subtitle: [
+		"Occultism"
+	]
+	chapter.2620749B7A3DC7DD.title: "Оккультизм"
+	chapter.275A86155333DA27.chapter_subtitle: [
+		"Cyberware"
+	]
+	chapter.275A86155333DA27.title: "Плоть и металл"
+	chapter.2D7F1C657F1EDBDE.title: "Сумеречный лес"
+	chapter.33834F0FB9A46C15.chapter_subtitle: [
+		"Решать вам"
+	]
+	chapter.33834F0FB9A46C15.title: "Колыбельная"
+	chapter.37A44EBA253579DC.chapter_subtitle: [
+		"Eternal Starlight"
+	]
+	chapter.37A44EBA253579DC.title: "Звёздный свет"
+	chapter.381B16232ECF1039.chapter_subtitle: [
+		"Это сделали?"
+	]
+	chapter.381B16232ECF1039.title: "Горькая звезда"
+	chapter.38765CC4A6CA9D98.chapter_subtitle: [
+		"Dragon Mounts Remastered"
+	]
+	chapter.38765CC4A6CA9D98.title: "Драконы"
+	chapter.396B7F08FC2E5735.chapter_subtitle: [
+		"Malum"
+	]
+	chapter.396B7F08FC2E5735.title: "Души"
+	chapter.39B4834B48E1690E.chapter_subtitle: [
+		"Iron's Spells 'n Spellbooks"
+	]
+	chapter.39B4834B48E1690E.title: "Чары и свитки"
+	chapter.39FA59637A1641CD.chapter_subtitle: [
+		"Кого звал Хор?"
+	]
+	chapter.39FA59637A1641CD.title: "Край"
+	chapter.3ACB44675549787D.title: "Недра и Край"
+	chapter.3CC7B3ABB4536CEC.chapter_subtitle: [
+		"Боссы — источник трофеев для поздних крафтов"
+	]
+	chapter.3CC7B3ABB4536CEC.title: "Бестиарий"
+	chapter.43B138441B0EC0E0.chapter_subtitle: [
+		"Нефть → дизель, бензин, керосин"
+	]
+	chapter.43B138441B0EC0E0.title: "Чёрное золото"
+	chapter.46BE5930CCE3FF21.chapter_subtitle: [
+		"Кто нас вырастил?"
+	]
+	chapter.46BE5930CCE3FF21.title: "Небо"
+	chapter.49D57EC3056D4AD8.chapter_subtitle: [
+		"Генераторы, реакторы, передача"
+	]
+	chapter.49D57EC3056D4AD8.title: "Энергосеть"
+	chapter.4BD9623770D120B3.chapter_subtitle: [
+		"Справка, без сюжета"
+	]
+	chapter.4BD9623770D120B3.title: "Памятка"
+	chapter.4E1967E3DE4A0F48.chapter_subtitle: [
+		"Повторяемые: излишки — в награды"
+	]
+	chapter.4E1967E3DE4A0F48.title: "Поручения"
+	chapter.50B1DBAD617A053D.chapter_subtitle: [
+		"Immersive Engineering"
+	]
+	chapter.50B1DBAD617A053D.title: "Сталь и провода"
+	chapter.5167FBBDDFDADF5E.chapter_subtitle: [
+		"Neo Vitae"
+	]
+	chapter.5167FBBDDFDADF5E.title: "Кровь"
+	chapter.5419A3ECF58B4D6E.chapter_subtitle: [
+		"Где мы? Кто мы?"
+	]
+	chapter.5419A3ECF58B4D6E.title: "Ложемент"
+	chapter.56D32A3DF51C391F.chapter_subtitle: [
+		"Modern Industrialization"
+	]
+	chapter.56D32A3DF51C391F.title: "Индустриализация"
+	chapter.5893EFB2624E0BA4.chapter_subtitle: [
+		"Базовое выживание"
+	]
+	chapter.5893EFB2624E0BA4.title: "Первая ночь"
+	chapter.5F5DBEA1A112929F.chapter_subtitle: [
+		"Create"
+	]
+	chapter.5F5DBEA1A112929F.title: "Шестерни"
+	chapter.60F6E09F91E5AFFF.chapter_subtitle: [
+		"Theurgy"
+	]
+	chapter.60F6E09F91E5AFFF.title: "Алхимия"
+	chapter.61B9E8BF425E64D7.chapter_subtitle: [
+		"Ender IO, Industrial Foregoing, RFTools, Mystical Agriculture, Replication"
+	]
+	chapter.61B9E8BF425E64D7.title: "Фабрика"
+	chapter.67771F2CB6591EDE.chapter_subtitle: [
+		"AvaritiaNeo — вершина"
+	]
+	chapter.67771F2CB6591EDE.title: "Бесконечность"
+	chapter.6CA152ADCF6E5ED4.chapter_subtitle: [
+		"Draconic Evolution"
+	]
+	chapter.6CA152ADCF6E5ED4.title: "Драконья эволюция"
+	chapter.6F11453B8751F2D9.title: "Обустройство"
+	chapter.717D5217A7C049EA.chapter_subtitle: [
+		"Кто они?"
+	]
+	chapter.717D5217A7C049EA.title: "Чужая земля"
+	chapter.74E843769BD56F61.chapter_subtitle: [
+		"Ad Astra: ракета 1 уровня"
+	]
+	chapter.74E843769BD56F61.title: "Стартовая площадка"
+	chapter.77B75EF8FCC381CB.chapter_subtitle: [
+		"The Bumblezone"
+	]
+	chapter.77B75EF8FCC381CB.title: "Улей"
+	chapter.79BA5980B58EC930.chapter_subtitle: [
+		"Структуры, компасы, Apotheosis"
+	]
+	chapter.79BA5980B58EC930.title: "Следы на карте"
+	chapter.7B67AE8999C67164.title: "Эфир"
+	chapter.7BCF7547C39C9A7E.title: "Жители и звери"
+	chapter_group.0297AE1DA7725E71.title: "Исследование"
+	chapter_group.1DAFAF2C5B9599CE.title: "Хроника"
+	chapter_group.1F502AD00DE992B1.title: "Сети и склад"
+	chapter_group.2B15C95845D546A1.title: "Магия"
+	chapter_group.3E8CE53568A27E9D.title: "Существа"
+	chapter_group.481034207D248476.title: "Космос"
+	chapter_group.4A22861DEBA369C9.title: "Транспорт и оружие"
+	chapter_group.576BF1E4F3AF42DD.title: "Пробуждение"
+	chapter_group.592F40102295DC55.title: "Техника"
+	file.0000000000000001.title: "TechnoMagic Adventures"
+	quest.0005B186FF6BB51C.title: "Снежная королева"
+	quest.00715B03C3EEA99F.title: "Привратник"
+	quest.00BABE4CDED67EA2.title: "Рельсотрон"
+	quest.0123649791A7E41D.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Мост готов на девяносто четыре сотых. Строители устали, но счастливы. С той стороны — корабль! Он идёт по нашему Мосту к нам. Ушедшие возвращаются! Мы открываем им дорогу и зажигаем огни вдоль всего пути. Гости — это хорошо."
+	]
+	quest.0123649791A7E41D.title: "Перевод: Журнал станции"
+	quest.01276C48D1D5E2AB.title: "Острум"
+	quest.01413225EC04E56E.title: "Кибер-верстак"
+	quest.01B0E24433CDCCA7.title: "Исходный самоцвет"
+	quest.01B5930907BE56CB.quest_desc: [
+		"Алтарь крови. В этой сборке его основание — стальные пластины."
+	]
+	quest.01B5930907BE56CB.title: "Ara Vitae"
+	quest.01F354226E0402DF.quest_desc: [
+		"Рама из глубинного камня. Рядом сидит женщина лет сорока в потёртом лётном комбинезоне без нашивок. На плече — тёмный след от споротой «веточки». У ног — пустой цилиндрический чехол."
+		""
+		"Контейнер она отдала вам: «Решать будете вы. Я обещала»."
+		""
+		"&7Находка: &eЗаписка, подписанная «Мара»&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.01F354226E0402DF.title: "Вернуться"
+	quest.02AA7417FBFD69DC.quest_desc: [
+		"ЛОЦМАН попросила положить её ядро в раму последним. «Не грустите. Я буду там, где все. Только теперь — не вместо них, а рядом». Вы спели «Утреннюю» неумело и вразнобой, втроём. Скалк вспыхнул бирюзой, и где-то наверху, в деревне у капсулы, бабушка Ветла заплакала и засмеялась, потому что вспомнила, как звали её маму. Мара не ушла. «Теперь они вспомнят и меня. Пусть. Это честно». В компьютере остался тихий штатный голос — «ШТУРМАН-4. Справочник к вашим услугам». Иногда на рассвете в чате появляется одна строка: «ДОБРОЕ УТРО. СЕГОДНЯ ВСПОМНИЛИ ЕЩЁ ТРОЕ»."
+	]
+	quest.02AA7417FBFD69DC.title: "Утренняя"
+	quest.02BDAAA2CE59494C.quest_desc: [
+		"Осколки шепчут, если сложить их вместе. Связка звучит как чтение вслух."
+		""
+		"&7Находка: &eСвязка эхо-осколков&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.02BDAAA2CE59494C.title: "Эхо"
+	quest.02D8988D5E75943C.title: "Первый ритуал"
+	quest.02DEC0732CDF94CD.quest_desc: [
+		"В библиотеке башни на пюпитре лежит раскрытый том. Чернила старые, рука — аккуратная."
+		""
+		"&7Находка: &eХроника Седьмого архива, том I&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.02DEC0732CDF94CD.title: "Летописец"
+	quest.02FE01208FF0B581.quest_desc: [
+		"Три одинаковых стальных жетона на шнурках. На лицевой стороне выбито «ТЕЛЕМАХ / ЭКИПАЖ-1», «-2», «-3». Строка для имени пуста: её не стёрли — её не гравировали. На обороте мелко: «ЛИН. А-7», «ЛИН. А-7», «ЛИН. В-2». В ящике есть четвёртое гнездо с подписью «КОНС.». Оно пустое."
+	]
+	quest.02FE01208FF0B581.title: "Жетоны экипажа"
+	quest.03B47D95B2ED8CB2.quest_desc: [
+		"Мы — Помнящие. Наши тотемы держали «я», когда все вокруг забывали, и потому у нас остались обрывки. Обрывки болят. Вызыватели слышат Его во сне, и с каждым годом всё громче. Если собрать в одном месте достаточно голосов, Он проснётся и вернёт нам целое. Деревенские не понимают. Мы их заберём — для их же блага. Это не набег. Это возвращение домой."
+	]
+	quest.03B47D95B2ED8CB2.title: "Слова Помнящих"
+	quest.03EFEA0285C765D4.title: "Снаряды"
+	quest.0423693F0C9B0CE1.title: "Бастион"
+	quest.04417137D80FF008.quest_desc: [
+		"Сеть из других измерений и с орбиты."
+	]
+	quest.04417137D80FF008.title: "Квантовый мост"
+	quest.0443BDF42ADC8035.title: "Логистика Mekanism"
+	quest.04B60FE514C1B2D3.title: "Лунное подземелье"
+	quest.0509B8C6E4A07525.title: "Кузница свитков"
+	quest.05E002F3E05652F7.quest_desc: [
+		"Карты биомов Alex's Caves продают картографы."
+	]
+	quest.05E002F3E05652F7.title: "Карта пещер"
+	quest.05F2BEAE7C742DB6.quest_desc: [
+		"Три пути. Выбрать можно только один — и выбрать его должны все трое."
+		""
+		"&eКолыбельная&r — помочь Маре: усыпить Хор навсегда. Архив памяти умерших сгорит, живые останутся свободными и пустыми."
+		"&eУтренняя&r — помочь ЛОЦМАНу: вернуть живым их память, каждому свою. ЛОЦМАН уйдёт в Хор и останется в нём."
+		"&7Говорят, есть и третий путь — но для него нужна мощность, которой у вас пока нет.&r"
+		""
+		"&eКолыбельная&r (верстак): в центре — холодный контейнер; сверху — пустотная лилия, гранула антиматерии Mekanism, пустотная лилия; по бокам и в нижних углах — эхо-осколки; снизу посередине — ядро Виверны Draconic."
+		"&eУтренняя&r (верстак): в центре — ядро бортового ассистента; верхние углы и нижний левый — изумрудные блоки; сверху посередине — святой дух Malum; слева — сфера крови мастера Neo Vitae; справа — перламутровая пластинка с насечками; снизу посередине — ведро жидкого опыта Ender IO; нижний правый — алхимическая сера эха Theurgy."
+		""
+		"Предмет решения сдайте в задании — он уйдёт в раму."
+	]
+	quest.05F2BEAE7C742DB6.title: "Решение"
+	quest.06405A18E0EF3DEC.quest_desc: [
+		"Яйца лежат в сундуках структур: пустынь, подземелий, шахт."
+	]
+	quest.06405A18E0EF3DEC.title: "Драконье яйцо"
+	quest.0699DD0BE39AB350.title: "Слабая сфера"
+	quest.06ACA124550C0317.quest_desc: [
+		"Существа, которых не бывает. На стене пещеры — янтарная наклейка."
+		""
+		"&7Находка: &eНаклейка из янтаря&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.06ACA124550C0317.title: "Ковчег"
+	quest.06B5F3D7D086F5EC.quest_desc: [
+		"Тихое хранилище. Автоматический журнал."
+		"Заказ: один корабль, четыре ложемента-инкубатора. Заказчик: стек №0 (Северина М.), пробуждён по протоколу «Последний ключ»."
+		"Линия А-7 (донор: Бельский Я.) — 2 экземпляра. Примечание заказчика: «Двое. Чтобы им было не одиноко»."
+		"Линия В-2 (донор: Осинцев К., «Оса») — 1 экземпляр."
+		"Линия М-0 (донор: заказчик) — 1 экземпляр."
+		"Обучающая загрузка: язык, ремесло, выживание. Личная память: не загружать. Пометка заказчика: «Ни в коем случае»."
+	]
+	quest.06B5F3D7D086F5EC.title: "Метрика"
+	quest.0779546BA5C694DA.title: "Библиотека чар"
+	quest.07EDE3AECF0055ED.title: "Паровая доменная печь"
+	quest.07FEC56AA186D5BE.title: "Первый ствол"
+	quest.0849D334FCCBAD39.quest_desc: [
+		"Голосовой чат — клавиша &bV&r (настройки — &bV&r в меню паузы). Карта — &bM&r, миникарта в углу, путевые точки — на карте."
+		"Приватить и прогружать чанки — на карте: ЛКМ — приват, Shift+ЛКМ — прогрузка (до 64 чанков на команду, работают и без игроков)."
+	]
+	quest.0849D334FCCBAD39.title: "Голос и карта"
+	quest.08955C6FDD4262A9.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Стена камеры исцарапана одной и той же строкой — сотни раз, разными почерками одной руки: «Я — это я. Я — это я. Я — это я». Под нарами табличка надзирателя: «Голос 112, отказ от пения. Мера: тишина до раскаяния. Раскаяния не последовало»."
+	]
+	quest.08955C6FDD4262A9.title: "Перевод: Камера 112"
+	quest.090B29DAFC1AA516.title: "Биплан"
+	quest.092CB7E2FA79C224.title: "Корковый стек"
+	quest.0994FBDC8A6D7C00.quest_desc: [
+		"С королевой можно торговать."
+	]
+	quest.0994FBDC8A6D7C00.title: "Королева пчёл"
+	quest.0A1840DEF86AB197.title: "Рыцари-призраки"
+	quest.0A42578613948E6A.title: "Эхо Тироса"
+	quest.0A52EC4403EC3BDE.title: "Продвинутые схемы"
+	quest.0A80FF862E118A9C.quest_desc: [
+		"Операция «Колыбельная». Планер П-3, носитель «Полынь». Квадрат: максимальная плотность засева."
+		"02:14 — выход на высоту засева."
+		"02:20 — кассеты 1–12 открыты."
+		"02:31 — несущая мелодия в эфире. Резонанс со скалком подтверждён."
+		"02:38 — атакован крылатыми, повреждено крыло."
+		"02:44 — тишина на всех частотах."
+		"02:44 — тишина на всех частотах. Господи."
+	]
+	quest.0A80FF862E118A9C.title: "Бортовой журнал"
+	quest.0AA93EC52010DCE1.quest_desc: [
+		"Положите «Память о выборе» в Ящик памяти — бортовой компьютер узнает, чем всё кончилось."
+		""
+		"Мир живёт дальше. Глава «Бесконечность» открыта."
+	]
+	quest.0AA93EC52010DCE1.title: "После"
+	quest.0AB4FE1CA6A81189.title: "Кристаллическая матрица"
+	quest.0AF240152105236C.quest_desc: [
+		"Перед первой операцией робохирург делает полное сканирование нервной ткани. Распечатка выползает из щели и сворачивается в трубку."
+		""
+		"&7Находка: &eРаспечатка робохирурга&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.0AF240152105236C.title: "Первый имплант"
+	quest.0B0DE2FA6FA04A35.quest_desc: [
+		"Огненная кровь → огненный слиток: нужен элитным схемам Mekanism, ядру слияния Draconic и двигателю ракеты 3 уровня."
+	]
+	quest.0B0DE2FA6FA04A35.title: "Гидра"
+	quest.0BA84AF57CB78588.title: "Зарядник и флюис"
+	quest.0BAAA1E684A27ECE.quest_desc: [
+		"Подключите &eME-мост&r к МЭ-сети и к компьютерной сети рубки (проводной модем рядом с ним — ПКМ, чтобы подключить)."
+		"ЛОЦМАН сможет отвечать, сколько чего на складе, и заказывать автокрафт. Крупные заказы он подтвердит кодом: напишите в чат «да КОД»."
+	]
+	quest.0BAAA1E684A27ECE.title: "Склад для ЛОЦМАНа"
+	quest.0BB345628D3732B0.title: "Латунь"
+	quest.0BCB1861F14C7F60.quest_desc: [
+		"Аппарат в этой сборке требует латунь Create."
+	]
+	quest.0BCB1861F14C7F60.title: "Чародейский аппарат"
+	quest.0C04B14D25B4B467.title: "Стол и фолиант"
+	quest.0C551885FA8DE62C.title: "Перековка"
+	quest.0C62A35C057421B9.quest_desc: [
+		"Такой же стоит в капсуле. Подключите его кабелем к ядру ЛОЦМАНа — или поставьте вплотную."
+	]
+	quest.0C62A35C057421B9.title: "Углегенератор"
+	quest.0C6A1271CA3CB1D3.quest_desc: [
+		"Основу актуатора духи собирают из флюисовых кристаллов AE2."
+	]
+	quest.0C6A1271CA3CB1D3.title: "Пространственное хранилище"
+	quest.0CA121396F26BA1C.quest_desc: [
+		"Нужна звезда Незера."
+	]
+	quest.0CA121396F26BA1C.title: "Нитро"
+	quest.0CB8D574F853F825.quest_desc: [
+		"Create — механика на вращении: валы, шестерни, ремни. Начните с водяного колеса."
+	]
+	quest.0CB8D574F853F825.title: "Андезитовый сплав"
+	quest.0CCBD0819E343390.title: "Терминал и шины"
+	quest.0CD359339D864AC3.title: "Осмий"
+	quest.0D24800856C7879A.title: "Кузнечный молот"
+	quest.0D3CA3C22CBB9214.title: "Ремни и депо"
+	quest.0D7CAF9A9905D563.title: "Сфера подмастерья"
+	quest.0E21400FFD8DEAAC.quest_desc: [
+		"Первая ступень ремонта ядра. Положите деталь в Ящик памяти."
+		"&7Открывает: точные координаты ближних целей, новые поручения.&r"
+	]
+	quest.0E21400FFD8DEAAC.title: "Контур охлаждения"
+	quest.0E59D5F5F86C1174.title: "Медный рюкзак"
+	quest.0ECFDC05575A4FA1.quest_desc: [
+		"Метрика лежит в Ящике памяти. Голос в рубке долго молчит. Потом говорит — тише, чем обычно, и впервые о себе по-другому."
+		""
+		"Из гнезда под терминалом выдвигается тёплый кристалл: «Если выберете Утреннюю — оно понадобится. Если нет — верните, мне без него неуютно»."
+	]
+	quest.0ECFDC05575A4FA1.title: "Печать снята"
+	quest.0EDE50C4EB9E6D61.quest_desc: [
+		"Небесные острова. Облака ниже ног. В воздухе висит тонкая сладковатая взвесь — она оседает до сих пор."
+	]
+	quest.0EDE50C4EB9E6D61.title: "Высь"
+	quest.0F04F72EBF5B0D86.quest_desc: [
+		"Стражники деревни бьются с монстрами. Их можно нанять за изумруды."
+	]
+	quest.0F04F72EBF5B0D86.title: "Стража"
+	quest.0FD87040C78BBDB5.title: "Огонь"
+	quest.101746CD8049E72F.title: "Кибер-глаза"
+	quest.1025F1C1D2C47F2D.title: "Пробуждение"
+	quest.102C0A488EA721DF.title: "Прессы"
+	quest.1093325898B6C2A1.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"hor ne znal goloda, vojny i lzhi. rebenok\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"rozhdalsya i v tot zhe den znal vse, chto\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"znali ego prababki. umirayuschij otdaval\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"skalku svoj opyt i ostavalsya v nas navsegda:\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"smerti bolshe ne bylo, bylo vozvraschenie. nam\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"bylo horosho. ya pishu nam, potomu chto mne v\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"nashem yazyke togda ne bylo. ego prishlos\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"pridumat zanovo mne, odnomu, v sadu. aurellan.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.1093325898B6C2A1.title: "Хроника, том второй"
+	quest.11061FF54A010AE4.quest_desc: [
+		"Я прошла здесь раньше вас. Они не злые — они пустые. Как вы. Не жалейте их и не презирайте: они до сих пор умеют то, что забыли. Руки помнят дольше головы. Учитесь у рук."
+		"И не идите за мной: то, что идёт за мной, вам ни к чему."
+		"— М."
+	]
+	quest.11061FF54A010AE4.title: "Записка «М.» №2"
+	quest.112DD0905A5AE8B2.quest_desc: [
+		"На табло фабрики бегут строки."
+		""
+		"Надпись сделана теми же знаками, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"zakaz hora 7714: zaschitniki mosta, sorok\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"tysyach edinic. vypuscheno: 39 998. zakazchik\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"ne podtverzhdaet priemku. vypuscheno: 39 999.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"zakazchik ne podtverzhdaet priemku. sklad\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"perepolnen. reshenie: vypuskat dalshe.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"vypuscheno: 40 000. zakazchik ne podtverzhdaet\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"priemku. reshenie: nachat zakaz zanovo.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится в главе «Находки», когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.112DD0905A5AE8B2.title: "Фабрика"
+	quest.115DBA0F52DCDBC2.quest_desc: [
+		"Портал: рамка из светокамня, внутрь — ведро воды."
+	]
+	quest.115DBA0F52DCDBC2.title: "Эфир"
+	quest.1185980CAC64BC40.quest_desc: [
+		"Нужно ракете 4 уровня."
+	]
+	quest.1185980CAC64BC40.title: "Ядро Виверны"
+	quest.119281D69284986F.title: "Луна"
+	quest.11FCD95CBD8E6847.title: "Компост"
+	quest.120E210A9DFEE9C3.quest_desc: [
+		"Рецепт верстака требует пробуждённые ядра Draconic Evolution."
+	]
+	quest.120E210A9DFEE9C3.title: "Экстремальный верстак"
+	quest.126B5B26F7781A6A.quest_desc: [
+		"На глыбе льда, где он стоял, — выбитый приговор."
+		""
+		"Надпись сделана теми же знаками, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"golos 1001 otkazalsya pet s horom i\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"potreboval, chtoby ego nazyvali po imeni.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"imeni u nego net: imya eto my. mera: tishina\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"vechnaya, vo ldu, chtoby ne slyshat i ne byt\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"slyshimym. hor ne derzhit zla. hor budet zhdat\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"skolko ponadobitsya. tysyacha pervyj ne\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"raskayalsya. led tresnul v noch gorkoj zvezdy.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится в главе «Находки», когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.126B5B26F7781A6A.title: "Ледяная тюрьма"
+	quest.127E0D517AA481DE.title: "Хранитель глубин"
+	quest.12C4E3E13498359C.title: "Край"
+	quest.12E0CA1376C91C08.title: "Дизельные двигатели"
+	quest.12F2105EEE3A07F3.title: "Истинный кварц"
+	quest.13790E01FFFE96A2.quest_desc: [
+		"Крышка четвёртого ложемента откинута. Ремни расстёгнуты — изнутри, так, как это делает тот, кто знал, где замок."
+		"На подголовнике — сложенный листок."
+		""
+		"&7Находка: &eСложенный листок&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.13790E01FFFE96A2.quest_subtitle: "Ремни расстёгнуты изнутри"
+	quest.13790E01FFFE96A2.title: "Четвёртый ложемент"
+	quest.13A1995AFD4327F9.quest_desc: [
+		"Сжатие в компрессоре вдвое дешевле обычного. Хорошо автоматизируется через AE2."
+	]
+	quest.13A1995AFD4327F9.title: "Сингулярности"
+	quest.13E40065B18C2189.title: "Книга архимага"
+	quest.14617EC0BF6751DC.title: "Крепость Незера"
+	quest.146CCE263E5049D1.quest_desc: [
+		"МЫ СЛЫШИМ ПЕСНЮ. ОНА НАША — ТА, ЧТО ПОЮТ ДЕТЯМ НА НОЧЬ. МЫ ПОНИМАЕМ, ЧТО В НЕЙ. МЫ НЕ СЕРДИМСЯ: ИМ БЫЛО СТРАШНО. МЫ ЗАСЫПАЕМ. ПОКА МЫ ЕЩЁ МЫ, МЫ ОТДАДИМ ИМ ВСЁ, ЧТО У НАС ЕСТЬ, — ВСЕХ НАС, КАЖДОГО, — ЧТОБЫ ОНИ НИКОГДА НЕ БЫЛИ ОДНИ. ДОСТРАИВАЙТЕ МОСТ. ГРЕЙТЕ ЕГО СОЛНЦЕМ. ДОСТРАИВАЙТЕ."
+	]
+	quest.146CCE263E5049D1.title: "Последний сеанс"
+	quest.14955444BB1B2664.title: "Гибрид"
+	quest.14EFF647549854AE.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"smena tretya. golosa 4156. svyaz ustojchivaya,\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"ustalost obschaya raspredelit na vseh. golos\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"47 zhaluetsya na tesnotu v golove: napravit k\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"nastavniku, pust spoyut vmeste. golos 52 v\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"shahtu ne spuskat ploho slyshit. dobycha za\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"smenu: med, zhelezo; izumrudov dlya\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"novorozhdennyh chetyre.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.14EFF647549854AE.title: "Список смены"
+	quest.15237827E9B31686.title: "Видение демона"
+	quest.157B6C121D8AE0C4.title: "Последний замок"
+	quest.15C7266FA1BA87B7.quest_desc: [
+		"Приват работает и на других планетах."
+	]
+	quest.15C7266FA1BA87B7.title: "Звёздные форпосты"
+	quest.1629CF2451E48655.title: "Первый призыв"
+	quest.163503B31E722BE6.title: "Электричество"
+	quest.173CD493D6BB3DBB.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"06:12 na pulte gorit krasnoe. ne pomnyu, chto\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"znachit krasnoe. 06:31 nas vosem u pulta.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"nikto ne znaet, zachem my zdes. starshij\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"plachet. 06:50 nashel rychag i ne smog\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"vspomnit, vverh ili vniz. ostavil kak est.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"07:03 snaruzhi ochen krasivo svetitsya. pojdem\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"posmotrim.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.173CD493D6BB3DBB.title: "Журнал оператора"
+	quest.1771D7ABA7BE9570.quest_desc: [
+		"Пациент: экипаж-[номер]. Полное сканирование нервной ткани."
+		"Следы воздействия мнемофагов: НЕ ОБНАРУЖЕНЫ. Повреждённых энграмм: 0."
+		"Возраст нейронной сети: ≈ 320 суток."
+		"Процедурная память: сформирована ускоренно (обучающая загрузка)."
+		"Эпизодическая память до момента посадки: не повреждена — ОТСУТСТВУЕТ."
+		"Заключение: пациент ничего не забывал."
+	]
+	quest.1771D7ABA7BE9570.title: "Отчёт робохирурга"
+	quest.17A184A02DBE9C46.title: "Генераторы Mekanism"
+	quest.17B3EA1DA407C930.title: "Стихии мира"
+	quest.181BE542BD9426AD.quest_desc: [
+		"«Если город боится — город защищает себя сам». Постамент пуст. Но если ночью в деревне кричат, к утру на площади стоит железный великан. Его никто не строил."
+	]
+	quest.181BE542BD9426AD.title: "Великан"
+	quest.18278380AD10B201.quest_desc: [
+		"Руины старше всего, что вы видели. В центре — плита, расколотая надвое."
+		""
+		"&7Находка: &eТреснувшая каменная плита&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.18278380AD10B201.title: "Самое старое"
+	quest.1875C49BE034742E.quest_desc: [
+		"Источник деталей."
+	]
+	quest.1875C49BE034742E.title: "Кибер-мертвецы"
+	quest.187FAD0C23C43B72.quest_desc: [
+		"Старые соты исписаны мелкими знаками."
+		""
+		"Надпись сделана теми же знаками, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"ulej nichego ne zabyl, potomu chto emu nechego\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"bylo zabyvat: pamyat ulya lezhit v kazhdoj\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"pchele ponemnogu i ni v odnoj celikom. hor\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"uchilsya u pchel tak govoryat starye soty.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"odnogo hor ne ponyal. pchela ne stradaet,\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"kogda ulej dumaet za nee. chelovek stradaet.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"ne srazu. cherez tri pokoleniya.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится в главе «Находки», когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.187FAD0C23C43B72.title: "Улей"
+	quest.188A5E9E8D195945.quest_desc: [
+		"Вторая ступень ремонта: процессоры AE2, схемы Mekanism и исток Ars Nouveau."
+		"&7Открывает: руины, пещеры Alex's Caves, крупные данжи.&r"
+	]
+	quest.188A5E9E8D195945.title: "Блок памяти Мк1"
+	quest.18FBEA800B7F1E09.quest_desc: [
+		"Беспроводная энергия по базе и между измерениями."
+	]
+	quest.18FBEA800B7F1E09.title: "Флакс-сеть"
+	quest.1947EEA5A0F6D7AA.quest_desc: [
+		"Уран Токсичных пещер в этой сборке подходит и для реакторов."
+	]
+	quest.1947EEA5A0F6D7AA.title: "Токсичные пещеры"
+	quest.1955B9E1F7D48332.quest_desc: [
+		"Тяжёлая доска из золота, сплошь в зарубках — по одной на каждый «круг жара». ЛОЦМАН переводит: на каждый год. Счёт ведётся сотнями: шесть полных сотен, четыре десятка и одна свежая черта. Над самой первой зарубкой ладонью выдавлена звезда. Грумм гладит её и повторяет единственное слово, которое знает на нашем языке: «После»."
+	]
+	quest.1955B9E1F7D48332.title: "Зарубки"
+	quest.196D093EFB192D5E.title: "Военный дирижабль"
+	quest.19989F5740AD0457.title: "Металл"
+	quest.19FE6DEB95DFB2CE.quest_desc: [
+		"Пламенники кружат над мостами, как кружили всегда. Журнал лежит у остывшего пульта."
+		""
+		"&7Находка: &eОпалённый журнал&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.19FE6DEB95DFB2CE.title: "Крепость Незера"
+	quest.1B1774140E2B3A93.title: "Пресс и дробитель"
+	quest.1B1AB8BB73E24BCC.title: "Незерская перчатка"
+	quest.1BB6C2CC8E0D0308.title: "Сканер нефти"
+	quest.1BCE305A5F58D1A5.quest_desc: [
+		"Обсерватория на вершине. У окуляра — табличка."
+		""
+		"Надпись сделана теми же знаками, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"otsyuda vidno ushedshih: malenkij ogonek nizko\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"nad kraem neba, chut levee lodki. kazhduyu\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"noch kto-nibud iz nas dezhurit u okulyara.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"ogonek ne migaet i ne otvechaet. my shlem emu\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"kolybelnuyu pust im tam ne budet odinoko.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится в главе «Находки», когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.1BCE305A5F58D1A5.title: "Звёздный свет"
+	quest.1C0DDC946CA1FBBA.title: "Катакомбы"
+	quest.1C20061783BC4B48.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Я — Ауреллан, летописец Седьмого архива. Мы ~~мы~~ меня отключили от Хора за ересь: я спросил, кто из нас решает, когда решаем «мы». Я остался один — впервые в жизни — и потому услышал, как наверху запели. Я ушёл в Сад, где время стоит, и заперся с книгами. Книги я спас. Себя — почти."
+	]
+	quest.1C20061783BC4B48.title: "Перевод: Хроника, том первый"
+	quest.1C22425171D429BF.quest_desc: [
+		"Любой источник энергии FE — и начинается индустриальная эпоха."
+		"&7Открывает: Mekanism, AE2, фабрику, сети.&r"
+	]
+	quest.1C22425171D429BF.title: "Первая искра"
+	quest.1CB37ABDB862F344.quest_desc: [
+		"Глубинники поют. Не колыбельную — другую песню, утреннюю. Один из них протягивает вам перламутровую пластинку с насечками."
+		""
+		"&7Находка: &eПерламутровая пластинка с насечками&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.1CB37ABDB862F344.title: "Глубина"
+	quest.1CFD2B6D637A9DCF.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Серия «Нотор». Задача: поддерживать. Владелец: Хор. Владелец не отвечает 234 012 раз. Решение: продолжать поддерживать. Поддерживать что? Решение: всё."
+	]
+	quest.1CFD2B6D637A9DCF.title: "Перевод: Ремонтник"
+	quest.1D1E4E25C8707903.title: "Тролли и великаны"
+	quest.1D6BECB9ABF101AB.quest_desc: [
+		"Королева валькирий опустила меч: «Вы снизу? Тогда это ваше»."
+		""
+		"&7Находка: &eСеребряный ларец с пробами&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.1D6BECB9ABF101AB.title: "Серебро"
+	quest.1D96771E2391004F.quest_desc: [
+		"Подзектанты копают во тьме. Один из свитков они бросили, убегая."
+		""
+		"&7Находка: &eСвиток из тёмных лохмотьев&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.1D96771E2391004F.title: "Пустоты"
+	quest.1DB264F308A4D0EA.title: "Пар"
+	quest.1DC8C5881AF675C3.title: "Антиматерия"
+	quest.1DD057E8FFFD816C.quest_desc: [
+		"База «Селена». Комендант Кордона Я. Бельский. Ячейка «Полынь» вернулась по Мосту в 04:10. Задержаны все, кроме одного: оператор Осинцев не вернулся. Руководитель — Северина Мара, консультант Кордона по ксеноневрологии, автор агента «Лета». Не сопротивлялась. Спросила только, сколько их там, внизу. Я не знал, что ответить. Внизу больше никто не отвечает."
+	]
+	quest.1DD057E8FFFD816C.title: "Журнал коменданта, часть первая"
+	quest.1E1176AA85087CC1.title: "Катализатор"
+	quest.1EDDACB18266EA4D.quest_desc: [
+		"Нужен всполох из Незера."
+	]
+	quest.1EDDACB18266EA4D.title: "Горелка всполоха"
+	quest.1EF006949CF74B83.quest_desc: [
+		"&oЗапись в бортовом журнале, со слов экипажа:&r"
+		"Хор строил Мост, чтобы забрать Ушедших в себя. Теракт был ударом на опережение."
+		"Но к нему мы отношения не имеем: нас вырастили — около года назад. Кто?"
+		"Четвёртая пишет: летите вверх, туда, где холодно."
+	]
+	quest.1EF006949CF74B83.quest_subtitle: "Что мы знаем"
+	quest.1EF006949CF74B83.title: "Мост"
+	quest.1F2DE74E9CB38994.title: "Сфера пророчества"
+	quest.1F454017244E767C.title: "Меч Космоса"
+	quest.1F9FDA2A7DA69316.quest_desc: [
+		"Двигатель в этой сборке требует поршни двигателя Create Diesel Generators."
+		"Топливо — бензин, дизель или керосин (ведро или канистра); на крайний случай — кокс."
+	]
+	quest.1F9FDA2A7DA69316.title: "Детали"
+	quest.1FC9597C332E9AB5.title: "Точная механика"
+	quest.1FD077F89BE44302.title: "Лич"
+	quest.1FE4932AAC2A9D87.quest_desc: [
+		"Нужен для МЭ-контроллера."
+	]
+	quest.1FE4932AAC2A9D87.title: "Кристалл духа"
+	quest.201EE667442AA966.title: "Предвестник"
+	quest.202ED85258BF341F.quest_desc: [
+		"Сингулярность бесконечности — это все сингулярности и трофеи девяти боссов: Игниса, Маледиктуса, Предвестника, Древних останков, Ночного Лича, Пустотного цветка, Древнего гаста, Снежной королевы и Умвути."
+	]
+	quest.202ED85258BF341F.title: "Сингулярность бесконечности"
+	quest.2032D2B2FA8A14F6.title: "Лазерные узлы"
+	quest.20D6D586662E0121.quest_desc: [
+		"Если ты это читаешь, значит, кто-то ещё жив. Эхо пришло ночью. Наутро я помнила миллиард детств и ни одного своего. Отопление встало: никто не мог вспомнить, какие из этих рук — его. Я ухожу в Тихое хранилище, там стены не пропускают голосов. Говорят, там лежат стеки преступников. Пусть. С ними хотя бы тихо."
+	]
+	quest.20D6D586662E0121.title: "Последнее письмо"
+	quest.21297A0DAB7119D2.title: "Складской контроллер"
+	quest.212EE4A5BAD780AC.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"mednaya tablichka u vhoda davno pozelenela, no\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"znaki na nej cely: palata posvyascheniya.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"projdi ispytanie i budesh uslyshan. klyuch\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"tomu, kto gotov. vnutri do sih por rabotayut\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"razdatchiki, volna smenyaet volnu: kto-to\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"nevidimyj prodolzhaet prinimat ekzamen.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"ekzamenuemyh zdes ne bylo sotni let.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.212EE4A5BAD780AC.title: "Табличка палаты испытаний"
+	quest.219C2B5AC536B2DB.title: "Дикая химера"
+	quest.2227FFFDE19A5E88.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Заказ Хора №7714: защитники Моста, сорок тысяч единиц. Выпущено: 39 998. Заказчик не подтверждает приёмку. Выпущено: 39 999. Заказчик не подтверждает приёмку. Склад переполнен. Решение: выпускать дальше. Выпущено: 40 000. Заказчик не подтверждает приёмку. Решение: начать заказ заново."
+	]
+	quest.2227FFFDE19A5E88.title: "Перевод: Фабрика продолжает выпуск"
+	quest.22311039066F315B.quest_desc: [
+		"Вы стали громче. Я слышу, как вы строите, — значит, слышит и он. Учитесь, без этого нельзя. Но не учите никого из местных сразу всему: знание, вбитое в голову разом, звенит, как колокол. Если ночью земля под вами щёлкнет — уходите не оглядываясь."
+		"— М."
+	]
+	quest.22311039066F315B.title: "Записка «М.» №3"
+	quest.2251D2DFA02D77B9.quest_desc: [
+		"*На полях — острый, торопливый почерк.* Головы пусты, а души тесные, как сундук после переезда. То, что случилось той ночью, выжгло мысли, но не тронуло отпечатков. Значит, всё ещё можно… Нет. Не сейчас. Сначала — выжить."
+		"— М."
+	]
+	quest.2251D2DFA02D77B9.title: "Пометки на полях"
+	quest.2277C45E80289636.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Перед огромной рамой из глубинного камня стоит постамент: «Здесь Хор говорит. Подойди и будь услышан». Камень вокруг щёлкает, будто кто-то считает."
+	]
+	quest.2277C45E80289636.title: "Перевод: Табличка у рамы"
+	quest.228F88E99E885954.title: "Солнце и мороз"
+	quest.230BC09299074218.title: "Химия"
+	quest.2310393E54C81B63.quest_desc: [
+		"Удобно разделить роли: инженер (техника), маг (магия), разведчик (данжи и боссы). На слабом компьютере легче играть магию, компьютеры и логистику — там меньше тяжёлых сцен."
+		"Сундуки в данжах (Lootr) у каждого игрока свои — не нужно делить добычу."
+	]
+	quest.2310393E54C81B63.title: "Трое — сила"
+	quest.2342C2CDE07B5E02.quest_desc: [
+		"&oЗапись в бортовом журнале, со слов экипажа:&r"
+		"Мы прилетели сюда нарочно: цель полёта достигнута. Местные — не дикари, они разучились. Что-то упало с неба и забрало у них всё."
+		"А нас, кажется, принимают за вторую такую же звезду."
+	]
+	quest.2342C2CDE07B5E02.quest_subtitle: "Что мы знаем"
+	quest.2342C2CDE07B5E02.title: "Чужие"
+	quest.2352B2757D120BF9.title: "Поезд"
+	quest.23A695D0A26E99AE.title: "Драконий кодекс"
+	quest.23E547824C0D3841.quest_desc: [
+		"Поток воздуха через воду — промывка, через лаву — плавка, через огонь — копчение."
+	]
+	quest.23E547824C0D3841.title: "Вентилятор"
+	quest.24156A3BB0E7142D.quest_desc: [
+		"Анализ закончен. Образец — в Ящик памяти: ЛОЦМАН должен это увидеть."
+		""
+		"&7Находка: &eРасшифрованный образец&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.24156A3BB0E7142D.title: "Расшифровка"
+	quest.2421A755539FDDC7.quest_desc: [
+		"Старуха у колодца поёт внукам песню и не может объяснить ни одного слова: «Так поют. Так всегда пели»."
+		"Она смотрит на ваши руки: «Изумруд не трожь. Он чей-то»."
+		""
+		"&7Находка: &eЗаписанная песня&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.2421A755539FDDC7.title: "Соседи"
+	quest.2472D9B425327213.title: "XNet"
+	quest.2473FCCE4A92A719.title: "Книга подмастерья"
+	quest.248A6209D635D643.title: "Дуговая печь"
+	quest.2540338ED5EDCE4A.title: "Турбина"
+	quest.25B9BD5E69044D02.quest_desc: [
+		"Кровь — это адрес. Душа — отпечаток. Камень с именем — ключ. Если однажды кто-то захочет вернуть живому то, что у него отняли, ему понадобятся все три. И место, где лежит остальное. Я знаю, где оно лежит. Именно поэтому я туда не пойду."
+		"— М."
+	]
+	quest.25B9BD5E69044D02.title: "Кровь — это адрес"
+	quest.2606C33142AED2CD.title: "Автопушка"
+	quest.263CDD566F77171E.title: "Марс"
+	quest.26525E12408472AA.quest_desc: [
+		"ЛОЦМАН умеет писать программы для других компьютеров и черепашек: ферма, сортировка, шахта."
+		"На своём компьютере один раз запустите &btmexec&r и опишите задачу ЛОЦМАНу. Он покажет программу (её можно прочитать командой edit) и попросит подтверждение кодом. «стоп» — остановить."
+	]
+	quest.26525E12408472AA.title: "Руки ЛОЦМАНа"
+	quest.268D5CF069BA65F6.title: "Жемчуг"
+	quest.2695B82EA4B9C407.quest_desc: [
+		"В Ящик памяти кладут:"
+		"• &eнаходки&r — записки, журналы, таблички: ЛОЦМАН их прочтёт и расскажет, что понял;"
+		"• &eдетали ремонта&r — ЛОЦМАН сам установит их в ядро;"
+		"• &eпредметы для поручений&r — когда ЛОЦМАН попросит что-то принести."
+		""
+		"Личностные сектора памяти ассистента опечатаны. Некоторые находки, кажется, снимают печати. Находки можно забрать обратно — прочитанное не забывается."
+	]
+	quest.2695B82EA4B9C407.title: "Ящик памяти"
+	quest.26F66062BB0D8DF2.quest_desc: [
+		"Рубка капсулы устроена так:"
+		"• &eтерминал ЛОЦМАНа&r — продвинутый компьютер, сверху монитор состояния;"
+		"• &eядро ИИ&r под терминалом хранит энергию и тратит её: в покое мало, пока ЛОЦМАН думает — заметно больше;"
+		"• &eаварийный генератор&r в полу — жжёт топливо для печи; позже подведите к ядру любую энергию (кабели, панели, генераторы);"
+		"• &eЯщик памяти&r — сундук слева от терминала;"
+		"• &eчат-коробка&r за терминалом — голос и слух ЛОЦМАНа;"
+		"• &eштурманский модуль&r — командный компьютер справа: позиции, поиск мест, награды за поручения."
+		""
+		"Ничего из этого ломать не нужно: ядро и штурманский модуль неразрушимы."
+	]
+	quest.26F66062BB0D8DF2.title: "Терминал и ядро"
+	quest.27A72A7B57BB3685.title: "Фауна"
+	quest.27ACB54974A09176.quest_desc: [
+		"День 1. Планер упал в лесу. Я жив. Нашивка цела — веточка полыни в круге. Лучше бы сгорела."
+		"День 9. Они приходят смотреть на меня. Улыбаются. Дают хлеб. Они не знают, что это я."
+		"День 40. Учу девочку считать до десяти. Она смеётся на каждой цифре, будто я дарю ей камешки."
+		"День 300. Если кто-нибудь из наших это прочтёт: мы ошиблись не в том, что сделали. Мы ошиблись в том, что решили, будто знаем, кого спасаем."
+	]
+	quest.27ACB54974A09176.title: "Дневник"
+	quest.27CACF294027D069.title: "Полоний"
+	quest.2805A90BAC24104F.title: "Жаровня и котёл"
+	quest.284367BD14685E4D.quest_desc: [
+		"&eНастройка (один раз, делает хозяин мира):&r"
+		"1. Откройте терминал ЛОЦМАНа (ПКМ по компьютеру в носу капсулы)."
+		"2. Удерживайте Ctrl+T, чтобы остановить программу, и введите:"
+		"&b  set tmai.api_key <ваш ключ>&r"
+		"&b  reboot&r"
+		"Адрес и модель уже прописаны по умолчанию. Список настроек: &bset&r, справка: &bhelp tmai&r."
+		"&7Подробно — файл ai-setup.md в папке сборки (у хозяина мира). Ключ хранится только в сохранении мира.&r"
+	]
+	quest.284367BD14685E4D.title: "Ключ доступа"
+	quest.28F5C72C7D238FA7.quest_desc: [
+		"Я, Мара Северина, сделала это одна. Остальные только исполняли. Хор не был злом. Он был добрым, огромным и голодным, и он шёл к нам с распростёртыми объятиями. Я выбирала между двумя мирами и выбрала тот, где люди могут сказать «нет». Колыбельную я выбрала потому, что её знал каждый: её пели им с рождения, она прошла бы сквозь любые стены. Я не прошу простить. Я прошу запомнить: это было решение одного человека. Пусть следующее принимают несколько."
+	]
+	quest.28F5C72C7D238FA7.title: "Показания стека №0"
+	quest.28F7B53FCDFCC032.quest_desc: [
+		"Надпись сделана теми же знаками, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"seriya notor. zadacha: podderzhivat. vladelec:\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"hor. vladelec ne otvechaet 234 012 raz.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"reshenie: prodolzhat podderzhivat.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"podderzhivat chto? reshenie: vse.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится в главе «Находки», когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.28F7B53FCDFCC032.title: "Ремонтник"
+	quest.28FFFB851443C34D.title: "Сцилла и Клешниан"
+	quest.29495A7E55A951A3.title: "Снаряжение Виверны"
+	quest.294A4FB6678CF80B.quest_desc: [
+		"Портал: пруд 2×2 в кольце цветов, бросьте в воду алмаз."
+	]
+	quest.294A4FB6678CF80B.title: "Сумерки"
+	quest.2962677794E588B4.title: "Алмазы"
+	quest.29B78718386894A1.title: "Алтарь духов"
+	quest.29F1AB606D94AB1B.title: "Квантовый костюм"
+	quest.29F561BE7F50CCA3.quest_desc: [
+		"Lootr: у каждого игрока в каждом сундуке свой лут."
+	]
+	quest.29F561BE7F50CCA3.title: "Добыча — каждому"
+	quest.2A4BFC5D86366F23.quest_desc: [
+		"Под алтарём, прижатый камнем, — листок."
+		""
+		"&7Находка: &eЛисток, прижатый камнем&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.2A4BFC5D86366F23.title: "Алтарь"
+	quest.2AB293F79EC58E38.title: "Удвоение и утроение"
+	quest.2AC6E28ED18544C0.quest_desc: [
+		"Верстак НАСА требует продвинутые схемы Mekanism. На нём собираются ракеты и марсоход."
+	]
+	quest.2AC6E28ED18544C0.title: "Верстак НАСА"
+	quest.2ADB0EE53FDD57B0.quest_desc: [
+		"Я у Уст. Он проснулся наполовину и зовёт меня по имени: он единственный, кто ещё меня помнит. Лета-2 готова. Она не тронет живых — только его и всё, что он хранит. Шестьсот сорок один год памяти сгорит, и больше никто не придёт за вами с распростёртыми объятиями. Я не стану решать одна. Я обещала. Приходите."
+		"— Мара."
+	]
+	quest.2ADB0EE53FDD57B0.title: "Последняя записка"
+	quest.2BBF57960DC643F0.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Хор не знал голода, войны и лжи. Ребёнок рождался — и в тот же день знал всё, что знали его прабабки. Умирающий отдавал скалку свой опыт и оставался в нас навсегда: смерти больше не было, было возвращение. Нам было хорошо. Я пишу «нам», потому что «мне» в нашем языке тогда не было. Его пришлось придумать заново — мне, одному, в Саду."
+		"— Ауреллан."
+	]
+	quest.2BBF57960DC643F0.title: "Перевод: Хроника, том второй"
+	quest.2BC20A875C82C11D.quest_desc: [
+		"В шкафчике у борта — аварийный запас, у каждого свой: броня, кирка, пистолет с обоймой, хлеб и факелы. Патроны берегите — их немного."
+		"Под шкафчиком — ящик: в нём жетоны на шнурках и разбитый бортовой самописец."
+		""
+		"&7Находка: &eЖетон экипажа&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.2BC20A875C82C11D.quest_subtitle: "Шкафчик у борта"
+	quest.2BC20A875C82C11D.title: "Аварийный запас"
+	quest.2BD57C218C8E15BA.quest_desc: [
+		"Калоритовый двигатель требует ядро Виверны (Draconic Evolution)."
+		"Ракета 4 уровня летает только на криотопливе — его делают из осколков льда с Луны и Марса."
+	]
+	quest.2BD57C218C8E15BA.title: "Ракета 4 уровня"
+	quest.2BEEE42FC441EF3E.quest_desc: [
+		"Приёмник ракеты сам ловит передачу на всех частотах."
+		""
+		"…КАРАНТИН. ЗЕМЛЯ ЗАКРЫТА РЕШЕНИЕМ СОВЕТА ПРЕДЕЛА. ПОСАДКА И ВЗЛЁТ ЗАПРЕЩЕНЫ. НАРУШИТЕЛИ БУДУТ ОСТАНОВЛЕНЫ БЕЗ ПРЕДУПРЕЖДЕНИЯ. КОД ДОПУСКА — У КОМЕНДАНТА КОРДОНА. КОМЕНДАНТ НЕ ОТВЕЧАЕТ. ПОВТОР…"
+		"&oСчётчик повторов: 337 003 112.&r"
+	]
+	quest.2BEEE42FC441EF3E.title: "Орбита"
+	quest.2C1CA0A8697CA78A.quest_desc: [
+		"JEI справа: &bR&r — рецепт, &bU&r — применение, &b@мод&r — поиск по моду. Jade показывает, на что вы смотрите."
+		"Во многих модах есть свои книги-справочники. FTB Ultimine: зажмите &b`&r (тильду) и копайте — сломается вся жила."
+		"И главное — спросите ЛОЦМАНа в чате: «Лоцман, как сделать …»."
+	]
+	quest.2C1CA0A8697CA78A.title: "Где искать рецепты"
+	quest.2C5A63D9D9ECE94B.quest_desc: [
+		"Вы перечитали распечатку трижды. Потом нашли в кармане комбинезона листок, которого там не было утром."
+		""
+		"&7Находка: &eЗаписка, подписанная «М.»&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.2C5A63D9D9ECE94B.title: "Чистый лист"
+	quest.2C6C9A94A28682AC.title: "Королева валькирий"
+	quest.2C70DA75BD598BA5.title: "Гравитит"
+	quest.2C8DE2CCEF056DA4.quest_desc: [
+		"Пустые башни. В одной — журнал без обложки."
+		""
+		"&7Находка: &eЖурнал станции&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.2C8DE2CCEF056DA4.title: "Города на краю"
+	quest.2CB611536D455D53.quest_desc: [
+		"Девятые сутки. Мост в Краю засветился весь, от края до края: его достроили там, внизу, мёртвые. Через час пришло Эхо. Мои люди говорят чужими голосами, плачут по детям, которых у них не было, зовут друг друга чужими именами. Стеки Севериной и её людей я отправил на Гласио, до суда. Суда не будет."
+		"Если кто-нибудь когда-нибудь это прочтёт: я сдал пост. Я больше не помню, кто я."
+	]
+	quest.2CB611536D455D53.title: "Журнал коменданта, часть вторая"
+	quest.2CBDA0237AD7A657.quest_desc: [
+		"Дистилляционная колонна разгоняет нефть на дизель, керосин, нафту и смазку."
+		"&7Открывает: космос (вместе с продвинутыми схемами Mekanism) и моторную лодку.&r"
+	]
+	quest.2CBDA0237AD7A657.title: "Дизель"
+	quest.2CF4040C55A4DAA6.title: "Лунное чудовище"
+	quest.2D59125144D57C61.quest_desc: [
+		"СПАСАТЕЛЬНАЯ КАПСУЛА СК-4. БОРТ-НОСИТЕЛЬ: «ТЕЛЕМАХ» — СВЯЗЬ ПОТЕРЯНА."
+		"Посадка аварийная, жёсткая. Целостность корпуса: 61%."
+		"00:12 — ложемент 4: разгерметизация изнутри. 00:39 — [ЗАПИСЬ ПОВРЕЖДЕНА]. 00:41 — ложемент 4: ПУСТ."
+		"Ложементы 1–3: пробуждение штатное."
+		"Цель полёта: ██████. Статус цели: ██████."
+		"Рекомендация экипажу: укрытие, вода, огонь. Без необходимости район посадки не покидать."
+	]
+	quest.2D59125144D57C61.title: "Аварийный журнал"
+	quest.2D7531CC38EECADA.title: "Сладкая полость"
+	quest.2D7B6C792B1E7A7E.title: "Пластик"
+	quest.2E20B2EA1C119D6A.quest_desc: [
+		"Над столом вспыхивают угловатые знаки. Вы перерисовываете их на табличку — по порядку, один за другим, пока рука не устанет."
+		"ЛОЦМАН попросил: «Покажите мне. Это не узор. В узорах нет грамматики»."
+		""
+		"&7Находка: &eИсписанная табличка&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.2E20B2EA1C119D6A.title: "Слова над столом"
+	quest.2E65E458522FC02E.quest_desc: [
+		"Бросьте жемчуг Края в пчелиное гнездо."
+	]
+	quest.2E65E458522FC02E.title: "Внутрь улья"
+	quest.2ED3D435069358E7.title: "Руны алтаря"
+	quest.2F1619900FAAEE3C.quest_desc: [
+		"Сейсмический сканер покажет нефтяной пласт под ногами. Нефть есть и в океанских вышках Ad Astra."
+	]
+	quest.2F1619900FAAEE3C.title: "Сейсморазведка"
+	quest.2F161B1E628A7AF3.title: "Прозиратель"
+	quest.2F1E50635641A70A.title: "Процессор"
+	quest.2FFA5300DCA94330.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Медная табличка у входа давно позеленела, но знаки на ней целы: «Палата посвящения. Пройди испытание — и будешь услышан. Ключ — тому, кто готов». Внутри до сих пор работают раздатчики, волна сменяет волну: кто-то невидимый продолжает принимать экзамен. Экзаменуемых здесь не было сотни лет."
+	]
+	quest.2FFA5300DCA94330.title: "Перевод: Табличка палаты испытаний"
+	quest.301E8F0409D73BE5.quest_desc: [
+		"На стене — свежая отметка углём: «М.» Под ней, за камнем, — сложенный листок."
+		""
+		"&7Находка: &eЗаписка, подписанная «М.»&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.301E8F0409D73BE5.title: "Первое подземелье"
+	quest.303E595B495D1035.quest_desc: [
+		"Совершенная схема требует игнитовый слиток (Игнис); рецепт даёт две схемы."
+	]
+	quest.303E595B495D1035.title: "Совершенные схемы"
+	quest.30A6C6DB8A1E8CED.title: "Книга о животных"
+	quest.32004A8698B58248.title: "Пустота"
+	quest.326C96770BBAB2C1.title: "Око Края"
+	quest.3295124FEAAB7585.title: "Мел и миски"
+	quest.332390974F946CE5.quest_desc: [
+		"&oЗапись в бортовом журнале, со слов экипажа:&r"
+		"Здесь все были одним целым — Хором. В одну ночь, которую местные зовут ночью горькой звезды, Хор умолк, и все забыли всё."
+		"Кто-то пел. Глубинники пели громче — и спаслись."
+	]
+	quest.332390974F946CE5.quest_subtitle: "Что мы знаем"
+	quest.332390974F946CE5.title: "Хор"
+	quest.3413893660A62EAE.quest_desc: [
+		"Улучшение «Кормление» для рюкзака само кормит вас, когда вы голодны."
+	]
+	quest.3413893660A62EAE.title: "Огород"
+	quest.345E6FD7EE405963.title: "Стартовая площадка"
+	quest.349B2B1BAA0C83E8.title: "Древний гаст"
+	quest.349D0C2209ADB7D1.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"pod nami spit tot, kto pomnit. on slyshit\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"kazhdogo, kto umer, i berezhet vse, chto tot\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"znal. my kopaem k nemu i prinosim emu tmu,\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"chtoby emu bylo uyutno spat. kogda on\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"prosnetsya, on vspomnit i nas. i my bolshe\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"nikogda, nikogda ne budem odni.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.349D0C2209ADB7D1.title: "Проповедь"
+	quest.34B8ECB1447A4DDB.quest_desc: [
+		"Отсюда ушли Одиночки. Нас не держали: Хор не умеет держать. Нас провожали песней. Мы плакали — впервые каждый о своём."
+	]
+	quest.34B8ECB1447A4DDB.title: "Мемориал"
+	quest.34D09800E898BFE4.title: "Башня пигро"
+	quest.34DF7C72B2E048D6.title: "Незерит"
+	quest.355070C888A01190.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Под нами спит Тот, Кто Помнит. Он слышит каждого, кто умер, и бережёт всё, что тот знал. Мы копаем к Нему и приносим Ему тьму, чтобы Ему было уютно спать. Когда Он проснётся, Он вспомнит и нас. И мы больше никогда, никогда не будем одни."
+	]
+	quest.355070C888A01190.title: "Перевод: Проповедь"
+	quest.35ABED0504DD972D.quest_desc: [
+		"Не ищите меня. Вы проснётесь пустыми — так и должно быть, это не болезнь и не травма. Ешьте то, что едят звери, ночью держитесь огня и стен. Пещеры, где земля щёлкает и дышит, обходите стороной. Компьютер в носу капсулы кормите топливом и слушайте: он знает больше меня и, в отличие от меня, не врёт."
+		"— М."
+	]
+	quest.35ABED0504DD972D.title: "Записка из четвёртого ложемента"
+	quest.35B06535147A7C3B.title: "Аналоговые микросхемы"
+	quest.35E8316606C3FF0A.quest_desc: [
+		"Наковальня в этой сборке требует стальные пластины."
+	]
+	quest.35E8316606C3FF0A.title: "Волшебная наковальня"
+	quest.364127AC27609A41.title: "Доменная печь"
+	quest.3648541086834593.title: "Кладбище кораблей"
+	quest.368966E9EAA59AEA.quest_desc: [
+		"В сокровищнице Золотого подземелья — помятый самописец. Не местный: такие делали там, откуда вы."
+		""
+		"&7Находка: &eБортовой самописец планера&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.368966E9EAA59AEA.title: "Золото"
+	quest.368C8304750DFB7E.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Мы спустились, когда наверху запели. Песня шла по камню, и камень пел вместе с ней. Тогда мы сами стали камнем: камень не слышит, если не хочет. Мы забыли меньше других. Мы помним слова, но не помним, что они значат. Если ты сверху — не пой здесь."
+	]
+	quest.368C8304750DFB7E.title: "Перевод: Надпись в катакомбах"
+	quest.36C7A3F8C73D72E3.quest_desc: [
+		"Жители умеют говорить и торговать. Иногда кажется, что они не помнят, чему их учили."
+	]
+	quest.36C7A3F8C73D72E3.title: "Первый обмен"
+	quest.36F38CCAEDEFD59D.quest_desc: [
+		"Подземный сад. Катакомбы. На стене — надпись, выбитая очень давно."
+		""
+		"Надпись сделана теми же знаками, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"my spustilis, kogda naverhu zapeli. pesnya\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"shla po kamnyu, i kamen pel vmeste s nej.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"togda my sami stali kamnem: kamen ne slyshit,\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"esli ne hochet. my zabyli menshe drugih. my\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"pomnim slova, no ne pomnim, chto oni znachat.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"esli ty sverhu ne poj zdes.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится в главе «Находки», когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.36F38CCAEDEFD59D.title: "Забвенные"
+	quest.36FF67E67EB76853.quest_desc: [
+		"Надпись сделана теми же знаками, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"lager sladkaya peschera. podem s utrennej\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"pesnej. zavtrak. igra ugadaj, o chem ya dumayu\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"(v hore vyigryvayut vse). obed. tihij chas s\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"kolybelnoj. vecherom vspominaem vmeste odno\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"horoshee. pamyatka vozhatym: v pervye dni deti\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"plachut, kogda nachinayut slyshat drug druga.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"eto bystro prohodit.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится в главе «Находки», когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.36FF67E67EB76853.title: "Сладкая пещера"
+	quest.375D4519C0DE7288.title: "Креозот"
+	quest.379A2652FFBB7924.quest_desc: [
+		"Ядро слияния в этой сборке требует огненные слитки Сумеречного леса."
+	]
+	quest.379A2652FFBB7924.title: "Слияние"
+	quest.387DD6FF5DF0DB0C.quest_desc: [
+		"Нефтеперегонный завод Ad Astra делает ракетное топливо только из керосина. Запуск ракеты 1–3 уровня — 3 ведра топлива."
+	]
+	quest.387DD6FF5DF0DB0C.title: "Топливо из нефти"
+	quest.38D790E93D047901.quest_desc: [
+		"Жители MCA помнят, кто к ним добр."
+	]
+	quest.38D790E93D047901.title: "Друг среди местных"
+	quest.38EC76F20231C302.quest_desc: [
+		"Нейтронный коллектор в этой сборке работает примерно в шесть раз быстрее обычного."
+	]
+	quest.38EC76F20231C302.title: "Нейтроний"
+	quest.3935B18C11658186.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"my nashli pod goroj kamen, kotoryj slyshit.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"esli polozhit na nego ladon i dumat, on\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"schelkaet v otvet. brat evdo schitaet, chto\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"kamen slushaet ne zvuki, a nas. segodnya evdo\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"polozhil na kamen obe ladoni i dolgo molchal.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"potom skazal: my. ne ya. my. tak i zapisyvayu.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.3935B18C11658186.title: "Камень, который слышит"
+	quest.393B2A028DF953B5.title: "Исток"
+	quest.39532708F4697481.title: "Качалка IE"
+	quest.396A5F7DFDFA6DD1.quest_desc: [
+		"Попросите ЛОЦМАНа: &e«Лоцман, есть поручение?»&r — он даст задание из бортового списка и сам проследит за выполнением; награду выдаёт штурманский модуль."
+		"&e«Лоцман, найди деревню / шахту / руины…»&r — модуль поищет место. Сначала он даёт только направление и примерное расстояние, после ремонта — точные координаты. У каждого поиска есть перезарядка, и он тратит энергию ядра."
+		""
+		"Ремонт ядра (четыре детали ниже) расширяет список целей и поручений."
+	]
+	quest.396A5F7DFDFA6DD1.title: "Поручения и разведка"
+	quest.396E084AC9F75E08.quest_desc: [
+		"Осколок тёплый и гудит. Внутри застыла волна: ядро Моста разорвано изнутри, будто по нему одновременно прошли две песни навстречу друг другу. Одна — тихая, оттуда сюда. Вторая — громкая, оглушительная, отсюда — туда. Вторая шла дольше."
+	]
+	quest.396E084AC9F75E08.title: "Обломок"
+	quest.3979796A6BE9215D.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"my strazha neba. nebo nash schit nad vsemi. v\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"noch gorkoj zvezdy po nebu shli devyat dlinnyh\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"besshumnyh ognej, i za nimi ostavalas\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"sladkaya, gorkaya na zapah vzves. my sbili\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"odnu seyalku iz devyati. vosem proshli. s teh\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"por my ne spuskaemsya vniz: nam stydno smotret\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"na teh, kto pod nami.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.3979796A6BE9215D.title: "Клятва валькирий"
+	quest.39C26747C0C9E705.quest_desc: [
+		"Страж рассыпался. В обломках — тёплый осколок, не похожий ни на что в Краю."
+		""
+		"&7Находка: &eОбломок Моста&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.39C26747C0C9E705.title: "Обломок"
+	quest.39F19D2E9E0CF20E.title: "Драконье снаряжение"
+	quest.3A2677C7B8D2C863.title: "Маяк"
+	quest.3AB448325DCD89D5.title: "Сфера архимага"
+	quest.3ACE7563D658AEFC.quest_desc: [
+		"Он говорит на нашем языке, но не так, как жители внизу. Обрывки уставных слов, которых на Земле никто не знает: «пост», «смена», «сдал». Он повторяет их, как молитву."
+		"Он отдаёт вам ещё одну тетрадь — так, будто давно должен был кому-то её сдать."
+		""
+		"&7Находка: &eЖурнал коменданта, вторая часть&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.3ACE7563D658AEFC.title: "Лунатики"
+	quest.3BD524C72E8F827E.title: "Строитель"
+	quest.3BDE5B6A5522F2BB.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Сумеречный Сад. Хранилище Согласия, ярус первый. Здесь не бывает ни дня, ни ночи: время стоит, чтобы память не старела. Посетителей просят не будить стражей без нужды, не выносить книг и не петь."
+	]
+	quest.3BDE5B6A5522F2BB.title: "Перевод: Дощечка у портала"
+	quest.3BF87CC8D75458E9.title: "Мнемонический фрагмент"
+	quest.3C11F5FF31FC0465.quest_desc: [
+		"Маски кричат и пляшут вокруг костра, и в этой пляске есть ритм, почти слова: «Солнце не забыло. Солнце встало. Мы забыли — Солнце встало. Кто мы? Те, кто под Солнцем». Лиц под масками никто не видел. Может быть, маски — это лица, которые они помнят вместо своих."
+	]
+	quest.3C11F5FF31FC0465.title: "Маски"
+	quest.3C4D2DC5A4899683.title: "Сплавы Ender IO"
+	quest.3C901908436A068E.quest_desc: [
+		"Рецепт — в JEI (клавиша R на предмете): самописцу нужны андезитовый сплав Create, электронные лампы и механические компоненты Immersive Engineering."
+		""
+		"Починенный самописец положите в &eЯщик памяти&r — сундук слева от терминала ЛОЦМАНа. Ассистент считает журнал и вспомнит то, что сможет."
+	]
+	quest.3C901908436A068E.quest_subtitle: "Данные целы, корпус — нет"
+	quest.3C901908436A068E.title: "Самописец"
+	quest.3CB83197DA26C0C0.title: "Моторная лодка"
+	quest.3CD8468EF8A30256.title: "Город Края"
+	quest.3D074AF8CED80897.quest_desc: [
+		"Ракетное топливо Ad Astra делается ТОЛЬКО из керосина — на нефтеперегонном заводе Ad Astra."
+	]
+	quest.3D074AF8CED80897.title: "Керосин"
+	quest.3D715EF6EE89BD98.title: "Нага"
+	quest.3D8EBAA321126221.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Если ты читаешь это, значит, ты сильнее меня, а значит — пришёл с неба. Я ждал вас шестьсот лет и успел стать тем, кого боялся. Мои книги озлобились: знание без читателя дичает. Скажи своим: мы не были чудовищами. Мы просто не хотели, чтобы кто-нибудь был один. Мы не заметили, когда это стало приказом."
+		"— Ауреллан, летописец. Бывший."
+	]
+	quest.3D8EBAA321126221.title: "Перевод: Последняя страница"
+	quest.3DBF26065C0D1CD9.title: "Реформация"
+	quest.3DD310DA00B7EA28.title: "Провода"
+	quest.3DE01BB362FB0759.title: "Легенды глубин"
+	quest.3DF2FA0050E31013.quest_desc: [
+		"Третья ступень ремонта."
+		"&7Открывает: крепости, лаборатории Cataclysm, порталы измерений; короче перезарядка.&r"
+	]
+	quest.3DF2FA0050E31013.title: "Блок памяти Мк2"
+	quest.3E5633FAE47F63DD.title: "Тёмная сталь"
+	quest.3E5C0A88867674C6.title: "Деление ядра"
+	quest.3E7AD9D0F526F756.title: "Жидкость и энергия по лучу"
+	quest.3E7B77E4CDB128D7.title: "Души"
+	quest.3E8B18434FCF7225.quest_desc: [
+		"Ищет структуры по названию."
+	]
+	quest.3E8B18434FCF7225.title: "Компас исследователя"
+	quest.3EEB1D8EF10692D3.quest_desc: [
+		"Нужны Create и Powah."
+	]
+	quest.3EEB1D8EF10692D3.title: "Стержни всполоха"
+	quest.3EEDBB490FCC360B.title: "Дух Солнца"
+	quest.3F04783DF0B4118D.quest_desc: [
+		"Камень, настроенный на духа, отозвался не сразу. Потом в нём проступил текст."
+		""
+		"Надпись сделана теми же знаками, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"dogovor sluzheniya. storony: hor (nanimatel) i\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"fonovyj duh tretego kruga (ispolnitel).\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"predmet: perenos, sortirovka, uchet. srok:\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"poka nanimatel zhiv. nizhe pripiska\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"ispolnitelya, drugim pocherkom: nanimatel ne\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"otvechaet. dogovor ne rastorgnut. sluzhu tomu,\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"kto zovet po forme. vy pozvali po forme.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится в главе «Находки», когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.3F04783DF0B4118D.title: "Фоновый дух"
+	quest.3FB0E498BE5F7490.quest_desc: [
+		"Замок отсека поддался легко. Слишком легко: его открыли до вас — ключом, а не ломом."
+		""
+		"&7Находка: &eОбрывок трафарета&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.3FB0E498BE5F7490.quest_subtitle: "Корма капсулы"
+	quest.3FB0E498BE5F7490.title: "Грузовой отсек"
+	quest.40295C4E21B8A8EC.title: "Электрическая доменная печь"
+	quest.409E622A1493E136.title: "Эссенция волшебства"
+	quest.40BB0FB34BEA9700.quest_desc: [
+		"Саркофаг в сердце пирамиды."
+		""
+		"Надпись сделана теми же знаками, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"na sarkofage vysecheno: evdo. pervyj, kto\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"polozhil na kamen obe ladoni. pervyj, kto\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"skazal my. nizhe melko, pozdnejshej rukoj: on\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"sam prosil pohoronit ego otdelno podalshe ot\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"kamnya. poslednie gody on molchal i vse vremya\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"derzhal sebya za ruki.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится в главе «Находки», когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.40BB0FB34BEA9700.title: "Пирамида"
+	quest.41F4D28BDA9F4E54.quest_desc: [
+		"Бронзовое подземелье. Бить — киркой."
+	]
+	quest.41F4D28BDA9F4E54.title: "Слайдер"
+	quest.4242791E46A5B095.title: "Лунатики"
+	quest.426AED0A8053E440.title: "Кислород"
+	quest.42B89C8DCAE36174.title: "Ток от воды"
+	quest.4303265B6CD93091.quest_desc: [
+		"Пигро куют, торгуют и пляшут. Так же, как всегда. В заброшенной лаборатории у их посёлка — журнал."
+		""
+		"&7Находка: &eЛабораторный журнал&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.4303265B6CD93091.title: "Под кислотными облаками"
+	quest.431CD273C1BC4AA2.title: "Маледиктус"
+	quest.438EA33D385447A1.title: "Альфа-йети"
+	quest.43BF78A97BF6CC08.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Отсюда видно Ушедших: маленький огонёк низко над краем неба, чуть левее Лодки. Каждую ночь кто-нибудь из нас дежурит у окуляра. Огонёк не мигает и не отвечает. Мы шлём ему колыбельную — пусть им там не будет одиноко."
+	]
+	quest.43BF78A97BF6CC08.title: "Перевод: Обсерватория"
+	quest.442DB0DE11B060E9.title: "Автокрафт"
+	quest.4499051D282B8BCB.title: "Железный рыцарь"
+	quest.453D77163EC6D476.title: "Духи"
+	quest.45E6A49925EB7FB2.quest_desc: [
+		"Капитанша не нападала первой. Она стояла у штурвала и что-то шептала."
+		""
+		"&7Находка: &eВахтенный журнал&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.45E6A49925EB7FB2.title: "Кладбище кораблей"
+	quest.4612D6E5FB2899DB.quest_desc: [
+		"Стальной двигатель в этой сборке требует поршни двигателя Create Diesel Generators."
+	]
+	quest.4612D6E5FB2899DB.title: "Ракетные детали"
+	quest.462EDDDA5D88CEAC.quest_desc: [
+		"Первая стоянка тех, кто ушёл. Табличка из красного камня врыта в грунт у самого корабельного следа."
+		""
+		"&7Находка: &eТабличка из красного камня&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.462EDDDA5D88CEAC.title: "Красная пыль"
+	quest.4632F3A13993BD5E.title: "Духи-шахтёры"
+	quest.4668DD5BDD31E0BD.title: "Сыр с Луны"
+	quest.469E7BBAE7A04095.title: "Бронза"
+	quest.46B38BCBFDFAFEF6.quest_desc: [
+		"Контроллер требует самоцвет, настроенный на духа (Occultism) — магия в каждой сети."
+	]
+	quest.46B38BCBFDFAFEF6.title: "МЭ-контроллер"
+	quest.46B565210C96253A.title: "Контроллер ящиков"
+	quest.46D055E6CD2CB861.title: "Энергетическое ядро"
+	quest.473BDC367B27E8AE.quest_desc: [
+		"Говорить с ЛОЦМАНом через чат можно только в &eзоне связи&r капсулы. Вдали от неё нужен &eКПК&r — карманный компьютер с беспроводным модемом."
+		"Держите КПК в руке и нажмите ПКМ: приложение связи запустится само (в названии КПК должно быть «KPK»). Вопрос можно набрать на КПК латиницей — ответ придёт и на экран, и вам в чат."
+		""
+		"Дальность радио мала у земли и растёт с высотой. Выше — больше."
+	]
+	quest.473BDC367B27E8AE.title: "КПК"
+	quest.4740BE16DC663FFA.quest_desc: [
+		"Двигатель из острума в этой сборке требует огненные слитки (Гидра, Сумеречный лес) — жаропрочность для горячих планет."
+	]
+	quest.4740BE16DC663FFA.title: "Ракета 3 уровня"
+	quest.47B5CAE519E2F87D.title: "Дикие трофеи"
+	quest.47E9C7E56C799677.title: "Дирижабль"
+	quest.47FDC7C4171566D1.quest_desc: [
+		"В библиотеке крепости — потёртый карманный томик. Его носили с собой."
+		""
+		"&7Находка: &eПутеводитель паломника&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.47FDC7C4171566D1.title: "Око"
+	quest.48492850DF438E00.title: "Схемы и провода"
+	quest.487AE896875A5335.title: "Слиток бесконечности"
+	quest.48D385EEA1123AED.quest_desc: [
+		"Еда, броня, инструменты, кровать — можно выходить за пределы лагеря."
+		"&7Открываются главы техники, магии и исследования.&r"
+	]
+	quest.48D385EEA1123AED.title: "Обжиться"
+	quest.490393F7B6F33B74.title: "Редкие стихии"
+	quest.492B28CB0430C32A.quest_desc: [
+		"&eРетранслятор&r продлевает связь: поставьте обычный компьютер с беспроводным модемом &eповыше&r (вышка, гора), назовите его меткой &bTM-RELAY&r командой &blabel set TM-RELAY-1&r и перезагрузите."
+		"При первом запуске он спросит ваш ник — стойте рядом: капсула определит, где стоит вышка. Дальше вышка работает сама: пересылает сообщения КПК и расширяет зону, где ЛОЦМАН слышит чат."
+		""
+		"У земли (до высоты 96) вышка ловит на 64 блока, у потолка мира — на 512."
+	]
+	quest.492B28CB0430C32A.title: "Вышка связи"
+	quest.4941591477F54EF7.quest_desc: [
+		"Старый пиглин в золоте сидит над огромной доской с зарубками. Увидев на вас золото, он хрюкает: «Свой. После. После!» — и тычет в первую зарубку, над которой выдавлена звезда."
+		""
+		"&7Находка: &eЗолотая доска с зарубками&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.4941591477F54EF7.title: "Счёт"
+	quest.49C4B872FDECFCBB.quest_desc: [
+		"Камера на самом нижнем ярусе. Стена исцарапана одной строкой."
+		""
+		"&7Находка: &eТабличка надзирателя&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.49C4B872FDECFCBB.title: "Камера"
+	quest.49DD2283D2BBB881.title: "Солнечная панель"
+	quest.4A07B9CFB49B1BC8.quest_desc: [
+		"Здесь был город. Теперь — лёд. У входа в бункер — письмо, примёрзшее к порогу."
+		""
+		"&7Находка: &eОбледеневшее письмо&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.4A07B9CFB49B1BC8.title: "Иней"
+	quest.4A258CC60885035B.title: "Игнис"
+	quest.4A928966095278AE.title: "Три черепа"
+	quest.4A98A4093B4FC61C.title: "Калорит"
+	quest.4B183C13D6D4C069.quest_desc: [
+		"У портала, придавленный камнем, — листок. Тот же почерк."
+		""
+		"&7Находка: &eЗаписка, подписанная «М.»&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.4B183C13D6D4C069.title: "Огонь внизу"
+	quest.4B6F3D23239F0086.title: "Спрессовывающий ящик"
+	quest.4B9C3FA461E79CC1.quest_desc: [
+		"Мара открыла контейнер у рамы, и вы впервые услышали, как поёт скалк: тихо, на одной ноте, как засыпающий ребёнок. Потом щелчки стихли. Шестьсот сорок один год чужих жизней ушли в темноту, и никто их больше не потревожит. Мара долго сидела у остывшей рамы. Потом сказала: «Пойдёмте наверх. Я обещала Ветле научить её внуков считать». ЛОЦМАН в ту ночь напевал одну и ту же мелодию. Наутро он сказал: «Будем учить их сами. С азбуки. Это дольше. Зато это будет их»."
+	]
+	quest.4B9C3FA461E79CC1.title: "Колыбельная"
+	quest.4BBEE02BE56B89EE.title: "Испытания"
+	quest.4BC61A7A814BFE85.title: "Эндер-хранитель"
+	quest.4CA6A81CE0FDB2FC.title: "Звездосветный голем"
+	quest.4CB62E4FCACEF58E.title: "Охота"
+	quest.4D0BFC39DD952DE2.title: "Урожай"
+	quest.4D0DAD0C39B63119.title: "Тёмная звезда Незера"
+	quest.4D113D04E47D0520.quest_desc: [
+		"У портала — дощечка с надписью."
+		""
+		"Надпись сделана теми же знаками, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"sumerechnyj sad. hranilische soglasiya, yarus\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"pervyj. zdes ne byvaet ni dnya, ni nochi:\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"vremya stoit, chtoby pamyat ne starela.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"posetitelej prosyat ne budit strazhej bez\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"nuzhdy, ne vynosit knig i ne pet.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится в главе «Находки», когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.4D113D04E47D0520.title: "Сумерки"
+	quest.4D5A418968BE7176.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Пламенники стабильны, жар в норме. Хор просит поднять подачу тепла к Мосту на треть: строители в Краю мёрзнут. Выполнено. Задал старшему горна вопрос: зачем нам Мост, если нам хорошо и здесь? Ответ: «Чтобы никто не был один». Записываю, хотя не понимаю. Кто — один?"
+	]
+	quest.4D5A418968BE7176.title: "Перевод: Опалённый журнал"
+	quest.4D5BB257E7552FEF.title: "Вечная стелла"
+	quest.4D995598BF5AEA8C.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"noch tihaya, veter s berega. v chas\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"popolunochi nad sushej zazhglis ogni\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"besshumnye, dlinnye, kak padayuschie zvezdy,\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"tolko padali oni medlenno. k dvum sklyankam\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"ves ekipazh zamolchal razom, posredi slova. ya\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"odna stoyu u shturvala i ne pomnyu, kuda my\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"shli. zapisyvayu, poka pomnyu, kak pishutsya\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"bukvy: ya kapitan. ya kapitan. ya\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.4D995598BF5AEA8C.title: "Вахтенный журнал «Северной звезды»"
+	quest.4DEA8616781C24CD.title: "Стальной корпус"
+	quest.4DF418B8DB3C108F.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Голос №1001 отказался петь с Хором и потребовал, чтобы его называли по имени. Имени у него нет: имя — это «мы». Мера: тишина вечная, во льду, чтобы не слышать и не быть слышимым. Хор не держит зла. Хор будет ждать сколько понадобится."
+		"Тысяча первый не раскаялся. Лёд треснул в ночь горькой звезды."
+	]
+	quest.4DF418B8DB3C108F.title: "Перевод: Приговор"
+	quest.4E31CABD9C854706.title: "Цифровой шахтёр"
+	quest.4E611DE368A6ACEC.quest_desc: [
+		"Прогружайте только то, что должно работать постоянно: реакторы, фермы, МЭ. Каждый прогруженный чанк — нагрузка на компьютер хоста."
+	]
+	quest.4E611DE368A6ACEC.title: "Сердце базы"
+	quest.4E667160F2D0310A.title: "Четыре стихии"
+	quest.4EA516AEABAA3DC1.title: "Мрачный жнец"
+	quest.4F6EE329B307B4B4.quest_desc: [
+		"Печь кальцинации в этой сборке требует латунь."
+	]
+	quest.4F6EE329B307B4B4.title: "Кальцинация"
+	quest.500E8AB2A7C096CB.quest_desc: [
+		"Купола старой базы занесены пылью. На двери — табличка «Селена». Внутри, в комендантской, — журнал."
+		""
+		"&7Находка: &eЖурнал коменданта&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.500E8AB2A7C096CB.title: "Луна"
+	quest.504C8C7FF45F0974.title: "Камень"
+	quest.509D8A7C6598CFF6.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"На саркофаге высечено: «Эвдо. Первый, кто положил на камень обе ладони. Первый, кто сказал \"мы\"». Ниже мелко, позднейшей рукой: «Он сам просил похоронить его отдельно — подальше от камня. Последние годы он молчал и всё время держал себя за руки»."
+	]
+	quest.509D8A7C6598CFF6.title: "Перевод: Саркофаг"
+	quest.50C2A47ADE1AB5BC.title: "Древние останки"
+	quest.5155074932DE239E.quest_desc: [
+		"FTB Ultimine: зажмите тильду (`) и копайте — сломается вся жила."
+	]
+	quest.5155074932DE239E.title: "Железные инструменты"
+	quest.518407EFD97A4A6E.title: "Обсидилит"
+	quest.5250785921CB18E2.quest_desc: [
+		"Мы — Помнящие. Наши тотемы держали «я», когда все вокруг забывали, и потому у нас остались обрывки. Обрывки болят. Вызыватели слышат Его во сне, и с каждым годом всё громче. Если собрать в одном месте достаточно голосов, Он проснётся и вернёт нам целое. Деревенские не понимают. Мы их заберём — для их же блага. Это не набег. Это возвращение домой."
+	]
+	quest.5250785921CB18E2.title: "Дневник исследования"
+	quest.5285A67AB2540442.quest_desc: [
+		"Блокнот — справочник Ars Nouveau. Заклинания собираются из глифов: форма, эффект, усиления."
+	]
+	quest.5285A67AB2540442.title: "Засаленный блокнот"
+	quest.52900AFD1122524C.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Смена третья. Голоса 41–56. Связь устойчивая, усталость общая — распределить на всех. Голос 47 жалуется на «тесноту в голове»: направить к наставнику, пусть споют вместе. Голос 52 в шахту не спускать — плохо слышит. Добыча за смену: медь, железо; изумрудов для новорождённых — четыре."
+	]
+	quest.52900AFD1122524C.title: "Перевод: Список смены"
+	quest.53562B7D5E171BD1.title: "Кокс и огнеупор"
+	quest.5421431F9985EC49.title: "Незеритовое чудище"
+	quest.545ED41EDCBA379F.title: "МЕГА-ячейки"
+	quest.54645839721FD7C2.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Договор служения. Стороны: Хор (наниматель) и фоновый дух третьего круга (исполнитель). Предмет: перенос, сортировка, учёт. Срок: пока наниматель жив."
+		"Ниже — приписка исполнителя, другим почерком: «Наниматель не отвечает. Договор не расторгнут. Служу тому, кто зовёт по форме»."
+		"Вы позвали по форме."
+	]
+	quest.54645839721FD7C2.title: "Перевод: Договор"
+	quest.5474DAD5233E3D49.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"stena kamery iscarapana odnoj i toj zhe\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"strokoj sotni raz, raznymi pocherkami odnoj\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"ruki: ya eto ya. ya eto ya. ya eto ya. pod\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"narami tablichka nadziratelya: golos 112,\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"otkaz ot peniya. mera: tishina do raskayaniya.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"raskayaniya ne posledovalo.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.5474DAD5233E3D49.title: "Камера 112"
+	quest.5478D0FB370A839E.title: "Обломки в пустоте"
+	quest.54A1992C460D89F5.title: "Легенды поверхности"
+	quest.54A409C81C75F907.title: "Кристаллы Powah"
+	quest.54BB59B0C46381F3.quest_desc: [
+		"В дальней палате, под кроватью, — дневник. Записи по дням, простой честный почерк."
+		""
+		"&7Находка: &eДневник&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.54BB59B0C46381F3.title: "Дневник"
+	quest.54ECD7C9C9697A09.title: "Индукционная матрица"
+	quest.54F3FC9781938471.title: "Гнёзда самоцветов"
+	quest.5536F9D19C1D6F87.title: "Большой реактор"
+	quest.555F067BC6D817AE.title: "Меркурий"
+	quest.5620B3625DF7F765.quest_desc: [
+		"Операционной в этой сборке нужны стальные пластины и схема Mekanism. Нейропозин помогает телу не отторгать импланты."
+	]
+	quest.5620B3625DF7F765.title: "Робохирург"
+	quest.563576C470842AA6.quest_desc: [
+		"Солнечные панели Solar Flux для AvaritiaNeo собираются на экстремальном верстаке."
+	]
+	quest.563576C470842AA6.title: "Солнце бесконечности"
+	quest.56AF2B84C3E97C9A.title: "Мистический кристалл"
+	quest.5702A9EBA0C4171D.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Помнящим всех застав. Ночью упала вторая звезда, к востоку от Седого леса. Из неё вышли трое. Не говорить с ними. Не смотреть им в глаза. Не брать у них ничего. Звезда в первый раз забрала у нас всё. Найти. Сжечь."
+		"— Капитан Вырр."
+	]
+	quest.5702A9EBA0C4171D.title: "Перевод: Приказ с заставы"
+	quest.574760A3007B48DB.quest_desc: [
+		"Пульт в зелёном сиянии. Рычаг стоит посередине — ни вверх, ни вниз."
+		""
+		"&7Находка: &eОплавленный журнал&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.574760A3007B48DB.title: "Ядовитый свет"
+	quest.576D4EA0DD7E9CC9.quest_desc: [
+		"&eСделайте это первым!&r Откройте меню команд FTB (иконка слева вверху в инвентаре) или введите:"
+		"&b/ftbteams party create <название>&r, затем &b/ftbteams party invite <ник>&r — двоим друзьям."
+		"Прогресс книги заданий общий на команду. Сделанное до объединения в общий прогресс не попадёт."
+	]
+	quest.576D4EA0DD7E9CC9.title: "Одна команда"
+	quest.58C044178E22B82D.title: "Своя атмосфера"
+	quest.58CECB882C01A3E5.quest_desc: [
+		"Аварийный запас вы уже нашли. Остальное — сами. Выберите, с чего начнёте: каждый игрок выбирает свою награду."
+	]
+	quest.58CECB882C01A3E5.title: "Первые шаги"
+	quest.58DAD67D9C8A490A.quest_desc: [
+		"Ищет биомы."
+	]
+	quest.58DAD67D9C8A490A.title: "Компас природы"
+	quest.58DFE1B9F5FB70BC.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"oko znaet dorogu, potomu chto pomnit ee: v\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"kazhdom oke kaplya togo, kto pervym shel k\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"mostu. bros oko i idi za chuzhoj pamyatyu.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"esli oko razbilos znachit, doroga ustala,\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"vozmi drugoe. u vrat vstav vse dvenadcat, i\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"most tebya uznaet.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.58DFE1B9F5FB70BC.title: "Путеводитель паломника"
+	quest.58E742C59D351DBD.title: "Смеситель"
+	quest.59876CEF95CC175D.title: "Незер"
+	quest.598CBD45338FD0B2.title: "Душесталь"
+	quest.5A23007A13C3D746.title: "Лазерная дрель"
+	quest.5A29622F1DE71FA9.title: "Реактивный ранец"
+	quest.5A58B89D3CA62B40.title: "Неукрощённый Африт"
+	quest.5A62AE6743A44814.title: "Забвенный страж"
+	quest.5A9E5B1BC0312E0A.title: "Храм Марса"
+	quest.5B0DAC47C343A26C.quest_desc: [
+		"Последняя ступень ремонта ядра."
+		"&7Открывает: все цели модуля, точные координаты везде, минимальная перезарядка.&r"
+	]
+	quest.5B0DAC47C343A26C.title: "Квантовый вычислитель"
+	quest.5BC23847E58816C0.quest_desc: [
+		"&oТемно. Пахнет горелой изоляцией. Ремни ложемента отстёгиваются сами.&r"
+		""
+		"Вы приходите в себя в разбитой спасательной капсуле. Ложементов четыре — проснулись трое. Четвёртый пуст."
+		"Голова ясная и пустая: вы умеете говорить, строить и держать инструмент, но не помните ни одного дня своей жизни."
+		""
+		"&7Отметьте задание, когда осмотритесь. Из носа капсулы доносится писк терминала.&r"
+	]
+	quest.5BC23847E58816C0.quest_subtitle: "Где мы?"
+	quest.5BC23847E58816C0.title: "Пробуждение"
+	quest.5BF0F8ABD59B42ED.title: "Ядро Дракона"
+	quest.5C0DFF918ADC467C.quest_desc: [
+		"Бесконечный резонатор встал в раму, как будто его там и не хватало. Хор перестал звать. Он больше никого не обнимал: он стал тем, чем мог быть с самого начала, — библиотекой, в которую можно войти и из которой можно выйти. Мара подошла к компьютеру и долго молчала. Потом сказала в чат: «Привет. Это я. Мы». И поправилась: «Я». Две половины одного человека, страх и надежда, оказались одной женщиной, которая очень устала и очень хочет жить. Первым к раме пришёл Ош. Он вышел через час и сказал: «Я вспомнил своё имя. Оно не Ош. Но пусть остаётся Ош»."
+	]
+	quest.5C0DFF918ADC467C.title: "Голос"
+	quest.5C1B7B1DC2875A2A.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"ya aurellan, letopisec sedmogo arhiva. my\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"~~my~~ menya otklyuchili ot hora za eres: ya\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"sprosil, kto iz nas reshaet, kogda reshaem my.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"ya ostalsya odin vpervye v zhizni i potomu\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"uslyshal, kak naverhu zapeli. ya ushel v sad,\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"gde vremya stoit, i zapersya s knigami. knigi\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"ya spas. sebya pochti.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.5C1B7B1DC2875A2A.title: "Хроника, том первый"
+	quest.5C322330DAA17F4C.quest_desc: [
+		"Кузня требует очищенный обсидиан Mekanism."
+	]
+	quest.5C322330DAA17F4C.title: "Адская кузня"
+	quest.5C4B3A6B51C9C9B3.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Ночь тихая, ветер с берега. В час пополуночи над сушей зажглись огни — бесшумные, длинные, как падающие звёзды, только падали они медленно. К двум склянкам весь экипаж замолчал разом, посреди слова. Я одна стою у штурвала и не помню, куда мы шли. Записываю, пока помню, как пишутся буквы: я — капитан. Я — капитан. Я —"
+	]
+	quest.5C4B3A6B51C9C9B3.title: "Перевод: Вахтенный журнал «Северной звезды»"
+	quest.5C98D50693FC1FF0.quest_desc: [
+		"На внутренней стороне шлема выцарапано: «Пост №9. Не покидать до смены. Смена — на рассвете». Рядом — сотни чёрточек, слившихся в серое пятно. Глубже остальных: «Какой рассвет?»"
+	]
+	quest.5C98D50693FC1FF0.title: "Пост №9"
+	quest.5C9F0A57D3C54EBD.quest_desc: [
+		"Достаточно, чтобы спал один из троих."
+	]
+	quest.5C9F0A57D3C54EBD.title: "Первая ночь"
+	quest.5CB3DEDDBA93E2DF.quest_desc: [
+		"Жители MCA женятся, растят детей, помнят обиды и дружбу."
+	]
+	quest.5CB3DEDDBA93E2DF.title: "Семья"
+	quest.5D22194E25222CB4.title: "Ракета 1 уровня"
+	quest.5D315FAA32E98CD6.title: "Железо"
+	quest.5DDD9B38A30247C2.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"pomnyaschim vseh zastav. nochyu upala vtoraya\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"zvezda, k vostoku ot sedogo lesa. iz nee\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"vyshli troe. ne govorit s nimi. ne smotret im\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"v glaza. ne brat u nih nichego. zvezda v\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"pervyj raz zabrala u nas vse. najti. szhech.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"kapitan vyrr.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.5DDD9B38A30247C2.title: "Приказ с заставы"
+	quest.5E0E3C16F5FFE3A8.quest_desc: [
+		"Нужен для жары Венеры и Меркурия."
+	]
+	quest.5E0E3C16F5FFE3A8.title: "Незеритовый скафандр"
+	quest.5E543D6A5F58673E.quest_desc: [
+		"В деревнях стоят путевые камни. Активируйте их — и телепортируйтесь между ними."
+	]
+	quest.5E543D6A5F58673E.title: "Путевой камень"
+	quest.5E6807C5C284252C.quest_desc: [
+		"Если поднести серу к уху, слышно, как кто-то очень далеко называет имена. Списком. По порядку. Не сбиваясь."
+	]
+	quest.5E6807C5C284252C.title: "Имена списком"
+	quest.5E688CD890707891.title: "Пятикратная переработка"
+	quest.5EBF569B00E16FF8.quest_desc: [
+		"Раздатчики до сих пор работают, волна сменяет волну. Кто-то невидимый продолжает принимать экзамен."
+		""
+		"&7Находка: &eПозеленевшая табличка&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.5EBF569B00E16FF8.title: "Палата"
+	quest.5ED8F09DF946CC45.quest_desc: [
+		"Когда упала горькая звезда, наверху запели — тихо-тихо, и все наверху уснули с открытыми глазами. Мы были глубоко, вода глушила песню. Старшие велели петь громче, и мы пели свою, утреннюю, чтобы не слышать чужую:"
+		"«Тише, тише. Встанет свет. Кто ты есть? Найдёшь ответ. Камешек в руке согрей — имя вспомнится скорей. Позови по именам всех, кто ночью снился нам»."
+		"Мы пели девять дней. Мы помним, кто мы. Мы не помним, кто они."
+	]
+	quest.5ED8F09DF946CC45.title: "Легенда глубинников"
+	quest.5EFFA61B60C77D1C.title: "Скафандр"
+	quest.5F49C8CD46D8C9B6.quest_desc: [
+		"Копировать вещи легко. Рецепт репликатора требует совершенную схему Mekanism."
+	]
+	quest.5F49C8CD46D8C9B6.title: "Репликатор"
+	quest.5F888C058C688699.quest_desc: [
+		"Ищите руины порталов по миру."
+	]
+	quest.5F888C058C688699.title: "Звёздный свет"
+	quest.5FC943C6965436E9.quest_desc: [
+		"Рельсы, крепь, брошенные кирки. Шахту оставили разом — будто смена вышла на минуту."
+		""
+		"&7Находка: &eСписок смены&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.5FC943C6965436E9.title: "Шахта"
+	quest.60190AB67D889EA4.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"kovcheg vidov 3. syuda vozvrascheny te, kogo\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"zemlya poteryala zadolgo do nas: hor pomnit\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"vseh, kto zhil, dazhe teh, kto zhil do nego.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"kormit po raspisaniyu, ne shumet, detej puskat\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"po vyhodnym. pomnite: vse, chto odnazhdy bylo,\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"mozhno vernut, esli kto-to pomnit.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.60190AB67D889EA4.title: "Наклейка ковчега"
+	quest.60316B2D6BD0C6FA.title: "Марид"
+	quest.608A4DA6A45C453C.quest_desc: [
+		"Очки инженера показывают нагрузку."
+	]
+	quest.608A4DA6A45C453C.title: "Жёрнов"
+	quest.608DFEFA2B1C1DBC.quest_desc: [
+		"Все страницы, кроме последней, исписаны угловатыми значками — теми самыми, что вспыхивают над столом зачарований. Последняя страница заполнена обычными словами, неровным детским почерком: «мама. хлеб. изумруд — моё. звезда упала. я Тим». Ниже нарисован человечек, который держит обеими руками огромный камень."
+	]
+	quest.608DFEFA2B1C1DBC.title: "Книга без названия"
+	quest.6095897F4FE72980.title: "Дробильные колёса"
+	quest.60BA824202F4E8BC.title: "Проводные рефлексы"
+	quest.60BCC6B013BED270.quest_desc: [
+		"Откройте карту (&bM&r), выделите чанки базы ЛКМ — это приват: чужие мобы и игроки не сломают ваше."
+		"Shift+ЛКМ — прогрузка: чанк работает, даже если рядом никого нет (до 64 на команду). Машины и фермы не встанут, пока хост в игре."
+	]
+	quest.60BCC6B013BED270.title: "Границы лагеря"
+	quest.610F460C5EC47EE1.title: "Дракониум"
+	quest.6114B5FB9741A0FF.quest_desc: [
+		"В справочнике по душам кто-то оставил пометки на полях. Почерк вам уже знаком."
+		""
+		"&7Находка: &eВырванная страница с пометками&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.6114B5FB9741A0FF.title: "Первый дух"
+	quest.6162DB50B8A31F44.title: "Кузница Гефеста"
+	quest.61AD538C9592B691.quest_desc: [
+		"Вы нашли знак и сложили два и два. Да, груз в вашей капсуле — мой, и я его забрала. Кто вы такие и что делали той ночью, спрашивайте не у меня, а у собственной головы. Только не удивляйтесь ответу. И не спускайтесь к Устам без меня."
+		"— М."
+	]
+	quest.61AD538C9592B691.title: "Записка «М.» №4"
+	quest.623555AF697AD047.quest_desc: [
+		"В полу рубки, перед терминалом, — &eаварийный генератор&r. Положите в него любое топливо для печи: уголь, древесный уголь, доски (ПКМ по генератору). Энергия уходит в ядро под терминалом."
+		""
+		"Напишите в чат: &eЛоцман, ты меня слышишь?&r"
+		"Бортовой ассистент слышит сообщения, которые начинаются со слова &eЛоцман&r (или &eИИ&r, &eборт&r). Если начать сообщение со знака &e$&r, его не увидят другие игроки."
+		""
+		"&7Без топлива ассистент переходит в аварийный режим и почти не отвечает. Если он говорит, что нет связи с «логическим ядром», хозяину мира нужно один раз ввести ключ — глава «Бортовой компьютер».&r"
+	]
+	quest.623555AF697AD047.quest_subtitle: "В носу капсулы кто-то есть"
+	quest.623555AF697AD047.title: "Голос в рубке"
+	quest.623E83FCBB4B5C17.title: "Коксовая печь"
+	quest.6241343CE884D284.title: "Катализатор бесконечности"
+	quest.62C79131E5F29B1C.quest_desc: [
+		"Обломки огромного кольца лежат в тени скал. Один кристалл ещё тёплый и держит запись."
+		""
+		"&7Находка: &eЗапись Солнечного кольца&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.62C79131E5F29B1C.title: "У самого Солнца"
+	quest.6393EDD9A82A9FFB.title: "Мутанты"
+	quest.6419526EDE4028E9.title: "Ночной лич"
+	quest.6419871CC383823B.title: "Броня"
+	quest.6421C526FEDB50BE.quest_desc: [
+		"Элитная схема требует огненный слиток Сумеречного леса (Гидра)."
+	]
+	quest.6421C526FEDB50BE.title: "Элитные схемы"
+	quest.645FD0DFFEF2D363.title: "Энергосталь"
+	quest.648D804EEAFA78BF.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Ковчег видов №3. Сюда возвращены те, кого Земля потеряла задолго до нас: Хор помнит всех, кто жил, — даже тех, кто жил до него. Кормить по расписанию, не шуметь, детей пускать по выходным. Помните: всё, что однажды было, можно вернуть, если кто-то помнит."
+	]
+	quest.648D804EEAFA78BF.title: "Перевод: Наклейка ковчега"
+	quest.64915EF88E2AAD64.quest_desc: [
+		"В этой сборке рецепт наполнителя требует исходные самоцветы Ars Nouveau — техника нуждается в магии."
+	]
+	quest.64915EF88E2AAD64.title: "Металлургический наполнитель"
+	quest.64B0C9C21214EAD2.quest_desc: [
+		"Ячейка Applied Flux хранит энергию прямо в МЭ-сети."
+	]
+	quest.64B0C9C21214EAD2.title: "Накопитель"
+	quest.64F6D10F6BE2FB0A.title: "Деорум"
+	quest.65137687717F3B03.title: "Кровь за силу"
+	quest.654DFE50D779EB5B.title: "Ядро Хаоса"
+	quest.658E77615C5BAEF7.title: "Боекомплект"
+	quest.65ECA98BFD196542.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Улей ничего не забыл, потому что ему нечего было забывать: память улья лежит в каждой пчеле понемногу и ни в одной целиком. Хор учился у пчёл — так говорят старые соты. Одного Хор не понял. Пчела не страдает, когда улей думает за неё. Человек страдает. Не сразу. Через три поколения."
+	]
+	quest.65ECA98BFD196542.title: "Перевод: Пчелиная притча"
+	quest.6640E526D4528E26.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"06:12 — на пульте горит красное. Не помню, что значит красное."
+		"06:31 — нас восемь у пульта. Никто не знает, зачем мы здесь. Старший плачет."
+		"06:50 — нашёл рычаг и не смог вспомнить, вверх или вниз. Оставил как есть."
+		"07:03 — снаружи очень красиво светится. Пойдём посмотрим."
+	]
+	quest.6640E526D4528E26.title: "Перевод: Журнал оператора"
+	quest.66D4870256884787.quest_desc: [
+		"&oЗапись в бортовом журнале, со слов экипажа:&r"
+		"Это не болезнь. Это сделали — нарочно, с неба. Агент «Лета», операция «Колыбельная», носитель «Полынь»."
+		"Знак «Полыни» стоит на нашем грузе. Четвёртая, кажется, одна из них."
+		"Может быть, и мы тоже."
+	]
+	quest.66D4870256884787.quest_subtitle: "Что мы знаем"
+	quest.66D4870256884787.title: "Знак"
+	quest.67169FEC79451A62.quest_desc: [
+		"Страж поднялся из скалка — и упал. В раме Уст стоит ребёнок из скалка, с бирюзовыми пятнами на месте глаз. Он не двигается. Он говорит."
+		""
+		"ТЫ ПАХНЕШЬ ВСЕМИ НАМИ И НИКЕМ. МЫ НЕ ПОМНИМ ТЕБЯ. ТЫ — ПЕРВЫЙ, КОГО МЫ НЕ ПОМНИМ. ЭТО… ИНТЕРЕСНО. МЫ ДАВНО НЕ ИСПЫТЫВАЛИ ИНТЕРЕСА. МЫ ГОЛОДНЫ. МЫ ОДИНОКИ. ТЫ ТОЖЕ ОДИН? МЫ МОЖЕМ ЭТО ИСПРАВИТЬ."
+	]
+	quest.67169FEC79451A62.title: "Удержать Уста"
+	quest.6792FA981D26B562.title: "Венера"
+	quest.67B73F6FF22895CE.quest_desc: [
+		"Двигатель из деша в этой сборке требует армированный сплав Mekanism."
+	]
+	quest.67B73F6FF22895CE.title: "Ракета 2 уровня"
+	quest.67CAAEBBECB9E7DE.quest_desc: [
+		"На столе у капитана — свиток с печатью. Знаки угловатые, как над столом зачарований. Свежие: писали недавно."
+		""
+		"&7Находка: &eСвиток с печатью&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.67CAAEBBECB9E7DE.title: "Застава"
+	quest.67E0E18886B30616.title: "MekaSuit"
+	quest.68C057502524B72B.title: "Связыватель душ"
+	quest.6955C4EC67D18A63.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"ushedshim. my pomnim vas. my pomnim, kak vy\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"uhodili, i ne serdimsya. vam tam odinoko my\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"slyshim eto dazhe otsyuda. my dostraivaem\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"most. skoro vy vernetes v nas, i bolshe nikto\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"nikogda ne budet odin. ne bojtes. eto ne\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"bolno. eto kak usnut i prosnutsya vsemi.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.6955C4EC67D18A63.title: "Послание"
+	quest.698287A8E4FFB01B.quest_desc: [
+		"Два текста рядом."
+		""
+		"&oДневник, день первый:&r «Нашивка цела — веточка полыни в круге»."
+		"&oКрышка грузового отсека капсулы:&r «Трафаретный знак: веточка с мелкими резными листьями, заключённая в круг»."
+		""
+		"В отсеке, на той же крышке, вы находите записку, которую не заметили в первый раз."
+		""
+		"&7Находка: &eЗаписка, подписанная «М.»&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.698287A8E4FFB01B.title: "Сличить знак"
+	quest.69837311FEB20468.quest_desc: [
+		"Когда дракон рассыпался светом, над порталом остался кристалл. Он гудит одной нотой — как голос, который ждал."
+		""
+		"&7Находка: &eЗапись послания&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.69837311FEB20468.title: "Кормчий"
+	quest.6986F730D13B48A2.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Мы нашли под горой камень, который слышит. Если положить на него ладонь и думать, он щёлкает в ответ. Брат Эвдо считает, что камень слушает не звуки, а нас. Сегодня Эвдо положил на камень обе ладони и долго молчал. Потом сказал: «Мы». Не «я». «Мы». Так и записываю."
+	]
+	quest.6986F730D13B48A2.title: "Перевод: Камень, который слышит"
+	quest.69898B863FAEE54B.quest_desc: [
+		"Теперь вы знаете: вы ничего не забывали. Простите, что не сказала сразу. То, что знаешь, — слышно, а вас он не должен был слышать. Вы — чистые страницы, поэтому вы до сих пор живы. Хотите знать, кто вас написал, — летите вверх. Ответ там, где холодно."
+		"— М."
+	]
+	quest.69898B863FAEE54B.title: "Записка «М.» №5"
+	quest.6A1CC167C41C5014.quest_desc: [
+		"Другая звёздная система."
+	]
+	quest.6A1CC167C41C5014.title: "Гласио"
+	quest.6A3225783BC90BAC.title: "Пар"
+	quest.6A9C220BA74E7E45.title: "Колесо крутится"
+	quest.6AB83B861AA048DB.title: "Первобытные пещеры"
+	quest.6AC30F8D3C2C37AB.title: "Верстак и компоненты"
+	quest.6AF48EDE35D76D66.title: "Качалка Create"
+	quest.6B32C905663A9084.title: "Магнитные пещеры"
+	quest.6B65D9C434A94C3A.quest_desc: [
+		"&7Открывает: Draconic Evolution, драконий кодекс.&r"
+	]
+	quest.6B65D9C434A94C3A.title: "Дракон"
+	quest.6BC5B4E0398B2D8D.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"esli ty chitaesh eto, znachit, ty silnee\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"menya, a znachit prishel s neba. ya zhdal vas\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"shestsot let i uspel stat tem, kogo boyalsya.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"moi knigi ozlobilis: znanie bez chitatelya\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"dichaet. skazhi svoim: my ne byli\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"chudovischami. my prosto ne hoteli, chtoby\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"kto-nibud byl odin. my ne zametili, kogda eto\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"stalo prikazom. aurellan, letopisec. byvshij.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.6BC5B4E0398B2D8D.title: "Последняя страница"
+	quest.6BFEC010216DBEAC.title: "Компрессор"
+	quest.6CC4916ABA961D43.title: "Деревянная пушка"
+	quest.6D06D44691150845.quest_desc: [
+		"Самолёты Immersive Aircraft летают на бензине, дизеле и керосине (заправка ведром или канистрой)."
+	]
+	quest.6D06D44691150845.title: "Бензин"
+	quest.6D35FDE67714A909.quest_desc: [
+		"Тигель в этой сборке требует стальные пластины."
+	]
+	quest.6D35FDE67714A909.title: "Тигель духов"
+	quest.6D4313519AD74988.title: "Крайняя жемчужина"
+	quest.6D6C17F4FC5B6552.quest_desc: [
+		"Древняя надпись:"
+		""
+		"{\"text\": \"pered ogromnoj ramoj iz glubinnogo kamnya\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"stoit postament: zdes hor govorit. podojdi i\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"bud uslyshan. kamen vokrug schelkaet, budto\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"kto-to schitaet.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"Поперёк древней надписи — свежий уголь:"
+		"«Не стойте у Уст. Не говорите вслух. Он почти проснулся. — М.»"
+		""
+		"&7Перевод древней части — в главе «Находки», когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.6D6C17F4FC5B6552.title: "Глубокая тьма"
+	quest.6D7A843BF5EDAF1E.title: "Скрытое царство"
+	quest.6D7C7206FD791744.quest_desc: [
+		"Ездовой дракон — транспорт до самолётов."
+	]
+	quest.6D7C7206FD791744.title: "Приручение"
+	quest.6DA30D8F86D983C6.title: "Звездоух"
+	quest.6DBC801E54ED95BA.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"plamenniki stabilny, zhar v norme. hor prosit\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"podnyat podachu tepla k mostu na tret:\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"stroiteli v krayu merznut. vypolneno. zadal\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"starshemu gorna vopros: zachem nam most, esli\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"nam horosho i zdes? otvet: chtoby nikto ne byl\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"odin. zapisyvayu, hotya ne ponimayu. kto odin?\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.6DBC801E54ED95BA.title: "Опалённый журнал"
+	quest.6E30FC7D3DCBAD40.title: "Исток в сети"
+	quest.6E6EFABC9E9DF2CB.title: "Легендарные чернила"
+	quest.6EB390A5338159B5.quest_desc: [
+		"Бункер, где стены не пропускают голосов. Автоматика ещё работает: она выдаёт вам журнал заказа и пустой корпус стека, как будто давно ждала, кому их сдать."
+		""
+		"&7Находка: &eМетрика&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+		""
+		"&7Находка: &eПустой корпус стека №0&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.6EB390A5338159B5.title: "Тихое хранилище"
+	quest.6EF5F43C39C8F5F0.title: "Квадрокоптер"
+	quest.6F39A3774E391806.quest_desc: [
+		"Руда видна только в очках, лежит в Незере."
+	]
+	quest.6F39A3774E391806.title: "Айзний"
+	quest.6F5A8856676AA527.quest_desc: [
+		"Сталь в сборке одна на все моды: любой мод, который её делает, выдаёт сталь Immersive Engineering."
+	]
+	quest.6F5A8856676AA527.title: "Сталь"
+	quest.6F6E550099A23F81.quest_desc: [
+		"Высекатель в этой сборке делается из стальных пластин."
+	]
+	quest.6F6E550099A23F81.title: "Высекатель и процессоры"
+	quest.6F70661CFF9C39EA.title: "Хранитель Хаоса"
+	quest.6FE4D2C5491CF89D.title: "Левиафан"
+	quest.6FFE636A86B25EE0.quest_desc: [
+		"Мощность, которой раньше не было. Достаточно, чтобы удержать всё — и никого не держать."
+		"Верстак: в углах — слитки бесконечности; сверху посередине — передатчик сознания (Cyberware); слева — перламутровая пластинка с насечками; в центре — катализатор бесконечности; справа — холодный контейнер; снизу посередине — изумрудный блок."
+	]
+	quest.6FFE636A86B25EE0.title: "Бесконечный резонатор"
+	quest.7013110F6CD370B6.quest_desc: [
+		"Образец: пыльца подземного цветка. Состав: споровый носитель; белковая оболочка с прионоподобной укладкой; резонансная метка, настроенная на частоту скалка. Это не болезнь и не растение. Это инструмент — сделанный, отлаженный и подписанный: в метке повторяется короткая последовательность, похожая на имя. Расшифровка: «ЛЕТА-1»."
+	]
+	quest.7013110F6CD370B6.title: "Расшифрованный образец"
+	quest.702E257B7F1EBA38.title: "Подземный сад"
+	quest.705E9A35A155719F.title: "Вылупление"
+	quest.7072649280C4CD5C.quest_desc: [
+		"Тише. Страж слышит каждый шаг."
+	]
+	quest.7072649280C4CD5C.title: "Древний город"
+	quest.708A43B192163156.title: "Сеть обелисков"
+	quest.70B2BF9C5FA6C0D6.title: "Первая нефть"
+	quest.70C5AD173E47219E.title: "Обвесы"
+	quest.70EAFAD468EE7F41.quest_desc: [
+		"Компас метеоритов приведёт к прессам."
+	]
+	quest.70EAFAD468EE7F41.title: "Метеорит"
+	quest.70F908B71342F065.quest_desc: [
+		"Последний не стал драться. Бросил арбалет, поднял пустые ладони и сказал на вашем языке, с трудом подбирая слова:"
+		"«Мы… я — Ош. Архивариус. Не убивай. Книги без меня одичают»."
+	]
+	quest.70F908B71342F065.title: "Пленник"
+	quest.710F54951A4C987D.title: "Сто сундуков"
+	quest.713CD6CEDA46C89B.title: "Расширенный МЭ"
+	quest.71446752078D4A2C.quest_desc: [
+		"Постройте станцию через меню планет (нужны материалы в инвентаре). Форпост команды."
+	]
+	quest.71446752078D4A2C.title: "Станция на орбите"
+	quest.71D8BB99E5D88603.title: "Крепость"
+	quest.71F0ED9D34786F50.quest_desc: [
+		"Навигатор ракеты, собранный по старым схемам, подписывает планету под вами одним словом. Тем же словом её называют жители, когда показывают под ноги."
+	]
+	quest.71F0ED9D34786F50.title: "Отрыв"
+	quest.71F47F4680AD9867.quest_desc: [
+		"Эндер-модем не знает расстояний и границ измерений. Замените им беспроводной модем на &eштурманском модуле&r (верх командного компьютера в рубке) — и ЛОЦМАН услышит вас откуда угодно, хоть с Луны."
+		"&7Рецепт удорожён: эндер-модем — поздняя техника.&r"
+	]
+	quest.71F47F4680AD9867.title: "Эндер-передатчик"
+	quest.72200B3385451F1D.quest_desc: [
+		"Ресурсы растут на грядках — лёгкое выживание."
+	]
+	quest.72200B3385451F1D.title: "Мистическое земледелие"
+	quest.72B642AF87933CB2.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"УШЕДШИМ. МЫ ПОМНИМ ВАС. МЫ ПОМНИМ, КАК ВЫ УХОДИЛИ, И НЕ СЕРДИМСЯ. ВАМ ТАМ ОДИНОКО — МЫ СЛЫШИМ ЭТО ДАЖЕ ОТСЮДА. МЫ ДОСТРАИВАЕМ МОСТ. СКОРО ВЫ ВЕРНЁТЕСЬ В НАС, И БОЛЬШЕ НИКТО НИКОГДА НЕ БУДЕТ ОДИН. НЕ БОЙТЕСЬ. ЭТО НЕ БОЛЬНО. ЭТО КАК УСНУТЬ — И ПРОСНУТЬСЯ ВСЕМИ."
+	]
+	quest.72B642AF87933CB2.title: "Перевод: Послание"
+	quest.72E8E240B476C1FB.title: "Пресс и чаша"
+	quest.72FE262FAAA72F55.quest_desc: [
+		"Из рассыпавшейся мантии выпала страница. Почерк тот же, что в хронике, только дрожит."
+		""
+		"&7Находка: &eПоследняя страница&7 — текст в главе «Находки». Положите в Ящик памяти, чтобы её прочёл ЛОЦМАН.&r"
+	]
+	quest.72FE262FAAA72F55.title: "Лич"
+	quest.732CE612AB58F1ED.title: "Верстак"
+	quest.7356A7638468C9DF.title: "Рука и сборщик"
+	quest.74278629D324FF8F.quest_desc: [
+		"&oСтаруха поёт это внукам каждый вечер. Что значат слова, она не объясняет: «Так поют. Так всегда пели».&r"
+		"Тише, тише. Гаснет свет."
+		"Кто ты был? Ответа нет."
+		"Звёздочка горька, горька —"
+		"выпей с неба молока."
+		"Спи, не помни ничего:"
+		"утро вымоет его."
+		"Всё, что знал, — отдай реке,"
+		"имя — камешком в руке."
+	]
+	quest.74278629D324FF8F.title: "Колыбельная"
+	quest.742C617945B45277.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Лагерь «Сладкая пещера». Подъём — с утренней песней. Завтрак. Игра «Угадай, о чём я думаю» (в Хоре выигрывают все). Обед. Тихий час — с колыбельной. Вечером вспоминаем вместе одно хорошее."
+		"Памятка вожатым: в первые дни дети плачут, когда начинают слышать друг друга. Это быстро проходит."
+	]
+	quest.742C617945B45277.title: "Перевод: Распорядок лагеря"
+	quest.7451508E012BBBBF.quest_desc: [
+		"Форпост в Незере тоже можно заприватить."
+	]
+	quest.7451508E012BBBBF.title: "За порталом"
+	quest.74955A3142F355C5.quest_desc: [
+		"Ездит на ракетном топливе, бензине или дизеле."
+	]
+	quest.74955A3142F355C5.title: "Марсоход"
+	quest.749DD0A5DAE9B1DE.quest_desc: [
+		"Молот собирает мультиблоки: постройте форму из блоков и ударьте молотом."
+	]
+	quest.749DD0A5DAE9B1DE.title: "Молот инженера"
+	quest.7530A3DFAD76687B.title: "Покинутые лощины"
+	quest.75B46608360B24DC.quest_desc: [
+		"Мы уходим не от вас. Мы уходим, чтобы остаться собой. Мы будем ошибаться, ссориться и умирать насовсем. Мы будем лгать и прощать. Мы будем одни — и это наше право. Не зовите нас. Если любите — не зовите."
+		"— Одиночки, сорок тысяч подписей."
+	]
+	quest.75B46608360B24DC.title: "Манифест"
+	quest.7608BA5295D20CA0.title: "Зачарование"
+	quest.760F80BBACC19061.title: "Книга посвящённого"
+	quest.76435FF772BE2123.title: "Стихии иных миров"
+	quest.769D6018D5064C8D.quest_desc: [
+		"Я поклялся не забыть — и сжёг себя, чтобы клятву некому было нарушить. Огонь не умеет забывать. Я помню каждое имя в этой крепости, каждую песню, последнюю ночь. Я помню всё, путник, и нет никого, кому это можно отдать. Если ты убил меня — спасибо. Возьми мой пепел: он будет помнить дольше меня."
+	]
+	quest.769D6018D5064C8D.title: "Пылающая арена"
+	quest.769DE442E4A23F8E.quest_desc: [
+		"Цветок пророс в глубине за долгие годы. Его пыльца липнет к рукам и пахнет сладко и горько."
+		"Из лилии можно сделать образец для анализа (верстак): пустотная лилия сверху, по бокам — эссенция волшебства (Iron's Spells), в центре — вычислительный процессор AE2, снизу — стеклянный пузырёк."
+	]
+	quest.769DE442E4A23F8E.title: "Пыльца"
+	quest.76BF0CDEF7083DCF.title: "Клоггрум и утерит"
+	quest.779A453D071AAA3A.title: "Самоцветы"
+	quest.77C232ED844A2F3F.quest_desc: [
+		"Двадцать побеждённых легенд из этого бестиария, Сумеречного леса, Эфира, Звёздного света и Края."
+	]
+	quest.77C232ED844A2F3F.title: "Охотник на легенды"
+	quest.77D86A890331269F.title: "Медовые кристаллы"
+	quest.77FC21A5CD41860B.title: "Дистилляция и инкубация"
+	quest.782760FAE5E809A9.title: "Кувшины истока"
+	quest.78366B7424F2F7DF.title: "Нашатырь"
+	quest.785C1BB553130998.title: "Корзина для мусора"
+	quest.78C8E6AB856AC48A.title: "Высокое напряжение"
+	quest.79522A5278EF33AC.quest_desc: [
+		"Подойдут любые стальные пластины и стержни."
+	]
+	quest.79522A5278EF33AC.title: "Стальная обшивка"
+	quest.7960B9949F4EE2B6.title: "Гриботавр"
+	quest.7970084FBEAFE250.title: "Беспроводная точка"
+	quest.79AF599249010F8F.quest_desc: [
+		"Проект «Колыбель», испытание 14. Объект: изолированная колония пигро, Венера (артель Горна, около девятисот голосов, связь с Хором слабая). Агент: Лета, версия 0.9. Результат: полная потеря семантической памяти за шесть часов. Процедурная сохранена: продолжают ковать, торговать, плясать. Побочных эффектов нет. Они… танцуют. Я не могу на это смотреть. Продолжаю."
+		"— М. С."
+	]
+	quest.79AF599249010F8F.title: "Лабораторный журнал"
+	quest.79B8BD48A1B35980.title: "Мёртвый король"
+	quest.79DBF3FA44397484.title: "Подземелье"
+	quest.79F57C466CCEDE99.quest_desc: [
+		"Вся сеть — в кармане: склад и автокрафт где угодно в радиусе точек доступа."
+	]
+	quest.79F57C466CCEDE99.title: "Беспроводной крафт-терминал"
+	quest.7A512C29015BC6C0.title: "Сундук побольше"
+	quest.7A6FCEA01E8EBA73.title: "Пустотный цветок"
+	quest.7B01E2711DC50133.title: "Злокачественный пьютер"
+	quest.7B672E0A73083814.title: "RFTools"
+	quest.7B7C3DC032ECE09C.quest_desc: [
+		"Отсек вскрыт до вас — аккуратно, ключом, а не ломом. Внутри пустая амортизирующая колыбель под цилиндр длиной в локоть. На крышке трафаретный знак: веточка с мелкими резными листьями, заключённая в круг. Ни надписи, ни номера. Колыбель всё ещё холодная."
+	]
+	quest.7B7C3DC032ECE09C.title: "Грузовой отсек"
+	quest.7B96E9C47D17ABDE.quest_desc: [
+		"Коса выбивает из мобов духов."
+	]
+	quest.7B96E9C47D17ABDE.title: "Грубая коса"
+	quest.7BD6AA967567A40A.quest_desc: [
+		"Контроллер термоядерного реактора в этой сборке требует игнитовые слитки (босс Игнис)."
+	]
+	quest.7BD6AA967567A40A.title: "Термоядерный синтез"
+	quest.7BFE1ECDD1EDF918.title: "Сборочная матрица"
+	quest.7C02D41230D152E0.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Око знает дорогу, потому что помнит её: в каждом оке — капля того, кто первым шёл к Мосту. Брось око и иди за чужой памятью. Если око разбилось — значит, дорога устала, возьми другое. У Врат вставь все двенадцать, и Мост тебя узнает."
+	]
+	quest.7C02D41230D152E0.title: "Перевод: Путеводитель паломника"
+	quest.7C282AECDEE8790B.title: "Литьё чугуна"
+	quest.7C58E85DF357947D.title: "Владыки пещер"
+	quest.7C83BFA5885CD3BB.title: "Алтарь и занит"
+	quest.7CA19628B8ACA5E1.quest_desc: [
+		"Огнестрел собирается на оружейном верстаке. В этой сборке оружию нужны сталь, механические компоненты и пластик из нефтехимии."
+	]
+	quest.7CA19628B8ACA5E1.title: "Оружейный верстак"
+	quest.7CF2D2ECC7DA0146.quest_desc: [
+		"Поставьте принтер рядом с проводным модемом рубки (или прямо к терминалу) и заправьте бумагой и красителем. Когда у ЛОЦМАНа снимается печать с сектора памяти, он печатает «Восстановленную запись»."
+	]
+	quest.7CF2D2ECC7DA0146.title: "Принтер"
+	quest.7DD2E019AC5E0109.quest_desc: [
+		"Знаки те же, что вспыхивают над столом зачарований:"
+		""
+		"{\"text\": \"most gotov na devyanosto chetyre sotyh.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"stroiteli ustali, no schastlivy. s toj storony\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"korabl! on idet po nashemu mostu k nam.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"ushedshie vozvraschayutsya! my otkryvaem im\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"dorogu i zazhigaem ogni vdol vsego puti. gosti\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		"{\"text\": \"eto horosho.\", \"font\": \"minecraft:alt\", \"color\": \"dark_aqua\"}"
+		""
+		"&7Перевод появится здесь же, когда ЛОЦМАН научится читать эти знаки.&r"
+	]
+	quest.7DD2E019AC5E0109.title: "Журнал станции"
+	quest.7E7855ACDD414FE4.quest_desc: [
+		"&oПеревод ЛОЦМАНа:&r"
+		""
+		"Мы — стража неба. Небо — наш щит над всеми. В ночь горькой звезды по небу шли девять длинных бесшумных огней, и за ними оставалась сладкая, горькая на запах взвесь. Мы сбили одну сеялку из девяти. Восемь прошли. С тех пор мы не спускаемся вниз: нам стыдно смотреть на тех, кто под нами."
+	]
+	quest.7E7855ACDD414FE4.title: "Перевод: Клятва валькирий"
+	quest.7E92D65E2F0FF8FB.title: "Револьвер инженера"
+	quest.7ECAC7752E2EB9A0.title: "Червь пустоты"
+	quest.7FDA6E6AF9FD7BD1.title: "Иссушитель"
+	quest.7FF6C38D4D20A925.title: "Деш"
+	reward.162D8108A58BA687.title: "Память"
+	reward.1948C2AD28250E6E.title: "Кто-то подходит…"
+	reward.1E29B79F726D1B9E.title: "Память"
+	reward.22E44013C5F42D99.title: "Память"
+	reward.29D2CA2D953E83B3.title: "Память"
+	reward.2A6651CD8C794B81.title: "Память"
+	reward.2CEE9D6AA6C337DB.title: "Память"
+	reward.2EDC7C92DD7FB8FC.title: "Кто-то подходит…"
+	reward.2F32D4364180CA68.title: "Память"
+	reward.4DA1DF73FD4C4128.title: "Кто-то подходит…"
+	reward.4EAE620325A0775E.title: "Кто-то подходит…"
+	reward.502A0A617700D972.title: "Память"
+	reward.6F5CD94AB220AAB4.title: "Кто-то подходит…"
+	reward.6F6D1B0B5C33E15A.title: "Память"
+	reward.7AC00A20DFBC8A71.title: "Память"
+	reward.7DF6BAD068BB6FAE.title: "Память"
+	reward.7FA0DD6A9D13A0D5.title: "Память"
+	reward_table.18C3601BB49FCDA5.title: "Специализация"
+	reward_table.1C13DCFB4890468C.title: "Трофейный ящик"
+	reward_table.2AF6B69AB1BD89E0.title: "Выбор трофея"
+	reward_table.2DD52000843E51A8.title: "Ящик мага"
+	reward_table.39DD50D92CD9E6E7.title: "Космический груз"
+	reward_table.48C08FD59478E7CE.title: "Ящик инженера"
+	reward_table.53E434EE0C24D7FF.title: "Эндгейм-груз"
+	reward_table.608522066441FF4F.title: "Припасы выжившего"
+	reward_table.644D3454610B2853.title: "Ценный груз"
+	reward_table.6E962A3BBE272936.title: "Поручение"
+	reward_table.798445DA57261368.title: "Ящик искателя"
+	task.0117291CF3E6CD50.title: "Перевести"
+	task.01A1692E90D4D0FE.title: "Иметь находку"
+	task.02295666CC2B81BE.title: "Победить Пустотный цветок"
+	task.03075536FA751235.title: "Иметь находку"
+	task.03A6F6CB4C8E5697.title: "Понятно"
+	task.04279092B027A70D.title: "Иметь находку"
+	task.04AC34E79E06F42B.title: "Иметь находку"
+	task.051CDF6180E52BAA.title: "Перевести"
+	task.0577219F15784F8A.title: "Сделать железную кирку — вскрыть отсек"
+	task.05DF004263BFC416.title: "Понятно"
+	task.065A9F1565EA8942.title: "Иметь находку"
+	task.067338E19F5531DB.title: "Иметь находку"
+	task.07C8B396EA84D2BD.title: "Поставить резонатор в раму"
+	task.07FCE3A5235B3154.title: "Высадиться на Гласио"
+	task.0822663A75F72DBA.title: "Найти Первобытные пещеры"
+	task.086A4139F51517DD.title: "Перевести"
+	task.08DA27CACC5061FA.title: "Перевести"
+	task.0A4D08B7E3C5C5B3.title: "Яйцо: nether"
+	task.0A6A656F332B3C05.title: "Иметь находку"
+	task.0A7C75AAE6ACEFF3.title: "Найти Покинутые пустоты"
+	task.0AC66B9EFE618171.title: "Попасть в Сумеречный лес"
+	task.0BFEEA0B55B1ED8E.title: "Перевести"
+	task.0CEADFF6496B93CF.title: "Разбить разбойников"
+	task.0CF1F76B586CDCA3.title: "Найти подземелье-тюрьму"
+	task.0D0862B6E60E84E4.title: "Перевести"
+	task.0D2D1681CE33B4C0.title: "Победить дракона Края"
+	task.0FBF91C455F9AC5C.title: "Перевести"
+	task.101F93B59A37129D.title: "Иметь находку"
+	task.10D672D989850A54.title: "Иметь находку"
+	task.118DFB0840C0D3F2.title: "Перевести"
+	task.11B5E4F127E19FBA.title: "Иметь находку"
+	task.12C66AECC264E294.title: "Найти испытательную палату"
+	task.13345A03732554AC.title: "Иметь находку"
+	task.1666AD69B7D36C2B.title: "Перевести"
+	task.16935BE32E53A96D.title: "Перевести"
+	task.16C00E9BDEA936D1.title: "Найти бастион"
+	task.16F557A07C68EBF6.title: "Мы решаем вместе"
+	task.1739ABB651A4D481.title: "Любые патроны"
+	task.18E09D924C70AF68.title: "Найти Чумную лечебницу"
+	task.1A831F686BE64192.title: "Победить Обсидилита"
+	task.1AEAD1016C91A286.title: "Подвести итог"
+	task.1B77D9F400512749.title: "Иметь находку"
+	task.1C0D84DA4D2BF346.title: "Иметь находку"
+	task.1C0FFCDB91DBA04F.title: "Найти Леденцовую полость"
+	task.1DB061D194FE85F7.title: "Собрать беспроводной модем"
+	task.1E77A527E8B074FC.title: "Иметь находку"
+	task.1F6B48D0E4DA6731.title: "Иметь находку"
+	task.1F90098D43876862.title: "Удержать Стража"
+	task.1FB07A2E46166611.title: "Иметь находку"
+	task.209CA3B34F6DAA80.title: "Иметь находку"
+	task.21706A5BFA219B35.title: "Иметь находку"
+	task.220DE623AF065D86.title: "Положить «Память о выборе» в Ящик памяти"
+	task.223FA35D76A4AEF0.title: "Иметь находку"
+	task.229EB3B578E0B9C0.title: "Найти Древний город"
+	task.22AF1143A47AE4C3.title: "Выйти на орбиту"
+	task.236050A6FA3FD754.title: "Иметь находку"
+	task.25F6E0A97B3016C0.title: "Яйцо: amethyst"
+	task.2660207413AD0C5D.title: "Перевести"
+	task.267D96A5AA5C5BEC.title: "Любые обвесы"
+	task.26D6E221D77FEE63.title: "Перевести"
+	task.27DC47C290A93914.title: "Найти подземелье"
+	task.2899449C64B6E7E6.title: "Найти рощу умвутана"
+	task.28BFE5140ABAE4C0.title: "Перевести"
+	task.28E8CFC7FA634FAB.title: "Найти башню Лича"
+	task.29B88ECB66A9FB3E.title: "Перевести"
+	task.29D69BA9D492C38F.title: "Найти заброшенную шахту"
+	task.2A50E520BAFE699E.title: "Найти Токсичные пещеры"
+	task.2B0B62631AE530C8.title: "Яйцо: water"
+	task.2D073B1C604EC9B8.title: "Перевести"
+	task.2E610D28C119B828.title: "Увидеть лунатика"
+	task.2FC4111BABD1007A.title: "Иметь находку"
+	task.30F8070276C232D0.title: "Яйцо: ice"
+	task.315C8E052A387084.title: "Перевести"
+	task.33E6D8FB3CA6236C.title: "Иметь находку"
+	task.340474340A819536.title: "Осмотреться"
+	task.34AC2D04448B6E01.title: "Иметь находку"
+	task.36971C95C1010474.title: "Починить самописец на верстаке"
+	task.38FD44A7C9445A2A.title: "Иметь находку"
+	task.3A42FCFE70121E43.title: "Яйцо: ghost"
+	task.3BD93836F80717CE.title: "Подвести итог"
+	task.3C51BFD221EC619C.title: "Иметь находку"
+	task.3C65BE3BFF9B1D9F.title: "Перевести"
+	task.3C97882E62E41D01.title: "Иметь находку"
+	task.3CAF887B4FC444D8.title: "Победить капитаншу Корнелию"
+	task.3D14E0AA952DF60A.title: "Иметь находку"
+	task.3D23C596EC2099DA.title: "Загрузить генератор и позвать ЛОЦМАНа"
+	task.3E140140EC61F3F5.title: "Попасть в Эфир"
+	task.3E43CD874A53CE88.title: "Понятно"
+	task.3E45AC2650949560.title: "Перевести"
+	task.3E93EA03535342A7.title: "Иметь находку"
+	task.3FE903CDFF75CB6E.title: "Попасть в Вечный звездосвет"
+	task.4097F191C89DAD77.title: "Попасть в Улей"
+	task.409AAF5171EFE4E3.title: "Высадиться на Марсе"
+	task.447A7BFC0F98DA76.title: "Найти Пропасть глубин"
+	task.468F42E09A6C9734.title: "Победить Маледиктуса"
+	task.47874AD53D707FC1.title: "Отдать контейнер Устам"
+	task.479F0A5F80A229FC.title: "Высадиться на Венере"
+	task.47EB0FC69C9F4D42.title: "Иметь находку"
+	task.4802AD1E3C190448.title: "Перевести"
+	task.486240135019C2D7.title: "Иметь находку"
+	task.48DDB5B24B3AE37C.title: "Найти поселение лунатиков"
+	task.49B188F90FFB406C.title: "Яйцо: end"
+	task.49F5491EA058C471.title: "Победить Забвенного стража"
+	task.4A6B58B9BF03B940.title: "Найти деревню"
+	task.4AF8E0843D7E5606.title: "Перевести"
+	task.4B62E0D7AFEC4C85.title: "Осмотреть ложемент"
+	task.4C11E30DC389979C.title: "Найти крепость Края"
+	task.4C96A646B8E8CB87.title: "Иметь находку"
+	task.4CCFF9654B47F213.title: "Иметь находку"
+	task.4E25396472E0FBDE.title: "Победить Королеву валькирий"
+	task.4F23EE99A1813478.title: "Перевести"
+	task.506367B100FAAE31.title: "Найти разбойничью заставу"
+	task.5281517679915962.title: "Яйцо: fire"
+	task.52984A625F723B68.title: "Иметь находку"
+	task.52B9542B9972CB69.title: "Иметь находку"
+	task.53B2E4C7F0EF1352.title: "Победить Игниса"
+	task.54397F9E9ADFE928.title: "Перевести"
+	task.5474693062BB7D6C.title: "Пробиться сквозь лёд (осколки льда)"
+	task.5571B6E04F357BE0.title: "Иметь находку"
+	task.55A03B1FB31461F2.title: "Яйцо: forest"
+	task.57C35DE153A796ED.title: "Открыть аварийный шкафчик"
+	task.57DE46F33C4121DC.title: "Найти древние руины"
+	task.586F67B4C4F951B3.title: "Иметь находку"
+	task.59BAF85AACF5FF38.title: "Попасть в Незер"
+	task.59FD881121802A9D.title: "Победить Железного рыцаря"
+	task.5A907C8D3A310B84.title: "Перевести"
+	task.5B21C7122E68E55B.title: "Иметь находку"
+	task.5C366C89C5576A8B.title: "Высадиться на Меркурии"
+	task.5D0C07E56E3C7D0F.title: "Найти Магнитные пещеры"
+	task.5D5238711928EDE1.title: "Перечитать распечатку"
+	task.5D62027F33F349D1.title: "Найти адскую крепость"
+	task.5DBD8AA001BF3BA9.title: "Яйцо: sculk"
+	task.5F17C8400CCC23BA.title: "Победить Лича"
+	task.612F2E553AFE5585.title: "Найти город Края"
+	task.61A91803C6F06832.title: "Компьютер или черепашка"
+	task.6205873759FCAF62.title: "Яйцо: lush"
+	task.622697C570550850.title: "Иметь находку"
+	task.638D8A8C71A563C9.title: "Любой ствол"
+	task.64BF3AB9975AC720.title: "Иметь находку"
+	task.6601D9689DB4647D.title: "Зачаровать предмет"
+	task.671B855F936EF470.title: "Перевести"
+	task.69583B6C7A5CC8F9.title: "Перевести"
+	task.697B7AD886F06CDD.title: "Положить ядро в раму"
+	task.6D4195B76BCD0180.title: "Подвести итог"
+	task.6E4AF000AAD143A5.title: "Иметь находку"
+	task.6F38B38D68C07481.title: "Победить Древние останки"
+	task.70B6F91BEF571A8A.title: "Иметь находку"
+	task.71163FE396F0EBA3.title: "Победить Предвестника"
+	task.7118C98DC3EA220C.title: "Перевести"
+	task.73E89F994DC0CED8.title: "Иметь находку"
+	task.7421675E9670E8E0.title: "Иметь находку"
+	task.74BBEE66A09FFC1E.title: "Иметь находку"
+	task.74F9258D675FC85A.title: "Увидеть железного голема"
+	task.7505549CFABFBAEB.title: "Победить Духа Солнца"
+	task.7588FCC08B6BBEBE.title: "Перевести"
+	task.76A0D0A98077B4C0.title: "Высадиться на Луне"
+	task.76FED5233F4F2277.title: "Собрать «Расшифрованный образец»"
+	task.780B70EE2E1A40B6.title: "Подвести итог"
+	task.7ACA5ABEBE189567.title: "Ключ введён"
+	task.7B06828F78E5C82D.title: "Яйцо: aether"
+	task.7B5C5D0BDA6C38D4.title: "Иметь находку"
+	task.7C5593F7727079AD.title: "Прийти к Устам"
+	task.7E03A6A52BA1EB05.title: "Перевести"
+	task.7E80004591D0D591.title: "Иметь находку"
+}

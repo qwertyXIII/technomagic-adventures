@@ -1,0 +1,265 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "irons_spells"
+	group: "2B15C95845D546A1"
+	icon: {
+		count: 1
+		id: "irons_spellbooks:iron_spell_book"
+	}
+	id: "39B4834B48E1690E"
+	order_index: 28
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "409E622A1493E136"
+			rewards: [
+				{
+					count: 4
+					id: "43A6BACA158EA222"
+					item: {
+						count: 1
+						id: "irons_spellbooks:common_ink"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "0F8B049F808A6A58"
+					item: {
+						count: 1
+						id: "irons_spellbooks:arcane_essence"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["409E622A1493E136"]
+			hide_until_deps_visible: true
+			id: "0C04B14D25B4B467"
+			rewards: [
+				{
+					count: 16
+					id: "2741ECAF835B16DA"
+					item: {
+						count: 1
+						id: "irons_spellbooks:arcane_essence"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "39F5530ADC656677"
+					item: {
+						count: 1
+						id: "irons_spellbooks:inscription_table"
+					}
+					type: "item"
+				}
+				{
+					id: "580B2F7F55DFCCBF"
+					item: {
+						count: 1
+						id: "irons_spellbooks:iron_spell_book"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0C04B14D25B4B467"]
+			hide_until_deps_visible: true
+			id: "0509B8C6E4A07525"
+			rewards: [
+				{
+					count: 8
+					id: "1FCF14756644D1CF"
+					item: {
+						count: 1
+						id: "irons_spellbooks:common_ink"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "57FCB1E57627AEDF"
+					item: {
+						count: 1
+						id: "irons_spellbooks:scroll_forge"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["0C04B14D25B4B467"]
+			hide_until_deps_visible: true
+			id: "35E8316606C3FF0A"
+			rewards: [
+				{
+					count: 2
+					id: "19F37099F9CF6D8A"
+					item: {
+						count: 1
+						id: "irons_spellbooks:mithril_scrap"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "0D5780735F66A71D"
+					item: {
+						count: 1
+						id: "irons_spellbooks:arcane_anvil"
+					}
+					type: "item"
+				}
+				{
+					id: "2BA3D218F6C96C77"
+					item: {
+						count: 1
+						id: "irons_spellbooks:upgrade_orb"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0C04B14D25B4B467"]
+			hide_until_deps_visible: true
+			id: "1C0DDC946CA1FBBA"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "23A34B60EE1A20D7"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "irons_spellbooks:irons_spellbooks/enter_catacombs"
+					criterion: ""
+					id: "01C55EAA03A64629"
+					type: "advancement"
+				}
+			]
+			x: 4.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["1C0DDC946CA1FBBA"]
+			hide_until_deps_visible: true
+			id: "79B8BD48A1B35980"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "77FED024E757AC86"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "irons_spellbooks:dead_king"
+					id: "299C8305904FA63D"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["0509B8C6E4A07525"]
+			hide_until_deps_visible: true
+			id: "6E6EFABC9E9DF2CB"
+			rewards: [
+				{
+					count: 32
+					id: "24A2400095073999"
+					item: {
+						count: 1
+						id: "irons_spellbooks:arcane_essence"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "irons_spellbooks:irons_spellbooks/ink_legendary"
+					criterion: ""
+					id: "478130833DECFE65"
+					type: "advancement"
+				}
+			]
+			x: 6.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["6E6EFABC9E9DF2CB", "6B65D9C434A94C3A"]
+			hide_until_deps_complete: true
+			id: "23A695D0A26E99AE"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "35AE8A9B3C336E43"
+					table_id: 3302581088336892328L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "70827B4DEA3A6116"
+					item: {
+						count: 1
+						id: "irons_spellbooks:dragonskin_spell_book"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["79B8BD48A1B35980"]
+			hide_until_deps_visible: true
+			id: "0A42578613948E6A"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "74ED95F7F1BD99C1"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "irons_spellbooks:fire_boss"
+					id: "7C615F551BB10194"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.0d
+			y: 0.8d
+		}
+	]
+}

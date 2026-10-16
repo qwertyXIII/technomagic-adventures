@@ -1,0 +1,306 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "exploration"
+	group: "0297AE1DA7725E71"
+	icon: {
+		count: 1
+		id: "explorerscompass:explorerscompass"
+	}
+	id: "79BA5980B58EC930"
+	order_index: 33
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "3E8B18434FCF7225"
+			rewards: [
+				{
+					count: 2
+					id: "03877B22EB7897B8"
+					item: {
+						count: 1
+						id: "minecraft:map"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "79CA0F1EB4152A5C"
+					item: {
+						count: 1
+						id: "explorerscompass:explorerscompass"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -2.4000000000000004d
+		}
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "29F561BE7F50CCA3"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2786C5365F4CEE6C"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "lootr:1chest"
+					criterion: ""
+					id: "28C9E59353503722"
+					type: "advancement"
+				}
+			]
+			x: 0.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_visible: true
+			id: "79DBF3FA44397484"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2B3BA70F00CD47B2"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "621EE75EDEFB8DAD"
+					structure: "dungeoncrawl:dungeon"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: -3.2d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_visible: true
+			id: "4BBEE02BE56B89EE"
+			rewards: [
+				{
+					count: 2
+					id: "4808C7ABFC7C462F"
+					item: {
+						count: 1
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "0F86323DD0C792F5"
+					structure: "minecraft:trial_chambers"
+					type: "structure"
+				}
+				{
+					id: "1AAC297F8209C3E4"
+					item: {
+						count: 1
+						id: "minecraft:trial_key"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_visible: true
+			id: "71D8BB99E5D88603"
+			rewards: [
+				{
+					count: 8
+					id: "6BA2BB3F938D71F9"
+					item: {
+						count: 1
+						id: "minecraft:ender_pearl"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "313F3C921DEA867A"
+					structure: "#tm:strongholds"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4BBEE02BE56B89EE"]
+			hide_until_deps_visible: true
+			id: "7072649280C4CD5C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5DE1DB7C3EEC8784"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "1D511F0032584C2E"
+					structure: "minecraft:ancient_city"
+					type: "structure"
+				}
+				{
+					count: 4L
+					id: "769AE5BF41F8915C"
+					item: {
+						count: 1
+						id: "minecraft:echo_shard"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["29F561BE7F50CCA3"]
+			hide_until_deps_visible: true
+			id: "710F54951A4C987D"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7C13A7D6D2CC3113"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "lootr:100loot"
+					criterion: ""
+					id: "1014BF94440B7691"
+					type: "advancement"
+				}
+			]
+			x: 2.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["7608BA5295D20CA0"]
+			hide_until_deps_complete: true
+			id: "0C551885FA8DE62C"
+			rewards: [
+				{
+					count: 16
+					id: "728CC2199DDEE364"
+					item: {
+						count: 1
+						id: "apotheosis:gem_dust"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5B2BB837131CF9BB"
+					item: {
+						count: 1
+						id: "apotheosis:simple_reforging_table"
+					}
+					type: "item"
+				}
+				{
+					id: "39BDDBB8910BC3C8"
+					item: {
+						count: 1
+						id: "apotheosis:salvaging_table"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["0C551885FA8DE62C"]
+			hide_until_deps_visible: true
+			id: "54F3FC9781938471"
+			rewards: [
+				{
+					count: 2
+					id: "0FCD52A68765B884"
+					item: {
+						count: 1
+						id: "apotheosis:sigil_of_socketing"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "21491D556A8D6EC3"
+					item: {
+						count: 1
+						id: "apotheosis:sigil_of_socketing"
+					}
+					type: "item"
+				}
+				{
+					id: "3C56D42695472B87"
+					item: {
+						count: 1
+						id: "apotheosis:gem_cutting_table"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 3.2d
+		}
+		{
+			dependencies: ["7608BA5295D20CA0", "59876CEF95CC175D"]
+			hide_until_deps_complete: true
+			id: "0779546BA5C694DA"
+			rewards: [
+				{
+					id: "747AE2B34C47AE28"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [
+				{
+					id: "6A9511B8E6D81B44"
+					item: {
+						count: 1
+						id: "apothic_enchanting:library"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "55B0156E6100471A"
+					item: {
+						count: 1
+						id: "apothic_enchanting:hellshelf"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.4000000000000004d
+		}
+	]
+}

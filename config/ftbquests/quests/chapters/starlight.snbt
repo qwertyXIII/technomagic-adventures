@@ -1,0 +1,127 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "starlight"
+	group: "0297AE1DA7725E71"
+	icon: {
+		count: 1
+		id: "eternal_starlight:starlit_diamond"
+	}
+	id: "37A44EBA253579DC"
+	order_index: 38
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "5F888C058C688699"
+			rewards: [
+				{
+					id: "4B2D92D737945C74"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					dimension: "eternal_starlight:starlight"
+					id: "799E37ACA5A24A13"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F888C058C688699"]
+			hide_until_deps_visible: true
+			id: "1F2DE74E9CB38994"
+			rewards: [
+				{
+					id: "5FF28857F58106C4"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					advancement: "eternal_starlight:obtain_orb_of_prophecy"
+					criterion: ""
+					id: "17278A9F978796BA"
+					type: "advancement"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F2DE74E9CB38994"]
+			hide_until_deps_visible: true
+			id: "00715B03C3EEA99F"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0280D24EFD2BF19D"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "eternal_starlight:the_gatekeeper"
+					id: "56D7A0A832F8FA48"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00715B03C3EEA99F"]
+			hide_until_deps_visible: true
+			id: "4CA6A81CE0FDB2FC"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "703915A3A3A123A0"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "eternal_starlight:starlight_golem"
+					id: "51DEC43E457EF9D4"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["00715B03C3EEA99F"]
+			hide_until_deps_visible: true
+			id: "2CF4040C55A4DAA6"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "481892012812D14D"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "eternal_starlight:lunar_monstrosity"
+					id: "2357B2A2356155E7"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: 0.8d
+		}
+	]
+}

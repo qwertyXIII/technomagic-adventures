@@ -1,0 +1,11 @@
+# Награды за поручения (выдаёт только штурманский модуль, один раз на поручение и игрока). components — компоненты в синтаксисе /give, без скобок.
+id	item	count	components	desc
+r_food	minecraft:cooked_beef	12		12 стейков
+r_torches	minecraft:torch	64		64 факела
+r_compass	naturescompass:naturescompass	1		природный компас
+r_ammo	tacz:ammo	60	minecraft:custom_data={AmmoId:"tacz:9mm"}	60 патронов 9 мм
+r_tools	minecraft:iron_pickaxe	1		железная кирка
+r_xp	minecraft:experience_bottle	16		16 пузырьков опыта
+r_emeralds	minecraft:emerald	12		12 изумрудов
+r_golden	minecraft:golden_apple	2		2 золотых яблока
+r_pearls	minecraft:ender_pearl	6		6 жемчужин Края

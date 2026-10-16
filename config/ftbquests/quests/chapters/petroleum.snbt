@@ -1,0 +1,283 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "petroleum"
+	group: "592F40102295DC55"
+	icon: {
+		count: 1
+		id: "immersivepetroleum:crudeoil_bucket"
+	}
+	id: "43B138441B0EC0E0"
+	order_index: 16
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6F5A8856676AA527"]
+			hide_until_deps_complete: true
+			id: "2F1619900FAAEE3C"
+			rewards: [
+				{
+					count: 4
+					id: "3ED42BF64595C482"
+					item: {
+						count: 1
+						id: "immersiveengineering:component_steel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "7CFD7953B0CD7B4F"
+					item: {
+						count: 1
+						id: "immersivepetroleum:seismic_survey"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["0BB345628D3732B0"]
+			hide_until_deps_complete: true
+			id: "1BB6C2CC8E0D0308"
+			rewards: [
+				{
+					id: "27CB5FE9CE96B73B"
+					item: {
+						count: 1
+						id: "createdieselgenerators:canister"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3FC3582699F24ABC"
+					item: {
+						count: 1
+						id: "createdieselgenerators:oil_scanner"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["2F1619900FAAEE3C", "1BB6C2CC8E0D0308"]
+			dependency_requirement: "one_completed"
+			hide_until_deps_complete: true
+			id: "70B2BF9C5FA6C0D6"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "277C1A7A4F637C1A"
+					table_id: 5242348113741014990L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "1D75D7675B223A79"
+					item: {
+						count: 1
+						id: "immersivepetroleum:crudeoil_bucket"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["70B2BF9C5FA6C0D6"]
+			hide_until_deps_visible: true
+			id: "39532708F4697481"
+			rewards: [
+				{
+					count: 4
+					id: "50E3030C961F6B0D"
+					item: {
+						count: 1
+						id: "immersiveengineering:component_steel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "immersivepetroleum:main/mb_pumpjack"
+					criterion: ""
+					id: "0D6BDCB3D7CFD253"
+					type: "advancement"
+				}
+			]
+			x: 4.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["70B2BF9C5FA6C0D6"]
+			hide_until_deps_visible: true
+			id: "6AF48EDE35D76D66"
+			optional: true
+			rewards: [
+				{
+					count: 32
+					id: "49392431EB88F0FC"
+					item: {
+						count: 1
+						id: "create:fluid_pipe"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "643E06DDFF38808E"
+					item: {
+						count: 1
+						id: "createdieselgenerators:pumpjack_head"
+					}
+					type: "item"
+				}
+				{
+					id: "5357D48C91B8FAE8"
+					item: {
+						count: 1
+						id: "createdieselgenerators:pumpjack_crank"
+					}
+					type: "item"
+				}
+				{
+					id: "392363DC52AC3BDD"
+					item: {
+						count: 1
+						id: "createdieselgenerators:pumpjack_bearing"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["39532708F4697481", "6AF48EDE35D76D66"]
+			dependency_requirement: "one_completed"
+			hide_until_deps_visible: true
+			id: "2CBDA0237AD7A657"
+			rewards: [
+				{
+					id: "6521BCC80F922C83"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					count: 2
+					id: "0F87C7F77FCCA8EF"
+					item: {
+						count: 1
+						id: "createdieselgenerators:canister"
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "1E98B86E3B51D36D"
+					item: {
+						count: 1
+						id: "immersivepetroleum:diesel_bucket"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2CBDA0237AD7A657"]
+			hide_until_deps_visible: true
+			id: "6D06D44691150845"
+			rewards: [
+				{
+					count: 2
+					id: "0655D3830B0FD195"
+					item: {
+						count: 1
+						id: "immersivepetroleum:gasoline_bucket"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "7CF0F97B578FA148"
+					item: {
+						count: 1
+						id: "immersivepetroleum:gasoline_bucket"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["2CBDA0237AD7A657"]
+			hide_until_deps_visible: true
+			id: "3D074AF8CED80897"
+			rewards: [
+				{
+					id: "71976D92CF77C418"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					id: "2871BF3F3D4D7347"
+					item: {
+						count: 1
+						id: "immersivepetroleum:kerosene_bucket"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2CBDA0237AD7A657"]
+			hide_until_deps_visible: true
+			id: "12E0CA1376C91C08"
+			optional: true
+			rewards: [
+				{
+					id: "337B497567E078CE"
+					item: {
+						count: 1
+						id: "createdieselgenerators:engine_turbocharger"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "66BF72A1FC2DF50D"
+					item: {
+						count: 1
+						id: "createdieselgenerators:diesel_engine"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 1.6d
+		}
+	]
+}

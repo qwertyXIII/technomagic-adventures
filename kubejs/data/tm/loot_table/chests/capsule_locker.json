@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    { "rolls": 1, "entries": [ { "type": "minecraft:item", "name": "minecraft:leather_helmet" } ] },
+    { "rolls": 1, "entries": [ { "type": "minecraft:item", "name": "minecraft:leather_chestplate" } ] },
+    { "rolls": 1, "entries": [ { "type": "minecraft:item", "name": "minecraft:leather_leggings" } ] },
+    { "rolls": 1, "entries": [ { "type": "minecraft:item", "name": "minecraft:leather_boots" } ] },
+    { "rolls": 1, "entries": [ { "type": "minecraft:item", "name": "minecraft:stone_pickaxe" } ] },
+    { "rolls": 1, "entries": [ { "type": "minecraft:item", "name": "tacz:modern_kinetic_gun",
+        "functions": [ { "function": "minecraft:set_custom_data",
+          "tag": "{GunId:\"tacz:glock_17\",GunFireMode:\"SEMI\",GunCurrentAmmoCount:17,HasBulletInBarrel:1b}" } ] } ] },
+    { "rolls": 1, "entries": [ { "type": "minecraft:item", "name": "tacz:ammo",
+        "functions": [ { "function": "minecraft:set_custom_data", "tag": "{AmmoId:\"tacz:9mm\"}" },
+                       { "function": "minecraft:set_count", "count": 34 } ] } ] },
+    { "rolls": 1, "entries": [ { "type": "minecraft:item", "name": "minecraft:bread",
+        "functions": [ { "function": "minecraft:set_count", "count": 6 } ] } ] },
+    { "rolls": 1, "entries": [ { "type": "minecraft:item", "name": "minecraft:torch",
+        "functions": [ { "function": "minecraft:set_count", "count": 8 } ] } ] }
+  ]
+}

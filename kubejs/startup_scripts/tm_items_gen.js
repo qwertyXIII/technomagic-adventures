@@ -1,0 +1,74 @@
+// СГЕНЕРИРОВАНО tools/gen/build.py из tools/gen/lore.py — не править вручную.
+
+// Свои предметы сборки (сюжет, ремонт ядра ЛОЦМАНа, финалы). Текстуры — ванильные/модовые, своих PNG нет.
+// Названия — kubejs/assets/kubejs/lang/*.json, подсказки — client_scripts/tm_tooltips_gen.js.
+
+StartupEvents.registry('item', event => {
+  const items = [
+    ["capsule_log", "minecraft:item/paper", 1, "uncommon"],
+    ["note_m_1", "minecraft:item/paper", 1, "uncommon"],
+    ["crew_tag", "minecraft:item/name_tag", 1, "uncommon"],
+    ["cargo_stencil", "minecraft:item/map", 1, "uncommon"],
+    ["flight_recorder_broken", "minecraft:item/clock_00", 1, "common"],
+    ["flight_recorder", "minecraft:item/clock_16", 1, "rare"],
+    ["song_lullaby", "minecraft:item/writable_book", 1, "uncommon"],
+    ["untitled_book", "minecraft:item/book", 1, "uncommon"],
+    ["raider_order", "minecraft:item/paper", 1, "uncommon"],
+    ["copper_plaque", "minecraft:block/oxidized_cut_copper", 1, "uncommon"],
+    ["shift_list", "minecraft:item/paper", 1, "uncommon"],
+    ["note_m_2", "minecraft:item/paper", 1, "uncommon"],
+    ["glagol_tablet", "minecraft:item/enchanted_book", 1, "rare"],
+    ["gold_tally", "minecraft:item/gold_ingot", 1, "uncommon"],
+    ["scorched_journal", "minecraft:item/book", 1, "uncommon"],
+    ["operator_log", "minecraft:item/written_book", 1, "uncommon"],
+    ["ark_label", "minecraft:item/honeycomb", 1, "uncommon"],
+    ["deep_song", "minecraft:item/nautilus_shell", 1, "rare"],
+    ["zealot_sermon", "minecraft:item/phantom_membrane", 1, "uncommon"],
+    ["warden_plate", "minecraft:item/netherite_scrap", 1, "uncommon"],
+    ["oldest_tablet", "minecraft:block/cracked_stone_bricks", 1, "uncommon"],
+    ["note_m_margin", "minecraft:item/paper", 1, "uncommon"],
+    ["note_m_3", "minecraft:item/paper", 1, "uncommon"],
+    ["chronicle_1", "minecraft:item/written_book", 1, "uncommon"],
+    ["aurellan_last_page", "minecraft:item/paper", 1, "rare"],
+    ["sky_sample", "minecraft:item/glass_bottle", 1, "uncommon"],
+    ["glider_log", "minecraft:item/clock_48", 1, "uncommon"],
+    ["lethe_sample", "minecraft:item/glow_ink_sac", 1, "rare"],
+    ["note_m_4", "minecraft:item/paper", 1, "uncommon"],
+    ["echo_chronicle", "minecraft:item/echo_shard", 1, "uncommon"],
+    ["diary_ko", "minecraft:item/writable_book", 1, "uncommon"],
+    ["note_m_5", "minecraft:item/paper", 1, "uncommon"],
+    ["watch_log", "minecraft:item/written_book", 1, "uncommon"],
+    ["pilgrim_guide", "minecraft:item/written_book", 1, "uncommon"],
+    ["station_log", "minecraft:item/book", 1, "uncommon"],
+    ["choir_message", "minecraft:item/amethyst_shard", 1, "rare"],
+    ["bridge_shard", "minecraft:item/prismarine_shard", 1, "uncommon"],
+    ["surgeon_report", "computercraft:item/printed_page", 1, "rare"],
+    ["note_m_6", "minecraft:item/paper", 1, "uncommon"],
+    ["belsky_log_1", "minecraft:item/written_book", 1, "rare"],
+    ["belsky_log_2", "minecraft:item/written_book", 1, "uncommon"],
+    ["exodus_manifesto", "minecraft:item/brick", 1, "uncommon"],
+    ["cradle_lab_log", "minecraft:item/written_book", 1, "uncommon"],
+    ["solar_session", "minecraft:item/glowstone_dust", 1, "rare"],
+    ["glacio_letter", "minecraft:item/paper", 1, "uncommon"],
+    ["growth_record", "minecraft:item/paper", 1, "epic"],
+    ["stack_zero", "minecraft:item/netherite_scrap", 1, "epic"],
+    ["locman_core", "minecraft:item/heart_of_the_sea", 1, "epic"],
+    ["note_m_7", "minecraft:item/paper", 1, "rare"],
+    ["lethe_two", "minecraft:item/ominous_bottle", 1, "epic"],
+    ["lethe_two_primed", "minecraft:item/dragon_breath", 1, "epic"],
+    ["mnemosyne_core", "minecraft:item/nether_star", 1, "epic"],
+    ["infinite_resonator", "minecraft:item/end_crystal", 1, "epic"],
+    ["epilogue_token_a", "minecraft:item/firework_star", 1, "epic"],
+    ["epilogue_token_b", "minecraft:item/firework_star", 1, "epic"],
+    ["epilogue_token_c", "minecraft:item/firework_star", 1, "epic"],
+    ["ai_repair_cooling", "minecraft:item/prismarine_crystals", 16, "uncommon"],
+    ["ai_repair_memory_1", "minecraft:item/disc_fragment_5", 16, "uncommon"],
+    ["ai_repair_memory_2", "minecraft:item/amethyst_shard", 16, "rare"],
+    ["ai_repair_quantum", "minecraft:item/ender_eye", 16, "epic"],
+  ]
+  items.forEach(row => {
+    const b = event.create(row[0]).texture(row[1]).maxStackSize(row[2]).rarity(row[3])
+    b.fireResistant()
+    b.tag('kubejs:tm_story')
+  })
+})

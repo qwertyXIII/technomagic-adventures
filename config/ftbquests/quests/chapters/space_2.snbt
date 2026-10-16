@@ -1,0 +1,292 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "space_2"
+	group: "481034207D248476"
+	icon: {
+		count: 1
+		id: "ad_astra:tier_2_rocket"
+	}
+	id: "1F1E4D02CB23F34F"
+	order_index: 44
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["71F0ED9D34786F50"]
+			hide_until_deps_complete: true
+			id: "119281D69284986F"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5BB461A44219840C"
+					table_id: 4169577723705550567L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					dimension: "ad_astra:moon"
+					id: "2BC0D9E56A90542B"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["119281D69284986F"]
+			hide_until_deps_visible: true
+			id: "7FF6C38D4D20A925"
+			rewards: [
+				{
+					count: 8
+					id: "6500DCB81BC82399"
+					item: {
+						count: 1
+						id: "ad_astra:desh_plate"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "054EE00FCC302FCD"
+					item: {
+						count: 1
+						id: "ad_astra:desh_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -2.4000000000000004d
+		}
+		{
+			dependencies: ["119281D69284986F"]
+			hide_until_deps_visible: true
+			id: "4242791E46A5B095"
+			rewards: [
+				{
+					count: 8
+					id: "29B3632DD6CC83B8"
+					item: {
+						count: 1
+						id: "ad_astra:cheese"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "403E12CA3A82B69B"
+					observe_type: 5
+					timer: 0L
+					to_observe: "ad_astra:lunarian"
+					type: "observation"
+				}
+			]
+			x: 2.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["119281D69284986F"]
+			hide_until_deps_visible: true
+			id: "04B60FE514C1B2D3"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "163A7D9035B8E61A"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "0983AB785D2D7604"
+					structure: "ad_astra:moon_dungeon"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["119281D69284986F"]
+			id: "4668DD5BDD31E0BD"
+			invisible: true
+			rewards: [
+				{
+					count: 16
+					id: "65B5E1ED01E51F9A"
+					item: {
+						count: 1
+						id: "ad_astra:cheese"
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					id: "01240EB222699565"
+					item: {
+						count: 1
+						id: "ad_astra:cheese_block"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 2.4000000000000004d
+		}
+		{
+			dependencies: ["7FF6C38D4D20A925"]
+			hide_until_deps_complete: true
+			id: "67B73F6FF22895CE"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7BEBEFC92318DC69"
+					table_id: 4169577723705550567L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "6E32FC226CB8E0B7"
+					item: {
+						count: 1
+						id: "ad_astra:tier_2_rocket"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["67B73F6FF22895CE"]
+			hide_until_deps_visible: true
+			id: "263CDD566F77171E"
+			rewards: [
+				{
+					id: "17BF741DF52B3635"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [
+				{
+					dimension: "ad_astra:mars"
+					id: "3597F090D96E375E"
+					type: "dimension"
+				}
+			]
+			x: 6.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["263CDD566F77171E"]
+			hide_until_deps_visible: true
+			id: "01276C48D1D5E2AB"
+			rewards: [
+				{
+					count: 8
+					id: "6AC21811A077D311"
+					item: {
+						count: 1
+						id: "ad_astra:ostrum_plate"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "7C70C7909D531368"
+					item: {
+						count: 1
+						id: "ad_astra:ostrum_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["263CDD566F77171E"]
+			hide_until_deps_visible: true
+			id: "5A9E5B1BC0312E0A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "290B050FA4AFCBEB"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "20CCB838B962A9CA"
+					structure: "ad_astra:mars_temple"
+					type: "structure"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["263CDD566F77171E"]
+			hide_until_deps_visible: true
+			id: "74955A3142F355C5"
+			optional: true
+			rewards: [
+				{
+					count: 4
+					id: "7939DE40CC4C032C"
+					item: {
+						count: 1
+						id: "ad_astra:wheel"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "7764D245FE4AB52D"
+					item: {
+						count: 1
+						id: "ad_astra:tier_1_rover"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["67B73F6FF22895CE"]
+			hide_until_deps_visible: true
+			id: "71446752078D4A2C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2EE8D1041DAF75FE"
+					table_id: 4169577723705550567L
+					team_reward: true
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "1C123B98766CB40C"
+					type: "checkmark"
+				}
+			]
+			x: 6.0d
+			y: 0.8d
+		}
+	]
+}

@@ -1,0 +1,259 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "settling"
+	group: "576BF1E4F3AF42DD"
+	icon: {
+		count: 1
+		id: "sophisticatedstorage:chest"
+	}
+	id: "6F11453B8751F2D9"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "7A512C29015BC6C0"
+			rewards: [
+				{
+					count: 2
+					id: "0215537C189517E4"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:basic_tier_upgrade"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "07E695099AE78545"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:chest"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -4.800000000000001d
+		}
+		{
+			dependencies: ["7A512C29015BC6C0"]
+			hide_until_deps_visible: true
+			id: "21297A0DAB7119D2"
+			rewards: [
+				{
+					count: 2
+					id: "7B26887EA374F0FF"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:storage_link"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "6D90801AB6E0D830"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:controller"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "11FCD95CBD8E6847"
+			rewards: [
+				{
+					count: 16
+					id: "3CBD4813F610F533"
+					item: {
+						count: 1
+						id: "minecraft:golden_carrot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "2C23536A351DBFD5"
+					item: {
+						count: 1
+						id: "minecraft:composter"
+					}
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "5C850B3CB5406388"
+					item: {
+						count: 1
+						id: "minecraft:bone_meal"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -3.2d
+		}
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "0E59D5F5F86C1174"
+			rewards: [
+				{
+					count: 2
+					id: "1734737B406087E2"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:upgrade_base"
+					}
+					type: "item"
+				}
+				{
+					id: "3289360F95172C93"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:pickup_upgrade"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "06EAF3EEF83C76CF"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:copper_backpack"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "58DAD67D9C8A490A"
+			rewards: [
+				{
+					count: 4
+					id: "773A8EE197AE44EB"
+					item: {
+						count: 1
+						id: "minecraft:map"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "40C045023BBDBB07"
+					item: {
+						count: 1
+						id: "naturescompass:naturescompass"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5E543D6A5F58673E"]
+			hide_until_deps_complete: true
+			id: "708A43B192163156"
+			optional: true
+			rewards: [
+				{
+					count: 4
+					id: "5E974356244F08C1"
+					item: {
+						count: 1
+						id: "waystones:warp_scroll"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "2048E6BDDBC2682A"
+					item: {
+						count: 1
+						id: "waystones:waystone"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["36C7A3F8C73D72E3"]
+			hide_until_deps_complete: true
+			id: "38D790E93D047901"
+			optional: true
+			rewards: [
+				{
+					count: 16
+					id: "06A506C313A91A49"
+					item: {
+						count: 1
+						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "mca:friend"
+					criterion: ""
+					id: "29828162A5F1FB30"
+					type: "advancement"
+				}
+			]
+			x: 0.0d
+			y: 3.2d
+		}
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "785C1BB553130998"
+			optional: true
+			rewards: [
+				{
+					count: 8
+					id: "7688C46A724873DC"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "2B3C672C9A2E7B6B"
+					item: {
+						count: 1
+						id: "trashcans_forever:basic_bin"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.800000000000001d
+		}
+	]
+}

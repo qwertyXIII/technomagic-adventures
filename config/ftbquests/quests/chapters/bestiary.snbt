@@ -1,0 +1,645 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "bestiary"
+	group: "0297AE1DA7725E71"
+	icon: {
+		count: 1
+		id: "cataclysm:remnant_skull"
+	}
+	id: "3CC7B3ABB4536CEC"
+	order_index: 40
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_complete: true
+			id: "4499051D282B8BCB"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "703F59AD63D512A7"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "mowziesmobs:ferrous_wroughtnaut"
+					id: "2B52FA89E204CFF5"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: -14.4d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_complete: true
+			id: "228F88E99E885954"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7B17F422A2F004C6"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "mowziesmobs:umvuthi"
+					id: "70272A6FB95840DA"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "mowziesmobs:frostmaw"
+					id: "36F0ADED25C0B444"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: -12.8d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_complete: true
+			id: "6419526EDE4028E9"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7878CD2F1BACDA95"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "bosses_of_mass_destruction:lich"
+					id: "05ACCEDE1836FFA3"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: -11.200000000000001d
+		}
+		{
+			dependencies: ["59876CEF95CC175D"]
+			hide_until_deps_complete: true
+			id: "1B1AB8BB73E24BCC"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "51C194EF540E4CBE"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "bosses_of_mass_destruction:gauntlet"
+					id: "1075F9D7579122C0"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: -9.600000000000001d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_complete: true
+			id: "7A6FCEA01E8EBA73"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "03741D6DE599AD32"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "bosses_of_mass_destruction:void_blossom"
+					id: "5074F209071C81B1"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["12C4E3E13498359C"]
+			hide_until_deps_complete: true
+			id: "518407EFD97A4A6E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "27B8469B49D4D039"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "bosses_of_mass_destruction:obsidilith"
+					id: "449D067D4D084F85"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: -6.4d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_complete: true
+			id: "50C2A47ADE1AB5BC"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "25D54C8DE1D9E5F3"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:ancient_remnant"
+					id: "73C2FA984B824C11"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: -4.800000000000001d
+		}
+		{
+			dependencies: ["59876CEF95CC175D"]
+			hide_until_deps_complete: true
+			id: "5421431F9985EC49"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7490CC6C9CF070DD"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:netherite_monstrosity"
+					id: "5AFB7A53D85D1D86"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: -3.2d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_complete: true
+			id: "201EE667442AA966"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6257EB03D248F9B9"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:the_harbinger"
+					id: "3B3B6627506C2F81"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["5421431F9985EC49"]
+			hide_until_deps_visible: true
+			id: "4A258CC60885035B"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4427CA92F8DD4ADA"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:ignis"
+					id: "3C5A3BF189876408"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_complete: true
+			id: "6FE4D2C5491CF89D"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "798B0994A4832718"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:the_leviathan"
+					id: "1C6606B73FDCB765"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["12C4E3E13498359C"]
+			hide_until_deps_complete: true
+			id: "4BC61A7A814BFE85"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7DCBE1D96BDCAC6E"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:ender_guardian"
+					id: "1BFA9AB712F9B9C5"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_complete: true
+			id: "431CD273C1BC4AA2"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "743B4B5FE0E2D419"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:maledictus"
+					id: "2A03304BEBCAF9A6"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 3.2d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_complete: true
+			id: "28FFFB851443C34D"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7AED573F1F218487"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:scylla"
+					id: "4A98769346528BAE"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "cataclysm:clawdian"
+					id: "20BE3611400DBC9B"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 4.800000000000001d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_complete: true
+			id: "54A1992C460D89F5"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1EF84739FFB81665"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "legendary_monsters:overgrown_colossus"
+					id: "5617F261BB362389"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "legendary_monsters:frostbitten_golem"
+					id: "5E31AF15EE481D82"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "legendary_monsters:dune_sentinel"
+					id: "6484C601090E4A72"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 6.4d
+		}
+		{
+			dependencies: ["54A1992C460D89F5"]
+			hide_until_deps_visible: true
+			id: "3DE01BB362FB0759"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "32C6545DB7635670"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "legendary_monsters:withered_abomination"
+					id: "4F35021A14DEF5FD"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "legendary_monsters:skeletosaurus"
+					id: "6229FF9D00F90AAA"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "legendary_monsters:endersent"
+					id: "4DC2E339CBFC5AB4"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_complete: true
+			id: "3648541086834593"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0A1D3861636D0193"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "aquamirae:captain_cornelia"
+					id: "0839292C62A851C2"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "aquamirae:maze_mother"
+					id: "419C003FB77DFBEB"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3E8B18434FCF7225"]
+			hide_until_deps_complete: true
+			id: "6393EDD9A82A9FFB"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4F6BC0A0F1B7F1A3"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "mutantmonsters:mutant_zombie"
+					id: "02481F6B5FF18D78"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "mutantmonsters:mutant_skeleton"
+					id: "2BD4032BFC5F4E22"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "mutantmonsters:mutant_creeper"
+					id: "73156FFEA681BC9C"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "mutantmonsters:mutant_enderman"
+					id: "38D04ADB65DB30EF"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 9.600000000000001d
+		}
+		{
+			dependencies: ["05E002F3E05652F7"]
+			hide_until_deps_complete: true
+			id: "7C58E85DF357947D"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7EE99FDD81EC8307"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "alexscaves:luxtructosaurus"
+					id: "424BE38CF9B458C7"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "alexscaves:hullbreaker"
+					id: "0D4F036AB25A146D"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "alexscaves:forsaken"
+					id: "2778CDC145835CD2"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 11.200000000000001d
+		}
+		{
+			dependencies: ["7072649280C4CD5C"]
+			hide_until_deps_complete: true
+			id: "127E0D517AA481DE"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5B3D30D0270D3F78"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:warden"
+					id: "01DC37B576F8207C"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 0.0d
+			y: 12.8d
+		}
+		{
+			dependencies: ["36C7A3F8C73D72E3"]
+			id: "4EA516AEABAA3DC1"
+			invisible: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1DE3FA83136EF40A"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					advancement: "mca:adventure/kill_grim_reaper"
+					criterion: ""
+					id: "2385F3EE955AB544"
+					type: "advancement"
+				}
+			]
+			x: 0.0d
+			y: 14.4d
+		}
+		{
+			dependencies: [
+				"4499051D282B8BCB"
+				"228F88E99E885954"
+				"6419526EDE4028E9"
+				"1B1AB8BB73E24BCC"
+				"7A6FCEA01E8EBA73"
+				"518407EFD97A4A6E"
+				"50C2A47ADE1AB5BC"
+				"5421431F9985EC49"
+				"201EE667442AA966"
+				"4A258CC60885035B"
+				"6FE4D2C5491CF89D"
+				"4BC61A7A814BFE85"
+				"431CD273C1BC4AA2"
+				"28FFFB851443C34D"
+				"54A1992C460D89F5"
+				"3DE01BB362FB0759"
+				"3648541086834593"
+				"6393EDD9A82A9FFB"
+				"7C58E85DF357947D"
+				"127E0D517AA481DE"
+				"3D715EF6EE89BD98"
+				"1FD077F89BE44302"
+				"7960B9949F4EE2B6"
+				"0B0DE2FA6FA04A35"
+				"349B2B1BAA0C83E8"
+				"0005B186FF6BB51C"
+				"41F4D28BDA9F4E54"
+				"2C6C9A94A28682AC"
+				"3EEDBB490FCC360B"
+				"00715B03C3EEA99F"
+				"4CA6A81CE0FDB2FC"
+				"2CF4040C55A4DAA6"
+				"79B8BD48A1B35980"
+				"0A42578613948E6A"
+				"219C2B5AC536B2DB"
+				"5A62AE6743A44814"
+				"7FDA6E6AF9FD7BD1"
+				"6B65D9C434A94C3A"
+				"6F70661CFF9C39EA"
+			]
+			hide_dependency_lines: true
+			hide_until_deps_visible: true
+			id: "77C232ED844A2F3F"
+			min_required_dependencies: 20
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "47A431D35F5B4DE2"
+					table_id: 3095862569387002336L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7769C732F063F7E4"
+					table_id: 6045014796848650239L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [
+				{
+					id: "080BE4FA51E5F8BB"
+					type: "checkmark"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+	]
+}

@@ -1,0 +1,177 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "forbidden"
+	group: "2B15C95845D546A1"
+	icon: {
+		count: 1
+		id: "forbidden_arcanus:arcane_crystal"
+	}
+	id: "16668AA4C556965C"
+	order_index: 32
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "56AF2B84C3E97C9A"
+			rewards: [
+				{
+					count: 8
+					id: "0E6E7FD965D295F2"
+					item: {
+						count: 1
+						id: "forbidden_arcanus:arcane_crystal_dust"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "27D2A50C60467A8C"
+					item: {
+						count: 1
+						id: "forbidden_arcanus:arcane_crystal"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["56AF2B84C3E97C9A"]
+			hide_until_deps_visible: true
+			id: "6162DB50B8A31F44"
+			rewards: [
+				{
+					id: "76DAD6A66E077DDA"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					id: "1885CCF49F9A8EA9"
+					item: {
+						count: 1
+						id: "forbidden_arcanus:hephaestus_forge_tier_1"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "43D7BA72A26EC027"
+					item: {
+						count: 1
+						id: "forbidden_arcanus:darkstone_pedestal"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6162DB50B8A31F44"]
+			hide_until_deps_visible: true
+			id: "3E7B77E4CDB128D7"
+			rewards: [
+				{
+					id: "0F1A880E307D4D7D"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "5E38F629CF220181"
+					item: {
+						count: 1
+						id: "forbidden_arcanus:soul"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["6162DB50B8A31F44"]
+			hide_until_deps_visible: true
+			id: "64F6D10F6BE2FB0A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "405B8EDCCACB5CBF"
+					table_id: 3302581088336892328L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "643881369DF49603"
+					item: {
+						count: 1
+						id: "forbidden_arcanus:deorum_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["64F6D10F6BE2FB0A", "7FDA6E6AF9FD7BD1"]
+			hide_until_deps_complete: true
+			id: "4D0DAD0C39B63119"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0CFE8DAC3F9ADC5C"
+					table_id: 7227490514009532499L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "688A9C87024F3D6A"
+					item: {
+						count: 1
+						id: "forbidden_arcanus:dark_nether_star"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4D0DAD0C39B63119"]
+			hide_until_deps_visible: true
+			id: "4D5BB257E7552FEF"
+			rewards: [
+				{
+					id: "5CA3DBBD53F116E7"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			tasks: [
+				{
+					id: "5733E34C40149AB6"
+					item: {
+						count: 1
+						id: "forbidden_arcanus:eternal_stella"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+	]
+}

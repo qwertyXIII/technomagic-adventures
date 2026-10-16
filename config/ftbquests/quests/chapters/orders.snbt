@@ -1,0 +1,193 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "orders"
+	group: "576BF1E4F3AF42DD"
+	icon: {
+		count: 1
+		id: "minecraft:bell"
+	}
+	id: "4E1967E3DE4A0F48"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			can_repeat: true
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "4D0BFC39DD952DE2"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "477A7DE15452A0B6"
+					table_id: 7968603026760345910L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					id: "33BD2B47F90097AA"
+					item: {
+						count: 1
+						id: "minecraft:wheat"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "4CB62E4FCACEF58E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "55967E34C72955B6"
+					table_id: 7968603026760345910L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 32L
+					id: "33AB8FB7E5BAAC8C"
+					item: {
+						count: 1
+						id: "minecraft:rotten_flesh"
+					}
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 32L
+					id: "399A4489E1A0A2F7"
+					item: {
+						count: 1
+						id: "minecraft:bone"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -2.4000000000000004d
+		}
+		{
+			can_repeat: true
+			dependencies: ["1C22425171D429BF"]
+			hide_until_deps_complete: true
+			id: "19989F5740AD0457"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "756CC2E5B4B5113A"
+					table_id: 5242348113741014990L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					id: "42F916BB2DAE81F9"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -0.8d
+		}
+		{
+			can_repeat: true
+			dependencies: ["01B0E24433CDCCA7"]
+			hide_until_deps_complete: true
+			id: "393B2A028DF953B5"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "00CEBE4C29498F28"
+					table_id: 3302581088336892328L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 32L
+					id: "51DC063CF85C7981"
+					item: {
+						count: 1
+						id: "ars_nouveau:source_gem"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.8d
+		}
+		{
+			can_repeat: true
+			dependencies: ["12C4E3E13498359C"]
+			hide_until_deps_complete: true
+			id: "268D5CF069BA65F6"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "521CC1E6CF4A1446"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 16L
+					id: "1159EF58641DEF5F"
+					item: {
+						count: 1
+						id: "minecraft:ender_pearl"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.4000000000000004d
+		}
+		{
+			can_repeat: true
+			dependencies: ["2962677794E588B4"]
+			hide_until_deps_complete: true
+			id: "779A453D071AAA3A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "295F02AF9871B1A8"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 16L
+					id: "0750B4277632CCA1"
+					item: {
+						count: 1
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+	]
+}

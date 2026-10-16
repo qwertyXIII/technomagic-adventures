@@ -1,0 +1,118 @@
+{
+	filename: "trophy"
+	id: "1C13DCFB4890468C"
+	loot_size: 2
+	order_index: 4
+	rewards: [
+		{
+			count: 32
+			id: "36ECBA2F7559B573"
+			item: {
+				count: 1
+				id: "minecraft:experience_bottle"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 16
+			id: "35C7524E91E13D6D"
+			item: {
+				count: 1
+				id: "minecraft:diamond"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 4
+			id: "1BB3D1D68150AD0F"
+			item: {
+				count: 1
+				id: "minecraft:golden_apple"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 2
+			id: "1712BD6C7E4AD8AD"
+			item: {
+				count: 1
+				id: "apotheosis:sigil_of_socketing"
+			}
+			weight: 8.0d
+		}
+		{
+			id: "7D55C8667BE3AD0E"
+			item: {
+				count: 1
+				id: "minecraft:totem_of_undying"
+			}
+			weight: 6.0d
+		}
+		{
+			count: 2
+			id: "69DAA9F4164A734B"
+			item: {
+				count: 1
+				id: "minecraft:netherite_ingot"
+			}
+			weight: 6.0d
+		}
+		{
+			id: "4C57A8E1B8B288D8"
+			item: {
+				count: 1
+				id: "irons_spellbooks:upgrade_orb"
+			}
+			weight: 6.0d
+		}
+		{
+			id: "065919F94BCD266A"
+			item: {
+				count: 1
+				id: "minecraft:enchanted_golden_apple"
+			}
+			weight: 4.0d
+		}
+		{
+			count: 2
+			id: "618CC6CD2A763DAD"
+			item: {
+				count: 1
+				id: "apothic_enchanting:infused_breath"
+			}
+			weight: 3.0d
+		}
+		{
+			id: "0C0D7D69652AB022"
+			item: {
+				count: 1
+				id: "artifacts:crystal_heart"
+			}
+			weight: 2.0d
+		}
+		{
+			id: "0DD63175A38749F6"
+			item: {
+				count: 1
+				id: "artifacts:power_glove"
+			}
+			weight: 2.0d
+		}
+		{
+			id: "38B07207702357B5"
+			item: {
+				count: 1
+				id: "artifacts:cloud_in_a_bottle"
+			}
+			weight: 2.0d
+		}
+		{
+			id: "06D880D2B34A4B9A"
+			item: {
+				count: 1
+				id: "artifacts:feral_claws"
+			}
+			weight: 2.0d
+		}
+	]
+}

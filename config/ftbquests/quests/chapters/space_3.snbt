@@ -1,0 +1,228 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "space_3"
+	group: "481034207D248476"
+	icon: {
+		count: 1
+		id: "ad_astra:tier_4_rocket"
+	}
+	id: "14E7A38C3ED79C86"
+	order_index: 45
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["01276C48D1D5E2AB", "0B0DE2FA6FA04A35"]
+			hide_until_deps_complete: true
+			id: "4740BE16DC663FFA"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5F09C1EADE6E9044"
+					table_id: 4169577723705550567L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "5F9DEDE1DBFF029A"
+					item: {
+						count: 1
+						id: "ad_astra:tier_3_rocket"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4740BE16DC663FFA"]
+			hide_until_deps_visible: true
+			id: "6792FA981D26B562"
+			rewards: [
+				{
+					id: "2588658F5947252A"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [
+				{
+					dimension: "ad_astra:venus"
+					id: "35D30CC9263C263C"
+					type: "dimension"
+				}
+			]
+			x: 2.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["6792FA981D26B562"]
+			hide_until_deps_visible: true
+			id: "4A98A4093B4FC61C"
+			rewards: [
+				{
+					count: 8
+					id: "3EE2E3CE30CB1AF8"
+					item: {
+						count: 1
+						id: "ad_astra:calorite_plate"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "429069DDAD86E7E3"
+					item: {
+						count: 1
+						id: "ad_astra:calorite_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["4740BE16DC663FFA"]
+			hide_until_deps_visible: true
+			id: "555F067BC6D817AE"
+			rewards: [
+				{
+					id: "15E5FABE3D2F3C5C"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [
+				{
+					dimension: "ad_astra:mercury"
+					id: "13556912F4816A02"
+					type: "dimension"
+				}
+			]
+			x: 2.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["6792FA981D26B562"]
+			hide_until_deps_visible: true
+			id: "34D09800E898BFE4"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7A3B99C8EB232087"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "0D5ED11ABEA924E0"
+					structure: "ad_astra:pygro_tower"
+					type: "structure"
+				}
+			]
+			x: 4.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["4A98A4093B4FC61C", "34DF7C72B2E048D6"]
+			hide_until_deps_complete: true
+			id: "5E0E3C16F5FFE3A8"
+			rewards: [
+				{
+					id: "6047CB6A1A34EE2C"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [
+				{
+					id: "35CD0F2D2AF783CD"
+					item: {
+						count: 1
+						id: "ad_astra:netherite_space_helmet"
+					}
+					type: "item"
+				}
+				{
+					id: "704B6D52479BF4F3"
+					item: {
+						count: 1
+						id: "ad_astra:netherite_space_suit"
+					}
+					type: "item"
+				}
+				{
+					id: "6D4E7E2AC6402750"
+					item: {
+						count: 1
+						id: "ad_astra:netherite_space_pants"
+					}
+					type: "item"
+				}
+				{
+					id: "6D60C75753D06917"
+					item: {
+						count: 1
+						id: "ad_astra:netherite_space_boots"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["4A98A4093B4FC61C", "1185980CAC64BC40"]
+			hide_until_deps_complete: true
+			id: "2BD57C218C8E15BA"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4CB9F3C602C83F00"
+					table_id: 4169577723705550567L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "46A3A1921DA6D052"
+					item: {
+						count: 1
+						id: "ad_astra:tier_4_rocket"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["2BD57C218C8E15BA"]
+			hide_until_deps_visible: true
+			id: "6A1CC167C41C5014"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "69147847B0EB3D46"
+					table_id: 7227490514009532499L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					dimension: "ad_astra:glacio"
+					id: "29DD138A1353D55C"
+					type: "dimension"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+	]
+}

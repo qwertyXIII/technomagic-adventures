@@ -1,0 +1,301 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "underground"
+	group: "0297AE1DA7725E71"
+	icon: {
+		count: 1
+		id: "undergarden:catalyst"
+	}
+	id: "2599EC7724B30730"
+	order_index: 37
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "1E1176AA85087CC1"
+			rewards: [
+				{
+					count: 16
+					id: "0154647375642194"
+					item: {
+						count: 1
+						id: "undergarden:shard_torch"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3748053830C0811C"
+					item: {
+						count: 1
+						id: "undergarden:catalyst"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["1E1176AA85087CC1"]
+			hide_until_deps_visible: true
+			id: "702E257B7F1EBA38"
+			rewards: [
+				{
+					count: 16
+					id: "41D3E544D3CDB99E"
+					item: {
+						count: 1
+						id: "undergarden:shard_torch"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					dimension: "undergarden:undergarden"
+					id: "367C240CA85899C5"
+					type: "dimension"
+				}
+			]
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["702E257B7F1EBA38"]
+			hide_until_deps_visible: true
+			id: "76BF0CDEF7083DCF"
+			rewards: [
+				{
+					id: "147BDA2A63B034C3"
+					item: {
+						count: 1
+						id: "undergarden:slingshot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "0D889BE2B1511106"
+					item: {
+						count: 1
+						id: "undergarden:cloggrum_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "67469EE1483FB638"
+					item: {
+						count: 1
+						id: "undergarden:utherium_crystal"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["76BF0CDEF7083DCF"]
+			hide_until_deps_visible: true
+			id: "5A62AE6743A44814"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1AD46D71FBF85657"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "undergarden:forgotten_guardian"
+					id: "7C39D16FDB092A34"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "05E002F3E05652F7"
+			rewards: [
+				{
+					id: "0C98E49ACCEAF9FC"
+					item: {
+						count: 1
+						id: "alexscaves:cave_codex"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "09E898441CA44B8A"
+					item: {
+						count: 1
+						id: "alexscaves:cave_map"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["05E002F3E05652F7"]
+			hide_until_deps_visible: true
+			id: "6B32C905663A9084"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2E4D9DC151F6FEAB"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:magnetic_caves"
+					id: "031101EE7D152266"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "11214D9C546FDECC"
+					item: {
+						count: 1
+						id: "alexscaves:scarlet_neodymium_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -2.4000000000000004d
+		}
+		{
+			dependencies: ["05E002F3E05652F7"]
+			hide_until_deps_visible: true
+			id: "6AB83B861AA048DB"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7824D2FA00161FDD"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:primordial_caves"
+					id: "7FB555A100375C13"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "4B9FF4D5E11733C1"
+					item: {
+						count: 1
+						id: "alexscaves:amber"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["05E002F3E05652F7"]
+			hide_until_deps_visible: true
+			id: "1947EEA5A0F6D7AA"
+			rewards: [
+				{
+					id: "12AE1B54D5908CB9"
+					item: {
+						count: 1
+						id: "alexscaves:hazmat_mask"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:toxic_caves"
+					id: "490A2783D0AFD79C"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "579F1B9BF86FD4D9"
+					item: {
+						count: 1
+						id: "alexscaves:uranium"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["05E002F3E05652F7"]
+			hide_until_deps_visible: true
+			id: "7530A3DFAD76687B"
+			rewards: [
+				{
+					count: 4
+					id: "66C3CAC91D23A473"
+					item: {
+						count: 1
+						id: "alexscaves:dark_tatters"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:forlorn_hollows"
+					id: "703C71091414EC2D"
+					type: "biome"
+				}
+			]
+			x: 2.0d
+			y: 2.4000000000000004d
+		}
+		{
+			dependencies: ["05E002F3E05652F7"]
+			id: "2D7531CC38EECADA"
+			invisible: true
+			rewards: [
+				{
+					count: 8
+					id: "01FF94396C38DEE5"
+					item: {
+						count: 1
+						id: "alexscaves:candy_cane"
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					biome: "alexscaves:candy_cavity"
+					id: "168AED0E7F7026A8"
+					type: "biome"
+				}
+			]
+			x: 2.0d
+			y: 4.0d
+		}
+	]
+}

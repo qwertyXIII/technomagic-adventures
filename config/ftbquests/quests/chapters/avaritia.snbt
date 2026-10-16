@@ -1,0 +1,384 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "avaritia"
+	group: "592F40102295DC55"
+	icon: {
+		count: 1
+		id: "avaritia:infinity_ingot"
+	}
+	id: "67771F2CB6591EDE"
+	order_index: 23
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["1025F1C1D2C47F2D", "79F57C466CCEDE99"]
+			hide_until_deps_complete: true
+			id: "120E210A9DFEE9C3"
+			rewards: [
+				{
+					count: 4
+					id: "471219DD4E9DECEF"
+					item: {
+						count: 1
+						id: "avaritia:diamond_lattice"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "63C3FC8C94469BF4"
+					item: {
+						count: 1
+						id: "avaritia:extreme_crafting_table"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["120E210A9DFEE9C3"]
+			hide_until_deps_visible: true
+			id: "0AB4FE1CA6A81189"
+			rewards: [
+				{
+					id: "3A7B2280220EBD90"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "5C9BB893AB2B63B2"
+					item: {
+						count: 1
+						id: "avaritia:crystal_matrix_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["120E210A9DFEE9C3"]
+			hide_until_deps_visible: true
+			id: "38EC76F20231C302"
+			rewards: [
+				{
+					count: 16
+					id: "0DE665819C5398E8"
+					item: {
+						count: 1
+						id: "avaritia:neutron_pile"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5F90DB08657E3F62"
+					item: {
+						count: 1
+						id: "avaritia:neutron_collector"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "6C2DC2D5EFF63792"
+					item: {
+						count: 1
+						id: "avaritia:neutronium_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["38EC76F20231C302"]
+			hide_until_deps_visible: true
+			id: "13A1995AFD4327F9"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "32ECB50819E9511C"
+					table_id: 6045014796848650239L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "16D5030613EA3424"
+					item: {
+						count: 1
+						id: "avaritia:compressor"
+					}
+					type: "item"
+				}
+				{
+					id: "564ECE2A5D7C23A7"
+					item: {
+						count: 1
+						id: "avaritia:iron_singularity"
+					}
+					type: "item"
+				}
+				{
+					id: "4799BF700751EE30"
+					item: {
+						count: 1
+						id: "avaritia:gold_singularity"
+					}
+					type: "item"
+				}
+				{
+					id: "7E484E668FBBA62C"
+					item: {
+						count: 1
+						id: "avaritia:copper_singularity"
+					}
+					type: "item"
+				}
+				{
+					id: "78C91EFD54EDCD27"
+					item: {
+						count: 1
+						id: "avaritia:diamond_singularity"
+					}
+					type: "item"
+				}
+				{
+					id: "7DB50A01D2CC1467"
+					item: {
+						count: 1
+						id: "avaritia:emerald_singularity"
+					}
+					type: "item"
+				}
+				{
+					id: "75E738B986BE82AA"
+					item: {
+						count: 1
+						id: "avaritia:lapis_singularity"
+					}
+					type: "item"
+				}
+				{
+					id: "5A9BDDB0134C2534"
+					item: {
+						count: 1
+						id: "avaritia:redstone_singularity"
+					}
+					type: "item"
+				}
+				{
+					id: "6333BDFF51E53127"
+					item: {
+						count: 1
+						id: "avaritia:quartz_singularity"
+					}
+					type: "item"
+				}
+				{
+					id: "7680248AAEE62B86"
+					item: {
+						count: 1
+						id: "avaritia:amethyst_singularity"
+					}
+					type: "item"
+				}
+				{
+					id: "105F5889E05F5F01"
+					item: {
+						count: 1
+						id: "avaritia:netherite_singularity"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["38EC76F20231C302"]
+			hide_until_deps_visible: true
+			id: "6D4313519AD74988"
+			rewards: [
+				{
+					id: "247B0226A72477E3"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			tasks: [
+				{
+					id: "4AB40BEA25756008"
+					item: {
+						count: 1
+						id: "avaritia:endest_pearl"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["13A1995AFD4327F9"]
+			hide_until_deps_visible: true
+			id: "202ED85258BF341F"
+			rewards: [
+				{
+					id: "51705E78007FEF34"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			tasks: [
+				{
+					id: "4EE9B258A2B352A6"
+					item: {
+						count: 1
+						id: "avaritia:infinity_singularity"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0AB4FE1CA6A81189", "6D4313519AD74988", "202ED85258BF341F"]
+			hide_until_deps_visible: true
+			id: "6241343CE884D284"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5B7370E617895C31"
+					table_id: 6045014796848650239L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "75B10BA6A48DB9B7"
+					item: {
+						count: 1
+						id: "avaritia:infinity_catalyst"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6241343CE884D284"]
+			hide_until_deps_visible: true
+			id: "487AE896875A5335"
+			rewards: [
+				{
+					id: "50A9C7B78DA2DF93"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+			]
+			tasks: [
+				{
+					id: "28663D9F9FB42BA5"
+					item: {
+						count: 1
+						id: "avaritia:infinity_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["487AE896875A5335"]
+			hide_until_deps_visible: true
+			id: "1F454017244E767C"
+			optional: true
+			rewards: [
+				{
+					id: "259DEF0CBBC4675D"
+					type: "xp_levels"
+					xp_levels: 100
+				}
+			]
+			tasks: [
+				{
+					id: "148630678D5961C4"
+					item: {
+						count: 1
+						id: "avaritia:infinity_sword"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["487AE896875A5335", "0ECFDC05575A4FA1"]
+			hide_until_deps_complete: true
+			id: "6FFE636A86B25EE0"
+			rewards: [
+				{
+					id: "129F8232D22D5208"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "3993030FFB5E36E7"
+					item: {
+						count: 1
+						id: "kubejs:infinite_resonator"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["38EC76F20231C302"]
+			hide_until_deps_visible: true
+			id: "563576C470842AA6"
+			optional: true
+			rewards: [
+				{
+					id: "0F7BDAA13BC9C777"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			tasks: [
+				{
+					id: "7379D7E1D22B6911"
+					item: {
+						count: 1
+						id: "solarflux:sp_avaritia.neutronium"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.6d
+		}
+	]
+}

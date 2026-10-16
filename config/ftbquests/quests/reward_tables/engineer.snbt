@@ -1,0 +1,116 @@
+{
+	filename: "engineer"
+	id: "48C08FD59478E7CE"
+	loot_size: 3
+	order_index: 1
+	rewards: [
+		{
+			count: 32
+			id: "0C88E82E092FCC3F"
+			item: {
+				count: 1
+				id: "create:andesite_alloy"
+			}
+			weight: 15.0d
+		}
+		{
+			count: 32
+			id: "5AA52357DA734CB1"
+			item: {
+				count: 1
+				id: "minecraft:redstone"
+			}
+			weight: 15.0d
+		}
+		{
+			count: 32
+			id: "4FF1DE70A1C36969"
+			item: {
+				count: 1
+				id: "minecraft:copper_ingot"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 16
+			id: "2FCE60B87C142192"
+			item: {
+				count: 1
+				id: "immersiveengineering:ingot_steel"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 16
+			id: "04D4E6F0BA6A8536"
+			item: {
+				count: 1
+				id: "mekanism:ingot_osmium"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 16
+			id: "730F517B091D93ED"
+			item: {
+				count: 1
+				id: "create:brass_ingot"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 16
+			id: "0D722D60AFA1EC23"
+			item: {
+				count: 1
+				id: "ae2:certus_quartz_crystal"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 16
+			id: "5F480E3B28368F5A"
+			item: {
+				count: 1
+				id: "mekanism:ingot_bronze"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 16
+			id: "2BA7E230CF122F24"
+			item: {
+				count: 1
+				id: "ae2:silicon"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 4
+			id: "36171FE654567713"
+			item: {
+				count: 1
+				id: "mekanism:basic_control_circuit"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 2
+			id: "5811ADCD2DDB7D67"
+			item: {
+				count: 1
+				id: "create:precision_mechanism"
+			}
+			weight: 6.0d
+		}
+		{
+			count: 4
+			id: "69EB2240FE517994"
+			item: {
+				count: 1
+				id: "immersiveengineering:component_steel"
+			}
+			weight: 6.0d
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "acceptVanillaFuel": false,
+  "fuelList": {
+    "immersiveengineering:coal_coke": 3200,
+    "immersivepetroleum:petcoke": 3200,
+    "minecraft:blaze_powder": 1200
+  },
+  "fluidFuelList": {
+    "#c:diesel": 12000,
+    "#c:gasoline": 16000,
+    "#c:kerosene": 20000,
+    "ad_astra:fuel": 20000,
+    "#c:biodiesel": 6000
+  }
+}

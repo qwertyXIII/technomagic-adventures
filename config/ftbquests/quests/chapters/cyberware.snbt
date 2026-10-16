@@ -1,0 +1,180 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "cyberware"
+	group: "592F40102295DC55"
+	icon: {
+		count: 1
+		id: "cyber_ware_port:cyberware_workbench"
+	}
+	id: "275A86155333DA27"
+	order_index: 21
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0A52EC4403EC3BDE"]
+			hide_until_deps_complete: true
+			id: "01413225EC04E56E"
+			rewards: [
+				{
+					count: 4
+					id: "4D3A0EBEDC76D870"
+					item: {
+						count: 1
+						id: "cyber_ware_port:blueprint"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "7F79F9D55FF39988"
+					item: {
+						count: 1
+						id: "cyber_ware_port:cyberware_workbench"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["01413225EC04E56E"]
+			hide_until_deps_visible: true
+			id: "1875C49BE034742E"
+			rewards: [
+				{
+					id: "61150FCA04F44D96"
+					item: {
+						count: 1
+						id: "cyber_ware_port:component_box"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "cyber_ware_port:cyber_zombie"
+					id: "2012FE5F54DCB84E"
+					type: "kill"
+					value: 3L
+				}
+			]
+			x: 2.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["01413225EC04E56E"]
+			hide_until_deps_complete: true
+			id: "5620B3625DF7F765"
+			rewards: [
+				{
+					count: 4
+					id: "772215E68625DD99"
+					item: {
+						count: 1
+						id: "cyber_ware_port:neuropozyne"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "608D8C5985138E8C"
+					item: {
+						count: 1
+						id: "cyber_ware_port:robo_surgeon"
+					}
+					type: "item"
+				}
+				{
+					id: "78F0235D063FEF5F"
+					item: {
+						count: 1
+						id: "cyber_ware_port:surgery_chamber"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["5620B3625DF7F765"]
+			hide_until_deps_visible: true
+			id: "101746CD8049E72F"
+			rewards: [
+				{
+					id: "5C182BF11BEBCC4D"
+					item: {
+						count: 1
+						id: "cyber_ware_port:cybereye_upgrades_night_vision"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "0B5EB0EC3F9EF2F0"
+					item: {
+						count: 1
+						id: "cyber_ware_port:cybereyes"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["5620B3625DF7F765"]
+			hide_until_deps_visible: true
+			id: "60BA824202F4E8BC"
+			optional: true
+			rewards: [
+				{
+					id: "7AFEFF559D9950EF"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
+			tasks: [
+				{
+					id: "2BDB023A592593CF"
+					item: {
+						count: 1
+						id: "cyber_ware_port:muscle_upgrades_wired_reflexes"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5620B3625DF7F765"]
+			hide_until_deps_visible: true
+			id: "092CB7E2FA79C224"
+			rewards: [
+				{
+					id: "3D098587FED1F247"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [
+				{
+					id: "0E9C500C5FF9B256"
+					item: {
+						count: 1
+						id: "cyber_ware_port:brain_upgrades_cortical_stack"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.6d
+		}
+	]
+}

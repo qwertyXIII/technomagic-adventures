@@ -1,0 +1,204 @@
+{
+	autofocus_id: "5BC23847E58816C0"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "landing"
+	group: "576BF1E4F3AF42DD"
+	icon: {
+		count: 1
+		id: "kubejs:crew_tag"
+	}
+	id: "5419A3ECF58B4D6E"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "5BC23847E58816C0"
+			rewards: [
+				{
+					id: "1AD83B5A68D4BF9F"
+					item: {
+						count: 1
+						id: "kubejs:capsule_log"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "2DD6CE7033141D1D"
+					item: {
+						count: 1
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					command: "/scoreboard players set {p} tm_story 1"
+					elevate_perms: true
+					id: "22E44013C5F42D99"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					id: "340474340A819536"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5BC23847E58816C0"]
+			hide_until_deps_visible: true
+			id: "623555AF697AD047"
+			rewards: [
+				{
+					count: 16
+					id: "3E6862010E20AD5E"
+					item: {
+						count: 1
+						id: "minecraft:charcoal"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3D23C596EC2099DA"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5BC23847E58816C0"]
+			hide_text_until_complete: true
+			hide_until_deps_visible: true
+			id: "13790E01FFFE96A2"
+			rewards: [
+				{
+					id: "00771C021F3925C5"
+					item: {
+						count: 1
+						id: "kubejs:note_m_1"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "4B62E0D7AFEC4C85"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5BC23847E58816C0"]
+			hide_until_deps_visible: true
+			id: "2BC20A875C82C11D"
+			rewards: [
+				{
+					id: "53940D344F6D70FF"
+					item: {
+						count: 1
+						id: "kubejs:crew_tag"
+					}
+					type: "item"
+				}
+				{
+					id: "3224B329260B9E7A"
+					item: {
+						count: 1
+						id: "kubejs:flight_recorder_broken"
+					}
+					team_reward: true
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "57C35DE153A796ED"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["13790E01FFFE96A2"]
+			hide_text_until_complete: true
+			hide_until_deps_visible: true
+			id: "3FB0E498BE5F7490"
+			rewards: [
+				{
+					id: "0077F963FD185417"
+					item: {
+						count: 1
+						id: "kubejs:cargo_stencil"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "7CACE2B334733D07"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:story/iron_tools"
+					criterion: ""
+					id: "0577219F15784F8A"
+					type: "advancement"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2BC20A875C82C11D"]
+			hide_until_deps_visible: true
+			id: "3C901908436A068E"
+			rewards: [
+				{
+					id: "03D858301E43EFD4"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					command: "/scoreboard players set {p} tm_story 2"
+					elevate_perms: true
+					id: "1E29B79F726D1B9E"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "36971C95C1010474"
+					item: {
+						count: 1
+						id: "kubejs:flight_recorder"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 2.0d
+		}
+	]
+}

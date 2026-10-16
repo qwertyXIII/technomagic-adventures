@@ -1,0 +1,108 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "territory"
+	group: "576BF1E4F3AF42DD"
+	icon: {
+		count: 1
+		id: "minecraft:filled_map"
+	}
+	id: "17E506AAB14F6F2B"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "60BCC6B013BED270"
+			rewards: [
+				{
+					count: 8
+					id: "50017390068518E9"
+					item: {
+						count: 1
+						id: "minecraft:lantern"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5241655072816171"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["60BCC6B013BED270"]
+			hide_until_deps_visible: true
+			id: "4E611DE368A6ACEC"
+			rewards: [
+				{
+					count: 16
+					id: "12E9D4C1A999378A"
+					item: {
+						count: 1
+						id: "minecraft:glowstone"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "531A4B6C81AA8CBC"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["59876CEF95CC175D"]
+			hide_until_deps_complete: true
+			id: "7451508E012BBBBF"
+			rewards: [
+				{
+					count: 16
+					id: "4DAA6284BE78F0CE"
+					item: {
+						count: 1
+						id: "minecraft:obsidian"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "72D3B01BCFA9C6BB"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["71F0ED9D34786F50"]
+			hide_until_deps_complete: true
+			id: "15C7266FA1BA87B7"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6B7DAC8D42226640"
+					table_id: 4169577723705550567L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "42DCE8962A98FB8E"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 1.6d
+		}
+	]
+}

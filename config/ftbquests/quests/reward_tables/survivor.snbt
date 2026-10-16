@@ -1,0 +1,105 @@
+{
+	filename: "survivor"
+	id: "608522066441FF4F"
+	loot_size: 2
+	order_index: 0
+	rewards: [
+		{
+			count: 8
+			id: "68EF06846D95D814"
+			item: {
+				count: 1
+				id: "minecraft:bread"
+			}
+			weight: 20.0d
+		}
+		{
+			count: 8
+			id: "112934A001832869"
+			item: {
+				count: 1
+				id: "minecraft:cooked_beef"
+			}
+			weight: 20.0d
+		}
+		{
+			count: 32
+			id: "6B6FD37787096666"
+			item: {
+				count: 1
+				id: "minecraft:torch"
+			}
+			weight: 15.0d
+		}
+		{
+			count: 8
+			id: "750B81AAE697633C"
+			item: {
+				count: 1
+				id: "minecraft:iron_ingot"
+			}
+			weight: 15.0d
+		}
+		{
+			count: 16
+			id: "0BC49F1392272A96"
+			item: {
+				count: 1
+				id: "minecraft:coal"
+			}
+			weight: 15.0d
+		}
+		{
+			count: 32
+			id: "3DE05256820027D7"
+			item: {
+				count: 1
+				id: "minecraft:arrow"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 8
+			id: "16AE6943EFEDB839"
+			item: {
+				count: 1
+				id: "minecraft:golden_carrot"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 2
+			id: "5EA531D41833365C"
+			item: {
+				count: 1
+				id: "waystones:return_scroll"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 8
+			id: "3F4A0DBCD5B2CE46"
+			item: {
+				count: 1
+				id: "minecraft:experience_bottle"
+			}
+			weight: 8.0d
+		}
+		{
+			id: "3DB0EADAE2EAB5A1"
+			item: {
+				count: 1
+				id: "minecraft:golden_apple"
+			}
+			weight: 3.0d
+		}
+		{
+			id: "2C08184906FA8D8F"
+			item: {
+				count: 1
+				id: "minecraft:name_tag"
+			}
+			weight: 3.0d
+		}
+	]
+}

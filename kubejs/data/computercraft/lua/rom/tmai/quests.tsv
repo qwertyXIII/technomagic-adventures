@@ -1,0 +1,17 @@
+# Поручения ЛОЦМАНа. type: deliver (принести в Ящик памяти) | visit (дойти до цели разведки) | kill (убить N мобов). reward — id из rewards.tsv.
+id	title	type	target	count	min_repair	reward	hint
+q_coal	Топливо для ядра	deliver	minecraft:coal	32	0	r_food	Уголь для генератора капсулы: положите в Ящик памяти
+q_charcoal	Запас на ночь	deliver	minecraft:charcoal	16	0	r_torches	Древесный уголь — тоже топливо
+q_village	Контакт с местными	visit	village	1	0	r_compass	Найти поселение и посмотреть на жителей
+q_zombies	Санитарная зона	kill	minecraft:zombie	10	0	r_ammo	Зачистить окрестности от заражённых
+q_creepers	Тишина вокруг лагеря	kill	minecraft:creeper	6	0	r_food	Криперы мешают строить
+q_iron	Сырьё для обшивки	deliver	minecraft:iron_ingot	24	1	r_tools	Железо на ремонт обшивки
+q_mineshaft	Старые выработки	visit	mineshaft	1	1	r_torches	Осмотреть заброшенную шахту
+q_spiders	Паутина в трюме	kill	minecraft:spider	8	1	r_xp	Пауки облюбовали окрестности
+q_copper	Медь для антенны	deliver	minecraft:copper_ingot	32	1	r_emeralds	Медь пойдёт на проводку капсулы
+q_redstone	Сигнальные цепи	deliver	minecraft:redstone	64	2	r_xp	Редстоун для сигнальных цепей
+q_ruins	Чужие камни	visit	ruins	1	2	r_emeralds	Осмотреть древние руины
+q_blaze	Жар Незера	kill	minecraft:blaze	6	2	r_ammo	Всполохи — опасный, но полезный жар
+q_diamond	Оптика для сканера	deliver	minecraft:diamond	4	3	r_golden	Алмазы — линзы для штурманского модуля
+q_stronghold	Глаз за горизонтом	visit	stronghold	1	3	r_pearls	Найти крепость Края
+q_endermen	Тени на краю	kill	minecraft:enderman	10	3	r_pearls	Эндермены носят то, что нужно Оку

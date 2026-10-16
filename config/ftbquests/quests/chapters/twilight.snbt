@@ -1,0 +1,273 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "twilight"
+	group: "0297AE1DA7725E71"
+	icon: {
+		count: 1
+		id: "twilightforest:magic_map_focus"
+	}
+	id: "2D7F1C657F1EDBDE"
+	order_index: 35
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED", "2962677794E588B4"]
+			hide_until_deps_complete: true
+			id: "294A4FB6678CF80B"
+			rewards: [
+				{
+					id: "0CFF72B4D746FDEF"
+					item: {
+						count: 1
+						id: "twilightforest:magic_map_focus"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					dimension: "twilightforest:twilight_forest"
+					id: "71B06C98F31263F5"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["294A4FB6678CF80B"]
+			hide_until_deps_visible: true
+			id: "3D715EF6EE89BD98"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0D5DDCC5DCE3BD89"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:naga"
+					id: "132AB3865DFD9A88"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3D715EF6EE89BD98"]
+			hide_until_deps_visible: true
+			id: "1FD077F89BE44302"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2910F0673D4B3D6C"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:lich"
+					id: "24B3615B706F0A01"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1FD077F89BE44302"]
+			hide_until_deps_visible: true
+			id: "7960B9949F4EE2B6"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "547E5000C3CB11E6"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:minoshroom"
+					id: "28033F1AA27971E9"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["7960B9949F4EE2B6"]
+			hide_until_deps_visible: true
+			id: "0B0DE2FA6FA04A35"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "791882B3C190FDE6"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:hydra"
+					id: "05778594F62F1F8D"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["1FD077F89BE44302"]
+			hide_until_deps_visible: true
+			id: "0A1840DEF86AB197"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "65F6F8D815CA3ABD"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "twilightforest:progress_knights"
+					criterion: ""
+					id: "310A1D31135545F9"
+					type: "advancement"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0A1840DEF86AB197"]
+			hide_until_deps_visible: true
+			id: "349B2B1BAA0C83E8"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "067488555295CCBB"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:ur_ghast"
+					id: "784D5D525975389D"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1FD077F89BE44302"]
+			hide_until_deps_visible: true
+			id: "438EA33D385447A1"
+			rewards: [
+				{
+					count: 8
+					id: "6687357A5FB37BA5"
+					item: {
+						count: 1
+						id: "twilightforest:arctic_fur"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:alpha_yeti"
+					id: "112B7988BA0678F8"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["438EA33D385447A1"]
+			hide_until_deps_visible: true
+			id: "0005B186FF6BB51C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "36E47D53C11F11C0"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:snow_queen"
+					id: "6ADB346084D8E626"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 8.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["349B2B1BAA0C83E8", "0005B186FF6BB51C"]
+			hide_until_deps_visible: true
+			id: "1D1E4E25C8707903"
+			rewards: [
+				{
+					id: "54A091895981D244"
+					item: {
+						count: 1
+						id: "twilightforest:giant_pickaxe"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "twilightforest:progress_troll"
+					criterion: ""
+					id: "513D60A8CB046A6F"
+					type: "advancement"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1D1E4E25C8707903"]
+			hide_until_deps_visible: true
+			id: "157B6C121D8AE0C4"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7ED9CBA5901AB6FE"
+					table_id: 8756200379582387048L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "5D888C95EF676738"
+					structure: "twilightforest:final_castle"
+					type: "structure"
+				}
+			]
+			x: 12.0d
+			y: 0.0d
+		}
+	]
+}

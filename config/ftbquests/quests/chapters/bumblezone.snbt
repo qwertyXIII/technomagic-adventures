@@ -1,0 +1,103 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "bumblezone"
+	group: "0297AE1DA7725E71"
+	icon: {
+		count: 1
+		id: "the_bumblezone:honey_crystal_shards"
+	}
+	id: "77B75EF8FCC381CB"
+	order_index: 39
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "2E65E458522FC02E"
+			rewards: [
+				{
+					count: 8
+					id: "7674D728B5690AE7"
+					item: {
+						count: 1
+						id: "minecraft:honey_bottle"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					dimension: "the_bumblezone:the_bumblezone"
+					id: "5BC9C1BA7BF37618"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2E65E458522FC02E"]
+			hide_until_deps_visible: true
+			id: "77D86A890331269F"
+			rewards: [
+				{
+					count: 8
+					id: "41BD44BFC66B1C7B"
+					item: {
+						count: 1
+						id: "the_bumblezone:bee_bread"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "36743861436115B3"
+					item: {
+						count: 1
+						id: "the_bumblezone:honey_crystal_shards"
+					}
+					type: "item"
+				}
+				{
+					id: "3E101CB6D8EA21DA"
+					item: {
+						count: 1
+						id: "the_bumblezone:royal_jelly_bottle"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["2E65E458522FC02E"]
+			hide_until_deps_visible: true
+			id: "0994FBDC8A6D7C00"
+			rewards: [
+				{
+					id: "39CB0417D0DDC0B7"
+					item: {
+						count: 1
+						id: "the_bumblezone:honey_compass"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "25C248CC18FCA2A4"
+					observe_type: 5
+					timer: 0L
+					to_observe: "the_bumblezone:bee_queen"
+					type: "observation"
+				}
+			]
+			x: 2.0d
+			y: 0.8d
+		}
+	]
+}

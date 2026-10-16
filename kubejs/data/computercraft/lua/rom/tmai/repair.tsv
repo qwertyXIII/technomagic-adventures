@@ -1,0 +1,6 @@
+# Детали ремонта ядра ЛОЦМАНа: компьютер переносит их из Ящика памяти в ядро; порядок и эффект проверяет KubeJS (server_scripts/tm_ai_core.js).
+item	title
+kubejs:ai_repair_cooling	Контур охлаждения ядра
+kubejs:ai_repair_memory_1	Блок памяти Мк1
+kubejs:ai_repair_memory_2	Блок памяти Мк2
+kubejs:ai_repair_quantum	Квантовый вычислитель

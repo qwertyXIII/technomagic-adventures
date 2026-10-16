@@ -1,0 +1,173 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "aether"
+	group: "0297AE1DA7725E71"
+	icon: {
+		count: 1
+		id: "aether:aether_portal_frame"
+	}
+	id: "7B67AE8999C67164"
+	order_index: 36
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "115DBA0F52DCDBC2"
+			rewards: [
+				{
+					count: 16
+					id: "4D71EB7A8E9F6F02"
+					item: {
+						count: 1
+						id: "aether:ambrosium_shard"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					dimension: "aether:the_aether"
+					id: "53CB464C47488D3C"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["115DBA0F52DCDBC2"]
+			hide_until_deps_visible: true
+			id: "7C83BFA5885CD3BB"
+			rewards: [
+				{
+					id: "33EE6B8A8BE41E57"
+					item: {
+						count: 1
+						id: "aether:zanite_pickaxe"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3D04EF985EB98B99"
+					item: {
+						count: 1
+						id: "aether:altar"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "5A2C005C96A71C18"
+					item: {
+						count: 1
+						id: "aether:zanite_gemstone"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7C83BFA5885CD3BB"]
+			hide_until_deps_visible: true
+			id: "41F4D28BDA9F4E54"
+			rewards: [
+				{
+					count: 2
+					id: "1E63A2ACEB707E08"
+					item: {
+						count: 1
+						id: "aether:golden_parachute"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					entity: "aether:slider"
+					id: "3B15B1B84F83D6B0"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["41F4D28BDA9F4E54"]
+			hide_until_deps_visible: true
+			id: "2C6C9A94A28682AC"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "10F886D54439F0F8"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "aether:valkyrie_queen"
+					id: "58795F97E86F0B82"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2C6C9A94A28682AC"]
+			hide_until_deps_visible: true
+			id: "2C70DA75BD598BA5"
+			rewards: [
+				{
+					id: "07E55E31047DA3E6"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "7F67B69D4BEE347E"
+					item: {
+						count: 1
+						id: "aether:enchanted_gravitite"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2C70DA75BD598BA5"]
+			hide_until_deps_visible: true
+			id: "3EEDBB490FCC360B"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2684AE44751589D8"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "aether:sun_spirit"
+					id: "229A55B069BDC013"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+	]
+}

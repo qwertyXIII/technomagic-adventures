@@ -1,8 +1,316 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/Advancedperipherals/world.toml"
+hash = "b9dcc5e7c2cbb453d11a4324b99341e6b08ad57e042151bf3e4b6c4336edd010"
+
+[[files]]
+file = "config/almostunified/unification/materials.json"
+hash = "11cc56f1ded8368fe9cd63521484ef178fbdd6fec5381fe4e56030ee164d6320"
+
+[[files]]
+file = "config/apotheosis/apotheosis.cfg"
+hash = "46e51141fc224613204ea9c228b84ac21303b29f51e4260948574d8a77acde00"
+
+[[files]]
+file = "config/avaritia-server.toml"
+hash = "0bb2b8a6e1d2067f743c5490a6ab63fb4174c34a30f8689b02705908c0eb4829"
+
+[[files]]
+file = "config/bosses_of_mass_destruction.json5"
+hash = "3edcdcc60b1cb43397787630274699653b57fbeaa44e9216543d9520fad75745"
+
+[[files]]
+file = "config/cataclysm-common.toml"
+hash = "6ca1ea802f7b910810b3506846ef62338e86e78cfba256db96287a7b5069fd0a"
+
+[[files]]
+file = "config/computercraft-server.toml"
+hash = "6948589179fb910c6a767aef3a6ab490d3352a0c337ca6c8c1a3e5c5f59c84a5"
+
+[[files]]
+file = "config/creeperoverhaul.jsonc"
+hash = "2da0155d3757a06ed101c66ed1fe5a67d17f5569a36bf5f8572f3ae286c09560"
+
+[[files]]
+file = "config/cyber_ware_port-common.toml"
+hash = "02479e3f7e202015e45efdfeb9ed63aeaf2070cfb002e348c48810b9d0822e44"
+
+[[files]]
+file = "config/endermanoverhaul.jsonc"
+hash = "205388dcbd6c4a6ecb4c632b0adc4da7e2d78dbe93ee8132a28e3827b6ce9de5"
+
+[[files]]
+file = "config/friendsandfoes.json"
+hash = "6d45b4844d752034708f8ab06889ff47801ad14c21ba8527cf1ae9353cd7eb92"
+
+[[files]]
 file = "config/ftbchunks-world.snbt"
-hash = "6b1c1647d5f44f3c594208bd185135b7c5481dd123df708c2c86ccd959602fee"
+hash = "627b1cc346985d89f4c781bccc6875bbf26d4e904663b6fefc1512da498d7cd2"
+
+[[files]]
+file = "config/ftbquests/quests/chapter_groups.snbt"
+hash = "09e11a7b38cab40ccc3570611f55a1876b5b7b1f6878b42e5e109802fba57788"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/ae2.snbt"
+hash = "3f5f0d2815182a78973a94ac35401cdc3e5b0169900dae1f764b3dea0ea7775f"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/aether.snbt"
+hash = "159412beda3bcc4b0741b55d365c36408dabcf38c318f34733caff1d9604c095"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/aircraft.snbt"
+hash = "12bd2d1b63c7fea912453248452c136ef253bbde72b5cf6e6945992cc4af7d93"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/ars_nouveau.snbt"
+hash = "4d5429c782ca2cd7f6a26362881be675eca23f2c2bb40fe862d0c4fb03868876"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/arsenal.snbt"
+hash = "e0b70dffc571336cc3308fa2ffd97720005aedadfa9d0ed7bc641a92afa90a1a"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/avaritia.snbt"
+hash = "a0d71367a352f14579aca9c56be1c0abff659f731f372621d4dc3e72577cc774"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/bestiary.snbt"
+hash = "2fa314813854cdccede246acfded09194c1888ded12b722e002b75cd779a1e08"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/bumblezone.snbt"
+hash = "4625e46c4d0b3fceb8ca09e1e90ed3098ae5209766bd5fa906148bc92a238edb"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/chronicle_1.snbt"
+hash = "9ceec86f0772d6ae0ca3ead30a5ca5c7259ce0a2f96cee57a16be30f1d423db3"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/chronicle_2.snbt"
+hash = "a11090a07dd081c1904b168aec0c4f6fa9b84e635c7b55685945b9494a70256e"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/chronicle_3.snbt"
+hash = "9c6cbcf1aa83699f7677fe216a1a8b6158a03549687588392d1eb967f7393a23"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/chronicle_4.snbt"
+hash = "d6234573f0adedaee95b55c82d1afe8ecfb29026742f911c1a2036e4ff5b2860"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/chronicle_5.snbt"
+hash = "0a588136a16eba10698780810d46995b5197e0880c1d08175c5e063650f800fa"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/chronicle_6.snbt"
+hash = "d358b78dee21a9d6e5f44576119f3322c7e3d1f35549efdd33975768c40e148a"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/computer.snbt"
+hash = "67500a225667485b43d64e783d4cf59b03e16f5490e1cbb66c36922cad7d6d4d"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/create.snbt"
+hash = "b7bc5627e48187dfa9983126de80854b5ea5ef7e456a73c87cdffe8445e7d0c3"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/creatures.snbt"
+hash = "7a1fde452e3e34eefa2fa58becc542b00b3cf9c2eabe138f023b44427096f2a9"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/cyberware.snbt"
+hash = "ae9d98a6b032baafc41db2e1b04487ff0eaf4f9fe6b79b59f64cd12188f84ebd"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/draconic.snbt"
+hash = "c5922684cfa2cbdbd8d5de90712e3d0febc48fd7a09503c6c60c94e4fd17d0f0"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/dragons.snbt"
+hash = "400197fcc327d13a1e6a4c766e9a78626bc51c224e5247cc271668ee51474001"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/energy.snbt"
+hash = "85e7bdf2757f4a115cc878bcb3f01e5eab03831476446dc2d931db9fe2e5980a"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/exploration.snbt"
+hash = "d845fb5f4903bdce736ab3a79e25c3006bf8680d878550590f09f32fca0c294d"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/factory.snbt"
+hash = "ae8f6f0c729b7e526d34331057a249bbe112af510fdd2128a81982a2ae244aa0"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/findings.snbt"
+hash = "984370d8d8732d2dbd0b56e87efa2e17f9ac57a5f55567d8b2f6d5542d81b232"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/first_night.snbt"
+hash = "57e8472c66d77ccf347b0509e01ee3a2eb7a4705656d5e9861cbba674900c3b4"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/forbidden.snbt"
+hash = "338cc1275e626ffe2a467072da833ed9ab3f8753a0d756551b75db5d98f561f3"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/help.snbt"
+hash = "0dcb1e4ac15fb18503f605ce835711d7f4bb7ed7cbba7f8fc0dfac32cd4a6c41"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/immersive.snbt"
+hash = "f13fc327d2289ca807b3f02142c46c35a9a65e80e32f85e137fe34f4acaa58da"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/industrialization.snbt"
+hash = "fda3ae4c9e61b9e275f388812d45caeeb0f0302058a242a0d27f08f72c165a1f"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/irons_spells.snbt"
+hash = "016d6c93c5299741edeec2ee02b25d40fba43625e191a6b26ec210ac1792e722"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/landing.snbt"
+hash = "4611015d5cd94fbe2d4b9082b0a8e51c2d2c58ff97c2471d8eb7c7c306da44c2"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/logistics.snbt"
+hash = "26fc8c19b2f6d9eb1a5c2316f6536d93f528f428ed3e98d8e365c07860a7ec08"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/malum.snbt"
+hash = "55b7ca708b5c0816da64aa3e066e9979a42f2b10e82f3e1cc040caa3f30aad7e"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/mekanism.snbt"
+hash = "ff696ef77491bc0bf0870071172f57d691e94faf380656f2b158cc5b10551703"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/neovitae.snbt"
+hash = "1b756490b40168c01b3d30c82145e1f8a11ce12d33b18ffd9a11291862a349f8"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/nether_end.snbt"
+hash = "ec73059ad535d54a7836c02672b8ef0212e3d4eaacc276885244dbee7d15a768"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/occultism.snbt"
+hash = "ec7b9222163fd06f848c6702307737afd16bfbf7037944ca0e7f836c0cfaf9ae"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/orders.snbt"
+hash = "46af3306c0351ea6f5135c7f28d3ffd85622e02250e08deb04aecc8979a75ada"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/petroleum.snbt"
+hash = "1a9b5602b297e1258a31725074e6ee39f968ad1caa35b5a037384ae122469791"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/settling.snbt"
+hash = "a5aad301675342eb8f41bee5b75629c930ca4c3c21d01dca7ad5673984eb3d7a"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/space_1.snbt"
+hash = "ae074439e1dd9dd88377a0d8f623e66ba550dd37073ba085dbc8e12becda760c"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/space_2.snbt"
+hash = "bec5914681ad60916ed44fd0b0048a8934e362921df5d6805c8205847040b5ef"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/space_3.snbt"
+hash = "7eed2effa24a938318818079aca685f79fe5b514d1e29043d16daea50191fa7b"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/starlight.snbt"
+hash = "17b2cd8a27f8ba0ebdb9590affe772ef1edd9ad1d3cc637af283bc5f66f4c04f"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/territory.snbt"
+hash = "a2ea1b79a0b2b5b519040816fb1ac920ac01d83469907cce291fa7d955c7b241"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/theurgy.snbt"
+hash = "c882cfe65bfe5ead5e90b958b4099aee81f64c4d471c6c4c3a416bd8522a6b42"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/twilight.snbt"
+hash = "2e560c959581f2fa823e6fc94a34bf8c1130f45fa93ec3bc36381afb9fc5b23c"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/underground.snbt"
+hash = "eae8c8d156c07e308a76d209eee41353b1839532ddeeede04b366df6d2878787"
+
+[[files]]
+file = "config/ftbquests/quests/data.snbt"
+hash = "936f81d66b88728d0243e382f086a6a96fd8889e733641b0fcb858ec50c6c1a7"
+
+[[files]]
+file = "config/ftbquests/quests/lang/en_us.snbt"
+hash = "8631653b9a1317fe8ddb90ba88cd4b32f5947bde90bcaf9283292b7970dc9a2a"
+
+[[files]]
+file = "config/ftbquests/quests/lang/ru_ru.snbt"
+hash = "8631653b9a1317fe8ddb90ba88cd4b32f5947bde90bcaf9283292b7970dc9a2a"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/endgame.snbt"
+hash = "0b8e590e0560045e9acbac576530e854c7181f4a6fe43f740020656b109e9ea6"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/engineer.snbt"
+hash = "f74bda8fc9943ed94e7156b1d96a4f8dbfae7f97f315dae236feae48a17d4895"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/explorer.snbt"
+hash = "a0deb7f9ae46a23a9e53e30639de76f9748570f9a1c67ca9381881ade47ea487"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/mage.snbt"
+hash = "be11143e1ae7dfbef21950ea03b52a0b83bdaeb7be0be266722c4a16f1230928"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/order.snbt"
+hash = "5b0531f40846de8a5b9f305e177e56ba808586e272ab45f471071a6a36766739"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/space.snbt"
+hash = "79d2f98de581b3105e814aa83b869dee85cb579882f9e6bebd9c9bd19d4c213b"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/specialization.snbt"
+hash = "a088e845fdaa0f499593e27f4086a54edbd90b632c16f341df89b3972b607e66"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/survivor.snbt"
+hash = "59eb0be2749744770cd8a5adf6141b895385b9bd4fe132a08c14a6848574b364"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/trophy.snbt"
+hash = "9fca45fc0caeabde55e3bc6d182018c76d2d7d626a9b86ebfce1a9a23b20c884"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/trophy_choice.snbt"
+hash = "ccd35ca185834557c69c5f738d6b863e1a92e4f241c78c63172f35f5f842d522"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/valuable.snbt"
+hash = "00e496fcaf0a68cd442298a0369c372a6ba69308a3d885ee059bcc4a9f226767"
+
+[[files]]
+file = "config/ftbultimine-server.snbt"
+hash = "09ed126146edc2ff342c741ef336f2ca227681495345ba66bba5d9917262658f"
+
+[[files]]
+file = "config/immersive_aircraft.json"
+hash = "aca5f85a97aed4fb4a3069368d5214d2fd858a0e34e3d5995a9cafece6583713"
+
+[[files]]
+file = "config/legendary_monsters-common.toml"
+hash = "fd1791914400c56c1d01dec2e7c5b0e7efdf4838fef4ec550c7b2f96cc8c3fc7"
 
 [[files]]
 file = "config/mca.json"
@@ -11,6 +319,782 @@ hash = "deb87504eda5a3eab46b66e73de8a8b3c6fce3c553bf70d505bf9a79878d5002"
 [[files]]
 file = "config/modernfix-mixins.properties"
 hash = "f17e9616aeaebd9759f12092a882d3820d7684d4c3361d792ac0eb84e7add51e"
+
+[[files]]
+file = "config/mowziesmobs-common.toml"
+hash = "9af5f47346cf07276b8839fd514bed8d158b5737e7343b686fefbe2d104847ec"
+
+[[files]]
+file = "config/mutantmonsters-common.toml"
+hash = "ac60ba53d0818e4c5824aa8d60e0870f4b0c2051b4e50f518f469a848d4d6760"
+
+[[files]]
+file = "config/solarflux/recipes.cfg"
+hash = "f250898916da8ab5fc5f97b216130c62160ab01039b38ca144b4eec85c4a9e4a"
+
+[[files]]
+file = "config/waystones-common.toml"
+hash = "e9fcf60ef34cca17f7d86833dfb087bc3fbf94d207881c9fb2e60c79cb6bef23"
+
+[[files]]
+file = "defaultconfigs/avaritia-server.toml"
+hash = "0bb2b8a6e1d2067f743c5490a6ab63fb4174c34a30f8689b02705908c0eb4829"
+
+[[files]]
+file = "defaultconfigs/computercraft-server.toml"
+hash = "6948589179fb910c6a767aef3a6ab490d3352a0c337ca6c8c1a3e5c5f59c84a5"
+
+[[files]]
+file = "kubejs/assets/kubejs/lang/en_us.json"
+hash = "26bb0a747a8275992c82c011957225d43b717498b5425707d39c6520512ab454"
+
+[[files]]
+file = "kubejs/assets/kubejs/lang/ru_ru.json"
+hash = "26bb0a747a8275992c82c011957225d43b717498b5425707d39c6520512ab454"
+
+[[files]]
+file = "kubejs/client_scripts/tm_tooltips_gen.js"
+hash = "30f2e6c4d83b75bae39bc46de05334702a7b323a7bbf68f15c04dcf6c6f2c8c9"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/autorun/tmai_boot.lua"
+hash = "25b14e2cbf39cc24d078ba0495adabd734b71b21d2d6af46bd7720ffe1100373"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/help/tmai.txt"
+hash = "cbaf4cded33387ccb0992c5c1c50054f105f23145c92002bde8d45e0e512c477"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/app.lua"
+hash = "a4df7b08183bf5435d14c61a94e4e725b099a66c0fd1859a11314f95fc3fce81"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/chat.lua"
+hash = "b77cc3e6996caf7c3fbd07cfa8e4014d4568192671e45e7a3372a03225116338"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/config.lua"
+hash = "be450aa0d4b0d6332d96347a732871153283242f1d770f918044c48ab119d3c2"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/embed.lua"
+hash = "a788a54e57ca8eec3841ed7b1e366763e726d0ec1b1e5b9f4cffb5ed44028208"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/extras.lua"
+hash = "00170ba1b989291b2b934d1db571080e7413b67ae5dffb28bed0270ee324e270"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/guard.lua"
+hash = "79696dda983f516caea59f0f244615a7010e326e56b098bdc19a452fe184e0b8"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/history.lua"
+hash = "a5a16c0e6a5e14ee50ba77c06a2b6b35eab559a9fecaebd7f040ed7cf59ae02d"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/json.lua"
+hash = "68c58e92367768aefbbcc9b600f6e52d2879e252b87930589244de1cedf53ad6"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/kb.lua"
+hash = "b2fb63490fc0df2181d7fa14500aacad0b2707be7c40e0d6f3a8ad8f24c3c642"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/link.lua"
+hash = "0d28f965ba6c6e046219d8fe0c6cd7eaccc630e6a1a295067497d6c757642b54"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/llm.lua"
+hash = "8fd72e831611b60ef8ce5f8bccb0b9c78ef5b3b87ff5fc8974287efd89ae30a0"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/lore.lua"
+hash = "1ac23c56847abdd4835b952fc8e6069d99b428306666d55cac02a076fb73dba3"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/me.lua"
+hash = "d2e6fb190af81de44ed26ff486adc256635aea15e6127891d86076c337feeeaa"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/power.lua"
+hash = "91968d1cce776e3c009c5f7dd56f01d3dff37a77b94efbe63662055e027fb820"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/prompt.lua"
+hash = "5cf351176fa10f6f13189a7e1aad1aaa6d84fb66fb3a7c1a509ed0c051306a9f"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/provider_anthropic.lua"
+hash = "4127cc4bfa2293cc38ff10dcf002b70ef9ab0f802e003063f17326adb30017c5"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/provider_openai.lua"
+hash = "45aca4bd2dd9b5f45660d7e37fb0f0ad9b72e0affbd03f40a5d855fcac60e18a"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/quests.lua"
+hash = "2730915afebb151a43b981050d7a047f48ebdd6c3c42b9c27ab4a18fc2e6947a"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/scripts.lua"
+hash = "fab68303b288021634e709c76d651335bbbfa82aead5c9f7be5521cb4eb23b1a"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/tools.lua"
+hash = "1bfe458f73cf374c20ebbb0a8ee6a4aaad0183c1433d972219b6dfbba72c8c52"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/tts.lua"
+hash = "b06bdb4c0bc59783a2fd20ca27ea4c202f5c1e093fa7229e87bdb019ae672f9d"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/u8.lua"
+hash = "7c8c50e843a74378f1fdcab4d85d8015372a787dcf9418d0f35842280e358fd3"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/ui.lua"
+hash = "fb3d54409875193e98a19f78f63965016dc6f51a289a856f08bdd73d08fcf79c"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/util.lua"
+hash = "b7230e21e589c70644ed43cb2251f9f74315658d4a94587bfa4aeeb5641c55fe"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/programs/tmai.lua"
+hash = "1877986855430898a00406b27ee16e99715644fdf741ccc44dff903cc5682171"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/programs/tmexec.lua"
+hash = "2bdf25853c7f4839488449d1f162452ae9f79d8d81398ee1284667ce485e0437"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/programs/tmnav.lua"
+hash = "f029bc0091dd14a45c1a47bfc332e6cbe4dcfadaee652f9bf4b51d84921ac55c"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/programs/tmpda.lua"
+hash = "ef2707009128f5d3ac8042d884f62a960a2924000a4f8c1be0c9bf8b47019bfd"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/programs/tmrelay.lua"
+hash = "9d8629c07a5020e99f3865bb59dba5cb75e90070abc54b32156c44b270ee369a"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/aether.md"
+hash = "56f6f76e15c40c6656119f80aa11966c024e57e963b027b470891235875c3f74"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/alexs_caves.md"
+hash = "be4b28b56a3c871babce85d50bf9423fe12da58e6dd0beae2a732886f8eb7db9"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/bomd.md"
+hash = "68737ab53af062290e8ea900666c3a39b984383f4976cd08599f0c7854a40bf5"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/bumblezone.md"
+hash = "d43b0c95d07b7bb488cf2182588fbac486481e9a499cf5e7c1bcc09df4387cdc"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/cataclysm.md"
+hash = "7b7471a9754602c2a59464ee0cc055b6b8e49fd68750455daf6b27f175129012"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/eternal_starlight.md"
+hash = "0ebc33d0ccabe4f267c89d66f6cb83d3ecf9bf224ec1d586d2560f828c727997"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/explore_tools.md"
+hash = "69b2a8a2a92fa2e06d0ef3711b07b416d009a37fc0324a49591f4d0c558a6b45"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/hostile_mobs.md"
+hash = "9a95a42d2c59a52a5fad206fb4589b1cecb6cc8e4cdd00c2ddd97b1f91dc4ecd"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/legendary_monsters.md"
+hash = "bb0fc49594788b2e78d297d3be97fc6e304fa3050f6d1270df853b61d94a8267"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/mowzies.md"
+hash = "eceed7affc8c51d021b1ef060b0e3a59c02dfff4a8a3a12e3a8c9d8d830be77f"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/nether_end.md"
+hash = "08f0ad18419e8479bbbeadf2c92e902236391bcd431d87de95ba04500bcf306f"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/structures.md"
+hash = "93ac673ea08cde8e7b6305d36d0e1093cf1f9f45c2c1d447392a957bdf69da30"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/twilight_forest.md"
+hash = "1b0624dc274a3021b84c3d64104f556e7414e7f3762297065628f7920128a944"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/adventure/undergarden.md"
+hash = "59124a5b880b1ebde6a10143d84db5c679e9ab26a1d0b6d47bfdd16b4a96fa31"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/index.tsv"
+hash = "551807f7e3c4f02bdfd86d0cd743301587888fa9b4063855b6b33f7e4a591e62"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/magic/apotheosis.md"
+hash = "a6de36d6d5d52e14bbd4ad5332605eac467cfb4382d1e2ae688ebe7db630bdf9"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/magic/ars_nouveau.md"
+hash = "30828a47fa26e5373a76b66a423f1ac10544f42402da9f00d670e0e3bf057313"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/magic/forbidden_arcanus.md"
+hash = "f778e087910cd7a679c0deb4062d79b2531859cd1efd72036f64a7f15a579347"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/magic/irons_spells.md"
+hash = "1434cc15e6c44ac59924998ae4ecf84ed63f996d95e2a66d6fad59251f993419"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/magic/malum.md"
+hash = "d1f5aa6eb8a505455ef5cd318b5ae63b4e85b60c0deb253fd0656afacd31d99f"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/magic/neovitae.md"
+hash = "7b1aa884ba23207c49a8ee1f1a3feecde653c405247efbba698a16c78e7e094d"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/magic/occultism.md"
+hash = "a881f7743f3608ea4422a1423fda235bb3a7cab3ce7d46e3177ee9588d27014e"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/magic/theurgy.md"
+hash = "8bf957964585636e87845df6423fa95e30b04c83fd0921c2e8a47e0b2e069568"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/net/ae2.md"
+hash = "bd02e6584883bcf9f106a5830708aff1e9b62705f4735ed3dfac0731fb884100"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/net/ae2_addons.md"
+hash = "a9d4e8348d43b5dc8cd9ae8f544fdf26cc439395d9fe4ec5ab3d20bf61e2b192"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/net/storage.md"
+hash = "9ba184c6a95ba110cbea816d69aad208ed73fe86bc58b5f8f4c22590d3295691"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/ai.md"
+hash = "fdc801073102130de7196c4e67b0a2208fffe1020134eb023c255b00fd4642ff"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/chunks.md"
+hash = "8cd42f5f31e1cb08b78479581199c7e99affabb211d2677ad8b685307d1a3209"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/energy.md"
+hash = "50641183bc75b4957a4ba14ebc180a0ec969ad871637f7507922f580ea7b08dc"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/oil_fuel.md"
+hash = "7a4a5963b5e8e65a9703a883eafa140dfd83f4ccda0e3b5a761ca3d3fa13ef6c"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/performance.md"
+hash = "f94a4ea53a29182c7c68fa306824b4fc6b5857e19d562c53f2f34c3e9e67cad0"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/progression.md"
+hash = "ec110b0c20925d4f9ad8ddd0c741c0ebaa9f449c9c16659da92a6d2d2172e1ea"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/quests.md"
+hash = "f5ccb281025d0ea5c2dd797351ec974d8b2243e461a27ce555515f002340bb11"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/recipes.md"
+hash = "93d73a91e0a6885adf7f467575f7081fdae4730733d1564b5acfe44c34c21274"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/start.md"
+hash = "90bf79d828247c7af51adde626407de19a7614f7e7746070aaec7e535c3c00f4"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/survival.md"
+hash = "20c99a6d0a82816ae6cfab62a5fdfd152f84ec5bf3bb7d531c57c8b6b66fcd24"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/team.md"
+hash = "a7d333a045e8be820ef7038c1aeddaa168865203b4cb53a403d713b7f3cbe183"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/unification.md"
+hash = "20c2188dfdd8eb7328e55c6304b033a264e4e9a6eacfc7f4166276be06be4f38"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/world.md"
+hash = "5ba5cd1ab28c9d19c74f78053f650194fa9306d0a395113580a9c99721a18621"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/space/ad_astra.md"
+hash = "26239fe680fc327591aaa6ce0565e5db31633b0f679e83318095935c86068fca"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/space/aircraft.md"
+hash = "c3a5595850039f14f98ac44e095562324619f1c6957780d42175a1cc67a32591"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/space/dragons.md"
+hash = "6c7d3930891d72d19c01bd9c575e8fcaf7602720245952442b830f18dcfe1278"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/space/tacz.md"
+hash = "24aa059deb61745a254d58111fd8ddd06c0a8d26e4840b43514b6231b6285dbf"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/avaritia.md"
+hash = "50054c969775cfab926deeff7217ea7899148f45bebf5c42928ed44a3f2c2624"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/cc_tweaked.md"
+hash = "7942dcb2162c7201af7da2fc05ed2a70c16a2d91de459b25b1a4e5c17b0d2ab5"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/create.md"
+hash = "fb7dfd4aed3ef9b0fa74b1a938598aa82bd962f6b8d080b1fc8639a3c93ae9e4"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/create_diesel.md"
+hash = "f608c7b54a465ad243f73ffe9b1a1abb64c71656fc82ecf61d4975cbd8dc259e"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/createbigcannons.md"
+hash = "2e02db412766da8b5a122ce85e47727697ccc79f02610c21b2e6eceaa3a311d1"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/cyberware.md"
+hash = "f717ae40de8515b3328b6c29b31c827d34b57c59321ec7c10dc874fea194a7eb"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/draconic_evolution.md"
+hash = "0165b9e9c9de39675f2cfb25aac069e110a614b23eb453df879bb390e9f4a00b"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/ender_io.md"
+hash = "305d37e13031b8ccc617e78686ad672c503980bbf365f9f4a30e3317b7265f0e"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/extreme_reactors.md"
+hash = "d2b9e1017b5df286a55a6596167a16d672898cfd6911554b0dfd2894e9e6f1a9"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/flux_networks.md"
+hash = "a5f4bfb95085f4a9562030bab37f002485581f5ef4c0e14adf718beaa68b64b0"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/immersive_engineering.md"
+hash = "ea711173e630b5e5268fae7f8473ff71e144529bb2971b4b9d95cca9442bb821"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/immersive_petroleum.md"
+hash = "e25fd0bac6bb289ac9baf137a8cef215ba2944464018acc1b2e3235286cecc66"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/industrial_foregoing.md"
+hash = "bc058c8b4431e2a56fcffaa1a83622acb8fd7a5996bc600cb4985e8cd5ed89fa"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/mekanism.md"
+hash = "7dc706c5146626d06792d8cf5aabce55e92f1f4f7ec333d05e5da9c83a520e7b"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/mekanism_generators.md"
+hash = "d33b56df3e91a2daad1c7d960e843670eb7205b8662c3c96316a141df295719d"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/modern_industrialization.md"
+hash = "74548703353d2c685d81575d83fedb5c8168a8df0ed335818fce61bb3dae3123"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/mystical_agriculture.md"
+hash = "bcb80df3fb5159e407dd5840f4e1498b9022a4a921464d3142772a5472ae2032"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/powah.md"
+hash = "1f9e236e7140d33c4c9ccef059450109a7c0a033c51e6cc03704c182109b9658"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/replication.md"
+hash = "e278af2e3a1e01979523eb55a40ff477e9a0da67b2851e9a523efe75b2da8928"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/rftools.md"
+hash = "c86fb77bb1830849fec13d3d0720d53059929116ee76ca6e5d9ae3d957103dbe"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/solarflux.md"
+hash = "e2f023231a79996e78f923ca1530924b34bfa458a7aef72c67710a099698af08"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/world/creatures.md"
+hash = "63a11f210cb6fc88ff7c86f6bfe9021a604a17e57e974e583f78c141f90aa3f6"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/world/utility.md"
+hash = "78467c678a98df46406f7dc6c946f09fd07d8f564ad8ffba726d49f9311766f3"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/world/worldgen.md"
+hash = "6b3e654646a03cbb42d3af22729f8c0075ca0903fb51fa68b9d0ca959a1402d5"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/e_a.dat"
+hash = "ff70e463ba53765d411df05671b3d325c5d0f341249e1c3a181f27a97c628346"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/e_b.dat"
+hash = "83ca157b62b4cdd766d9786989457e8d09e3705e6d369e62241214eb781612ca"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/e_c.dat"
+hash = "0bb1db1b1c7b9439554280c1df28e6ad03feade61fbd28fec35c257987aea9b6"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/l00.dat"
+hash = "3302cd4bf0688c53f6e14c635ce5a32e898ff89c53828b84ffe90c3e0c43c552"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/l01.dat"
+hash = "5e3f593c51daddca36959145f0afe8895f3ec8d880bb2cf2a4f8048cf265df22"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/l02.dat"
+hash = "d34f0d34c503a0180cbfbb123957957197ba38169ce4190f555b19242a4cc40f"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/l03.dat"
+hash = "ba7f25d59596497cf07dc1c7c1b5508940ee0fd232a9bc499ec69bbe28d22b69"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/l04.dat"
+hash = "3a91643400545650052a449ae53d31e6f0a5d13b6a82887fc58f76cbbedf7bd5"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/l05.dat"
+hash = "3ea7212bba40362a1f935751d20a45ab1af852cdf0539e21a4c5eff1810d504a"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/l06.dat"
+hash = "f91387d6156461420db19151d0f4635a6d522ddbe08ac340a728cee5254fc3e8"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/l07.dat"
+hash = "dff8067c651b11481e2520b11a72b81b753ad34bdf3283bb571e18de23676e4e"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/l08.dat"
+hash = "ce3ed6306d9c0225e94f443ea8fd7b5db008985fe1e35063b2695fb63fa1b529"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/l09.dat"
+hash = "7e345b3f3fb7fb4d296abde63db67bc336c3b808deb478e2d5b01e7ca0d73450"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/layers.tsv"
+hash = "96592a4999b3f180f6d861736af2ed6243bb22c6a7eacfdd0c650ab8981b48e0"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f01.dat"
+hash = "6875a632b2e87bad4198d3e6b573dcf266f5bda1d9ec9fef3c01d699858d7381"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f02.dat"
+hash = "1df7dc0256a353cc477891494c7ffb35814c75f0523f2d184f95222dfc3eeee0"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f03.dat"
+hash = "c2c4e419e39224e36b0ae29751bb1c1dfc87239d06fa76a4c7f9dc08b010eb19"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f04.dat"
+hash = "85406ee4c65e4dafb7636f51e5564e43be6b4912c9e62f473c650ca165b2ced9"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f05.dat"
+hash = "c5945f00ed23452d50a7e99a0fad59ebf023cc1f1ba59da9c187c35e4be6d770"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f06.dat"
+hash = "87b2e9630a0ba8a27575a9da6d18cf292834b2dbd2df47ca27d35559820ac4cf"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f07.dat"
+hash = "8c7898f2f26ba2934a113ebe32145c7974e563c50f39430248b7ca73a9260c40"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f08.dat"
+hash = "6b077d7dac31931bd62cd4538e2edc686551adc44d1ddec8cef3da031f01487d"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f09.dat"
+hash = "f854a180c47cb58e2b51de68e2ee1968f31019c9a20759733af0fbd6c80d91ad"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f10.dat"
+hash = "abff7efb9bde6950c8ba6ffbdf1fedc0f649a5a49dbef7e52337bf1e2774a662"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f12.dat"
+hash = "b98421a8e21c614390384431c929e49b6446e4654d2193d391a232af3a2493e8"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f13.dat"
+hash = "f38a352318feb11f3698788fd096711a235830c192a99d7d0605e11664487d68"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f15.dat"
+hash = "cf4310396cb3f4856f7413589f2e5d8813718584f211daee77a18ab150e0fbf7"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f16.dat"
+hash = "b2daaff17ab81ff4254bfefea66a17ff7be1a1445020170361b786a8b5d82101"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f17.dat"
+hash = "ea421c79db0bb0b5300b28d7a257391e156205d412089a1dcc9fe565bc066cc8"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f18.dat"
+hash = "aa610f3bda3de514954a920f3685147d3e2270e04ad5c7c9cc9c2f7132625a11"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f21.dat"
+hash = "83a334f221c360946bb463ccb97a3bece42b2cebbf37537fa4194b8c380df76b"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f22.dat"
+hash = "1b79b2d7a2d53ae4bf6cc5531a3553e34024f37a5571f6e584a4c907aea0b1e7"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f24.dat"
+hash = "55908e19ec577b51b0e4de455bcb4e3ab4011af3dab7a37ba975a8cd5a7608c9"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f25.dat"
+hash = "b3393b8a29ce6f37dae4e2b413a0d84a965f023aa03d9c328871b1ace5f52dd0"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f26.dat"
+hash = "3692bca8ee064399c621dbe8b8223740b08acabb64b3fbb89cb7ecc83a919378"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f28.dat"
+hash = "078a820cf4207d5b823d80f425082f421159481d52eb726b815e063c8965d40b"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f29.dat"
+hash = "2e3f658666f4934b6ca59355338ec83102c9e83822c3911301154d0bb0e54bd6"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f30.dat"
+hash = "2f8179d75d5e669fabc63de0d0bb70d75f2e44b6cab79ea81dcd8c4fac7dc418"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f31.dat"
+hash = "ee6d66ef88b913e5fb125961535f7fed461d9d0b9ee2e3504772420ef3b57c05"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f32.dat"
+hash = "723573f841f36a44d0a1f655a379240f892d86f0d0801717e521abbd654369fb"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f33.dat"
+hash = "89a9e166ec2b04806eb77b91f65fbd2f16c6828ae0800b4e75628684c72913cb"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f37.dat"
+hash = "7cd0b3dc2d650bc0d68647d55a2ca6f273c15a51c2b9b10b4de3e6cd880a2cac"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f38.dat"
+hash = "a2d0c647a934bb47dedbbd11ffa1a85e3370a054295a1567d6e147922658e644"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f39.dat"
+hash = "f52cffea1d86128229e9e6c0d209929c3fcf0d52cddd1f3cd6ac8385714c53e3"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f40.dat"
+hash = "7d7d334f45453de8a8bea0669f8cdef59349530bd09f6f2b29aee5f9b7a943db"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f44.dat"
+hash = "731ea6a3a5e9800f0615bf0ae22b3bd253dab811b123fcd76fc18193ceb14abc"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f45.dat"
+hash = "a6963a0205f5d8b94fb05c59c5038f73fd8d102af1068d8a5a5d8e48a0f7a08e"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f46.dat"
+hash = "fbef5677cab05d5869b29b79f5f3715a18bd433238e6c384e430b3d00f09b21c"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f47.dat"
+hash = "ecb95ad999fd102f39f41440040050a853e95b4e2f28460dd0760522ca8ac316"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f48.dat"
+hash = "5406270caafb5ad902105b9ab91e535fddf0ffae49c4a9c89276efd07cd68e09"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f49.dat"
+hash = "0dc90224f6e86e4a0d16ea80cd3a8e49ddbf8142b56bedd29ba8f65c59145f17"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f51.dat"
+hash = "1b45d1780f8cd91dce5a71710c9a9d5a4e19b7ba143fa1ff812dcd747c871fe7"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f52.dat"
+hash = "6415e6586386fd0f90df83d9ac20980f2648a6af472dd636114f77ced483a4a6"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f53.dat"
+hash = "4a50e53d565ef9342effb2a085ae23cf89506ce80089a7def19892c8884ae3f9"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f54.dat"
+hash = "41f27a046f5aaa3f7467ccdfe7359d8aab77d41132ccfc9781726210fc564b57"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f55.dat"
+hash = "8f328ab02a783745325b1a7289f66b6db76cb3d80d5eccef34cc08bcf7686834"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f56.dat"
+hash = "90d4765cc613437ec89c8c078dc32486fcbd394c7bc357920ecbc6b48669f02a"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f57.dat"
+hash = "a069ce2737d3a735f74bd916f907ab6ef52f98bff9cc12043945b6337c614a76"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f58.dat"
+hash = "88aacb3e0bbc405a93955901e4982ea9b1e10cab92d9040e021b68703ee9e018"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/n_f59.dat"
+hash = "a95812ebed366faecdb47291c3232924d394c236bb7399079f6e436312b48ff0"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/lore/notes.tsv"
+hash = "d0d0fda73df524da7921d64f83dcdb82c4e2eee9d5ae3463d48026c7b0d04711"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/persona.txt"
+hash = "621b79d31992e2ab2b5fc10124a2cd287d7c6a02f49aefc5c1c8edaffc5a123a"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/quests.tsv"
+hash = "d0a149262c2502f970e12f07bb5f4c3a77d031c43376f1d4f42a83b41b3ac460"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/repair.tsv"
+hash = "2adb137049b23bf010addd3a7ef67b9f65cc2f1019d2573218e6cc89c8e4eab5"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/rewards.tsv"
+hash = "d910f9bc0395b33afaaffa54cadcc987cd7c577af3fafd7c62d03990aaaae26c"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/scout.tsv"
+hash = "08f761aea5e0c53d4f7e0d15d77e4d0f7559ba8b0bd2bc4f3dc4fe48c0a532ea"
+
+[[files]]
+file = "kubejs/data/tm/easy_npc/preset/evoker/osh.npc.snbt"
+hash = "4c97b4964c329feeaebf649016a680721358e1747f63b8d934ca9970e45377c3"
+
+[[files]]
+file = "kubejs/data/tm/easy_npc/preset/humanoid/chorus.npc.snbt"
+hash = "677febc87c0daf85460348d592ebc49186976942576708396790d48a091d1ebb"
+
+[[files]]
+file = "kubejs/data/tm/easy_npc/preset/humanoid_slim/mara.npc.snbt"
+hash = "19ed8952a328af05e7fbd90d31423b27f99e625f1e2abb063a0a6d79c3a9462a"
+
+[[files]]
+file = "kubejs/data/tm/easy_npc/preset/piglin/grumm.npc.snbt"
+hash = "134aad78ad7d837f873d3b0636f97a628cb868ebabbd085d8cc11add176ddf0d"
+
+[[files]]
+file = "kubejs/data/tm/easy_npc/preset/villager/vetla.npc.snbt"
+hash = "9bf24fcf1496851e041c74b36c0a99dfdc60201a98555ddae0493ada4d4df2bd"
+
+[[files]]
+file = "kubejs/data/tm/loot_table/chests/capsule_locker.json"
+hash = "e23d5083d96f6ee1c7ca1678ff04518b77df6674fb33ab78e344cf9c647801db"
+
+[[files]]
+file = "kubejs/data/tm/structure/crash_capsule.nbt"
+hash = "406f1ea264bda575dff7b271459ccfd911d2d544cfc732589f3daa0853e619ea"
+
+[[files]]
+file = "kubejs/data/tm/tags/worldgen/structure/first_dungeons.json"
+hash = "8f9d7f4c141a68466a09050d75f31142f8071fa55de6056dcef6fe4b6055f3d0"
+
+[[files]]
+file = "kubejs/data/tm/tags/worldgen/structure/mineshafts.json"
+hash = "91ec67f4745efe0c74279dc8d0ddf133bc91891578a5634da9963722a8deed14"
+
+[[files]]
+file = "kubejs/data/tm/tags/worldgen/structure/nether_fortresses.json"
+hash = "fd9c68ac49263bdc0e9445f50fa1956272d7fc7e4f9004e3c13a58cb94ab8958"
+
+[[files]]
+file = "kubejs/data/tm/tags/worldgen/structure/old_ruins.json"
+hash = "b7dfa987a23212d6895f17174d05b97f18541f778b4e4ecafc09a386f17e8aa5"
+
+[[files]]
+file = "kubejs/data/tm/tags/worldgen/structure/strongholds.json"
+hash = "5ee320da0ce17226a2e2ebf2a876d594a64b0372cbbdcf2e7d14999f4fee49fd"
+
+[[files]]
+file = "kubejs/server_scripts/tm_ai_core.js"
+hash = "3bf33e3d247c145dc5be384c071104dddf6c89981895cd539b27ee9e876a166f"
+
+[[files]]
+file = "kubejs/server_scripts/tm_fuel.js"
+hash = "07815f6c2b5d89d12c20a46abe8515e8a5306b44008a1baf0374dbcc62ca39e1"
+
+[[files]]
+file = "kubejs/server_scripts/tm_jei_gen.js"
+hash = "fdf526107e7547c0cf9ffd2e5ba0d511dada536b52043cc1458aa84c7ab273a6"
+
+[[files]]
+file = "kubejs/server_scripts/tm_loot_story_gen.js"
+hash = "9d8f73729ea367689b3e5c76e1f99e588739e08bd7b379467a8601bcd478e7ef"
+
+[[files]]
+file = "kubejs/server_scripts/tm_recipes.js"
+hash = "30c05850094ef5ac82dd0d918f741c7819e6c5e79c3aaa9e599475cc357b4e05"
+
+[[files]]
+file = "kubejs/server_scripts/tm_tacz.js"
+hash = "d5cb34c4c538887673f9e1b0c5d785895b9cc7270903089c2edcc01660742c35"
+
+[[files]]
+file = "kubejs/server_scripts/tm_world.js"
+hash = "5a77a9c793f383a3b6d08f7b878c7a99e4fb5bde1fcccd4f7059c437dc3ac189"
+
+[[files]]
+file = "kubejs/startup_scripts/tm_ai_core.js"
+hash = "359437ddedcc85c8f4e82d3f9d4770cce6ff7ed7d5b858de3c4a309921c9760d"
+
+[[files]]
+file = "kubejs/startup_scripts/tm_items_gen.js"
+hash = "b1600f024dc0827a2ede62b49660320f4b6bdd51d393807d294ab1f675906396"
 
 [[files]]
 file = "mods/accessories.pw.toml"
@@ -45,6 +1129,11 @@ metafile = true
 [[files]]
 file = "mods/alexs-mobs-continued.pw.toml"
 hash = "6a83b750a2a0dd77c418019b2fd61e1abcc07cf3b28c3c919569b9e5c89a8eb7"
+metafile = true
+
+[[files]]
+file = "mods/almostunified.pw.toml"
+hash = "3805fe2877cffdae5e7bf74d85069a2535daa39a0f3ed766755be49294a07680"
 metafile = true
 
 [[files]]
@@ -94,7 +1183,7 @@ metafile = true
 
 [[files]]
 file = "mods/architectury-api.pw.toml"
-hash = "187eafde5974beee1263538b462b7b8fe2fc8948c5d413980d9796d55928580b"
+hash = "657a01a86bbf8617e4726c77df08f708e43a3db12db74b837eebd8eb1d93faae"
 metafile = true
 
 [[files]]
@@ -120,6 +1209,11 @@ metafile = true
 [[files]]
 file = "mods/balm.pw.toml"
 hash = "603cdc47142b5aa5729cbbf265a473574c9e2b55561de4318e9842d3d4b3b995"
+metafile = true
+
+[[files]]
+file = "mods/better-advanced-tooltips.pw.toml"
+hash = "03084ff4f74cedc1b8ac6c85a98842f75956fb4fa811d285d8ca7caa8d54da5d"
 metafile = true
 
 [[files]]
@@ -373,6 +1467,11 @@ hash = "670df7985eec05c6a339d90ebbcfda0e5f1f5c63846ac65a441412f123471e14"
 metafile = true
 
 [[files]]
+file = "mods/ftb-filter-system.pw.toml"
+hash = "9cb8d355c77067b00a96d96db398f60db62a6ee238dabff45ade33dd8d9f9e3b"
+metafile = true
+
+[[files]]
 file = "mods/ftb-library-forge.pw.toml"
 hash = "19d86081a1c7654a91f437d85ea34af4e3f2b899c8e0e50d48a04ca97babf7b4"
 metafile = true
@@ -390,6 +1489,11 @@ metafile = true
 [[files]]
 file = "mods/ftb-ultimine-forge.pw.toml"
 hash = "3529bc9c3a7b54933869be1d1d84a948d091c3d6064bbb6b17874d7c153b4dca"
+metafile = true
+
+[[files]]
+file = "mods/ftb-xmod-compat.pw.toml"
+hash = "6ad22c468d67dcbb65784e161d4af9e671d3437cb5bfb1e86a42ae25207cf25b"
 metafile = true
 
 [[files]]
@@ -493,6 +1597,11 @@ hash = "58333a1b7c35bd5940e63b498cf44da16b1f2464c73d72203d1fed84ccfd352a"
 metafile = true
 
 [[files]]
+file = "mods/kubejs.pw.toml"
+hash = "7e0eca275f27b6543f06c36dec433851a956960cbedd2be57d19e159d636bfc1"
+metafile = true
+
+[[files]]
 file = "mods/l_enders-cataclysm.pw.toml"
 hash = "f262b49b1038ef9f67704e0629da6aafa84cf4f760273589f5d73530ca5d74b5"
 metafile = true
@@ -525,6 +1634,11 @@ metafile = true
 [[files]]
 file = "mods/lodestonelib.pw.toml"
 hash = "f5d0701055478e980b50849f199f266e6ab1940277a17ad2e5060df0d978be83"
+metafile = true
+
+[[files]]
+file = "mods/lootjs.pw.toml"
+hash = "e42581d8eb65aa947dcbe6edb71b2082e84f31936b01f131758395d88dabc919"
 metafile = true
 
 [[files]]
@@ -772,6 +1886,11 @@ hash = "37383a2cce841609053ee1d534add290f41d9280ff36a7824bab821c964bfa68"
 metafile = true
 
 [[files]]
+file = "mods/rhino.pw.toml"
+hash = "e55ca32b338a0e0540f4fec5170675d860566255ae0f45692a00cb4ebf2eb535"
+metafile = true
+
+[[files]]
 file = "mods/rpl.pw.toml"
 hash = "7815e5a589de0c02a62ae83590e1f75f4d0c269e48f2435ce2ac448976ddf49f"
 metafile = true
@@ -779,6 +1898,11 @@ metafile = true
 [[files]]
 file = "mods/searchables.pw.toml"
 hash = "ce9ddada6ffd55a512149cc474c6a453281a997a5fdf1b7b4a2cc73f875e704a"
+metafile = true
+
+[[files]]
+file = "mods/simple-backups.pw.toml"
+hash = "b3b444ca79a5786d5c7589a7119fcf4c3e4cf73c70860c17acb63c88fc06749a"
 metafile = true
 
 [[files]]

@@ -1,0 +1,73 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "philipsruins:ancient_crypt",
+      "required": false
+    },
+    {
+      "id": "philipsruins:ancient_dungeon",
+      "required": false
+    },
+    {
+      "id": "philipsruins:ancient_ruins",
+      "required": false
+    },
+    {
+      "id": "philipsruins:ancient_towers",
+      "required": false
+    },
+    {
+      "id": "philipsruins:field_stone_ruins",
+      "required": false
+    },
+    {
+      "id": "philipsruins:field_stone_ruins_rocks",
+      "required": false
+    },
+    {
+      "id": "philipsruins:level_one_ruins",
+      "required": false
+    },
+    {
+      "id": "philipsruins:level_three_ruins",
+      "required": false
+    },
+    {
+      "id": "philipsruins:level_two_ruins",
+      "required": false
+    },
+    {
+      "id": "philipsruins:level_two_ruins_pool",
+      "required": false
+    },
+    {
+      "id": "philipsruins:lost_soul_city",
+      "required": false
+    },
+    {
+      "id": "philipsruins:lost_soul_dungeon",
+      "required": false
+    },
+    {
+      "id": "philipsruins:ocean_fortress",
+      "required": false
+    },
+    {
+      "id": "philipsruins:ocean_ruins",
+      "required": false
+    },
+    {
+      "id": "philipsruins:pumpkin_ruins",
+      "required": false
+    },
+    {
+      "id": "philipsruins:rare_ruin",
+      "required": false
+    },
+    {
+      "id": "philipsruins:underground_structures",
+      "required": false
+    }
+  ]
+}

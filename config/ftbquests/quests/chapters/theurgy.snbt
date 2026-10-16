@@ -1,0 +1,189 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "theurgy"
+	group: "2B15C95845D546A1"
+	icon: {
+		count: 1
+		id: "theurgy:distiller"
+	}
+	id: "60F6E09F91E5AFFF"
+	order_index: 29
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6F5A8856676AA527"]
+			hide_until_deps_complete: true
+			id: "78366B7424F2F7DF"
+			rewards: [
+				{
+					count: 8
+					id: "6EC5E9468247F74A"
+					item: {
+						count: 1
+						id: "theurgy:sal_ammoniac_crystal"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "08A820F38BC22275"
+					item: {
+						count: 1
+						id: "theurgy:sal_ammoniac_crystal"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["78366B7424F2F7DF"]
+			hide_until_deps_visible: true
+			id: "2805A90BAC24104F"
+			rewards: [
+				{
+					count: 8
+					id: "42BF10C3C8752D8C"
+					item: {
+						count: 1
+						id: "theurgy:mercury_shard"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "025C3319590A29BB"
+					item: {
+						count: 1
+						id: "theurgy:pyromantic_brazier"
+					}
+					type: "item"
+				}
+				{
+					id: "6A5D00FD8B3B4412"
+					item: {
+						count: 1
+						id: "theurgy:liquefaction_cauldron"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2805A90BAC24104F"]
+			hide_until_deps_visible: true
+			id: "4F6EE329B307B4B4"
+			rewards: [
+				{
+					id: "74F6859CE714EBA6"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					id: "4C6370BAFBAAF948"
+					item: {
+						count: 1
+						id: "theurgy:calcination_oven"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["2805A90BAC24104F"]
+			hide_until_deps_visible: true
+			id: "77FC21A5CD41860B"
+			rewards: [
+				{
+					count: 16
+					id: "54853A6B9918A5F6"
+					item: {
+						count: 1
+						id: "theurgy:mercury_shard"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "08575231033B3C9C"
+					item: {
+						count: 1
+						id: "theurgy:distiller"
+					}
+					type: "item"
+				}
+				{
+					id: "2C95B942DF0DC30E"
+					item: {
+						count: 1
+						id: "theurgy:incubator"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["4F6EE329B307B4B4", "77FC21A5CD41860B"]
+			hide_until_deps_visible: true
+			id: "3DBF26065C0D1CD9"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "44DEE814879CC33A"
+					table_id: 3302581088336892328L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "3ECDA5D06F4E26BC"
+					item: {
+						count: 1
+						id: "theurgy:reformation_source_pedestal"
+					}
+					type: "item"
+				}
+				{
+					id: "7CF48DDB26786399"
+					item: {
+						count: 1
+						id: "theurgy:reformation_target_pedestal"
+					}
+					type: "item"
+				}
+				{
+					id: "08EF69413812D7A4"
+					item: {
+						count: 1
+						id: "theurgy:reformation_result_pedestal"
+					}
+					type: "item"
+				}
+				{
+					id: "28B0AB3ACBDD9F90"
+					item: {
+						count: 1
+						id: "theurgy:sulfuric_flux_emitter"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+	]
+}

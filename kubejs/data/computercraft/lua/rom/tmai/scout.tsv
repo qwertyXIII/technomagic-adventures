@@ -1,0 +1,32 @@
+# Цели штурманского модуля. kind: structure|biome; target: ID или #тег; dim: измерение игрока (пусто = любое).
+# min_repair — ступень ремонта ядра для доступа; exact_repair — с какой ступени даются точные координаты (ниже — направление и ~расстояние);
+# cooldown — секунд (сокращается на 15% за ступень ремонта).
+id	name	kind	target	dim	min_repair	exact_repair	cooldown
+village	деревня	structure	#minecraft:village	minecraft:overworld	0	1	240
+outpost	разбойничья застава	structure	minecraft:pillager_outpost	minecraft:overworld	0	2	480
+mineshaft	заброшенная шахта	structure	#tm:mineshafts	minecraft:overworld	0	1	300
+trial	испытательная палата	structure	minecraft:trial_chambers	minecraft:overworld	0	2	600
+dungeon	подземелье	structure	#tm:first_dungeons	minecraft:overworld	1	2	600
+ruins	древние руины	structure	#tm:old_ruins	minecraft:overworld	1	2	600
+mushroom	грибные поля	biome	minecraft:mushroom_fields	minecraft:overworld	1	2	900
+grove	роща умвутана	structure	mowziesmobs:umvuthana_grove	minecraft:overworld	1	3	900
+magnetic	Магнитные пещеры	biome	alexscaves:magnetic_caves	minecraft:overworld	2	3	1200
+primordial	Первобытные пещеры	biome	alexscaves:primordial_caves	minecraft:overworld	2	3	1200
+toxic	Токсичные пещеры	biome	alexscaves:toxic_caves	minecraft:overworld	2	3	1200
+abyssal	Пропасть глубин	biome	alexscaves:abyssal_chasm	minecraft:overworld	2	3	1200
+forlorn	Покинутые пустоты	biome	alexscaves:forlorn_hollows	minecraft:overworld	2	3	1200
+candy	Леденцовая полость	biome	alexscaves:candy_cavity	minecraft:overworld	2	3	1200
+asylum	Чумная лечебница	structure	dungeons_arise:plague_asylum	minecraft:overworld	2	3	1200
+foundry	литейная крепость	structure	dungeons_arise:foundry	minecraft:overworld	2	3	1200
+lich_tower_bomd	башня Ночного лича	structure	bosses_of_mass_destruction:lich_tower	minecraft:overworld	3	4	1500
+stronghold	крепость Края	structure	#tm:strongholds	minecraft:overworld	3	3	1500
+ancient_city	Древний город	structure	minecraft:ancient_city	minecraft:overworld	3	4	1500
+factory	древняя фабрика	structure	cataclysm:ancient_factory	minecraft:overworld	3	4	1800
+prison	морозная тюрьма	structure	cataclysm:frosted_prison	minecraft:overworld	3	4	1800
+pyramid	проклятая пирамида	structure	cataclysm:cursed_pyramid	minecraft:overworld	3	4	1800
+sunken	затонувший город	structure	cataclysm:sunken_city	minecraft:overworld	4	4	1800
+mansion	лесной особняк	structure	minecraft:mansion	minecraft:overworld	4	4	1800
+fortress	адская крепость	structure	#tm:nether_fortresses	minecraft:the_nether	2	3	900
+bastion	бастион	structure	minecraft:bastion_remnant	minecraft:the_nether	2	3	900
+arena	пылающая арена	structure	cataclysm:burning_arena	minecraft:the_nether	3	4	1800
+end_city	город Края	structure	minecraft:end_city	minecraft:the_end	3	4	1200

@@ -1,0 +1,87 @@
+{
+	filename: "order"
+	id: "6E962A3BBE272936"
+	loot_size: 1
+	order_index: 8
+	rewards: [
+		{
+			count: 8
+			id: "7E0D26D8A8E0A69D"
+			item: {
+				count: 1
+				id: "minecraft:emerald"
+			}
+			weight: 15.0d
+		}
+		{
+			count: 8
+			id: "4750243FBA04FA68"
+			item: {
+				count: 1
+				id: "minecraft:experience_bottle"
+			}
+			weight: 15.0d
+		}
+		{
+			count: 16
+			id: "28C5F43043F8285E"
+			item: {
+				count: 1
+				id: "minecraft:iron_ingot"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 16
+			id: "1A85C24A6BE835EF"
+			item: {
+				count: 1
+				id: "minecraft:cooked_beef"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 8
+			id: "318B2B7BA9E31EF4"
+			item: {
+				count: 1
+				id: "minecraft:gold_ingot"
+			}
+			weight: 10.0d
+		}
+		{
+			id: "66C0838F9250D4D1"
+			item: {
+				count: 1
+				id: "waystones:warp_scroll"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 16
+			id: "3C23B2D0655C9221"
+			item: {
+				count: 1
+				id: "create:experience_nugget"
+			}
+			weight: 8.0d
+		}
+		{
+			id: "7A65CCAEB1E7799A"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:upgrade_base"
+			}
+			weight: 6.0d
+		}
+		{
+			count: 2
+			id: "52CB26B909F47888"
+			item: {
+				count: 1
+				id: "minecraft:diamond"
+			}
+			weight: 5.0d
+		}
+	]
+}

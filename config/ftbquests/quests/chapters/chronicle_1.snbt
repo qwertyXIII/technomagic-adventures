@@ -1,0 +1,332 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chronicle_1"
+	group: "1DAFAF2C5B9599CE"
+	icon: {
+		count: 1
+		id: "minecraft:bell"
+	}
+	id: "717D5217A7C049EA"
+	order_index: 8
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5BC23847E58816C0"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "2421A755539FDDC7"
+			rewards: [
+				{
+					id: "2236404F716D383A"
+					item: {
+						count: 1
+						id: "kubejs:song_lullaby"
+					}
+					type: "item"
+				}
+				{
+					command: "/execute as {p} at @s run easy_npc preset import_new data tm:easy_npc/preset/villager/vetla.npc.snbt ~2 ~ ~"
+					elevate_perms: true
+					id: "1948C2AD28250E6E"
+					permission_level: 2
+					silent: true
+					team_reward: true
+					type: "command"
+				}
+				{
+					count: 8
+					id: "089F334C3BC1A7B3"
+					item: {
+						count: 1
+						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+				{
+					command: "/scoreboard players set {p} tm_story 3"
+					elevate_perms: true
+					id: "2A6651CD8C794B81"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "4A6B58B9BF03B940"
+					structure: "#minecraft:village"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5BC23847E58816C0"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "67CAAEBBECB9E7DE"
+			rewards: [
+				{
+					id: "0823C0DBA82DB1BD"
+					item: {
+						count: 1
+						id: "kubejs:raider_order"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "506367B100FAAE31"
+					structure: "minecraft:pillager_outpost"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["67CAAEBBECB9E7DE"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "70F908B71342F065"
+			optional: true
+			rewards: [
+				{
+					command: "/execute as {p} at @s run easy_npc preset import_new data tm:easy_npc/preset/evoker/osh.npc.snbt ~2 ~ ~"
+					elevate_perms: true
+					id: "4EAE620325A0775E"
+					permission_level: 2
+					silent: true
+					team_reward: true
+					type: "command"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0B1BAB3CF3133531"
+					table_id: 6955002610390794063L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					entity: "minecraft:pillager"
+					id: "0CEADFF6496B93CF"
+					type: "kill"
+					value: 10L
+				}
+			]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5BC23847E58816C0"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "5EBF569B00E16FF8"
+			rewards: [
+				{
+					id: "7D6FB44C5FC0EC9D"
+					item: {
+						count: 1
+						id: "kubejs:copper_plaque"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "12C66AECC264E294"
+					structure: "minecraft:trial_chambers"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5BC23847E58816C0"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "5FC943C6965436E9"
+			rewards: [
+				{
+					id: "07DBC7967451ACE6"
+					item: {
+						count: 1
+						id: "kubejs:shift_list"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "29D69BA9D492C38F"
+					structure: "#tm:mineshafts"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5BC23847E58816C0"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "301E8F0409D73BE5"
+			rewards: [
+				{
+					id: "3C716E3B62599630"
+					item: {
+						count: 1
+						id: "kubejs:note_m_2"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "27DC47C290A93914"
+					structure: "#tm:first_dungeons"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["5BC23847E58816C0"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "3C11F5FF31FC0465"
+			optional: true
+			shape: "circle"
+			tasks: [
+				{
+					id: "2899449C64B6E7E6"
+					structure: "mowziesmobs:umvuthana_grove"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["5BC23847E58816C0"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "2E20B2EA1C119D6A"
+			rewards: [
+				{
+					id: "745463CC589BAE35"
+					item: {
+						count: 1
+						id: "kubejs:glagol_tablet"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "504222F087316E4A"
+					item: {
+						count: 1
+						id: "minecraft:enchanting_table"
+					}
+					type: "item"
+				}
+				{
+					advancement: "minecraft:story/enchant_item"
+					criterion: ""
+					id: "6601D9689DB4647D"
+					type: "advancement"
+				}
+			]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5BC23847E58816C0"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "5C98D50693FC1FF0"
+			optional: true
+			shape: "circle"
+			tasks: [
+				{
+					entity: "mowziesmobs:ferrous_wroughtnaut"
+					id: "59FD881121802A9D"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2421A755539FDDC7"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "181BE542BD9426AD"
+			optional: true
+			shape: "circle"
+			tasks: [
+				{
+					id: "74F9258D675FC85A"
+					observe_type: 5
+					timer: 0L
+					to_observe: "minecraft:iron_golem"
+					type: "observation"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3C901908436A068E", "2421A755539FDDC7", "2E20B2EA1C119D6A"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "2342C2CDE07B5E02"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "60F906817360C554"
+					table_id: 7227490514009532499L
+					type: "random"
+				}
+				{
+					id: "073214E8CCC74FA3"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					command: "/scoreboard players set {p} tm_story 4"
+					elevate_perms: true
+					id: "7FA0DD6A9D13A0D5"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "780B70EE2E1A40B6"
+					type: "checkmark"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+	]
+}

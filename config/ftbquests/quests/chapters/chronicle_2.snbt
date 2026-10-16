@@ -1,0 +1,519 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chronicle_2"
+	group: "1DAFAF2C5B9599CE"
+	icon: {
+		count: 1
+		id: "minecraft:sculk_catalyst"
+	}
+	id: "1F6F6EE67B87F0F2"
+	order_index: 9
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "4B183C13D6D4C069"
+			rewards: [
+				{
+					id: "3807D24BB622F50A"
+					item: {
+						count: 1
+						id: "kubejs:note_m_3"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					dimension: "minecraft:the_nether"
+					id: "59BAF85AACF5FF38"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4B183C13D6D4C069"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "19FE6DEB95DFB2CE"
+			rewards: [
+				{
+					id: "4B72FC07C86168DF"
+					item: {
+						count: 1
+						id: "kubejs:scorched_journal"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "5D62027F33F349D1"
+					structure: "#tm:nether_fortresses"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["4B183C13D6D4C069"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "4941591477F54EF7"
+			rewards: [
+				{
+					id: "4D18E23004E82908"
+					item: {
+						count: 1
+						id: "kubejs:gold_tally"
+					}
+					type: "item"
+				}
+				{
+					command: "/execute as {p} at @s run easy_npc preset import_new data tm:easy_npc/preset/piglin/grumm.npc.snbt ~2 ~ ~"
+					elevate_perms: true
+					id: "6F5CD94AB220AAB4"
+					permission_level: 2
+					silent: true
+					team_reward: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "16C00E9BDEA936D1"
+					structure: "minecraft:bastion_remnant"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4B183C13D6D4C069"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "769D6018D5064C8D"
+			optional: true
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3313843DD25C088C"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					entity: "cataclysm:ignis"
+					id: "53B2E4C7F0EF1352"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "574760A3007B48DB"
+			rewards: [
+				{
+					id: "5A2C5296DF78CAA0"
+					item: {
+						count: 1
+						id: "kubejs:operator_log"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					biome: "alexscaves:toxic_caves"
+					id: "2A50E520BAFE699E"
+					type: "biome"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "06ACA124550C0317"
+			rewards: [
+				{
+					id: "363452284E32C261"
+					item: {
+						count: 1
+						id: "kubejs:ark_label"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					biome: "alexscaves:primordial_caves"
+					id: "0822663A75F72DBA"
+					type: "biome"
+				}
+			]
+			x: 0.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "1CB37ABDB862F344"
+			rewards: [
+				{
+					id: "1B4DD1403DA134F9"
+					item: {
+						count: 1
+						id: "kubejs:deep_song"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					biome: "alexscaves:abyssal_chasm"
+					id: "447A7BFC0F98DA76"
+					type: "biome"
+				}
+			]
+			x: 0.0d
+			y: 3.2d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "1D96771E2391004F"
+			optional: true
+			rewards: [
+				{
+					id: "606FE79A2D165BEE"
+					item: {
+						count: 1
+						id: "kubejs:zealot_sermon"
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					biome: "alexscaves:forlorn_hollows"
+					id: "0A7C75AAE6ACEFF3"
+					type: "biome"
+				}
+			]
+			x: 2.0d
+			y: 3.2d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "36FF67E67EB76853"
+			optional: true
+			shape: "circle"
+			tasks: [
+				{
+					biome: "alexscaves:candy_cavity"
+					id: "1C0FFCDB91DBA04F"
+					type: "biome"
+				}
+			]
+			x: 2.0d
+			y: 4.8d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "28F7B53FCDFCC032"
+			optional: true
+			shape: "circle"
+			tasks: [
+				{
+					biome: "alexscaves:magnetic_caves"
+					id: "5D0C07E56E3C7D0F"
+					type: "biome"
+				}
+			]
+			x: 0.0d
+			y: 4.8d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "36F38CCAEDEFD59D"
+			shape: "diamond"
+			tasks: [
+				{
+					entity: "undergarden:forgotten_guardian"
+					id: "49F5491EA058C471"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 2.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "49C4B872FDECFCBB"
+			optional: true
+			rewards: [
+				{
+					id: "7ADFF2C95F9007FA"
+					item: {
+						count: 1
+						id: "kubejs:warden_plate"
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					id: "0CF1F76B586CDCA3"
+					structure: "dungeoncrawl:dungeon"
+					type: "structure"
+				}
+			]
+			x: 4.0d
+			y: 3.2d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "18278380AD10B201"
+			optional: true
+			rewards: [
+				{
+					id: "4E0A5EA914403F5D"
+					item: {
+						count: 1
+						id: "kubejs:oldest_tablet"
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					id: "57DE46F33C4121DC"
+					structure: "#tm:old_ruins"
+					type: "structure"
+				}
+			]
+			x: 4.0d
+			y: 4.8d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "3F04783DF0B4118D"
+			optional: true
+			shape: "circle"
+			tasks: [
+				{
+					id: "3BD53457C09B6FE8"
+					item: {
+						count: 1
+						id: "occultism:spirit_attuned_gem"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "6114B5FB9741A0FF"
+			rewards: [
+				{
+					id: "53575B67075383D7"
+					item: {
+						count: 1
+						id: "kubejs:note_m_margin"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "6FECB33910ADB5C8"
+					item: {
+						count: 1
+						id: "malum:spirit_altar"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "03B47D95B2ED8CB2"
+			optional: true
+			shape: "circle"
+			tasks: [
+				{
+					id: "4E9CB377EC3B9378"
+					item: {
+						count: 1
+						id: "irons_spellbooks:archevoker_logbook_translated"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 1.6d
+		}
+		{
+			dependencies: ["2342C2CDE07B5E02"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "4D113D04E47D0520"
+			shape: "diamond"
+			tasks: [
+				{
+					dimension: "twilightforest:twilight_forest"
+					id: "0AC66B9EFE618171"
+					type: "dimension"
+				}
+			]
+			x: 0.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["4D113D04E47D0520"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "02DEC0732CDF94CD"
+			rewards: [
+				{
+					id: "38B39101931BE731"
+					item: {
+						count: 1
+						id: "kubejs:chronicle_1"
+					}
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "28E8CFC7FA634FAB"
+					structure: "twilightforest:lich_tower"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["02DEC0732CDF94CD"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "72FE262FAAA72F55"
+			rewards: [
+				{
+					id: "163A860ED63B29FC"
+					item: {
+						count: 1
+						id: "kubejs:aurellan_last_page"
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7B9C67E7BF4A969B"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					entity: "twilightforest:lich"
+					id: "5F17C8400CCC23BA"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: -1.6d
+		}
+		{
+			dependencies: ["4B183C13D6D4C069", "72FE262FAAA72F55"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "332390974F946CE5"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "478E321E774C4766"
+					table_id: 7227490514009532499L
+					type: "random"
+				}
+				{
+					id: "502DFAC4C3950B23"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+				{
+					command: "/scoreboard players set {p} tm_story 5"
+					elevate_perms: true
+					id: "2F32D4364180CA68"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "6D4195B76BCD0180"
+					type: "checkmark"
+				}
+			]
+			x: 6.0d
+			y: -1.6d
+		}
+	]
+}

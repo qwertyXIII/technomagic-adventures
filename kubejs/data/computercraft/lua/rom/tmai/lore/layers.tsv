@@ -1,0 +1,15 @@
+# Слои памяти ЛОЦМАНа (СГЕНЕРИРОВАНО). keys — предметы-ключи через запятую; file — <file>.dat («шторка»).
+layer	keys	title	file
+0		Справочник	l00
+1	kubejs:flight_recorder	Капсула	l01
+2	kubejs:glagol_tablet	Глагол	l02
+3	kubejs:aurellan_last_page	Хор	l03
+4	kubejs:lethe_sample	Лета	l04
+5	kubejs:choir_message	Мост	l05
+6	kubejs:surgeon_report	Чистый лист	l06
+7	kubejs:belsky_log_1	Кордон	l07
+8	kubejs:solar_session	Эхо	l08
+9	kubejs:growth_record	Итака	l09
+10a	kubejs:epilogue_token_a	После	e_a
+10b	kubejs:epilogue_token_b	После	e_b
+10c	kubejs:epilogue_token_c	После	e_c

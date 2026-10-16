@@ -1,0 +1,366 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chronicle_6"
+	group: "1DAFAF2C5B9599CE"
+	icon: {
+		count: 1
+		id: "minecraft:sculk_shrieker"
+	}
+	id: "33834F0FB9A46C15"
+	order_index: 13
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6EB390A5338159B5"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "0ECFDC05575A4FA1"
+			rewards: [
+				{
+					id: "795A6C6CC515BF37"
+					item: {
+						count: 1
+						id: "kubejs:locman_core"
+					}
+					type: "item"
+				}
+				{
+					id: "18F4964A1520D277"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					command: "/scoreboard players set {p} tm_story 8"
+					elevate_perms: true
+					id: "6F6D1B0B5C33E15A"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					id: "3FDE644EF0C5A7B8"
+					item: {
+						count: 1
+						id: "kubejs:growth_record"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0ECFDC05575A4FA1"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "01F354226E0402DF"
+			rewards: [
+				{
+					id: "0BEC57FCAB4E0F2B"
+					item: {
+						count: 1
+						id: "kubejs:note_m_7"
+					}
+					type: "item"
+				}
+				{
+					id: "4D65EE103F8ACAA4"
+					item: {
+						count: 1
+						id: "kubejs:lethe_two"
+					}
+					type: "item"
+				}
+				{
+					command: "/execute as {p} at @s run easy_npc preset import_new data tm:easy_npc/preset/humanoid_slim/mara.npc.snbt ~2 ~ ~"
+					elevate_perms: true
+					id: "4DA1DF73FD4C4128"
+					permission_level: 2
+					silent: true
+					team_reward: true
+					type: "command"
+				}
+				{
+					command: "/scoreboard players set {p} tm_story 9"
+					elevate_perms: true
+					id: "2CEE9D6AA6C337DB"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "7C5593F7727079AD"
+					structure: "minecraft:ancient_city"
+					type: "structure"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["01F354226E0402DF"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "67169FEC79451A62"
+			rewards: [
+				{
+					command: "/execute as {p} at @s run easy_npc preset import_new data tm:easy_npc/preset/humanoid/chorus.npc.snbt ~2 ~ ~"
+					elevate_perms: true
+					id: "2EDC7C92DD7FB8FC"
+					permission_level: 2
+					silent: true
+					team_reward: true
+					type: "command"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "011555F6B011B33D"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					entity: "minecraft:warden"
+					id: "1F90098D43876862"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0ECFDC05575A4FA1"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "5E6807C5C284252C"
+			optional: true
+			rewards: [
+				{
+					id: "37BE191ED20F07A3"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					id: "2EEDC894AA7BADEF"
+					item: {
+						count: 1
+						id: "theurgy:alchemical_sulfur_echo"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["67169FEC79451A62"]
+			hide_until_deps_complete: true
+			id: "05F2BEAE7C742DB6"
+			max_completable_dependents: 1
+			rewards: [
+				{
+					id: "4C3396AF5B3785F6"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [
+				{
+					id: "16F557A07C68EBF6"
+					type: "checkmark"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["05F2BEAE7C742DB6"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "4B9C3FA461E79CC1"
+			rewards: [
+				{
+					id: "321147B3BD7223B9"
+					item: {
+						count: 1
+						id: "kubejs:epilogue_token_a"
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3761BFEFAE675147"
+					table_id: 6045014796848650239L
+					type: "random"
+				}
+				{
+					id: "5DA039C0ABE7E5BA"
+					type: "xp_levels"
+					xp_levels: 100
+				}
+				{
+					command: "/scoreboard players set {p} tm_story 10"
+					elevate_perms: true
+					id: "29D2CA2D953E83B3"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					consume_items: true
+					id: "47874AD53D707FC1"
+					item: {
+						count: 1
+						id: "kubejs:lethe_two_primed"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["05F2BEAE7C742DB6"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "02AA7417FBFD69DC"
+			rewards: [
+				{
+					id: "5CDA6C406AC68866"
+					item: {
+						count: 1
+						id: "kubejs:epilogue_token_b"
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "6E98011953B0F08A"
+					table_id: 6045014796848650239L
+					type: "random"
+				}
+				{
+					id: "5D69829CE5E88BF0"
+					type: "xp_levels"
+					xp_levels: 100
+				}
+				{
+					command: "/scoreboard players set {p} tm_story 11"
+					elevate_perms: true
+					id: "7DF6BAD068BB6FAE"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					consume_items: true
+					id: "697B7AD886F06CDD"
+					item: {
+						count: 1
+						id: "kubejs:mnemosyne_core"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["05F2BEAE7C742DB6", "6FFE636A86B25EE0"]
+			hide_text_until_complete: true
+			hide_until_deps_complete: true
+			id: "5C0DFF918ADC467C"
+			rewards: [
+				{
+					id: "5AAF7E45A2EBA965"
+					item: {
+						count: 1
+						id: "kubejs:epilogue_token_c"
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0A8AFD07E49C8F62"
+					table_id: 6045014796848650239L
+					type: "random"
+				}
+				{
+					id: "6C9CB69EF55F33DC"
+					type: "xp_levels"
+					xp_levels: 100
+				}
+				{
+					command: "/scoreboard players set {p} tm_story 12"
+					elevate_perms: true
+					id: "162D8108A58BA687"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					consume_items: true
+					id: "07C8B396EA84D2BD"
+					item: {
+						count: 1
+						id: "kubejs:infinite_resonator"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4B9C3FA461E79CC1", "02AA7417FBFD69DC", "5C0DFF918ADC467C"]
+			dependency_requirement: "one_completed"
+			hide_until_deps_complete: true
+			id: "0AA93EC52010DCE1"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "156A020345A89DBB"
+					table_id: 6045014796848650239L
+					type: "random"
+				}
+			]
+			shape: "circle"
+			tasks: [
+				{
+					id: "220DE623AF065D86"
+					type: "checkmark"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+	]
+}

@@ -1,0 +1,80 @@
+{
+	filename: "space"
+	id: "39DD50D92CD9E6E7"
+	loot_size: 2
+	order_index: 5
+	rewards: [
+		{
+			count: 8
+			id: "031661E04AEB9240"
+			item: {
+				count: 1
+				id: "ad_astra:desh_ingot"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 8
+			id: "34E49F64C1262189"
+			item: {
+				count: 1
+				id: "ad_astra:cheese"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 16
+			id: "60CB76B49021B670"
+			item: {
+				count: 1
+				id: "ad_astra:ice_shard"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 16
+			id: "5D0CDE1B4B63B6D0"
+			item: {
+				count: 1
+				id: "immersiveengineering:plate_steel"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 8
+			id: "7A97078EB14A9DAA"
+			item: {
+				count: 1
+				id: "ad_astra:ostrum_ingot"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 2
+			id: "309C423271534A3A"
+			item: {
+				count: 1
+				id: "ad_astra:fuel_bucket"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 2
+			id: "70FB25EF54C00AB1"
+			item: {
+				count: 1
+				id: "ad_astra:oxygen_bucket"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 4
+			id: "02D58E34A1646D7A"
+			item: {
+				count: 1
+				id: "ad_astra:calorite_ingot"
+			}
+			weight: 5.0d
+		}
+	]
+}

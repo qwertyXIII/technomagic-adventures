@@ -1,0 +1,243 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "neovitae"
+	group: "2B15C95845D546A1"
+	icon: {
+		count: 1
+		id: "neovitae:blood_orb_weak"
+	}
+	id: "5167FBBDDFDADF5E"
+	order_index: 31
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["01B0E24433CDCCA7", "453D77163EC6D476"]
+			dependency_requirement: "one_completed"
+			hide_until_deps_complete: true
+			id: "01B5930907BE56CB"
+			rewards: [
+				{
+					count: 4
+					id: "6402F7E62B390753"
+					item: {
+						count: 1
+						id: "neovitae:rune_blank"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "2F15A75CA228275F"
+					item: {
+						count: 1
+						id: "neovitae:ara_vitae"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["01B5930907BE56CB"]
+			hide_until_deps_visible: true
+			id: "65137687717F3B03"
+			rewards: [
+				{
+					count: 16
+					id: "17BD71922BA0C423"
+					item: {
+						count: 1
+						id: "minecraft:cooked_beef"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "neovitae:neovitae/self_sacrifice"
+					criterion: ""
+					id: "4E600CED9385A16D"
+					type: "advancement"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65137687717F3B03"]
+			hide_until_deps_visible: true
+			id: "0699DD0BE39AB350"
+			rewards: [
+				{
+					id: "022971C500A46A93"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			tasks: [
+				{
+					advancement: "neovitae:neovitae/weak_blood_orb"
+					criterion: ""
+					id: "4C492E1740046337"
+					type: "advancement"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0699DD0BE39AB350"]
+			hide_until_deps_visible: true
+			id: "2ED3D435069358E7"
+			rewards: [
+				{
+					count: 8
+					id: "279216AF0F884DED"
+					item: {
+						count: 1
+						id: "neovitae:rune_blank"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "68CB19C3FE651990"
+					item: {
+						count: 1
+						id: "neovitae:rune_sacrifice"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "2856871D3225CF58"
+					item: {
+						count: 1
+						id: "neovitae:rune_speed"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2ED3D435069358E7"]
+			hide_until_deps_visible: true
+			id: "0D7CAF9A9905D563"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "06AE0C4CD90D18AD"
+					table_id: 3302581088336892328L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "neovitae:neovitae/apprentice_blood_orb"
+					criterion: ""
+					id: "16B2285711A14EAE"
+					type: "advancement"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0D7CAF9A9905D563"]
+			hide_until_deps_visible: true
+			id: "02D8988D5E75943C"
+			rewards: [
+				{
+					id: "4063D8B2A1EDD876"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
+			tasks: [
+				{
+					advancement: "neovitae:neovitae/first_ritual"
+					criterion: ""
+					id: "4E05756210BD6192"
+					type: "advancement"
+				}
+			]
+			x: 10.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["0D7CAF9A9905D563", "4DEA8616781C24CD"]
+			hide_until_deps_complete: true
+			id: "5C322330DAA17F4C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6A1BE786D35DA84A"
+					table_id: 3302581088336892328L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "neovitae:neovitae/hellfire_forge"
+					criterion: ""
+					id: "20F89AD83C037150"
+					type: "advancement"
+				}
+			]
+			x: 10.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["5C322330DAA17F4C"]
+			hide_until_deps_visible: true
+			id: "6D7A843BF5EDAF1E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1CA22F622B8CB853"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					dimension: "neovitae:dungeon"
+					id: "24859EDC4E2E120A"
+					type: "dimension"
+				}
+			]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["02D8988D5E75943C", "6D7A843BF5EDAF1E"]
+			hide_until_deps_visible: true
+			id: "3AB448325DCD89D5"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7EB86F0BFD334F9E"
+					table_id: 7227490514009532499L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					advancement: "neovitae:neovitae/archmage_blood_orb"
+					criterion: ""
+					id: "6B15F406A6762664"
+					type: "advancement"
+				}
+			]
+			x: 14.0d
+			y: 0.0d
+		}
+	]
+}

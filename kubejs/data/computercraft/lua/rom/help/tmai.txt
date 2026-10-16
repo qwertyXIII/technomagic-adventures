@@ -1,0 +1,20 @@
+tmai - LOCMAN, bortovoy assistent kapsuly (komp'yuter s metkoy TM-AI).
+Zapuskaetsya sam. Ostanovit': Ctrl+T. Snova zapustit': reboot.
+
+Nastroyka (odin raz, hozyain mira):
+  set tmai.api_key <klyuch shlyuza>       - obyazatel'no
+  set tmai.emb_key <klyuch OpenRouter>    - poisk po smyslu (neobyazatel'no)
+  set tmai.tts true                       - ozvuchka (nuzhen emb_key ili tts_key)
+  reboot
+Uzhe propisano: tmai.base_url = http://192.168.0.113:4111/v1,
+                tmai.model = codex/gpt-6-luna
+Vse parametry s opisaniem: set   (ili: set tmai.model)
+Drugaya model/server: set tmai.base_url http://IP:port/v1 ; set tmai.model <imya>
+  (adres v lokal'noy seti nado razreshit' v config/computercraft-server.toml)
+
+V chate: "Locman, ..." (ili "II, ...", "bort, ..."); $ v nachale - lichno.
+Podtverzhdenie: "da 123". Ostanovka programm: "stop".
+Ochistit' istoriyu: tmai reset-history
+Logi: /tmai/log.txt   Sostoyanie: /tmai/state.json
+Vyshka svyazi: label set TM-RELAY-1, reboot. KPK: v nazvanii "KPK".
+Programmy ot LOCMANa na drugom komp'yutere: tmexec

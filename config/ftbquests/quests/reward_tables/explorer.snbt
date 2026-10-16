@@ -1,0 +1,111 @@
+{
+	filename: "explorer"
+	id: "798445DA57261368"
+	loot_size: 2
+	order_index: 3
+	rewards: [
+		{
+			count: 16
+			id: "181D2BB40C792DF4"
+			item: {
+				count: 1
+				id: "minecraft:emerald"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 3
+			id: "76908958C6DDE5FE"
+			item: {
+				count: 1
+				id: "waystones:warp_scroll"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 2
+			id: "483EBD021816F981"
+			item: {
+				count: 1
+				id: "minecraft:golden_apple"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 4
+			id: "4EDD27D5C6DEABF8"
+			item: {
+				count: 1
+				id: "minecraft:diamond"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 16
+			id: "1A345EDF28987ADC"
+			item: {
+				count: 1
+				id: "apotheosis:gem_dust"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 4
+			id: "0924D7EA77560A80"
+			item: {
+				count: 1
+				id: "minecraft:ender_pearl"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 2
+			id: "229DC39C867C658F"
+			item: {
+				count: 1
+				id: "sophisticatedbackpacks:upgrade_base"
+			}
+			weight: 8.0d
+		}
+		{
+			id: "0A7A949F0663A754"
+			item: {
+				count: 1
+				id: "artifacts:running_shoes"
+			}
+			weight: 2.0d
+		}
+		{
+			id: "5F27AEDB4D5C46BB"
+			item: {
+				count: 1
+				id: "artifacts:flippers"
+			}
+			weight: 2.0d
+		}
+		{
+			id: "1BDD39FAC56EA35B"
+			item: {
+				count: 1
+				id: "artifacts:night_vision_goggles"
+			}
+			weight: 2.0d
+		}
+		{
+			id: "5096ABD7CE235493"
+			item: {
+				count: 1
+				id: "artifacts:umbrella"
+			}
+			weight: 2.0d
+		}
+		{
+			id: "4311FB277A892B33"
+			item: {
+				count: 1
+				id: "artifacts:lucky_scarf"
+			}
+			weight: 2.0d
+		}
+	]
+}

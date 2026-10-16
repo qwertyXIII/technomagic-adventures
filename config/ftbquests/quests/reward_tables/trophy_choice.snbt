@@ -1,0 +1,50 @@
+{
+	filename: "trophy_choice"
+	id: "2AF6B69AB1BD89E0"
+	loot_size: 1
+	order_index: 10
+	rewards: [
+		{
+			id: "4D00B470C7950190"
+			item: {
+				count: 1
+				id: "artifacts:crystal_heart"
+			}
+		}
+		{
+			id: "7710AB1B217111F8"
+			item: {
+				count: 1
+				id: "artifacts:cloud_in_a_bottle"
+			}
+		}
+		{
+			id: "6B8FDA12B814E7AD"
+			item: {
+				count: 1
+				id: "artifacts:power_glove"
+			}
+		}
+		{
+			id: "38EC55F9380A6E0C"
+			item: {
+				count: 1
+				id: "artifacts:running_shoes"
+			}
+		}
+		{
+			id: "650EECC5EDFCFBA7"
+			item: {
+				count: 1
+				id: "artifacts:feral_claws"
+			}
+		}
+		{
+			id: "4E67F29D4537A3F0"
+			item: {
+				count: 1
+				id: "minecraft:totem_of_undying"
+			}
+		}
+	]
+}

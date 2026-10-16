@@ -1,0 +1,95 @@
+{
+	filename: "valuable"
+	id: "644D3454610B2853"
+	loot_size: 2
+	order_index: 6
+	rewards: [
+		{
+			count: 32
+			id: "494C83A57D576BEC"
+			item: {
+				count: 1
+				id: "minecraft:diamond"
+			}
+			weight: 12.0d
+		}
+		{
+			count: 32
+			id: "7AC2DF08A5304472"
+			item: {
+				count: 1
+				id: "minecraft:emerald"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 64
+			id: "1FBE7CDED3B32016"
+			item: {
+				count: 1
+				id: "minecraft:experience_bottle"
+			}
+			weight: 10.0d
+		}
+		{
+			count: 4
+			id: "016053618D338231"
+			item: {
+				count: 1
+				id: "minecraft:netherite_ingot"
+			}
+			weight: 8.0d
+		}
+		{
+			count: 8
+			id: "1BA392B7A259FC1A"
+			item: {
+				count: 1
+				id: "megacells:sky_steel_ingot"
+			}
+			weight: 8.0d
+		}
+		{
+			id: "2A623C1D1F8CF296"
+			item: {
+				count: 1
+				id: "ae2:item_storage_cell_64k"
+			}
+			weight: 6.0d
+		}
+		{
+			count: 4
+			id: "11C843A24DB52005"
+			item: {
+				count: 1
+				id: "modern_industrialization:iridium_plate"
+			}
+			weight: 6.0d
+		}
+		{
+			count: 4
+			id: "295BB697445E4424"
+			item: {
+				count: 1
+				id: "apothic_enchanting:infused_breath"
+			}
+			weight: 4.0d
+		}
+		{
+			id: "30AAFCCBB5CB6261"
+			item: {
+				count: 1
+				id: "minecraft:totem_of_undying"
+			}
+			weight: 4.0d
+		}
+		{
+			id: "5F4CC35F98ADFA7A"
+			item: {
+				count: 1
+				id: "minecraft:enchanted_golden_apple"
+			}
+			weight: 3.0d
+		}
+	]
+}

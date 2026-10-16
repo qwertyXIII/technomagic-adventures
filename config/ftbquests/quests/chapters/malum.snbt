@@ -1,0 +1,258 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "malum"
+	group: "2B15C95845D546A1"
+	icon: {
+		count: 1
+		id: "malum:spirit_altar"
+	}
+	id: "396B7F08FC2E5735"
+	order_index: 30
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "7B96E9C47D17ABDE"
+			rewards: [
+				{
+					count: 4
+					id: "77D6DB9E1DB7CA7F"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "382474CF5A07861D"
+					item: {
+						count: 1
+						id: "malum:crude_scythe"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7B96E9C47D17ABDE"]
+			hide_until_deps_visible: true
+			id: "453D77163EC6D476"
+			rewards: [
+				{
+					count: 8
+					id: "4881908FE3F5E5A0"
+					item: {
+						count: 1
+						id: "malum:arcane_spirit"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "0374AF53C1005E75"
+					item: {
+						count: 1
+						id: "malum:sacred_spirit"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "64A37DDB0EE6E414"
+					item: {
+						count: 1
+						id: "malum:wicked_spirit"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["453D77163EC6D476"]
+			hide_until_deps_visible: true
+			id: "29B78718386894A1"
+			rewards: [
+				{
+					count: 16
+					id: "239934C87DDA9305"
+					item: {
+						count: 1
+						id: "malum:runewood_log"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "11461A902A7FAEEB"
+					item: {
+						count: 1
+						id: "malum:spirit_altar"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["29B78718386894A1"]
+			hide_until_deps_visible: true
+			id: "598CBD45338FD0B2"
+			rewards: [
+				{
+					id: "57E190E30DD9BBDC"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "12F53D480920EBF4"
+					item: {
+						count: 1
+						id: "malum:soul_stained_steel_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "4F486AD09B439BAB"
+					item: {
+						count: 1
+						id: "malum:hallowed_gold_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["598CBD45338FD0B2", "6F5A8856676AA527"]
+			hide_until_deps_complete: true
+			id: "6D35FDE67714A909"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "26724F0F259CAE68"
+					table_id: 3302581088336892328L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "6960D70217C8DCC2"
+					item: {
+						count: 1
+						id: "malum:spirit_crucible"
+					}
+					type: "item"
+				}
+				{
+					id: "114DD593085FBE00"
+					item: {
+						count: 1
+						id: "malum:spirit_catalyzer"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6D35FDE67714A909"]
+			hide_until_deps_visible: true
+			id: "32004A8698B58248"
+			rewards: [
+				{
+					id: "07EE0686F6141CDA"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [
+				{
+					id: "674D5681C9EDE43B"
+					item: {
+						count: 1
+						id: "malum:void_salts"
+					}
+					type: "item"
+				}
+				{
+					id: "7E1E659583C38988"
+					item: {
+						count: 1
+						id: "malum:null_slate"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["32004A8698B58248"]
+			hide_until_deps_visible: true
+			id: "3BF87CC8D75458E9"
+			rewards: [
+				{
+					id: "6630565D8052F0DC"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+			]
+			tasks: [
+				{
+					id: "305CB248D660637A"
+					item: {
+						count: 1
+						id: "malum:mnemonic_fragment"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["32004A8698B58248"]
+			hide_until_deps_visible: true
+			id: "7B01E2711DC50133"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1BE51DB9C01B9290"
+					table_id: 3302581088336892328L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "60B1980C7A94C496"
+					item: {
+						count: 1
+						id: "malum:malignant_pewter_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: 0.8d
+		}
+	]
+}

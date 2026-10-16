@@ -1,0 +1,391 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ars_nouveau"
+	group: "2B15C95845D546A1"
+	icon: {
+		count: 1
+		id: "ars_nouveau:novice_spell_book"
+	}
+	id: "084F09FC0B280772"
+	order_index: 26
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["48D385EEA1123AED"]
+			hide_until_deps_complete: true
+			id: "5285A67AB2540442"
+			rewards: [
+				{
+					count: 4
+					id: "656932B0BB167850"
+					item: {
+						count: 1
+						id: "ars_nouveau:source_gem"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "39FAA9DD982AD350"
+					item: {
+						count: 1
+						id: "ars_nouveau:worn_notebook"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5285A67AB2540442"]
+			hide_until_deps_visible: true
+			id: "01B0E24433CDCCA7"
+			rewards: [
+				{
+					count: 32
+					id: "25B2A88B9AAEB951"
+					item: {
+						count: 1
+						id: "minecraft:amethyst_shard"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "78837B653832678D"
+					item: {
+						count: 1
+						id: "ars_nouveau:imbuement_chamber"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "771A3C3A6711FBB7"
+					item: {
+						count: 1
+						id: "ars_nouveau:source_gem"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["01B0E24433CDCCA7"]
+			hide_until_deps_visible: true
+			id: "760F80BBACC19061"
+			rewards: [
+				{
+					count: 4
+					id: "7915EF0F9A49EC83"
+					item: {
+						count: 1
+						id: "ars_nouveau:blank_parchment"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3EB0CA0D00B84245"
+					item: {
+						count: 1
+						id: "ars_nouveau:novice_spell_book"
+					}
+					type: "item"
+				}
+				{
+					id: "007FA0D48F3BB167"
+					item: {
+						count: 1
+						id: "ars_nouveau:scribes_table"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["01B0E24433CDCCA7"]
+			hide_until_deps_visible: true
+			id: "782760FAE5E809A9"
+			rewards: [
+				{
+					count: 8
+					id: "75D81CB0D6CB7AEA"
+					item: {
+						count: 1
+						id: "minecraft:experience_bottle"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "77140C3F5D33414B"
+					item: {
+						count: 1
+						id: "ars_nouveau:source_jar"
+					}
+					type: "item"
+				}
+				{
+					id: "441228A6E97FD8FA"
+					item: {
+						count: 1
+						id: "ars_nouveau:volcanic_sourcelink"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["782760FAE5E809A9"]
+			hide_until_deps_visible: true
+			id: "0BCB1861F14C7F60"
+			rewards: [
+				{
+					count: 8
+					id: "6EDCFF40AD19221D"
+					item: {
+						count: 1
+						id: "ars_nouveau:magebloom_fiber"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "3C081AD1FFFE3006"
+					item: {
+						count: 1
+						id: "ars_nouveau:enchanting_apparatus"
+					}
+					type: "item"
+				}
+				{
+					id: "21FEEF917CAB285B"
+					item: {
+						count: 1
+						id: "ars_nouveau:arcane_core"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "4DBF58CBEBD9C23B"
+					item: {
+						count: 1
+						id: "ars_nouveau:arcane_pedestal"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["0BCB1861F14C7F60"]
+			hide_until_deps_visible: true
+			id: "4E667160F2D0310A"
+			rewards: [
+				{
+					count: 2
+					id: "28F6CC935797FF93"
+					item: {
+						count: 1
+						id: "ars_nouveau:abjuration_essence"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "66BA156EF5511D83"
+					item: {
+						count: 1
+						id: "ars_nouveau:fire_essence"
+					}
+					type: "item"
+				}
+				{
+					id: "097D563922B81F48"
+					item: {
+						count: 1
+						id: "ars_nouveau:water_essence"
+					}
+					type: "item"
+				}
+				{
+					id: "4FB6395BCA840E8A"
+					item: {
+						count: 1
+						id: "ars_nouveau:earth_essence"
+					}
+					type: "item"
+				}
+				{
+					id: "69579EC3B8DE1239"
+					item: {
+						count: 1
+						id: "ars_nouveau:air_essence"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -0.8d
+		}
+		{
+			dependencies: ["760F80BBACC19061"]
+			hide_until_deps_visible: true
+			id: "47B5CAE519E2F87D"
+			rewards: [
+				{
+					id: "0DFCBA3E7894CF0E"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			tasks: [
+				{
+					id: "1DD6C5F8860037C3"
+					item: {
+						count: 1
+						id: "ars_nouveau:wilden_horn"
+					}
+					type: "item"
+				}
+				{
+					id: "5B3F589433D1D0D7"
+					item: {
+						count: 1
+						id: "ars_nouveau:wilden_spike"
+					}
+					type: "item"
+				}
+				{
+					id: "1AA9100DC2F46CED"
+					item: {
+						count: 1
+						id: "ars_nouveau:wilden_wing"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["4E667160F2D0310A", "47B5CAE519E2F87D"]
+			hide_until_deps_visible: true
+			id: "2473FCCE4A92A719"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "77BD6E83C2A7C849"
+					table_id: 3302581088336892328L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "46E4C36C2B9E4AEA"
+					item: {
+						count: 1
+						id: "ars_nouveau:apprentice_spell_book"
+					}
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0BCB1861F14C7F60"]
+			hide_until_deps_visible: true
+			id: "6DA30D8F86D983C6"
+			optional: true
+			rewards: [
+				{
+					id: "4BAED13E54C19450"
+					item: {
+						count: 1
+						id: "ars_nouveau:dominion_wand"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1E19E55F2EFAF158"
+					item: {
+						count: 1
+						id: "ars_nouveau:starbuncle_charm"
+					}
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.8d
+		}
+		{
+			dependencies: ["2473FCCE4A92A719"]
+			hide_until_deps_visible: true
+			id: "219C2B5AC536B2DB"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "157FD444E4628DCA"
+					table_id: 2023203629431801484L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					entity: "ars_nouveau:wilden_boss"
+					id: "4900B95CA7FEAB0C"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["219C2B5AC536B2DB"]
+			hide_until_deps_visible: true
+			id: "13E40065B18C2189"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1CFB21660C5DB05E"
+					table_id: 3302581088336892328L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "55B3A91274E92B2E"
+					item: {
+						count: 1
+						id: "ars_nouveau:archmage_spell_book"
+					}
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: 0.0d
+		}
+	]
+}
