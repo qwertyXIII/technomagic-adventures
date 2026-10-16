@@ -61,7 +61,21 @@ if [ ! -f "$MC/packwiz.json" ]; then
   done
 fi
 
-# 3. Моды, настройки, пакеты ресурсов, шейдеры
+# 3. Копия миров перед обновлением: только миры, в которые играли последние 14 дней; храним 3 последние копии
+RECENT=$(find "$MC/saves" -mindepth 2 -maxdepth 2 -name level.dat -mtime -14 2>/dev/null)
+if [ -n "$RECENT" ]; then
+  DEST="$MC/_world_backups/$(date +%Y-%m-%d_%H%M)"
+  step "Сохраняю копию миров перед обновлением: $DEST"
+  mkdir -p "$DEST"
+  while IFS= read -r lvl; do
+    W=$(dirname "$lvl")
+    cp -R "$W" "$DEST/" || fail "не удалось скопировать мир $(basename "$W"). Обновление отменено, мир не тронут."
+    echo "  $(basename "$W")"
+  done <<< "$RECENT"
+  ls -1d "$MC/_world_backups/"*/ 2>/dev/null | sort -r | tail -n +4 | while IFS= read -r old; do rm -rf "$old"; done
+fi
+
+# 4. Моды, настройки, пакеты ресурсов, шейдеры
 step "Скачиваю и обновляю сборку (в первый раз ~1 ГБ, откроется окно с прогрессом)"
 BOOT="$MC/packwiz-installer-bootstrap.jar"
 [ -f "$BOOT" ] || curl -fsSL "https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest/download/packwiz-installer-bootstrap.jar" -o "$BOOT" || fail "не удалось скачать packwiz"

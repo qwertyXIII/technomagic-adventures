@@ -88,7 +88,29 @@ if (-not (Test-Path $marker)) {
     }
 }
 
-# 3. Моды, настройки, пакеты ресурсов, шейдеры
+# 3. Копия миров перед обновлением: только миры, в которые играли последние 14 дней; храним 3 последние копии
+$saves = Join-Path $Mc "saves"
+$recent = @()
+if (Test-Path $saves) {
+    $recent = Get-ChildItem $saves -Directory | Where-Object {
+        $lvl = Join-Path $_.FullName "level.dat"
+        (Test-Path $lvl) -and ((Get-Item $lvl).LastWriteTime -gt (Get-Date).AddDays(-14))
+    }
+}
+if ($recent) {
+    $backupRoot = Join-Path $Mc "_world_backups"
+    $dest = Join-Path $backupRoot (Get-Date -Format "yyyy-MM-dd_HHmm")
+    Step "Сохраняю копию миров перед обновлением: $dest"
+    foreach ($w in $recent) {
+        robocopy $w.FullName (Join-Path $dest $w.Name) /E /R:1 /W:1 /NFL /NDL /NJH /NJS /NP | Out-Null
+        if ($LASTEXITCODE -ge 8) { Fail "не удалось скопировать мир $($w.Name) (robocopy $LASTEXITCODE). Обновление отменено, мир не тронут." }
+        Write-Host "  $($w.Name)"
+    }
+    Get-ChildItem $backupRoot -Directory | Sort-Object Name -Descending | Select-Object -Skip 3 |
+        ForEach-Object { Remove-Item -Recurse -Force $_.FullName }
+}
+
+# 4. Моды, настройки, пакеты ресурсов, шейдеры
 Step "Скачиваю и обновляю сборку (в первый раз ~1 ГБ, откроется окно с прогрессом)"
 $boot = Join-Path $Mc "packwiz-installer-bootstrap.jar"
 if (-not (Test-Path $boot)) {
