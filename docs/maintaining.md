@@ -83,6 +83,7 @@ packwiz refresh                  # после любых ручных право
 | `Failed to encode packet 'clientbound/minecraft:custom_payload'` при входе в мир | owo-lib 0.12.15 на свежем NeoForge 21.1 (Accessories из Aether) | `mods/owonetfix-1.0.0.jar` (MIT) |
 | `reeses_sodium_options is incompatible with sodiumoptionsapi` | Sodium Dynamic Lights тянет Sodium Options API | Динамический свет — LambDynamicLights |
 | Вступление про кораблекрушение и телепорт при первом входе | «Судьба» MCA Reborn | Выключено в `config/mca.json` |
+| «Сервер отправил реестры с неизвестными ключами» (список предметов `neovitae:*`) | Neo Vitae сам дописывает `config/neovitae/materials.json` под найденные руды; у хоста и клиента разные списки | Полный список лежит в `config/neovitae/materials.json` пака; при добавлении модов с рудами — обновить его с ПК хоста |
 | Quark не грузится | NeoForge ниже 21.1.252 | Ставить NeoForge 21.1.262 (делает установщик) |
 | `Mod entity_model_features requires entity_texture_features` при запуске | В окне необязательных модов включён EMF, а ETF выключен | Режим смены графики: включить оба или выключить оба (установщик предупреждает) |
 | Игрока с «лёгким» набором не пускает в мир хоста | Выключен мод, чей сетевой канал сервер шлёт всем (пример — CreativeCore) | Такой мод не делать необязательным (см. «Необязательные моды») |
