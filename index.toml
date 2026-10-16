@@ -5,6 +5,10 @@ file = "config/ftbchunks-world.snbt"
 hash = "6b1c1647d5f44f3c594208bd185135b7c5481dd123df708c2c86ccd959602fee"
 
 [[files]]
+file = "config/mca.json"
+hash = "deb87504eda5a3eab46b66e73de8a8b3c6fce3c553bf70d505bf9a79878d5002"
+
+[[files]]
 file = "config/modernfix-mixins.properties"
 hash = "f17e9616aeaebd9759f12092a882d3820d7684d4c3361d792ac0eb84e7add51e"
 
