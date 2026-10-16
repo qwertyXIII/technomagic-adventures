@@ -329,6 +329,10 @@ file = "config/mutantmonsters-common.toml"
 hash = "ac60ba53d0818e4c5824aa8d60e0870f4b0c2051b4e50f518f469a848d4d6760"
 
 [[files]]
+file = "config/neovitae/materials.json"
+hash = "8f8113978ee990d26fe9e08b72af7df5fe7140d6763030c6da33de532057d7ed"
+
+[[files]]
 file = "config/solarflux/recipes.cfg"
 hash = "f250898916da8ab5fc5f97b216130c62160ab01039b38ca144b4eec85c4a9e4a"
 
