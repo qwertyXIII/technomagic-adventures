@@ -1,0 +1,13 @@
+name = "Trashcans Forever!"
+filename = "trashcans_forever-1.0.0-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/KjfgiBFp/versions/cI8pceHu/trashcans_forever-1.0.0-neoforge-1.21.1.jar"
+hash-format = "sha512"
+hash = "6d66eafabec10599892737b5aa4ecf9f23047272fca63df8986cdfa173d448c0c929eced18c6e369e711c81413e56b8dedb0fdf6ab06809b5d511c18736aafaa"
+
+[update]
+[update.modrinth]
+mod-id = "KjfgiBFp"
+version = "cI8pceHu"

@@ -1,0 +1,13 @@
+name = "Cyberware: Reforged"
+filename = "cyber_ware_port-1.21.1-1.7.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/FJab88SV/versions/y8ToJ0gA/cyber_ware_port-1.21.1-1.7.0.jar"
+hash-format = "sha512"
+hash = "01d8bbcf95a880358b9e06bd31ae67064225378510eed4192c5aec4f5d4794cc7f00aacf8da22fbc334804b4457713b68e312af76838d63849ed652a021c4284"
+
+[update]
+[update.modrinth]
+mod-id = "FJab88SV"
+version = "y8ToJ0gA"

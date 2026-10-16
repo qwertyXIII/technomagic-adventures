@@ -1,0 +1,13 @@
+name = "TechnoMagic Adventures"
+author = "DXIII"
+version = "0.1.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "ab2662da568ccade5a2dd155761bf4f93102c4a3b540466e6dc63dc98bbb3ffb"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.262"

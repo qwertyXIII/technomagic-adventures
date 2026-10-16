@@ -1,0 +1,13 @@
+name = "AvaritiaNeo"
+filename = "AvaritiaNeo-1.21-1.3.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/j5gjLUvf/versions/FHnVxTl7/AvaritiaNeo-1.21-1.3.1.jar"
+hash-format = "sha512"
+hash = "8609943c8cfc0c6f3245bd67716fa0c613f725c8ed71d197e37667d8e3952f1d7e35f6f573707757ae21287c65a6566d40134142ee7b3e33b03264cfb59d7740"
+
+[update]
+[update.modrinth]
+mod-id = "j5gjLUvf"
+version = "FHnVxTl7"

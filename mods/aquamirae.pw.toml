@@ -1,0 +1,13 @@
+name = "Aquamirae"
+filename = "aquamirae-neoforge-1.21.1-7.2.12.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/k23mNPhZ/versions/RSbxcVPE/aquamirae-neoforge-1.21.1-7.2.12.jar"
+hash-format = "sha512"
+hash = "e47d75ff50f1d7861749fc982360165c16aa3963a205879986cc23bfc571dbc7b9eed34b7a2dd18a777c7cbc97423aaa3aadd34ccb0be4cbd713fbaea02f8e47"
+
+[update]
+[update.modrinth]
+mod-id = "k23mNPhZ"
+version = "RSbxcVPE"
