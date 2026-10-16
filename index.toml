@@ -1948,7 +1948,7 @@ hash = "acecbf9ad0ba2dad8f931a6cf9dd4cb7a538bd887e28df7a36056a1f3bb8c842"
 
 [[files]]
 file = "mods/particle-rain.pw.toml"
-hash = "88877526c9025b295b3691d2634d04d82544414fc13988e6f7029735ad450328"
+hash = "ac67453136bc100d06bcd1e0215e431d05e09393d73c64a1739891258b478ef7"
 metafile = true
 
 [[files]]

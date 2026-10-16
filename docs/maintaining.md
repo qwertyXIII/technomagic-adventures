@@ -40,7 +40,6 @@ description = "Что даёт. Нагрузка: …"
 | Iris Shaders | `mods/iris.pw.toml` | загрузчик шейдеров |
 | Complementary Reimagined, MakeUp Ultra Fast | `shaderpacks/*.pw.toml` | без Iris бесполезны (вреда нет) |
 | Better Clouds | `mods/better-clouds.pw.toml` | YACL остаётся: нужен Critters and Companions |
-| Particle Rain | `mods/particle-rain.pw.toml` | side = both, но сетевых каналов нет |
 | ETF, EMF, Fresh Animations | `mods/entitytexturefeatures`, `mods/entity-model-features`, `resourcepacks/fresh-animations` | связка: EMF без ETF — игра не запустится; FA без обоих не работает |
 | Better Leaves | `resourcepacks/better-leaves.pw.toml` | |
 | Wavey Capes | `mods/wavey-capes.pw.toml` | |
@@ -50,11 +49,11 @@ description = "Что даёт. Нагрузка: …"
 
 Пакеты ресурсов и шейдеры игрок включает в игре сам (`options.txt` сборка не раздаёт), поэтому их отсутствие ничего не ломает.
 
-**Что нельзя делать необязательным.** Моды производительности (Sodium, Sodium Extra, Reese's Sodium Options, ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, C2ME, ScalableLux, Lithium, Clumps и т.п.), всё, от чего зависят обязательные моды, и всё, что регистрирует сетевые каналы, которые сервер шлёт каждому игроку. Пример — **CreativeCore** (нужен только AmbientSounds, но остаётся обязательным): при входе игрока сервер (в том числе мир хоста, открытый по сети) шлёт ему пакет синхронизации настроек CreativeCore, а NeoForge 21.1 бросает `UnsupportedOperationException`, если у клиента нет этого канала, — без CreativeCore в мир к хосту не зайти. Хост обычно играет со всеми опциями, поэтому у «лёгкого» клиента не должно быть недостающих каналов.
+**Что нельзя делать необязательным.** Моды производительности (Sodium, Sodium Extra, Reese's Sodium Options, ImmediatelyFast, Entity Culling, ModernFix, FerriteCore, C2ME, ScalableLux, Lithium, Clumps и т.п.), всё, от чего зависят обязательные моды, всё, что регистрирует сетевые каналы, которые сервер шлёт каждому игроку, и **всё, что добавляет записи в синхронизируемые реестры** (предметы, блоки, сущности, **типы частиц**, звуки и т.п.): сервер сверяет реестры с клиентом и не пустит игрока без них («Сервер отправил реестры с неизвестными ключами»). Пример — **Particle Rain** (регистрирует `particlerain:*` частицы) — поэтому он обязательный. Пример — **CreativeCore** (нужен только AmbientSounds, но остаётся обязательным): при входе игрока сервер (в том числе мир хоста, открытый по сети) шлёт ему пакет синхронизации настроек CreativeCore, а NeoForge 21.1 бросает `UnsupportedOperationException`, если у клиента нет этого канала, — без CreativeCore в мир к хосту не зайти. Хост обычно играет со всеми опциями, поэтому у «лёгкого» клиента не должно быть недостающих каналов.
 
 **Перед добавлением новой опции:**
 1. `depcheck.py client` для двух крайних наборов — все опции включены и все выключены (папка с симлинками без jar опциональных модов): никаких `MISSING`.
-2. Проверить, что мод не регистрирует сетевые payload'ы (поиск `PayloadRegistrar`/`RegisterPayloadHandlersEvent` в классах jar) или что сервер не шлёт их всем подряд.
+2. Проверить, что мод не регистрирует записи реестров (в jar нет `assets/*/particles/*.json`, `DeferredRegister`/`Registries.*` в классах) и не регистрирует сетевые payload'ы (поиск `PayloadRegistrar`/`RegisterPayloadHandlersEvent` в классах jar) или что сервер не шлёт их всем подряд.
 3. Если одна опция требует другую — написать это в обеих `description` и, если без пары игра не запустится, добавить проверку в конец обоих установщиков (как для EMF/ETF).
 4. `packwiz refresh`.
 
