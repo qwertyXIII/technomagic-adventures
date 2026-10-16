@@ -62,6 +62,7 @@ ItemEvents.modifyTooltips(event => {
   event.add('kubejs:ai_repair_memory_1', [Text.gray("Ремонт ядра ЛОЦМАНа, ступень 2. Положить в Ящик памяти.")])
   event.add('kubejs:ai_repair_memory_2', [Text.gray("Ремонт ядра ЛОЦМАНа, ступень 3. Положить в Ящик памяти.")])
   event.add('kubejs:ai_repair_quantum', [Text.gray("Ремонт ядра ЛОЦМАНа, ступень 4. Положить в Ящик памяти.")])
+  event.add('kubejs:ai_transfer_module', [Text.gray("Переезд ЛОЦМАНа. ПКМ по штурманскому модулю или ядру ИИ — упаковать; Shift+ПКМ по блоку — поставить. Многоразовый.")])
   event.add('kubejs:capsule_log', [Text.darkGray("Прочитать: книга заданий → «Находки». ЛОЦМАН прочтёт, если положить в Ящик памяти.")])
   event.add('kubejs:note_m_1', [Text.darkGray("Прочитать: книга заданий → «Находки». ЛОЦМАН прочтёт, если положить в Ящик памяти.")])
   event.add('kubejs:crew_tag', [Text.darkGray("Прочитать: книга заданий → «Находки». ЛОЦМАН прочтёт, если положить в Ящик памяти.")])

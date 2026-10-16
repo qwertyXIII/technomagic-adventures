@@ -11,3 +11,8 @@ hash = "45304b1d7862afdb2177b7e6226fc9c6737911d17a4ad46cc9c519ca4deb935f05072cd3
 [update.modrinth]
 mod-id = "HVnmMxH1"
 version = "Bqen1mJX"
+
+[option]
+optional = true
+default = true
+description = "Красивые шейдеры: тени, отражения в воде, свечение, объёмный свет. Работает только вместе с Iris Shaders, включается в игре вручную (настройки графики). Нагрузка: очень высокая (видеокарта) — для мощных ПК."

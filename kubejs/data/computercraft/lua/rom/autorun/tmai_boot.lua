@@ -11,6 +11,11 @@ elseif label == "TM-NAV" then prog = "tmnav"
 elseif label:match("^TM%-RELAY") then prog = "tmrelay"
 elseif pocket and label:find("KPK", 1, true) then prog = "tmpda"
 end
+if prog == "tmai" or prog == "tmnav" then
+  -- ROM-autorun идёт раньше startup с дискет: запрещаем запуск чужой программы с дискеты в соседнем (или сетевом)
+  -- дисководе на компьютере ИИ (там ключи) и на командном компьютере. Только в памяти, файл settings не меняется.
+  settings.set("shell.allow_disk_startup", false)
+end
 if prog then
   if multishell then
     local id = shell.openTab(prog)

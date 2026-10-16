@@ -59,6 +59,7 @@
   "item.kubejs.ai_repair_memory_1": "Блок памяти Мк1",
   "item.kubejs.ai_repair_memory_2": "Блок памяти Мк2",
   "item.kubejs.ai_repair_quantum": "Квантовый вычислитель",
+  "item.kubejs.ai_transfer_module": "Модуль переноса",
   "block.kubejs.ai_core": "Ядро бортового ИИ",
   "item.kubejs.ai_core": "Ядро бортового ИИ"
 }

@@ -11,3 +11,8 @@ hash = "793dacaca4c200656e8875195e42975ecb628af114e13aad2059368b51cf45f00280f860
 [update.modrinth]
 mod-id = "uvpymuxq"
 version = "w4ReEpuG"
+
+[option]
+optional = true
+default = true
+description = "Пакет ресурсов: пышная объёмная листва деревьев. Подключается в игре вручную: Настройки → Пакеты ресурсов. Нагрузка: средняя–высокая в лесах (намного больше геометрии)."

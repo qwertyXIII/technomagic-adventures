@@ -32,7 +32,9 @@ local App = {}
 
 local cfg, state
 local queue = {}
-local nav = nil                -- статус TM-NAV: { x,y,z,dim, repair, radio }
+local nav = nil                -- статус TM-NAV: { x,y,z,dim, repair, radio, radios }
+local nav_fail = 0             -- сколько опросов подряд модуль не ответил
+local nav_where = nil          -- где модуль и радио (для записи в лог при переезде)
 local llm_status = "?"
 local last_chat_t = 0          -- когда в последний раз говорили (для напевания)
 local STATE_PATH = util.DATA_DIR .. "/state.json"
@@ -64,13 +66,20 @@ local function core_name()
   return core and peripheral.getName(core) or nil
 end
 
--- Ящик памяти: первый инвентарь рядом, который не ядро
+-- Ящик памяти: инвентарь вплотную к компьютеру (не ядро); если такого нет — первый в проводной сети.
+-- После переезда в сети ИИ могут оказаться чужие сундуки базы — вплотную стоящий важнее.
+local SIDE = {}
+for _, s in ipairs(redstone.getSides()) do SIDE[s] = true end
+
 local function memory_box()
+  local remote
   for _, name in ipairs(peripheral.getNames()) do
     if peripheral.hasType(name, "inventory") and not peripheral.hasType(name, "kubejs:ai_core") then
-      return peripheral.wrap(name), name
+      if SIDE[name] then return peripheral.wrap(name), name end
+      remote = remote or name
     end
   end
+  if remote then return peripheral.wrap(remote), remote end
 end
 
 local function open_rednet()
@@ -159,7 +168,8 @@ local function compact_history()
   if not history.needs_compaction() then return end
   local done = history.compact(function(old, prev)
     return llm.simple(cfg,
-      "Ты сжимаешь журнал разговора экипажа с бортовым ассистентом. Пиши по-русски, сухо, до 1200 символов: " ..
+      "Ты сжимаешь журнал разговора экипажа с бортовым ассистентом. Пиши по-русски, сухо, до " ..
+      math.floor(settings.get("tmai.summary_chars", 8000) / 2) .. " символов: " ..
       "кто что спрашивал, договорённости, найденные места и координаты, незавершённые дела. Без воды.",
       "Предыдущая сводка:\n" .. (prev ~= "" and prev or "(нет)") .. "\n\nНовый фрагмент журнала:\n" .. old)
   end)
@@ -170,7 +180,7 @@ end
 local function handle_ask(job)
   local p = power.status()
   if not p.ok then
-    reply(job, "[аварийный режим] Питание ядра ниже минимума. Загрузите топливо в генератор под терминалом.")
+    reply(job, "[аварийный режим] " .. (p.hint or "Питание ядра ниже минимума. Загрузите топливо в генератор под терминалом."))
     return
   end
   local ready, why = config.check(cfg)
@@ -410,8 +420,22 @@ local function poller()
       end
     end
     if tick % 3 == 1 then
-      local s = link.call("status", {}, 3)
-      if s then nav = s end
+      local s, err = link.call("status", {}, 3)
+      if s then
+        -- связь появилась или модуль/радио переехали: записать, откуда теперь считается зона связи
+        local rs = {}
+        for _, r in ipairs(s.radios or {}) do rs[#rs + 1] = (r.ender and "ender" or tostring(r.range)) .. "@" .. tostring(r.x) .. "," .. tostring(r.z) end
+        local where = ("NAV at %s %s %s, radios [%s]"):format(tostring(s.x), tostring(s.y), tostring(s.z), table.concat(rs, " "))
+        if nav == nil or where ~= nav_where then
+          util.log("I", "nav: link ok, %s", where)
+          ui.log_line("NAV: link ok")
+        end
+        nav, nav_fail, nav_where = s, 0, where
+      else
+        nav_fail = nav_fail + 1
+        if nav_fail == 2 then ui.log_line("NAV: no link"); util.log("W", "nav: %s", tostring(err)) end
+        if nav_fail >= 2 then nav = nil end   -- модуль упакован или без связи: не держать устаревший статус
+      end
     end
     if tick % 3 == 0 then
       local msg = quests.tick()

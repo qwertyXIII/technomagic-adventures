@@ -11,3 +11,8 @@ hash = "ff7e9f0b968eeb2ba0e833328a122813cad0434cfe2d5c3d527c1c0d564504f13a737fc0
 [update.modrinth]
 mod-id = "qyVF9oeo"
 version = "Dd2tmpsk"
+
+[option]
+optional = true
+default = true
+description = "Реалистичный звук: эхо в пещерах, приглушение звука за стенами. Нагрузка: средняя (процессор), выше там, где много звуков."

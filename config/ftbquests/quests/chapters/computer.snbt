@@ -222,6 +222,44 @@
 			y: -3.0d
 		}
 		{
+			dependencies: ["396A5F7DFDFA6DD1"]
+			hide_until_deps_visible: true
+			id: "6CBB58A9658D08CE"
+			optional: true
+			rewards: [
+				{
+					count: 16
+					id: "37B4C4077E25477A"
+					item: {
+						count: 1
+						id: "computercraft:cable"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "42885BDA88B17BEB"
+					item: {
+						count: 1
+						id: "computercraft:wired_modem"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "7D8FC1E36274E0D6"
+					item: {
+						count: 1
+						id: "kubejs:ai_transfer_module"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -1.5d
+		}
+		{
 			dependencies: ["26F66062BB0D8DF2"]
 			hide_until_deps_visible: true
 			id: "473BDC367B27E8AE"

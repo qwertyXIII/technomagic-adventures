@@ -82,9 +82,13 @@ function M.ask(o)
   local conv = P.new(o.system, o.history or {}, cfg)
   P.add_user(conv, o.user, o.user_name, o.context)
   local tools = cfg.use_tools and M.tools_supported ~= false and o.tools or nil
-  for round = 1, (cfg.tool_rounds or 4) + 1 do
-    -- в последнем круге инструменты не даём: модель должна ответить текстом
-    local use_tools = tools and round <= (cfg.tool_rounds or 4) and tools or nil
+  -- tool_rounds <= 0 — без ограничения; иначе после лимита ещё 2 круга без инструментов, чтобы модель ответила текстом
+  local rounds = cfg.tool_rounds or 0
+  local unlimited = rounds <= 0
+  local round = 0
+  while unlimited or round < rounds + 2 do
+    round = round + 1
+    local use_tools = tools and (unlimited or round <= rounds) and tools or nil
     local body, headers = prepare(cfg, conv, use_tools, P, o.conv_id)
     local data, err, code = post_retry(cfg, cfg.endpoint, body, headers)
     if not data and use_tools and round == 1 and (code == 400 or code == 422) then
@@ -108,7 +112,10 @@ function M.ask(o)
     local results = {}
     for _, call in ipairs(res.calls) do
       local content, is_error
-      if type(call.args) ~= "table" then
+      if not use_tools then
+        -- инструменты уже не даны, а модель просит ещё: не выполняем, просим итог текстом
+        content, is_error = "Лимит действий на этот вопрос исчерпан, инструмент не выполнен. Ответь игроку текстом по итогам уже сделанного (коды подтверждения — дословно).", true
+      elseif type(call.args) ~= "table" then
         content, is_error = "Ошибка: аргументы не являются JSON-объектом", true
       else
         local ok, out = pcall(o.run_tool, call.name, call.args)

@@ -11,3 +11,8 @@ hash = "c5bf900acf5a9fa29db9b7c0cb48eebc2e71858a43b6df143ac0c28e631900120d42ca9d
 [update.modrinth]
 mod-id = "kYuIpRLv"
 version = "7ndXqAZv"
+
+[option]
+optional = true
+default = true
+description = "Плащи игроков развеваются с физикой ткани. Нагрузка: низкая."

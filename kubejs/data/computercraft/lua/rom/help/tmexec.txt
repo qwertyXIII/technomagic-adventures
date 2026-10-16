@@ -1,0 +1,11 @@
+tmexec - agent dlya programm, kotorye pishet LOCMAN (na lyubom komp'yutere ili cherepashke s modemom).
+
+  tmexec            - zapustit' agenta; dal'she skazhite LOCMANu, chto avtomatizirovat'
+  tmexec startup    - to zhe + avtozapusk pri vklyuchenii: posle perezagruzki ili vygruzki
+                      chanka agent sam prodolzhit poslednyuyu podtverzhdennuyu programmu
+  tmexec nostartup  - ubrat' avtozapusk
+
+Programmy lezhat v /tmai_scripts/ (mozhno prochitat': edit /tmai_scripts/<imya>.lua).
+Zapusk - tol'ko posle "da KOD" v chate. Ostanovka: "stop" v chate ili Ctrl+T zdes'.
+Svyaz' s kapsuloy: besprovodnoy/ender-modem ili provodnoy modem s kabelem.
+Na komp'yuterah TM-AI, TM-NAV i komandnyh komp'yuterah agent ne rabotaet.

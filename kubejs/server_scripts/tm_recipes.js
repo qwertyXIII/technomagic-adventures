@@ -305,6 +305,13 @@ ServerEvents.recipes(event => {
   event.shaped('kubejs:ai_repair_quantum', ['VEV', 'DKD', 'VEV'], {
     V: 'enderio:vibrant_crystal', E: 'mekanism:elite_control_circuit', D: 'draconicevolution:draconium_core', K: 'ae2:cell_component_64k'
   }).id('kubejs:ai/repair_quantum')
+
+  // Модуль переноса (переезд ЛОЦМАНа: штурманский модуль и ядро; tm_ai_relocate.js) — ранне-средний этап:
+  // железные пластины (молот IE / пресс Create), дисковод и проводные модемы CC, эндер-жемчуг, исток Ars Nouveau
+  event.shaped('kubejs:ai_transfer_module', ['PEP', 'MDM', 'PSP'], {
+    P: '#c:plates/iron', E: 'minecraft:ender_pearl', M: 'computercraft:wired_modem', D: 'computercraft:disk_drive',
+    S: 'ars_nouveau:source_gem'
+  }).id('kubejs:ai/transfer_module')
 })
 
 // Теги: Alex's Caves 2.0.10 кладёт свои теги в старое пространство neoforge:* — его уран и сера не попадали в c:*

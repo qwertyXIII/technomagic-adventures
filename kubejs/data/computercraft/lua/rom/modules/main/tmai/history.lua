@@ -15,7 +15,7 @@ local S_PATH = util.DATA_DIR .. "/summary.txt"
 local N_PATH = util.DATA_DIR .. "/notes.json"
 
 local items, summary, notes
-local budget = 5000
+local budget = 20000
 
 function M.init(history_chars)
   budget = history_chars or budget
@@ -48,7 +48,7 @@ function M.compact(summarize)
   end
   local new_summary = summarize(table.concat(lines, "\n"), summary)
   if not new_summary or new_summary == "" then return false end
-  summary = u8.truncate(new_summary, 2500)
+  summary = u8.truncate(new_summary, settings.get("tmai.summary_chars", 8000))
   util.write_file_atomic(S_PATH, summary)
   local rest = {}
   for i = half + 1, #items do rest[#rest + 1] = items[i] end

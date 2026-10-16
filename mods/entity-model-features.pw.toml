@@ -11,3 +11,8 @@ hash = "b18bde755c6719c62579d65c96e6e768c99b25fba9f987dc843b2a64ce4d713ba2f8151d
 [update.modrinth]
 mod-id = "4I1XuqiY"
 version = "197m3VoU"
+
+[option]
+optional = true
+default = true
+description = "[Связка EMF + ETF + Fresh Animations — включайте или выключайте все три вместе.] Новые модели и анимации мобов из пакетов ресурсов (нужен для Fresh Animations). Работает ТОЛЬКО вместе с ETF: без ETF игра не запустится. Нагрузка: средняя, растёт, когда рядом много мобов."

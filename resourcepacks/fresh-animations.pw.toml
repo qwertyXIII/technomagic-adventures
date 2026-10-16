@@ -11,3 +11,8 @@ hash = "41258f9bea1a773d823f9a014d0c08206e9e7b339bc538e1538211fff28fadd06878a836
 [update.modrinth]
 mod-id = "50dA9Sha"
 version = "xN57JJts"
+
+[option]
+optional = true
+default = true
+description = "[Связка EMF + ETF + Fresh Animations — включайте или выключайте все три вместе.] Пакет ресурсов: живые анимации мобов (моргают, дышат, плавно двигаются). Без EMF и ETF не работает. Подключается в игре вручную: Настройки → Пакеты ресурсов. Нагрузка: средняя, когда рядом много мобов."

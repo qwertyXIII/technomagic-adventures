@@ -26,7 +26,8 @@ local function draw(t, info)
     y = y + 1
   end
   local p = info.power or {}
-  row("POWER  ", p.energy and (p.pct .. "% " .. p.energy .. " FE") or (p.reason or "?"), p.ok and colors.lime or colors.red)
+  row("POWER  ", p.energy and (p.pct .. "% " .. p.energy .. " FE" .. (p.far and " CORE NOT ADJACENT" or "")) or "no core",
+    p.ok and colors.lime or colors.red)
   row("LLM    ", info.llm or "?", info.llm_ok and colors.lime or colors.orange)
   row("TOOLS  ", info.tools or "-")
   row("SEARCH ", info.search or "keywords")

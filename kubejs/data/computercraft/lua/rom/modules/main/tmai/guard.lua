@@ -1,7 +1,8 @@
 -- tmai.guard — кто и как часто может обращаться к ЛОЦМАНу + зона радиосвязи.
 --
 -- Связь устроена «как в МЭ» и повторяет физику радио CC: Tweaked, чтобы чат не обходил механику:
---   * радио капсулы — беспроводной модем на штурманском модуле TM-NAV; дальность считается формулой CC
+--   * радио ЛОЦМАНа — беспроводной модем на штурманском модуле TM-NAV или на компьютере ИИ (после переезда —
+--     там, где их поставили: позицию и модемы TM-NAV измеряет сам); дальность считается формулой CC
 --     (modem_range у земли, растёт выше высоты 96 до modem_high_altitude_range у потолка мира);
 --   * вышки-ретрансляторы (компьютеры с меткой TM-RELAY…, программа tmrelay) продлевают связь: каждая
 --     сообщает капсуле, что жива, а позицию и дальность вышки капсула измерила сама при установке;
@@ -72,11 +73,18 @@ local function dist2(a, b)
   return dx * dx + dy * dy + dz * dz
 end
 
+-- Радио ЛОЦМАНа из статуса TM-NAV: список (модем на модуле и/или на компьютере ИИ); старый формат — одно поле radio.
+local function radios_of(nav)
+  if not nav then return {} end
+  if type(nav.radios) == "table" then return nav.radios end
+  return nav.radio and { nav.radio } or {}
+end
+
 -- Описание связи для контекста ИИ и экрана.
 function M.describe(nav)
-  local r = nav and nav.radio
-  if not r then return "радио капсулы: нет данных" end
-  local s = r.ender and "радио капсулы: эндер-модем (без ограничений)" or ("радио капсулы: беспроводной модем, дальность " .. (r.range or "?") .. " блоков")
+  local r = radios_of(nav)[1]
+  if not r then return "радио ЛОЦМАНа: нет данных (нет беспроводного модема на штурманском модуле или компьютере ИИ)" end
+  local s = r.ender and "радио ЛОЦМАНа: эндер-модем (без ограничений)" or ("радио ЛОЦМАНа: беспроводной модем, дальность " .. (r.range or "?") .. " блоков")
   local on, total = 0, 0
   for id, rr in pairs(state.relays) do
     total = total + 1
@@ -86,18 +94,22 @@ function M.describe(nav)
   return s
 end
 
--- В зоне ли связи игрок. nav = статус TM-NAV { x,y,z,dim, radio={x,y,z,dim,range,ender} }.
+-- В зоне ли связи игрок. nav = статус TM-NAV { x,y,z,dim, radios={{x,y,z,dim,range,ender},…} }.
 function M.in_zone(cfg, player, nav)
   if not cfg.comm_zone then return true, "проверка зоны выключена" end
-  if not nav or not nav.radio then return true, "нет данных навигации" end  -- не наказываем за сбой модуля
-  local r = nav.radio
-  if r.ender then return true, "эндер-модем капсулы" end
+  local radios = radios_of(nav)
+  if #radios == 0 then return true, "нет данных навигации" end  -- не наказываем за сбой модуля
+  for _, r in ipairs(radios) do
+    if r.ender then return true, "эндер-модем ЛОЦМАНа" end
+  end
   for id, rr in pairs(state.relays) do
     if rr.ender and alive[id] and util.now() - alive[id] < 180 then return true, "эндер-вышка #" .. id end
   end
   local p = link.call("pos", { player = player })
   if not p then return true, "позиция неизвестна" end
-  if p.dim == r.dim and dist2(p, r) <= (r.range or M.RANGE_LOW) ^ 2 then return true, "радио капсулы" end
+  for _, r in ipairs(radios) do
+    if p.dim == r.dim and dist2(p, r) <= (r.range or M.RANGE_LOW) ^ 2 then return true, "радио ЛОЦМАНа" end
+  end
   for id, rr in pairs(state.relays) do
     if alive[id] and util.now() - alive[id] < 180 and rr.dim == p.dim and dist2(p, rr) <= (rr.range or M.RANGE_LOW) ^ 2 then
       return true, "вышка #" .. id

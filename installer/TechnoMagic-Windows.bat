@@ -9,6 +9,6 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
-powershell -NoProfile -ExecutionPolicy Bypass -File "%PS1%"
+powershell -NoProfile -ExecutionPolicy Bypass -File "%PS1%" %*
 echo.
 pause

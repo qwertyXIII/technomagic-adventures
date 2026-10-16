@@ -110,7 +110,7 @@ hash = "d358b78dee21a9d6e5f44576119f3322c7e3d1f35549efdd33975768c40e148a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/computer.snbt"
-hash = "67500a225667485b43d64e783d4cf59b03e16f5490e1cbb66c36922cad7d6d4d"
+hash = "8289ce028d4d6752966956901d4a0be00edeae2926a0efbdccbf0a5444d830af"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/create.snbt"
@@ -250,11 +250,11 @@ hash = "936f81d66b88728d0243e382f086a6a96fd8889e733641b0fcb858ec50c6c1a7"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "8631653b9a1317fe8ddb90ba88cd4b32f5947bde90bcaf9283292b7970dc9a2a"
+hash = "a315af17e95ec6e0b1e7a651d19fa9ff10b15997050207f44473ee3900dfe521"
 
 [[files]]
 file = "config/ftbquests/quests/lang/ru_ru.snbt"
-hash = "8631653b9a1317fe8ddb90ba88cd4b32f5947bde90bcaf9283292b7970dc9a2a"
+hash = "a315af17e95ec6e0b1e7a651d19fa9ff10b15997050207f44473ee3900dfe521"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/endgame.snbt"
@@ -346,27 +346,31 @@ hash = "6948589179fb910c6a767aef3a6ab490d3352a0c337ca6c8c1a3e5c5f59c84a5"
 
 [[files]]
 file = "kubejs/assets/kubejs/lang/en_us.json"
-hash = "26bb0a747a8275992c82c011957225d43b717498b5425707d39c6520512ab454"
+hash = "10f108a07f3acc3f0df01b5ee3a473a4e617bb07b42afec2dbd0f3d7d9d471de"
 
 [[files]]
 file = "kubejs/assets/kubejs/lang/ru_ru.json"
-hash = "26bb0a747a8275992c82c011957225d43b717498b5425707d39c6520512ab454"
+hash = "10f108a07f3acc3f0df01b5ee3a473a4e617bb07b42afec2dbd0f3d7d9d471de"
 
 [[files]]
 file = "kubejs/client_scripts/tm_tooltips_gen.js"
-hash = "30f2e6c4d83b75bae39bc46de05334702a7b323a7bbf68f15c04dcf6c6f2c8c9"
+hash = "c419878b2861522e188eaa8db44e8472940def7ad66abb43385da691c139b03b"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/autorun/tmai_boot.lua"
-hash = "25b14e2cbf39cc24d078ba0495adabd734b71b21d2d6af46bd7720ffe1100373"
+hash = "885ae9902a692a3925340cbeb826741a56fcd3e26e2f83969d831d7752947f40"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/help/tmai.txt"
-hash = "cbaf4cded33387ccb0992c5c1c50054f105f23145c92002bde8d45e0e512c477"
+hash = "f65d78fc713f9aec696dade413d9c183502ea1748d3854b7ee6fa6ea8693cac3"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/help/tmexec.txt"
+hash = "bbc6db37f91aed692d7de2718a1053ff4e76a38f15bc5e79f0ccaa1e38fe6b6c"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/app.lua"
-hash = "a4df7b08183bf5435d14c61a94e4e725b099a66c0fd1859a11314f95fc3fce81"
+hash = "98eb6ff6707bdf0a13bdab459162b2fcc7a38a3b9c502dba2b78bfdfaa0d4487"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/chat.lua"
@@ -374,7 +378,7 @@ hash = "b77cc3e6996caf7c3fbd07cfa8e4014d4568192671e45e7a3372a03225116338"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/config.lua"
-hash = "be450aa0d4b0d6332d96347a732871153283242f1d770f918044c48ab119d3c2"
+hash = "d5155e3eed1eb292c97324e8fbc80ca4e25775dda38ea724df7d4aa69f2c3d70"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/embed.lua"
@@ -386,11 +390,11 @@ hash = "00170ba1b989291b2b934d1db571080e7413b67ae5dffb28bed0270ee324e270"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/guard.lua"
-hash = "79696dda983f516caea59f0f244615a7010e326e56b098bdc19a452fe184e0b8"
+hash = "baca5856a0f2dee2693a51282f8e9ed378fdac9bffe27da577650b047ca5d955"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/history.lua"
-hash = "a5a16c0e6a5e14ee50ba77c06a2b6b35eab559a9fecaebd7f040ed7cf59ae02d"
+hash = "ac0ec10af5abc25396739fec52c7784babd1c840ed444c7ab97c279b486beda2"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/json.lua"
@@ -398,15 +402,15 @@ hash = "68c58e92367768aefbbcc9b600f6e52d2879e252b87930589244de1cedf53ad6"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/kb.lua"
-hash = "b2fb63490fc0df2181d7fa14500aacad0b2707be7c40e0d6f3a8ad8f24c3c642"
+hash = "3566de0a3e881db0ac641ec500c5f1ae26809050c2d0652b43ac2ff60fbac75a"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/link.lua"
-hash = "0d28f965ba6c6e046219d8fe0c6cd7eaccc630e6a1a295067497d6c757642b54"
+hash = "fa04cb88a44b06801e2e2067ad02958ff92aff3ccc68265206150b7bc100f716"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/llm.lua"
-hash = "8fd72e831611b60ef8ce5f8bccb0b9c78ef5b3b87ff5fc8974287efd89ae30a0"
+hash = "137384b3373ceed34dc2e18462c693bd419692050160610339d4f6441ad81e03"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/lore.lua"
@@ -418,7 +422,7 @@ hash = "d2e6fb190af81de44ed26ff486adc256635aea15e6127891d86076c337feeeaa"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/power.lua"
-hash = "91968d1cce776e3c009c5f7dd56f01d3dff37a77b94efbe63662055e027fb820"
+hash = "3fc8622a12a0b3cd63dc5f7b22dead59618353be4714030cb4df928b6fbbb66b"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/prompt.lua"
@@ -438,11 +442,15 @@ hash = "2730915afebb151a43b981050d7a047f48ebdd6c3c42b9c27ab4a18fc2e6947a"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/scripts.lua"
-hash = "fab68303b288021634e709c76d651335bbbfa82aead5c9f7be5521cb4eb23b1a"
+hash = "e0680ee02e688633d2c6ddf8476912d1a0ba8abc2f78fcb26b097ba46b3501ec"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/sha256.lua"
+hash = "d03c438f9cd068d0b826fb96aa1551dd3972b5705aeb8b47b4cf5cc03cc1305d"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/tools.lua"
-hash = "1bfe458f73cf374c20ebbb0a8ee6a4aaad0183c1433d972219b6dfbba72c8c52"
+hash = "964d029d459848ab955adee9af4617a4a44c1c2faf7fee7f6300f7cd45610bcd"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/tts.lua"
@@ -454,7 +462,7 @@ hash = "7c8c50e843a74378f1fdcab4d85d8015372a787dcf9418d0f35842280e358fd3"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/ui.lua"
-hash = "fb3d54409875193e98a19f78f63965016dc6f51a289a856f08bdd73d08fcf79c"
+hash = "b3c568ddd2775ce55b9f85afb74d41aac10d1e0d9512b4673cb70f5d2715d7f1"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/util.lua"
@@ -466,11 +474,11 @@ hash = "1877986855430898a00406b27ee16e99715644fdf741ccc44dff903cc5682171"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/programs/tmexec.lua"
-hash = "2bdf25853c7f4839488449d1f162452ae9f79d8d81398ee1284667ce485e0437"
+hash = "b7769e41a8cb94d737bc5c63995fa5e5a0314232c7014fed693301da8d299f8a"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/programs/tmnav.lua"
-hash = "f029bc0091dd14a45c1a47bfc332e6cbe4dcfadaee652f9bf4b51d84921ac55c"
+hash = "a3dbdb18c9b88d9686004ba5a0437896610bc9b9a7d102627220db30850ba1ac"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/programs/tmpda.lua"
@@ -538,7 +546,7 @@ hash = "59124a5b880b1ebde6a10143d84db5c679e9ab26a1d0b6d47bfdd16b4a96fa31"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/kb/index.tsv"
-hash = "551807f7e3c4f02bdfd86d0cd743301587888fa9b4063855b6b33f7e4a591e62"
+hash = "e72e5c4001cc3c9952a1ade19bf0e78179f002291d7b9d691eef5996d5d0cda5"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/kb/magic/apotheosis.md"
@@ -617,6 +625,10 @@ file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/recipes.md"
 hash = "93d73a91e0a6885adf7f467575f7081fdae4730733d1564b5acfe44c34c21274"
 
 [[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/relocation.md"
+hash = "efa1f1f851c9e40acafe07b6ad2b1d9257e89743fc593acc2da968735d37956e"
+
+[[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/start.md"
 hash = "90bf79d828247c7af51adde626407de19a7614f7e7746070aaec7e535c3c00f4"
 
@@ -635,6 +647,122 @@ hash = "20c2188dfdd8eb7328e55c6304b033a264e4e9a6eacfc7f4166276be06be4f38"
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/world.md"
 hash = "5ba5cd1ab28c9d19c74f78053f650194fa9306d0a395113580a9c99721a18621"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/00_rules.md"
+hash = "29c639e65934d466a0c80922069b27aaf6b2af35ace3df09dbc60beb7fb9bd36"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/01_lang.md"
+hash = "ad4f32ea6fa7ad587fef32a665d370a125c732a777abb12e7d9ac2f1d48918a6"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/02_events.md"
+hash = "fd156579d4ae7ac2750e4296e1c16cc0b1e1b41b6db300fed5133ee0a9c7eb30"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/03_os_fs.md"
+hash = "9e3f045cfee085a9e87bbd2db2c784310c8bf6373fc220516cf06b7c367354e2"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/04_term.md"
+hash = "9f5940a43aca62e61456852e2bf7279de85316974567e889974230c8a58dd599"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/05_peripheral.md"
+hash = "ee01a5d3013db0ee469dfc19d21d0a2be8807176e2eb6915b21c9673f0526421"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/06_redstone.md"
+hash = "3d62cbf8da73597e5717a1e6efdc970d770b35a5b2b71d57fe7f0d5b5f04daec"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/07_rednet.md"
+hash = "0154282149cac387b545f9a3c01bfc235ea4e11ae12c9dc3b2219055fb422fa1"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/08_http.md"
+hash = "8f1fc656e7657ef2f8c3b97e450cdf85af9f78a76872312f1f7ae421d1bcaa6d"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/09_turtle.md"
+hash = "c9b65b8750795d1e69b7bd1aa41d258b2061e1e80d69b934d3f8806d877873a5"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/10_turtle_nav.md"
+hash = "2d0d823e4243d964c27491fdcf4193f33815468b32baf6a1076b362f24749c5b"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/11_errors.md"
+hash = "7366c576356303da5824bf4046e60fcbe841bc040915a1ed7eb99a6a9c0644c5"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/12_ap_chat.md"
+hash = "d1fcfa513151aba88e2825ead10703682b1a864af7b6daefefc9e0fef2eeed8f"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/13_ap_sensors.md"
+hash = "368a4e1405c9fbb9ac3f01198d7b1fdf0d80a9e2a78a649b236590c925e2d006"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/14_ap_me.md"
+hash = "bfae01b67a0c749b2fe4df25e25cd048086fcca1fde219c6ca5e8cda6bf1fa54"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/15_mekanism.md"
+hash = "58f9ac70e8a1202dec209c96135003b347bcfbdb208ef713ec2a53bbbd59f291"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/16_mekanism_reactors.md"
+hash = "0e824276a7d8588874cbeafcf7cc992a9564de776c842ddc8294ef10d0ac9b16"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/17_extreme_reactors.md"
+hash = "d4b5058cf7f692d2fd855f5ed73a245fc63b7892a488b5a0a123718fb5502498"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/18_create.md"
+hash = "ab8025fbdfb2d19789c43d26ce9bd1383c101dd192b047be80d33086db7baf9c"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/19_other_mods.md"
+hash = "5c513ea09f8b442ae0c74c0fec31383353c0bc45082a768f05f24d805917667d"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/20_ex_mine.md"
+hash = "977f5297edef0fbfa626daad9cd2dfa1492301acbd53a868dfcc4cbfd218d84b"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/21_ex_treefarm.md"
+hash = "c5acda99da9bfc4f4ecc0d4a5fe4daa2a147ea691035e2ff11b690379b107a19"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/22_ex_sort.md"
+hash = "50a8674108f938b10f2be6de917c60857fdc80dc3f8ffd6d09dd66263c213fb4"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/23_ex_reactor_er.md"
+hash = "2c700ed36f5c95feff8f06970b179d4d9ebcb509c269996a11bc75c2bc03bf20"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/24_ex_reactor_mek.md"
+hash = "929b1a1ade440e049c7578b27501c50df1146df1a5298a6aae1ebc6f2dc4a9d6"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/25_ex_energy.md"
+hash = "39a01cef12cde828ad1e7c5d464d8a252cb77ce40586a6883bdd25d74b0cfcae"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/26_ex_autocraft.md"
+hash = "f7ecdf953ef74ab8654fd122fdfc5e997cf92415f05061573a7a748649cfd4ec"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/27_ex_alerts.md"
+hash = "29def534382b6ceaa7f29957c0e243fc152e4381014e0c4610ae2f623d6ed04b"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/tmai/kb/skills/lua/28_ex_rednet.md"
+hash = "08b38d25db9e63e65cf3b68705f937ba7ca8d3409c992c35fd6e72a9efbde269"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/kb/space/ad_astra.md"
@@ -658,7 +786,7 @@ hash = "50054c969775cfab926deeff7217ea7899148f45bebf5c42928ed44a3f2c2624"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/cc_tweaked.md"
-hash = "7942dcb2162c7201af7da2fc05ed2a70c16a2d91de459b25b1a4e5c17b0d2ab5"
+hash = "6b3137aab7cdd552413bdff108f33c0108db33afec4593213a78d6df62f4ebe7"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/kb/tech/create.md"
@@ -994,7 +1122,7 @@ hash = "d0d0fda73df524da7921d64f83dcdb82c4e2eee9d5ae3463d48026c7b0d04711"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/persona.txt"
-hash = "621b79d31992e2ab2b5fc10124a2cd287d7c6a02f49aefc5c1c8edaffc5a123a"
+hash = "e9d0c3b544292ee53af16c95f837cc6b9eb677b25c3e5fa8d83a30a754a629a9"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/quests.tsv"
@@ -1065,6 +1193,10 @@ file = "kubejs/server_scripts/tm_ai_core.js"
 hash = "3bf33e3d247c145dc5be384c071104dddf6c89981895cd539b27ee9e876a166f"
 
 [[files]]
+file = "kubejs/server_scripts/tm_ai_relocate.js"
+hash = "dee2f1cb60bfe4cce7955f9d989ad066e851b29dbb18d45dce7f1c400e710c60"
+
+[[files]]
 file = "kubejs/server_scripts/tm_fuel.js"
 hash = "07815f6c2b5d89d12c20a46abe8515e8a5306b44008a1baf0374dbcc62ca39e1"
 
@@ -1078,7 +1210,7 @@ hash = "9d8f73729ea367689b3e5c76e1f99e588739e08bd7b379467a8601bcd478e7ef"
 
 [[files]]
 file = "kubejs/server_scripts/tm_recipes.js"
-hash = "30c05850094ef5ac82dd0d918f741c7819e6c5e79c3aaa9e599475cc357b4e05"
+hash = "f595b095c3899511b54e6f9b7225803d533415cedf430e1384cb0c17b07292b4"
 
 [[files]]
 file = "kubejs/server_scripts/tm_tacz.js"
@@ -1086,7 +1218,7 @@ hash = "d5cb34c4c538887673f9e1b0c5d785895b9cc7270903089c2edcc01660742c35"
 
 [[files]]
 file = "kubejs/server_scripts/tm_world.js"
-hash = "5a77a9c793f383a3b6d08f7b878c7a99e4fb5bde1fcccd4f7059c437dc3ac189"
+hash = "dd49c452e69e55bbdfd31347798bb622c8e3f69f1afd0ee5d6b331496458c3d9"
 
 [[files]]
 file = "kubejs/startup_scripts/tm_ai_core.js"
@@ -1094,7 +1226,7 @@ hash = "359437ddedcc85c8f4e82d3f9d4770cce6ff7ed7d5b858de3c4a309921c9760d"
 
 [[files]]
 file = "kubejs/startup_scripts/tm_items_gen.js"
-hash = "b1600f024dc0827a2ede62b49660320f4b6bdd51d393807d294ab1f675906396"
+hash = "997cbaca23866b9f168d48d8e5a91a60e1bde9c92af6555dba5b4ce7b2ab5154"
 
 [[files]]
 file = "mods/accessories.pw.toml"
@@ -1138,7 +1270,7 @@ metafile = true
 
 [[files]]
 file = "mods/ambientsounds.pw.toml"
-hash = "cbce99e396e7237be263e91001785d9811f4e7133dd0e556ab7c646ea37b20f3"
+hash = "9eb630080546b1ad9c4f6d15017ffefd9455d90c12cff6e6078f01b90a027923"
 metafile = true
 
 [[files]]
@@ -1218,7 +1350,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-clouds.pw.toml"
-hash = "ff68a3c161324e02415d4f2b6806a3b3ebef9ea1c8fff6925ce65e6b8b9d1417"
+hash = "3e9d3081128a62ea96fda702f69926240d75bff30025463314a0d17694214b93"
 metafile = true
 
 [[files]]
@@ -1239,6 +1371,11 @@ metafile = true
 [[files]]
 file = "mods/brandons-core.pw.toml"
 hash = "e86ba611faf7caeed1ea1191e17d6f396e9467a055facf94ab106ef87c24b305"
+metafile = true
+
+[[files]]
+file = "mods/c2me-neoforge.pw.toml"
+hash = "6b5ca6ccbffb900ed868de62c9c13a09b38ffed36b00e51ceaab5468b6941041"
 metafile = true
 
 [[files]]
@@ -1264,6 +1401,11 @@ metafile = true
 [[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "75181b55e0407d1fca1e2f346c6501f919f5109545990ddfb66db9cd1b771f8a"
+metafile = true
+
+[[files]]
+file = "mods/clumps.pw.toml"
+hash = "2acaff560bbda5741538528a2967355ec86a8f7564adba0b2316989c66892374"
 metafile = true
 
 [[files]]
@@ -1388,7 +1530,7 @@ metafile = true
 
 [[files]]
 file = "mods/entity-model-features.pw.toml"
-hash = "c875585a3269432ba23b379665cb287bd88517c7dbc1a22d0b5df9294f0a2ba4"
+hash = "3c83a8aa13c4c329a4343a65c7c70b069ae3dd010b9bf8604f611b68b7258a36"
 metafile = true
 
 [[files]]
@@ -1398,7 +1540,7 @@ metafile = true
 
 [[files]]
 file = "mods/entitytexturefeatures.pw.toml"
-hash = "37ae0fc372cc387710fb7cb525f79a405e88f9e88786f83c1e0834e127997d35"
+hash = "4d8242b5720dc6188bf2e9593017ecd2d62d4a7aaeadddabc8211670b35d21bf"
 metafile = true
 
 [[files]]
@@ -1573,7 +1715,7 @@ metafile = true
 
 [[files]]
 file = "mods/iris.pw.toml"
-hash = "db1c1e6382878b78e994dba1b9026935f8d1c5ca685c89d2437858e0a0dcab58"
+hash = "5817f6d1fe141d139934bcc91c9df424a452deee3893819bff4941359f5709d1"
 metafile = true
 
 [[files]]
@@ -1608,7 +1750,7 @@ metafile = true
 
 [[files]]
 file = "mods/lambdynamiclights.pw.toml"
-hash = "ebf0dae777cc19c354a662dc8144009dff7269b2d05624b4591fcb7de56fc14e"
+hash = "44490fdeac32791843e1c7924915aac6b5b5ffb5b74ea9c2e4702ec932ba2d0a"
 metafile = true
 
 [[files]]
@@ -1624,6 +1766,11 @@ metafile = true
 [[files]]
 file = "mods/lionfish-api.pw.toml"
 hash = "64acab1580ca6edd8b1dd185e914aeee7aa551a88a7cd7f0f9370a82aaadfef6"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+hash = "51e129832b04acd57da470fc41725bad5e101b6a6b1d4901fd8ea7a92b14e13d"
 metafile = true
 
 [[files]]
@@ -1797,7 +1944,7 @@ hash = "acecbf9ad0ba2dad8f931a6cf9dd4cb7a538bd887e28df7a36056a1f3bb8c842"
 
 [[files]]
 file = "mods/particle-rain.pw.toml"
-hash = "0036fedda388192221893df1b2e5c1e23af000f98c52fea383e6d2d1e85a3bcd"
+hash = "88877526c9025b295b3691d2634d04d82544414fc13988e6f7029735ad450328"
 metafile = true
 
 [[files]]
@@ -1896,6 +2043,11 @@ hash = "7815e5a589de0c02a62ae83590e1f75f4d0c269e48f2435ce2ac448976ddf49f"
 metafile = true
 
 [[files]]
+file = "mods/scalablelux.pw.toml"
+hash = "9d9330972174ff5c68779f15ecd7023b357eb2e0a5bdc99b63ca7768e90616f1"
+metafile = true
+
+[[files]]
 file = "mods/searchables.pw.toml"
 hash = "ce9ddada6ffd55a512149cc474c6a453281a997a5fdf1b7b4a2cc73f875e704a"
 metafile = true
@@ -1947,7 +2099,7 @@ metafile = true
 
 [[files]]
 file = "mods/sound-physics-remastered.pw.toml"
-hash = "258a77de0a6db4c9ab045cbb240bcf4eac0dbbca3f6bc981fb461e55c247f23f"
+hash = "b4f2094e5838aea647d6fc9c3953a76bbe6ed3d0b2ed46240bfe385f4d38911b"
 metafile = true
 
 [[files]]
@@ -2067,7 +2219,7 @@ metafile = true
 
 [[files]]
 file = "mods/wavey-capes.pw.toml"
-hash = "ddea9e5a57fca3fff29f8a43df3fc4ba276ae25f63a3aaa3ddfeaae33381c21b"
+hash = "f9d8432a6661a3baa6c3f6fc42492fa37b20ba49abb397bcdb24db05dcd90e98"
 metafile = true
 
 [[files]]
@@ -2167,20 +2319,20 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/better-leaves.pw.toml"
-hash = "c26f8da8b6f013fb7e917e29fc6ae783eb379c539da12d9d61196bc762fd26e1"
+hash = "887cca8b743d657fd9210c44f84c6fe373891a204c2c6e8c64eb39d1dc00d909"
 metafile = true
 
 [[files]]
 file = "resourcepacks/fresh-animations.pw.toml"
-hash = "9dc9b1568b6eaa48e16455e2a119566aa0e1c0e6f3e71099b97c535a73d0cd84"
+hash = "ef0d79d0e46528a1ad6caa9618d3927e6d2ccb37c4a53a6f8f8decfe56ca8bcd"
 metafile = true
 
 [[files]]
 file = "shaderpacks/complementary-reimagined.pw.toml"
-hash = "507cb3963240110bc71ed7c75cac1682e66d3609536b0bc5ef90a01db3cce21f"
+hash = "c00b5aaceb83e695dc30f0fe891956d3c9d8d4f32aadd55f9c4997964f188f0d"
 metafile = true
 
 [[files]]
 file = "shaderpacks/makeup-ultra-fast-shaders.pw.toml"
-hash = "124adb8dc2e059324dc6b4d80d2b381ab92181a96abe1c2a7c58964c17903bfe"
+hash = "498307d5b8d488a2c8b7eea89b50c4b2b3cb0f7c77ba7516f5a079a05dc51cda"
 metafile = true

@@ -43,6 +43,58 @@ function M.list_targets()
   return out
 end
 
+-- Код без комментариев (strings = false — и без строк): для быстрых проверок.
+local function strip(code, keep_strings)
+  code = code:gsub("%-%-%[(=*)%[.-%]%1%]", " ")
+  if not keep_strings then code = code:gsub("%[(=*)%[.-%]%1%]", '""') end
+  local out, i, n = {}, 1, #code
+  while i <= n do
+    local ch = code:sub(i, i)
+    if ch == "-" and code:sub(i + 1, i + 1) == "-" then
+      i = code:find("\n", i, true) or n + 1
+    elseif ch == '"' or ch == "'" then
+      local j = i + 1
+      while j <= n do
+        local cj = code:sub(j, j)
+        if cj == "\\" then j = j + 2 elseif cj == ch or cj == "\n" then break else j = j + 1 end
+      end
+      out[#out + 1] = keep_strings and code:sub(i, j) or '""'
+      i = j + 1
+    else
+      out[#out + 1] = ch
+      i = i + 1
+    end
+  end
+  return table.concat(out)
+end
+
+-- Быстрые проверки кода до записи на цель (типовые ошибки, см. навык lua.rules). nil — всё в порядке.
+local function lint(code)
+  local plain = strip(code)
+  if plain:find("//", 1, true) or plain:find("[&|]") or plain:find("<<", 1, true) or plain:find(">>", 1, true)
+    or plain:find("~[^=]") then
+    return "операторы Lua 5.3 (//, &, |, ~, <<, >>) в CC: Tweaked (Lua 5.2) не работают: math.floor(a / b), bit32.band/bor/bxor/bnot/lshift/rshift"
+  end
+  if plain:find("[^%w_]shell%s*%.") or plain:find("^shell%s*%.") or plain:find("multishell%s*%.") then
+    return "в tmexec нет shell и multishell: не вызывай shell.run/openTab, пиши всё в одном файле"
+  end
+  if strip(code, true):find("tmai_", 1, true) then
+    return "протоколы и имена tmai_* заняты капсулой: назови свой протокол иначе"
+  end
+  if plain:find("os%.reboot") or plain:find("os%.shutdown") then
+    return "os.reboot/os.shutdown остановят агента tmexec: не используй их"
+  end
+  if plain:find("while%s+true%s+do") then
+    local yields = { "sleep%(", "pullEvent", "receive%(", "startTimer", "turtle%.", "parallel%." }
+    local ok = false
+    for _, p in ipairs(yields) do if plain:find(p) then ok = true; break end end
+    if not ok then
+      return "бесконечный цикл без sleep/os.pullEvent: будет «Too long without yielding» и нагрузка на сервер — добавь sleep(…) или ожидание события"
+    end
+  end
+  return nil
+end
+
 local function sanitize(name)
   name = tostring(name or "script"):lower():gsub("[^a-z0-9_]", "_"):sub(1, 24)
   if name == "" then name = "script" end
@@ -56,7 +108,9 @@ function M.propose(args, player)
   local code = tostring(args.code or "")
   if #code == 0 or #code > 16000 then return nil, "код пустой или длиннее 16000 байт" end
   local f, err = load(code, "=" .. sanitize(args.name), "t", {})
-  if not f then return nil, "синтаксическая ошибка: " .. tostring(err) end
+  if not f then return nil, "синтаксическая ошибка: " .. tostring(err) .. " (Lua 5.2: нет //, &, |, ~, <<, >> — см. lua.lang)" end
+  local why = lint(code)
+  if why then return nil, why .. ". Исправь и вызови script_propose снова." end
   -- переиспользуем код задания, если это исправление того же скрипта на той же цели
   local jcode
   for c, j in pairs(jobs) do
@@ -102,12 +156,25 @@ end
 
 function M.is_job(code) return jobs[code] ~= nil end
 
+-- код программы для исправления (без него модель «чинит» вслепую)
+local function code_for_fix(j, max)
+  local code = tostring(j.code_text or "")
+  if #code > max then code = code:sub(1, max) .. "\n-- ...(обрезано)" end
+  return code
+end
+
 function M.status(jcode)
-  local out = {}
+  local out, errors = {}, 0
+  for c, j in pairs(jobs) do
+    if (not jcode or c == jcode) and j.state == "error" then errors = errors + 1 end
+  end
   for c, j in pairs(jobs) do
     if not jcode or c == jcode then
-      out[#out + 1] = { job = c, target = j.target, name = j.name, state = j.state,
+      local row = { job = c, target = j.target, name = j.name, state = j.state, description = j.description,
         error = j.last_error, output = j.output and j.output:sub(-600) or nil }
+      -- упавшая программа: отдать её код, чтобы исправить, а не переписать заново
+      if j.state == "error" and (jcode or errors == 1) then row.code = code_for_fix(j, 6000) end
+      out[#out + 1] = row
     end
   end
   return out
@@ -117,9 +184,12 @@ end
 function M.fix_prompt(j)
   j.fixes = (j.fixes or 0) + 1
   return string.format(
-    "Скрипт «%s» на компьютере #%d завершился ошибкой:\n%s\nПоследний вывод:\n%s\n" ..
-    "Исправь программу и вызови script_propose с тем же name и target. Попытка %d из 3.",
-    j.name, j.target, tostring(j.last_error), tostring(j.output or ""):sub(-500), j.fixes)
+    "Скрипт «%s» на компьютере #%d (%s) завершился ошибкой:\n%s\nПоследний вывод:\n%s\nКод программы:\n%s\n" ..
+    "Сохрани назначение, настройки и поведение программы — исправь только причину ошибки. " ..
+    "Найди причину (раздел навыка lua.errors, методы периферии — в lua.* через kb_read), исправь программу " ..
+    "и вызови script_propose с тем же name и target. Попытка %d из 3.",
+    j.name, j.target, (j.description or "") ~= "" and j.description or "без описания", tostring(j.last_error),
+    tostring(j.output or ""):sub(-500), code_for_fix(j, 8000), j.fixes)
 end
 
 return M

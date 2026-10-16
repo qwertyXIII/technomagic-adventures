@@ -11,3 +11,8 @@ hash = "33fddb430e16222902eac75b8b3d57c381b0f3cc729f3b56c4628df12ca108f23a0b11e2
 [update.modrinth]
 mod-id = "YL57xq9U"
 version = "KduFYu4t"
+
+[option]
+optional = true
+default = true
+description = "Загрузчик шейдеров. Без него шейдеры Complementary и MakeUp не работают. Сам по себе почти не влияет на FPS, нужно лишь немного памяти. Шейдер выбирается в игре вручную, в настройках графики. Нагрузка: низкая (пока шейдер не включён)."

@@ -25,9 +25,9 @@ local N = function(d) return { type = "integer", description = d } end
 
 local DEFS = {
   base = {
-    { name = "kb_search", description = "Найти разделы справочника по модам и сборке. Вернёт id и заголовки.",
+    { name = "kb_search", description = "Найти разделы справочника по модам и сборке и навыка Lua для программ CC (id lua.*, skill=true). Вернёт id и заголовки.",
       parameters = obj({ query = S("что искать, по-русски или ID мода/предмета") }, { "query" }) },
-    { name = "kb_read", description = "Прочитать раздел справочника целиком по id.",
+    { name = "kb_read", description = "Прочитать раздел справочника или навыка целиком по id.",
       parameters = obj({ id = S("id раздела из kb_search") }, { "id" }) },
     { name = "memory_list", description = "Список находок, которые экипаж положил в Ящик памяти (записки, журналы).",
       parameters = obj({}) },
@@ -65,12 +65,14 @@ local DEFS = {
     { name = "player_position", description = "Где сейчас спрашивающий игрок (координаты и измерение).", parameters = obj({}) },
   },
   scripts = {
-    { name = "computers_list", description = "Компьютеры/черепашки с агентом tmexec, на которых можно запускать скрипты.",
+    { name = "computers_list", description = "Компьютеры/черепашки с агентом tmexec (id, метка, kind: turtle/computer), на которых можно запускать скрипты.",
       parameters = obj({}) },
-    { name = "script_propose", description = "Предложить Lua-программу для CC: Tweaked. Она будет записана на целевой компьютер, запуск — после подтверждения игроком.",
+    { name = "script_propose", description = "Предложить Lua-программу для CC: Tweaked. ПЕРЕД вызовом прочитай навык (kb_read): lua.rules, если его нет в СПРАВКЕ, ближайший пример lua.ex.* и раздел нужной периферии; методы модов — только оттуда. Программа записывается на целевой компьютер, запуск — после подтверждения игроком.",
       parameters = obj({ target = N("ID компьютера из computers_list"), name = S("латиницей, до 24 символов"),
-        description = S("что делает программа"), code = S("полный код Lua") }, { "target", "name", "code" }) },
-    { name = "script_status", description = "Статус запущенных скриптов (вывод, ошибки).",
+        description = S("что делает программа"),
+        code = S("полный код Lua 5.2 для CC: Tweaked по правилам lua.rules: sleep/события в циклах, проверка периферии, комментарии по-русски, вывод на экран латиницей") },
+        { "target", "name", "code" }) },
+    { name = "script_status", description = "Статус скриптов: состояние, последний вывод, текст ошибки со стеком и код упавшей программы (исправляй её, а не пиши заново; lua.errors).",
       parameters = obj({ job = S("код задания, необязательно") }) },
     { name = "script_stop", description = "Остановить скрипт по коду задания (или все).",
       parameters = obj({ job = S("код задания, пусто = все") }) },

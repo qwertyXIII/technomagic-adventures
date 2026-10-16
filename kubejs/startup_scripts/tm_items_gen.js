@@ -65,6 +65,7 @@ StartupEvents.registry('item', event => {
     ["ai_repair_memory_1", "minecraft:item/disc_fragment_5", 16, "uncommon"],
     ["ai_repair_memory_2", "minecraft:item/amethyst_shard", 16, "rare"],
     ["ai_repair_quantum", "minecraft:item/ender_eye", 16, "epic"],
+    ["ai_transfer_module", "minecraft:item/shulker_shell", 1, "uncommon"],
   ]
   items.forEach(row => {
     const b = event.create(row[0]).texture(row[1]).maxStackSize(row[2]).rarity(row[3])

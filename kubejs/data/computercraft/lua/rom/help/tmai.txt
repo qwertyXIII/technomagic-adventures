@@ -18,3 +18,11 @@ Ochistit' istoriyu: tmai reset-history
 Logi: /tmai/log.txt   Sostoyanie: /tmai/state.json
 Vyshka svyazi: label set TM-RELAY-1, reboot. KPK: v nazvanii "KPK".
 Programmy ot LOCMANa na drugom komp'yutere: tmexec
+
+Pereezd (perenos LOCMANa na bazu):
+  komp'yuter TM-AI - slomat' kirkoy: metka i pamyat' sohranyatsya;
+  shturmanskiy modul' (TM-NAV) i yadro - "modulem perenosa" (PKM po bloku),
+  postavit' - Shift+PKM. Yadro - vplotnuyu k TM-AI (luchshe pod nim).
+  Svyaz' TM-AI <-> TM-NAV: provodnoy modem/kabel', besprovodnoy ili ender-modem.
+  Radio (zona chata) - besprovodnoy modem na TM-NAV ili na TM-AI.
+  Esli modul' "ne uznaet" komp'yuter - postav'te TM-AI vplotnuyu k TM-NAV.

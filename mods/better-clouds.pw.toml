@@ -11,3 +11,8 @@ hash = "b8d6946e99965a4037fd5c83a8aa8dc53b6b3360aa73be0e9a579088a8dd923d06ffadcd
 [update.modrinth]
 mod-id = "5srFLIaK"
 version = "UvRCtZxT"
+
+[option]
+optional = true
+default = true
+description = "Объёмные красивые облака вместо плоских. Нагрузка: средняя (видеокарта). На слабых машинах лучше выключить."

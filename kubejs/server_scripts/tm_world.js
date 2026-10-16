@@ -3,7 +3,8 @@
 //  2) разбитая спасательная капсула на точке появления: шаблон kubejs/data/tm/structure/crash_capsule.nbt
 //     (генерируется tools/gen/gen_capsule.py), случайный поворот, «якорь» — центр пола внутри капсулы;
 //     подсыпка грунта под воронку; точка возрождения — внутри капсулы;
-//  3) счётчики: tm_story (сюжет, для диалогов NPC), tm_ai_repair (ремонт ядра ЛОЦМАНа).
+//  3) счётчики: tm_story (сюжет, для диалогов NPC), tm_ai_repair (ремонт ядра ЛОЦМАНа);
+//  4) реестр для переезда ЛОЦМАНа: место штурманского модуля (tm_nav_pos) и компьютера ИИ (storage tm:ai ai_pos).
 // Стартовый набор лежит в шкафчике Lootr внутри капсулы (loot table tm:chests/capsule_locker) — у каждого свой.
 
 const CAPSULE = {
@@ -12,6 +13,8 @@ const CAPSULE = {
   anchor: [11, 3, 11],   // центр пола внутри капсулы (координаты шаблона)
   ground: 5,             // уровень исходной поверхности в шаблоне
   core: [11, 2, 15],     // ядро ЛОЦМАНа (координаты шаблона)
+  ai: [11, 3, 15],       // компьютер ИИ TM-AI
+  nav: [13, 3, 14],      // штурманский модуль TM-NAV (командный компьютер)
   coreCharge: 30000      // FE: остаточный заряд при старте мира
 }
 
@@ -86,6 +89,14 @@ function tmPlaceCapsule(server) {
   } catch (err) {
     console.warn('[TM] core charge: ' + err)
   }
+  // переезд ЛОЦМАНа (tm_ai_relocate.js): где стоит «свой» штурманский модуль и компьютер ИИ
+  // (имена уникальные в пределах функции: Rhino не любит повторные let/const, ср. «n» в цикле подсыпки)
+  const navXZ = tmRotXZ(rot, CAPSULE.nav[0], CAPSULE.nav[2])
+  server.persistentData.putString('tm_nav_pos', `minecraft:overworld ${ox + navXZ[0]} ${oy + CAPSULE.nav[1]} ${oz + navXZ[1]}`)
+  server.persistentData.putBoolean('tm_nav_known', true)
+  const aiXZ = tmRotXZ(rot, CAPSULE.ai[0], CAPSULE.ai[2])
+  server.runCommandSilent(`data modify storage tm:ai ai_pos set value "minecraft:overworld ${ox + aiXZ[0]} ${oy + CAPSULE.ai[1]} ${oz + aiXZ[1]}"`)
+
   const p = tmRotXZ(rot, CAPSULE.anchor[0], CAPSULE.anchor[2])
   const spawnY = oy + CAPSULE.anchor[1]
   server.runCommandSilent(`setworldspawn ${ox + p[0]} ${spawnY} ${oz + p[1]}`)

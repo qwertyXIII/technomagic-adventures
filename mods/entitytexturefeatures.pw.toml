@@ -11,3 +11,8 @@ hash = "0e349c235b509de605ef4175a60e87ee78eab208b554ebc1dfa756b18ab2b531ce4641bf
 [update.modrinth]
 mod-id = "BVzZfTc1"
 version = "lwNx1nD1"
+
+[option]
+optional = true
+default = true
+description = "[Связка EMF + ETF + Fresh Animations — включайте или выключайте все три вместе.] Разные варианты текстур одного моба и светящиеся детали. Нужен для EMF и Fresh Animations. Если выключаете ETF — выключите и EMF, иначе игра не запустится. Нагрузка: низкая–средняя."

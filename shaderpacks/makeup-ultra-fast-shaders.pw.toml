@@ -11,3 +11,8 @@ hash = "90a2f75eb073eaae5fe65f2ea5f8d656c122760c07ff75306728df4b162c42f88be531f0
 [update.modrinth]
 mod-id = "izsIPI7a"
 version = "pgb0JjoN"
+
+[option]
+optional = true
+default = true
+description = "Лёгкие шейдеры: тени и мягкое освещение с небольшой потерей FPS — вариант для слабых машин. Работает только вместе с Iris Shaders, включается в игре вручную (настройки графики). Нагрузка: средняя."
