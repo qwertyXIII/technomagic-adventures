@@ -2,6 +2,8 @@
 
 Сборка Minecraft **1.21.1 / NeoForge 21.1.262**: техника, магия, приключения, космос.
 
+👉 **[Как начать играть](docs/start.md)** — установка, новый мир, генерация мира заранее, включение бортового ИИ, что делать, если что-то не так.
+
 ## Установка и обновление
 
 **Windows:** скачайте [TechnoMagic-Windows.bat](https://github.com/qwertyXIII/technomagic-adventures/raw/main/installer/TechnoMagic-Windows.bat) и запустите двойным кликом.
