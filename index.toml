@@ -674,9 +674,8 @@ hash = "3db5943419e6b6f4e33946266be8797230434573bc68dbe3a77d72f19001ae0c"
 metafile = true
 
 [[files]]
-file = "mods/owo-network-fix.pw.toml"
-hash = "8121111f83d4d9f79bf051124588946ff65f746a842762933616edafe360feb6"
-metafile = true
+file = "mods/owonetfix-1.0.0.jar"
+hash = "acecbf9ad0ba2dad8f931a6cf9dd4cb7a538bd887e28df7a36056a1f3bb8c842"
 
 [[files]]
 file = "mods/particle-rain.pw.toml"
