@@ -9,6 +9,11 @@ file = "config/modernfix-mixins.properties"
 hash = "f17e9616aeaebd9759f12092a882d3820d7684d4c3361d792ac0eb84e7add51e"
 
 [[files]]
+file = "mods/accessories.pw.toml"
+hash = "39ec3cac812f819f45b88a70f6b83eb8c0e6007e9272bbccfb3f364b421d2631"
+metafile = true
+
+[[files]]
 file = "mods/ad-astra.pw.toml"
 hash = "5386763a89493ea2c4ab581e66ace9317641e4c6c5f094769b13e83b1f6be7aa"
 metafile = true
@@ -665,7 +670,12 @@ metafile = true
 
 [[files]]
 file = "mods/owo-lib.pw.toml"
-hash = "46831c04077a06df823bcd0f254833a90a9a9ccc78f5069f4b4c27fa301ac0cf"
+hash = "3db5943419e6b6f4e33946266be8797230434573bc68dbe3a77d72f19001ae0c"
+metafile = true
+
+[[files]]
+file = "mods/owo-network-fix.pw.toml"
+hash = "8121111f83d4d9f79bf051124588946ff65f746a842762933616edafe360feb6"
 metafile = true
 
 [[files]]
