@@ -16,6 +16,7 @@ local util = require("tmai.util")
 local json = require("tmai.json")
 local okb, build = pcall(require, "tmai.build")
 if not okb then build = nil end
+local apps = require("tmai.apps")
 
 local M = {}
 
@@ -89,6 +90,7 @@ function M.available(ctx)
   if ctx.has_me then add("me") end
   if ctx.has_nav then add("nav") end
   if ctx.has_exec then add("scripts") end
+  for _, d in ipairs(apps.tool_defs(ctx)) do list[#list + 1] = d end
   if build and build.tool_defs then
     local okd, defs = pcall(build.tool_defs, ctx)
     if okd and type(defs) == "table" then for _, d in ipairs(defs) do list[#list + 1] = d end end
@@ -101,6 +103,7 @@ local function str(v, max) v = tostring(v or ""); return v:sub(1, max or 200) en
 -- Выполнить инструмент. ctx = { player=, lore_level=, repair=, cfg= }
 function M.run(name, a, ctx)
   if build and type(name) == "string" and name:sub(1, 6) == "build_" then return build.run_tool(name, a, ctx) end
+  if apps.owns(name) then return apps.run_tool(name, a, ctx) end
   if name == "kb_search" then return kb.tool_search(str(a.query), ctx.lore_level)
   elseif name == "kb_read" then return kb.tool_read(str(a.id, 64), ctx.lore_level) or "нет такого раздела"
   elseif name == "memory_list" then local l = lore.list(); return { records = l }

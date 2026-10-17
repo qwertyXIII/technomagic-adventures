@@ -6,7 +6,9 @@
 --   scout_list / locate — поиск мест из /rom/tmai/scout.tsv (уровень ремонта, точность, перезарядка);
 --   reward      — награда за поручение из /rom/tmai/rewards.tsv (один раз на поручение);
 --   kill_track / kill_count — счёт убийств через scoreboard;
---   relay_probe — найти вышку-ретранслятор рядом с игроком (по ID её компьютера) и измерить её радио.
+--   relay_probe — найти вышку-ретранслятор рядом с игроком (по ID её компьютера) и измерить её радио;
+--   proxy — прокси для интернет-запросов компьютеров (/tmproxy); rewarded — какие поручения награждены;
+--   + операции приложений ЛОЦМАНа: модули /rom/modules/main/tmnav/<приложение>.lua (см. «операции приложений»).
 -- Запросы принимаются на канале 7300 с ЛЮБОГО модема (провод, радио, эндер — модуль и ИИ могут стоять где
 -- угодно), но только подписанные ключом спаренного компьютера ИИ (HMAC-SHA256, см. tmai.link): чужая программа
 -- в сети не может ни подделать запрос, ни повторить перехваченный. Ключ выдаётся при спаривании — первое
@@ -326,6 +328,44 @@ local function verify(msg)
   if p.t <= last_t or math.abs(os.epoch("utc") - p.t) > 30000 then return nil, "replay" end
   last_t = p.t
   return p
+end
+
+-- ---------- операции приложений ЛОЦМАНа ----------
+-- Модуль /rom/modules/main/tmnav/<id>.lua возвращает function(ops, api) и добавляет в ops свои операции
+-- с префиксом приложения ("wp_pos", "base_stats"…); занять встроенную операцию нельзя. Операция получает
+-- проверенный запрос p (поля — от ИИ) и возвращает data или nil, "ошибка". Всё, что идёт в команду сервера,
+-- проверять (api.valid_player, api.valid_id, числа — tonumber и пределы): запрос собирает ИИ, а его просит игрок.
+-- api: exec(cmd) -> ok, text; score(holder, objective) -> число; valid_player(name); valid_id(id);
+--      player_pos(name) -> {x,y,z,dim} | nil; store(id) -> сохраняемая таблица приложения; save(); util; json.
+local CORE_OPS = {}
+for k in pairs(OPS) do CORE_OPS[k] = true end
+local plugin_ops = setmetatable({}, {
+  __index = OPS,
+  __newindex = function(_, k, v)
+    if CORE_OPS[k] then error("операция " .. tostring(k) .. " встроенная", 2) end
+    OPS[k] = v
+  end,
+})
+local plugin_api = {
+  exec = exec, score = score, valid_player = valid_player, valid_id = valid_id, player_pos = player_pos,
+  util = util, json = json, save = save,
+  store = function(id)
+    st.apps = st.apps or {}
+    st.apps[id] = st.apps[id] or {}
+    return st.apps[id]
+  end,
+}
+local PLUGINS = "/rom/modules/main/tmnav"
+if fs.isDir(PLUGINS) then
+  for _, f in ipairs(fs.list(PLUGINS)) do
+    local name = f:match("^([%w_]+)%.lua$")
+    if name then
+      local ok, reg = pcall(require, "tmnav." .. name)
+      local ok2, err = ok and type(reg) == "function", reg
+      if ok2 then ok2, err = pcall(reg, plugin_ops, plugin_api) end
+      if not ok2 then util.log("E", "nav plugin %s: %s", name, tostring(err)) end
+    end
+  end
 end
 
 local ERRORS = {

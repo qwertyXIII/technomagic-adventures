@@ -1,12 +1,14 @@
 -- tmai.ui — экраны ЛОЦМАНа. Говорят с ИИ только здесь (терминал компьютера) и с КПК — не через игровой чат.
 --
 -- Терминал (ПКМ по компьютеру TM-AI), 51×19:
---   строка 1 — состояние коротко; строка 2 — вкладки (щелчок мышью, Tab / Shift+Tab);
+--   строка 1 — состояние коротко; строка 2 — вкладки (щелчок мышью, Tab / Shift+Tab; не влезают — листаются);
+--   Главная — тревоги и все приложения (Enter — открыть; начали печатать — переход в чат);
+--   приложения (tmai.apps: модули tmai/apps/*.lua) — свои вкладки между встроенными;
 --   Чат — лента разговора и строка ввода внизу (имя говорящего слева: определяется детектором игроков,
 --         щелчок по имени — сменить); Задания — поручения ЛОЦМАНа (Enter — взять, Delete — отменить);
 --   Память — восстановленные записи, находки, заметки (Enter — читать); Стройка — планы прораба;
 --   Устройства — что подключено и где Ящик памяти (Enter на инвентаре — сделать Ящиком памяти);
---   Настройки — ключ, адреса, модели… (Enter — изменить, ввод внизу; ключи — звёздочками).
+--   Настройки — ключ, адреса, модели… (Enter — изменить, ввод внизу; ключи — звёздочками; с ПИН — замок).
 --   PgUp/PgDn или колесо мыши — листать.
 -- Монитор (продвинутый, от 2×1 блоков): левая половина — состояние ИИ, правая — вкладки касанием
 --   (Чат, Задания, Память, Стройка); касание верхней/нижней половины текста — листать.
@@ -21,19 +23,45 @@ local config = require("tmai.config")
 
 local M = {}
 
-M.TABS = {
-  { id = "chat", title = "Чат", short = "Чат" },
-  { id = "quests", title = "Задания", short = "Зад" },
-  { id = "memory", title = "Память", short = "Пам" },
-  { id = "build", title = "Стройка", short = "Стр" },
-  { id = "devices", title = "Устройства", short = "Устр" },
-  { id = "settings", title = "Настройки", short = "Наст" },
+-- Встроенные вкладки; приложения (tmai.apps) встают между ними по order (M.set_apps).
+local BASE_TABS = {
+  { id = "home", title = "Главная", short = "Глав", order = 0 },
+  { id = "chat", title = "Чат", short = "Чат", order = 10 },
+  { id = "quests", title = "Задания", short = "Зад", order = 20 },
+  { id = "memory", title = "Память", short = "Пам", order = 25 },
+  { id = "build", title = "Стройка", short = "Стр", order = 85 },
+  { id = "devices", title = "Устройства", short = "Устр", order = 90 },
+  { id = "settings", title = "Настройки", short = "Наст", order = 95 },
 }
+local BASE_MON = { chat = true, quests = true, memory = true, build = true }
+M.TABS = BASE_TABS
 local MON_TABS = { "chat", "quests", "memory", "build" }
 local MON_FOLLOW = false   -- ИИ показал план: монитор переключится на «Стройку»
+M.apps = nil               -- реестр tmai.apps
 
--- Данные от app.lua: status, quests {active, available}, memory {rows}, devices {rows}, speaker, busy, build
-M.data = { status = {}, quests = {}, memory = {}, devices = {}, speaker = "Экипаж", busy = false }
+local function app_of(id) return M.apps and M.apps.get(id) or nil end
+
+-- Подключить приложения: вкладки терминала и монитора (monitor = true) по order.
+function M.set_apps(reg)
+  M.apps = reg
+  local tabs = {}
+  for _, tb in ipairs(BASE_TABS) do tabs[#tabs + 1] = tb end
+  for _, a in ipairs(reg and reg.list or {}) do
+    tabs[#tabs + 1] = { id = a.id, title = a.title, short = a.short, order = a.order, monitor = a.monitor }
+  end
+  table.sort(tabs, function(x, y)
+    if x.order ~= y.order then return x.order < y.order end
+    return x.id < y.id
+  end)
+  M.TABS = tabs
+  MON_TABS = {}
+  for _, tb in ipairs(tabs) do
+    if BASE_MON[tb.id] or tb.monitor then MON_TABS[#MON_TABS + 1] = tb.id end
+  end
+end
+
+-- Данные от app.lua: status, quests {active, available}, memory {rows}, devices {rows}, alerts, speaker, busy
+M.data = { status = {}, quests = {}, memory = {}, devices = {}, alerts = {}, speaker = "Экипаж", busy = false }
 M.reader = nil      -- function(row) -> заголовок, текст (чтение записи памяти); задаёт app.lua
 M.build = nil       -- модуль tmai.build (если есть)
 
@@ -59,6 +87,58 @@ end
 
 local function clear_area(t, x, y, w, h, bg)
   for yy = y, y + h - 1 do bar(t, x, yy, w, bg or colors.black) end
+end
+
+-- Полоса вкладок (строка y от x, ширина w): полные имена, если влезают, иначе короткие; не влезают и они —
+-- окно вокруг активной со стрелками < >. tabs = { {id, title, short}, … }. Возвращает зоны щелчка {x0, x1, id}.
+local function draw_tabs(t, x, y, w, tabs, active)
+  bar(t, x, y, w, colors.black)
+  if #tabs == 0 then return {} end
+  local function total(key)
+    local n = 0
+    for _, tb in ipairs(tabs) do n = n + text.len(tb[key]) + 1 end
+    return n - 1
+  end
+  local key = total("title") <= w and "title" or "short"
+  local first, last = 1, #tabs
+  if total(key) > w then
+    local ai = 1
+    for i, tb in ipairs(tabs) do if tb.id == active then ai = i end end
+    local room = w - 4
+    first, last = ai, ai
+    local used = text.len(tabs[ai][key])
+    local grew = true
+    while grew do
+      grew = false
+      if last < #tabs and used + 1 + text.len(tabs[last + 1][key]) <= room then
+        last = last + 1; used = used + 1 + text.len(tabs[last][key]); grew = true
+      end
+      if first > 1 and used + 1 + text.len(tabs[first - 1][key]) <= room then
+        first = first - 1; used = used + 1 + text.len(tabs[first][key]); grew = true
+      end
+    end
+  end
+  local zones = {}
+  local xx = x
+  if first > 1 then
+    put(t, xx, y, "<", colors.gray, colors.black)
+    zones[#zones + 1] = { x0 = xx, x1 = xx + 1, id = tabs[first - 1].id }
+    xx = xx + 2
+  end
+  for i = first, last do
+    local tb = tabs[i]
+    local room = math.max(1, x + w - xx)
+    local label = text.len(tb[key]) <= room and tb[key] or text.sub(tb[key], 1, room)
+    local on = tb.id == active
+    put(t, xx, y, label, on and colors.black or colors.lightGray, on and colors.cyan or colors.black)
+    zones[#zones + 1] = { x0 = xx, x1 = xx + text.len(label) - 1, id = tb.id }
+    xx = xx + text.len(label) + 1
+  end
+  if last < #tabs then
+    put(t, x + w - 1, y, ">", colors.gray, colors.black)
+    zones[#zones + 1] = { x0 = x + w - 2, x1 = x + w - 1, id = tabs[last + 1].id }
+  end
+  return zones
 end
 
 local function is_color(t)
@@ -133,14 +213,27 @@ local function status_rows(st)
     { "Радио", st.radio or "?", colors.white },
     { "Очередь", tostring(st.queue or 0), (st.queue or 0) > 0 and colors.yellow or colors.white },
   }
+  local na = #(M.data.alerts or {})
+  if na > 0 then table.insert(rows, 2, { "Тревоги", tostring(na), colors.red }) end
   return rows, p
 end
 
 -- ---------- терминал: состояние вкладок ----------
-local T = { tab = "chat", scroll = {}, sel = {}, edit = nil, read = nil, shift = false }
-local ed, sed            -- строка чата и строка правки настройки
+local T = { tab = "home", scroll = {}, sel = {}, edit = nil, read = nil, shift = false }
+local ed, sed            -- строка чата и строка ввода (настройка, ввод приложения, ПИН)
+-- T.edit: { setting = def } | { tab = id, p = prompt } | { pin = true }
 
 local function term_size() return term.getSize() end
+
+-- ПИН вкладки «Настройки» (tmai.pin): после верного ввода открыта 5 минут.
+local function pin_value() return tostring(settings.get("tmai.pin") or "") end
+local function settings_locked() return pin_value() ~= "" and os.clock() > (T.unlocked or -1) end
+local function start_pin()
+  local w, h = term_size()
+  T.edit = { pin = true }
+  sed = input.new({ term = term, x = 1, y = h, width = w, prompt = "ПИН: ", max = 8, history = false, mask = "*",
+    placeholder = "ПИН настроек" })
+end
 
 local function tab_index(id)
   for i, tb in ipairs(M.TABS) do if tb.id == id then return i end end
@@ -162,9 +255,48 @@ local function ensure_editors()
   T.prompt_w = pw
 end
 
--- Список строк вкладки-списка (задания, память, устройства, настройки): { text=, fg=, header=bool, row=… }
-local function list_rows(tab)
+-- Строка-состояние встроенной вкладки на «Главной».
+local function builtin_status(id)
+  if id == "chat" then return M.data.busy and "думает…" or nil end
+  if id == "quests" then
+    local a = (M.data.quests or {}).active
+    return a and (tostring(a.title) .. " " .. tostring(a.progress or "")) or nil
+  end
+  if id == "build" and M.build and M.build.list_plans then
+    local ok, plans = pcall(M.build.list_plans)
+    return ok and plans and #plans > 0 and ("планов: " .. #plans) or nil
+  end
+  if id == "settings" and (settings.get("tmai.pin") or "") ~= "" then return "под ПИН" end
+  return nil
+end
+
+local function home_rows()
   local out = {}
+  local al = M.data.alerts or {}
+  if #al > 0 then
+    out[#out + 1] = { text = "Тревоги", header = true }
+    for _, a in ipairs(al) do
+      out[#out + 1] = { text = a.text, fg = a.level == "crit" and colors.red or (a.level == "info" and colors.lightGray or colors.orange),
+        row = { kind = "alert" }, del = { kind = "alert_clear", key = a.key }, desc = "Delete — снять тревогу" }
+    end
+  end
+  out[#out + 1] = { text = "Приложения", header = true }
+  for _, tb in ipairs(M.TABS) do
+    if tb.id ~= "home" then
+      local a2 = app_of(tb.id)
+      local st = a2 and M.apps.status(a2) or builtin_status(tb.id)
+      out[#out + 1] = { text = tb.title, value = st, row = { kind = "open", id = tb.id }, desc = "Enter — открыть" }
+    end
+  end
+  return out
+end
+
+-- Список строк вкладки-списка: { text=, value=, fg=, header=bool, row=…, action=…, del=…, prompt=…, desc= }
+local function list_rows(tab, w)
+  local out = {}
+  local app = app_of(tab)
+  if app then return M.apps.rows(app, w or (term_size())) end
+  if tab == "home" then return home_rows() end
   if tab == "quests" then
     local q = M.data.quests or {}
     out[#out + 1] = { text = "Активное поручение", header = true }
@@ -194,7 +326,8 @@ local function list_rows(tab)
       if d.group then out[#out + 1] = { text = d.group, header = true }
       else
         local v = d.value
-        if d.secret then v = (v and v ~= "") and ("•••• " .. tostring(v):sub(-4)) or "(не задан)"
+        if d.secret then   -- хвост показываем только у длинных ключей (короткий ПИН так выдал бы себя целиком)
+          v = (v and v ~= "") and (#tostring(v) >= 12 and ("•••• " .. tostring(v):sub(-4)) or "задан") or "(не задан)"
         elseif type(v) == "boolean" then v = v and "да" or "нет"
         else v = tostring(v) end
         out[#out + 1] = { text = d.key, value = v, fg = colors.white, row = { kind = "setting", def = d } }
@@ -204,7 +337,10 @@ local function list_rows(tab)
   return out
 end
 
-local function selectable(rows, i) return rows[i] and rows[i].row ~= nil end
+local function selectable(rows, i)
+  local r = rows[i]
+  return r ~= nil and not r.header and (r.row ~= nil or r.action ~= nil or r.prompt ~= nil or r.del ~= nil)
+end
 
 local function fix_sel(tab, rows)
   local s = T.sel[tab] or 1
@@ -216,7 +352,7 @@ local function fix_sel(tab, rows)
 end
 
 local function move_sel(tab, dir)
-  local rows = list_rows(tab)
+  local rows = list_rows(tab, (term_size()))
   local s = fix_sel(tab, rows)
   local i = s + dir
   while rows[i] and not selectable(rows, i) do i = i + dir end
@@ -226,7 +362,19 @@ end
 -- Нижняя строка-подсказка для вкладки.
 local function hint_for(tab, sel_row)
   if T.read then return "Backspace/Enter — назад · PgUp/PgDn — листать" end
-  if T.edit then return "Enter — сохранить · ↑/↓ — отмена" end
+  if T.edit then return T.edit.pin and "Enter — открыть · ↑/↓ — назад" or "Enter — сохранить · ↑/↓ — отмена" end
+  if sel_row and sel_row.hint then return sel_row.hint end
+  if tab == "home" then return "↑↓ — выбор · Enter — открыть · печатайте — в чат" end
+  local app = app_of(tab)
+  if app then
+    local hs = M.apps.hint(app, sel_row)
+    if hs ~= "" then return hs end
+    if sel_row and sel_row.prompt then return "Enter — " .. tostring(sel_row.prompt.label or "ввести") end
+    local parts = {}
+    if sel_row and sel_row.action then parts[#parts + 1] = "Enter — " .. tostring(sel_row.action.label or "выполнить") end
+    if sel_row and sel_row.del then parts[#parts + 1] = "Delete — " .. tostring(sel_row.del.label or "удалить") end
+    return #parts > 0 and table.concat(parts, " · ") or "↑↓ — выбор"
+  end
   if tab == "chat" then return "Tab — вкладки · PgUp/PgDn — листать · «да КОД» — подтвердить" end
   if tab == "quests" then return "↑↓ — выбор · Enter — взять · Delete — отменить активное" end
   if tab == "memory" then return "↑↓ — выбор · Enter — читать" end
@@ -237,7 +385,7 @@ local function hint_for(tab, sel_row)
 end
 
 local function draw_list(t, x, y, w, h, tab)
-  local rows = list_rows(tab)
+  local rows = list_rows(tab, w)
   local sel = fix_sel(tab, rows)
   -- прокрутка: держим выбранную строку в окне
   local top = T.scroll[tab] or 1
@@ -330,35 +478,40 @@ function M.draw_term()
   put(t, 1, 1, " " .. (st.name or "ЛОЦМАН"), colors.white, colors.gray)
   local right = "энергия " .. pw .. "  " .. textutils.formatTime(os.time(), true) .. " "
   put(t, w - text.len(right) + 1, 1, right, colors.white, colors.gray)
-  -- строка 2: вкладки
-  bar(t, 1, 2, w, colors.black)
-  local xx = 1
-  T.tab_x = {}
-  local full = 0
-  for _, tb in ipairs(M.TABS) do full = full + text.len(tb.title) + 1 end
-  for _, tb in ipairs(M.TABS) do
-    local label = full <= w and tb.title or tb.short
-    local active = tb.id == T.tab
-    put(t, xx + 1, 2, label, active and colors.black or colors.lightGray, active and colors.cyan or colors.black)
-    T.tab_x[#T.tab_x + 1] = { x0 = xx, x1 = xx + text.len(label), id = tb.id }
-    xx = xx + text.len(label) + 1
+  local na = #(M.data.alerts or {})
+  if na > 0 then
+    local al = " тревог: " .. na .. " "
+    put(t, w - text.len(right) - text.len(al) + 1, 1, al, colors.white, colors.red)
   end
-  -- содержимое: строки 3..h-2 (h-1 — подсказка/описание, h — ввод); чтение и стройка — до h-1
+  -- строка 2: вкладки
+  T.tab_x = draw_tabs(t, 1, 2, w, M.TABS, T.tab)
+  -- содержимое: строки 3..h-2 (h-1 — подсказка/описание, h — ввод); чтение, стройка, свой вид — до h-1
   local cy, ch = 3, h - 4
   local sel_row
-  if T.read then
+  local app = app_of(T.tab)
+  if T.tab == "settings" and settings_locked() then
+    if not (T.edit and T.edit.pin) then start_pin() end
+    clear_area(t, 1, cy, w, ch + 1)
+    put(t, 2, cy + 1, text.fit("Настройки закрыты ПИН-кодом.", w - 2), colors.yellow, colors.black)
+    put(t, 2, cy + 2, text.fit("Введите ПИН внизу и Enter (↑ — назад).", w - 2), colors.lightGray, colors.black)
+    if T.pin_msg then put(t, 2, cy + 4, text.fit(T.pin_msg, w - 2), colors.red, colors.black) end
+  elseif T.read then
     draw_reader(t, 1, cy, w, ch + 1)
   elseif T.tab == "chat" then
     draw_feed(t, 1, cy, w, ch, T.scroll.chat or 0, M.data.busy)
   elseif T.tab == "build" then
     draw_build(t, 1, cy, w, ch + 1)
+  elseif app and app.draw then
+    clear_area(t, 1, cy, w, ch + 1)
+    local okd, err = pcall(app.draw, app.ctx, t, 1, cy, w, ch + 1, "term")
+    if not okd then put(t, 1, cy, text.fit("Ошибка: " .. tostring(err), w), colors.red, colors.black) end
   else
     sel_row = draw_list(t, 1, cy, w, ch, T.tab)
     -- под списком — описание выбранного
     local desc = ""
-    if sel_row and sel_row.row then
-      if sel_row.row.kind == "setting" then desc = sel_row.row.def.desc or ""
-      elseif sel_row.row.kind == "quest" then desc = sel_row.row.hint or ""
+    if sel_row then
+      if sel_row.row and sel_row.row.kind == "setting" then desc = sel_row.row.def.desc or ""
+      elseif sel_row.row and sel_row.row.kind == "quest" then desc = sel_row.row.hint or ""
       elseif sel_row.desc then desc = sel_row.desc end
     end
     put(t, 1, h - 1, text.fit(desc, w), colors.lightGray, colors.black)
@@ -380,17 +533,38 @@ local function start_edit(def)
   if def.type == "boolean" then
     return { kind = "setting", key = def.key, value = not def.value }
   end
-  T.edit = def
+  T.edit = { setting = def }
   sed = input.new({ term = term, x = 1, y = h, width = w, prompt = def.key .. "= ", max = 300, history = false,
-    mask = def.secret and "*" or nil, placeholder = def.secret and "вставьте ключ (Ctrl+V)" or "" })
+    mask = def.secret and "*" or nil,
+    placeholder = def.key == "pin" and "4–8 цифр, пусто — без ПИН" or (def.secret and "вставьте ключ (Ctrl+V)" or "") })
   if not def.secret then sed:set(tostring(def.value == nil and "" or def.value)) end
   return nil
+end
+
+-- Строка ввода для приложения (prompt строки): введённое придёт в action как act.value.
+local function start_prompt(tab, p)
+  local w, h = term_size()
+  T.edit = { tab = tab, p = p }
+  sed = input.new({ term = term, x = 1, y = h, width = w, prompt = tostring(p.label or "Ввод") .. ": ",
+    max = tonumber(p.max) or 200, history = false, mask = p.mask and "*" or nil, placeholder = p.placeholder or "" })
+  if p.value ~= nil and p.value ~= "" then sed:set(tostring(p.value)) end
+  return nil
+end
+
+-- Действие приложения: копия описания из строки + kind/app (ник говорящего добавит app.lua).
+local function app_act(tab, a)
+  local act = {}
+  for k, v in pairs(a or {}) do act[k] = v end
+  act.kind, act.app = "app", tab
+  return act
 end
 
 local function activate(tab, rows)
   local r = rows[T.sel[tab] or 0]
   if not r then return nil end
-  if r.action then return r.action end
+  if r.prompt then return start_prompt(tab, r.prompt) end
+  if tab == "home" and r.row and r.row.kind == "open" then M.show_tab(r.row.id); return nil end
+  if r.action then return app_of(tab) and app_act(tab, r.action) or r.action end
   if not r.row then return nil end
   if r.row.kind == "setting" then return start_edit(r.row.def)
   elseif r.row.kind == "quest" then return { kind = "quest_accept", id = r.row.id }
@@ -421,14 +595,29 @@ function M._handle_term(ev, a, b, c)
   if ev == "key" and (a == keys.leftShift or a == keys.rightShift) then T.shift = true end
   if ev == "key_up" and (a == keys.leftShift or a == keys.rightShift) then T.shift = false end
   ensure_editors()
-  -- правка настройки
+  if T.tab == "settings" and settings_locked() and not (T.edit and T.edit.pin) then start_pin() end
+  -- строка ввода: настройка, ввод приложения, ПИН
   if T.edit then
-    if ev == "key" and (a == keys.up or a == keys.down or a == keys.tab) then T.edit = nil; return acts end
+    if ev == "key" and (a == keys.up or a == keys.down or a == keys.tab) then
+      if T.edit.pin then T.tab = "home" end
+      T.edit = nil
+      return acts
+    end
     local r, txt = sed:handle(ev, a, b, c)
     local edited = r ~= nil
     if r == "submit" then
-      acts[#acts + 1] = { kind = "setting", key = T.edit.key, value = txt }
+      local e = T.edit
       T.edit = nil
+      if e.pin then
+        if txt == pin_value() then T.unlocked, T.pin_msg = os.clock() + 300, nil
+        else T.pin_msg = "неверный ПИН"; M.log_line("неверный ПИН настроек") end
+      elseif e.setting then
+        acts[#acts + 1] = { kind = "setting", key = e.setting.key, value = txt }
+      else
+        local act = app_act(e.tab, e.p)
+        act.value, act.label, act.placeholder = txt, nil, nil
+        acts[#acts + 1] = act
+      end
     end
     return acts, edited
   end
@@ -447,6 +636,20 @@ function M._handle_term(ev, a, b, c)
     elseif ev == "key" and a == keys.down then T.read.top = (T.read.top or 1) + 1 end
     return acts
   end
+  -- приложение со своим видом: ввод — ему
+  local app = app_of(T.tab)
+  if app and app.draw then
+    if app.key then
+      local okk, handled, act = pcall(app.key, app.ctx, ev, a, b, c)
+      if okk and handled then
+        if type(act) == "table" then acts[#acts + 1] = app_act(T.tab, act) end
+        return acts, true
+      end
+    end
+    return acts
+  end
+  -- на «Главной» начали печатать — это вопрос в чат
+  if T.tab == "home" and (ev == "char" or ev == "paste") then T.tab = "chat" end
   if T.tab == "chat" then
     local page = h - 5
     if (ev == "key" and a == keys.pageUp) or (ev == "mouse_scroll" and a < 0) then
@@ -487,7 +690,7 @@ function M._handle_term(ev, a, b, c)
     return acts
   end
   -- вкладки-списки
-  local rows = list_rows(T.tab)
+  local rows = list_rows(T.tab, w)
   fix_sel(T.tab, rows)
   if ev == "key" and a == keys.up then move_sel(T.tab, -1)
   elseif ev == "key" and a == keys.down then move_sel(T.tab, 1)
@@ -497,8 +700,10 @@ function M._handle_term(ev, a, b, c)
   elseif ev == "key" and a == keys.enter then
     local act = activate(T.tab, rows)
     if act then acts[#acts + 1] = act end
-  elseif ev == "key" and a == keys.delete and T.tab == "quests" then
-    acts[#acts + 1] = { kind = "quest_abandon" }
+  elseif ev == "key" and a == keys.delete then
+    local r = rows[T.sel[T.tab] or 0]
+    if r and r.del then acts[#acts + 1] = app_of(T.tab) and app_act(T.tab, r.del) or r.del
+    elseif T.tab == "quests" then acts[#acts + 1] = { kind = "quest_abandon" } end
   elseif ev == "mouse_click" and c >= 3 and c <= h - 2 then
     local i = (T.scroll[T.tab] or 1) + c - 3
     if selectable(rows, i) then
@@ -516,6 +721,8 @@ end
 function M.show_tab(id)
   T.tab = id; T.read, T.edit = nil, nil
 end
+
+function M.current_tab() return T.tab end
 
 -- ---------- монитор ----------
 local MON = { tab = "chat", scroll = 0, name = nil }
@@ -565,10 +772,10 @@ local function draw_status_panel(t, x, y, w, h, st)
 end
 
 local function draw_mon_list(t, x, y, w, h, tab)
-  local rows = list_rows(tab)
+  local rows = list_rows(tab, w)
   local lines = {}
   for _, r in ipairs(rows) do
-    local s = r.header and r.text or ((r.row and "• " or "  ") .. r.text)
+    local s = r.header and r.text or (((r.row or r.action) and "• " or "  ") .. r.text .. (r.value and ("  " .. tostring(r.value)) or ""))
     for _, l in ipairs(text.wrap(s, w)) do lines[#lines + 1] = { s = l, fg = r.header and colors.cyan or (r.fg or colors.white) } end
   end
   local top = math.max(1, math.min(MON.scroll + 1, math.max(1, #lines - h + 1)))
@@ -600,21 +807,18 @@ function M.draw_monitor(cfg)
   for yy = 1, h do bar(mon, lw, yy, 1, colors.gray) end
   local rx, rw = lw + 1, w - lw
   -- вкладки
-  bar(mon, rx, 1, rw, colors.black)
-  local xx = rx
-  MON.tab_x = {}
-  for _, id in ipairs(MON_TABS) do
-    local tb = M.TABS[tab_index(id)]
-    local label = (rw >= 34 and tb.title or tb.short)
-    local active = id == MON.tab
-    put(mon, xx, 1, label, active and colors.black or colors.lightGray, active and colors.cyan or colors.black)
-    MON.tab_x[#MON.tab_x + 1] = { x0 = xx, x1 = xx + text.len(label) - 1, id = id }
-    xx = xx + text.len(label) + 1
-  end
+  local mtabs = {}
+  for _, id in ipairs(MON_TABS) do mtabs[#mtabs + 1] = M.TABS[tab_index(id)] end
+  MON.tab_x = draw_tabs(mon, rx, 1, rw, mtabs, MON.tab)
+  local mapp = app_of(MON.tab)
   if MON.tab == "chat" then
     draw_feed(mon, rx, 2, rw, h - 1, MON.scroll, M.data.busy)
   elseif MON.tab == "build" then
     draw_build(mon, rx, 2, rw, h - 1)
+  elseif mapp and mapp.draw then
+    clear_area(mon, rx, 2, rw, h - 1)
+    local okd, err = pcall(mapp.draw, mapp.ctx, mon, rx, 2, rw, h - 1, "monitor")
+    if not okd then put(mon, rx, 2, text.fit("Ошибка: " .. tostring(err), rw), colors.red, colors.black) end
   else
     draw_mon_list(mon, rx, 2, rw, h - 1, MON.tab)
   end

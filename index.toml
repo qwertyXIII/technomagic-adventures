@@ -1141,8 +1141,16 @@ file = "kubejs/data/computercraft/lua/rom/help/tmexec.txt"
 hash = "bbc6db37f91aed692d7de2718a1053ff4e76a38f15bc5e79f0ccaa1e38fe6b6c"
 
 [[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/alert.lua"
+hash = "ef98f2ae444a70af210c572a470a3aa1435c5b70976b37d6f319ab19de8b66a2"
+
+[[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/app.lua"
-hash = "d2d1941ee4d274fa9fe12de1a1e5ab326a74dabad41350d57c026e20b83246e5"
+hash = "9650a52003b8c44806db3090159956fc7c09205af1039576a8ed3fca74cd8dcc"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/apps.lua"
+hash = "57f92d2a1f399fcfe8f4ffca4fe3c5534f59e956fd90f5225334674808d57d6d"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/build.lua"
@@ -1150,7 +1158,7 @@ hash = "fb69988f9cf9f573e7244974f6eee0f592ba055d78a1b5ae23ecc7fb279f2662"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/config.lua"
-hash = "084bdd40aeaf652cc1390b042fbfef0b32d43d7a11537e174f14e68fcfbba9e5"
+hash = "0ad22cc1591e32568dd36b4b32d768a1869e53a3187696aefe419b6863c67358"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/embed.lua"
@@ -1234,7 +1242,7 @@ hash = "004ed169f52124b0d9e2b977910933394416fb11bfb71acfa8ac4a437a9fa427"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/tools.lua"
-hash = "9f76b16d8af968efde4864653d9a14371a99f0ae4eed87b3cfdd5c1c51f4633b"
+hash = "2f21a0653b0e4f26ed46edc6b43a3769344b6f15e0a85f7e497241e06cdcb901"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/tts.lua"
@@ -1246,7 +1254,7 @@ hash = "7c8c50e843a74378f1fdcab4d85d8015372a787dcf9418d0f35842280e358fd3"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/ui.lua"
-hash = "570cb0f5278a77818ac5f4e298de565f256585eb115de9498b1478f4a61eee6a"
+hash = "2ab484134abf431855b95c9499a4ab1dcf85d44e4f9543092eb9df7a9b0d8ef4"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/util.lua"
@@ -1270,7 +1278,7 @@ hash = "d249000af5f3961b8436c206f88fa39e3d0fda8bbdf397fb59a700ec1e22126b"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/programs/tmnav.lua"
-hash = "549b9bf912cb6c4717b41de6f9a5abf0692b5aefda651be2a39e3bc7f9cc9b08"
+hash = "a2190372a2ef9dc1bba4a294919efc42ae03dcd409633806b7eb4a546ec56ed8"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/programs/tmpda.lua"

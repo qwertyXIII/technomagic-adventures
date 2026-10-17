@@ -6,7 +6,8 @@
 --   poller   — Ящик памяти (находки, ключи слоёв, детали ремонта), поручения, статус штурманского модуля;
 --   watcher  — кто стоит у терминала (детектор игроков), кто онлайн;
 --   ambience — напевание ночью, утренние строки после финала;
---   ui       — данные для экранов и перерисовка терминала/монитора;  embedder — векторы базы знаний.
+--   ui       — данные для экранов и перерисовка терминала/монитора;  embedder — векторы базы знаний;
+--   apps     — приложения (tmai.apps: вкладки-программы, их tick, очередь действий и запросов КПК).
 -- Всё, что модель может «сделать», проходит через tools.lua (белый список) и штурманский модуль TM-NAV.
 
 local config = require("tmai.config")
@@ -30,6 +31,9 @@ local ui = require("tmai.ui")
 local feed = require("tmai.feed")
 local who = require("tmai.who")
 local extras = require("tmai.extras")
+local apps = require("tmai.apps")
+local alert = require("tmai.alert")
+local PULL_EVENT = os.pullEvent       -- с ПИН-кодом Ctrl+T не останавливает программу (os.pullEventRaw)
 local okb, build = pcall(require, "tmai.build")
 if not okb then build = nil end
 
@@ -77,6 +81,29 @@ local function say(text, kind)
   if #pdas_recent() > 0 then
     pcall(rednet.broadcast, { op = "notify", text = text, from = persona_name() }, link.RADIO)
   end
+end
+
+-- Тревога (tmai.alert): лента, все КПК в зоне радио (с уровнем) и сигнал колонки.
+local function alarm(text, level)
+  last_talk_t = util.now()
+  feed.add(level == "info" and "sys" or "warn", "Тревога", text)
+  if #pdas_recent() > 0 then
+    pcall(rednet.broadcast, { op = "notify", text = text, level = level, from = "Тревога" }, link.RADIO)
+  end
+  if level ~= "info" then
+    local sp = peripheral.find("speaker")
+    if sp then pcall(sp.playNote, "bell", 1, level == "crit" and 18 or 12) end
+  end
+end
+
+-- Сообщение приложения на КПК игрока (по нику, с которым КПК выходил на связь) или на все.
+local function kpk_send(msg, player)
+  if player == nil then return pcall(rednet.broadcast, msg, link.RADIO) end
+  local sent = false
+  for id, p in pairs(state.pdas or {}) do
+    if p.player == player then pcall(rednet.send, tonumber(id), msg, link.RADIO); sent = true end
+  end
+  return sent
 end
 
 -- ---------- периферия ----------
@@ -389,6 +416,7 @@ local function apply_config()
   cfg = config.get()
   util.set_debug(cfg.debug)
   power.configure(cfg); embed.configure(cfg); tts.configure(cfg)
+  os.pullEvent = (cfg.pin or "") ~= "" and os.pullEventRaw or PULL_EVENT
 end
 
 local function ui_action(act)
@@ -422,6 +450,12 @@ local function ui_action(act)
     push({ kind = "quest_abandon" })
   elseif act.kind == "build_show" and build and build.select then
     build.select(act.id, act.layer)     -- шлёт tmai_ui build → монитор переключится на «Стройку»
+  elseif act.kind == "app" then
+    local sp = ui.data.speaker
+    act.player = who.valid(sp) and sp or nil
+    apps.action(act)
+  elseif act.kind == "alert_clear" then
+    alert.clear(act.key)
   end
 end
 
@@ -468,6 +502,12 @@ local function listener()
       local sender, msg, proto = ev[2], ev[3], ev[4]
       if proto == link.RADIO and type(msg) == "table" and ((msg.op == "ask" and type(msg.text) == "string") or msg.op == "ping") then
         on_radio(sender, msg)
+      elseif proto == link.RADIO and type(msg) == "table" and msg.op == "app" and type(msg.app) == "string" and type(msg.act) == "string" then
+        local player = tostring(msg.player or "")
+        if not who.valid(player) then player = nil end
+        state.pdas = state.pdas or {}
+        state.pdas[tostring(sender)] = { player = player or ("КПК" .. sender), t = util.now() }
+        apps.radio(sender, msg, player, function(t) rednet.send(sender, t, link.RADIO) end)
       elseif proto == "tmai_relay" and type(msg) == "table" and msg.op == "relay_hb" then
         guard.relay_beacon(sender)
       elseif proto == "tmai_relay_setup" and type(msg) == "table" and msg.op == "setup" and type(msg.player) == "string" then
@@ -492,6 +532,7 @@ local function listener()
       power.attach(); me.attach(); link.attach(); open_rednet(); extras.attach(); who.attach(); ui.reset_monitor()
       os.queueEvent("tmai_ui", "peripheral")
     end
+    if not TERM_EVENTS[name] and name ~= "tmai_ui" and name ~= "tmai_apps" then apps.event(name, table.unpack(ev, 2)) end
   end
 end
 
@@ -712,6 +753,7 @@ local function ui_loop()
     ui.data.busy = working
     ui.data.quests = { active = quests.active(), available = quests.available(nav and nav.repair or 0) }
     ui.data.memory = memory_rows()
+    ui.data.alerts = alert.list()
     if n % 5 == 0 then
       local okd, rows = pcall(device_rows, p)
       ui.data.devices = okd and rows or { { text = "ошибка: " .. tostring(rows), fg = colors.red } }
@@ -755,6 +797,16 @@ function App.run()
   prompt.load()
   ui.reader = read_memory
   ui.build = build
+  alert.init(state, alarm, save_state)
+  apps.load({
+    cfg = function() return cfg end, say = say, alert = alert, me = me,
+    nav = function(op, args, timeout) return link.call(op, args, timeout) end,
+    speaker = function() local sp = ui.data.speaker; return who.valid(sp) and sp or nil end,
+    online = function() return who.online() end,
+    kpk = kpk_send,
+  })
+  ui.set_apps(apps)
+  os.pullEvent = (cfg.pin or "") ~= "" and os.pullEventRaw or PULL_EVENT
   math.randomseed(os.epoch("utc"))
   local ok, why = config.check(cfg)
   ui.log_line(ok and "готов" or why)
@@ -766,10 +818,10 @@ function App.run()
     save_state()
     if first then say("…перезагрузка… " .. (lore.record(0) or "")) end
     say("Экипаж, говорить со мной — здесь, на терминале капсулы (ПКМ по компьютеру), или с КПК. " ..
-      "Вкладки сверху: задания, память, стройка, устройства, настройки.", "sys")
+      "На «Главной» — тревоги и все программы; вкладки сверху (Tab), начните печатать — и вы в чате.", "sys")
   end
   term.clear()
-  parallel.waitForAny(listener, worker, poller, watcher, ambience, ui_loop, embedder)
+  parallel.waitForAny(listener, worker, poller, watcher, ambience, ui_loop, embedder, apps.loop)
 end
 
 return App

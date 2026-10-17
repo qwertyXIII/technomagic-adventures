@@ -62,6 +62,7 @@ local DEFS = {
   { group = "Рубка и устройства" },
   { "memory_box", "", "string", "Имя инвентаря «Ящик памяти» в сети (пусто = сундук вплотную к терминалу); выбирается во вкладке «Устройства»" },
   { "monitor", "", "string", "Имя монитора (пусто = самый большой подключённый)" },
+  { "pin", "", "string", "ПИН вкладки «Настройки», 4–8 цифр (пусто — без ПИН). С ПИН-кодом Ctrl+T не останавливает ЛОЦМАНа. Забыли — хозяин мира удаляет строку tmai.pin в saves/<мир>/computercraft/computer/<номер>/.settings" },
   { "monitor_scale", 0.5, "number", "Масштаб текста монитора: 0.5 (мелко, больше текста) .. 2" },
   { "hum", true, "boolean", "Иногда напевать ночью (колонка капсулы)" },
   { "print_records", true, "boolean", "Печатать восстановленные записи на принтере (если подключён)" },
@@ -71,7 +72,7 @@ local DEFS = {
 local PREFIX = "tmai."
 
 -- Секреты: на экране показываются звёздочками.
-local SECRET = { api_key = true, emb_key = true, tts_key = true }
+local SECRET = { api_key = true, emb_key = true, tts_key = true, pin = true }
 
 function M.define()
   for _, d in ipairs(DEFS) do
@@ -125,6 +126,10 @@ function M.set(key, raw)
     else return nil, "нужно да/нет" end
   else
     v = tostring(raw or "")
+    if key == "pin" then
+      v = v:match("^%s*(.-)%s*$")
+      if v ~= "" and not v:match("^%d%d%d%d%d?%d?%d?%d?$") then return nil, "ПИН — 4–8 цифр (пусто — без ПИН)" end
+    end
     if key == "proxy" then
       v = v:match("^%s*(.-)%s*$")
       local ok, err = M.check_proxy(v)
