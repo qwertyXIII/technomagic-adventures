@@ -1,6 +1,6 @@
 name = "TechnoMagic Adventures"
 author = "DXIII"
-version = "0.4.0"
+version = "0.4.1"
 pack-format = "packwiz:1.1.0"
 
 [index]
