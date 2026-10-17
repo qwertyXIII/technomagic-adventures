@@ -132,7 +132,11 @@ function OPS.status() return status() end
 function OPS.players()
   local names = {}
   local ok, list = pcall(commands.getEntities, "@a")
-  if ok and type(list) == "table" then for _, e in ipairs(list) do names[#names + 1] = e.name end end
+  if ok and type(list) == "table" then
+    for _, e in ipairs(list) do   -- name у сущности — её тип (minecraft:player), ник — displayName
+      if valid_player(e.displayName) then names[#names + 1] = e.displayName end
+    end
+  end
   return { names = names }
 end
 
@@ -202,6 +206,13 @@ function OPS.reward(m)
   if not ok then return nil, "выдача не удалась" end
   st.rewarded[m.quest .. "@" .. m.player] = util.now(); save()
   return { desc = r.desc }
+end
+
+-- Поручения, за которые награда уже выдана (ЛОЦМАН сверяет и довыдаёт потерянные).
+function OPS.rewarded()
+  local ids = {}
+  for k in pairs(st.rewarded) do ids[#ids + 1] = k:match("^(.*)@") or k end
+  return { quests = ids }
 end
 
 local function kill_obj(entity)

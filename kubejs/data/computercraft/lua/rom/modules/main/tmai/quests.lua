@@ -5,6 +5,7 @@
 --          visit   — дойти до цели разведки target (ID из scout.tsv); координаты даёт TM-NAV
 --          kill    — убить count мобов target (ID сущности), счёт ведёт TM-NAV через scoreboard
 -- reward — ID награды из rewards.tsv (выдаёт TM-NAV командой /give, один раз на задание).
+-- Невыданная награда (модуль не ответил, непонятно кому) ждёт в state.quests.unpaid и выдаётся при следующей проверке.
 
 local util = require("tmai.util")
 local link = require("tmai.link")
@@ -12,12 +13,19 @@ local link = require("tmai.link")
 local M = {}
 
 local list, by_id = {}, {}
-local state, cargo_fn, core_name_fn
+local state, cargo_fn, core_name_fn, player_fn
 
-function M.init(st, get_cargo, get_core_name)
+-- Ник Minecraft (как who.valid; модуль не тянет who, чтобы не зависеть от периферии).
+local function valid(name)
+  return type(name) == "string" and #name >= 3 and #name <= 16 and name:match("^[%w_]+$") ~= nil
+end
+
+-- get_player() — ник того, кто сейчас у терминала, или nil.
+function M.init(st, get_cargo, get_core_name, get_player)
   state = st
   state.quests = state.quests or { done = {}, active = nil }
-  cargo_fn, core_name_fn = get_cargo, get_core_name
+  state.quests.unpaid = state.quests.unpaid or {}
+  cargo_fn, core_name_fn, player_fn = get_cargo, get_core_name, get_player
   list, by_id = {}, {}
   for _, r in ipairs(util.read_tsv(util.ROM_DIR .. "/quests.tsv")) do
     r.count = tonumber(r.count) or 1
@@ -51,6 +59,10 @@ function M.accept(id, player, repair)
   if state.quests.done[id] then return nil, "задание уже выполнено" end
   if q.min_repair > (repair or 0) then return nil, "задание пока недоступно" end
   if state.quests.active then return nil, "уже есть активное задание: " .. state.quests.active.id end
+  if not valid(player) then player = player_fn and player_fn() end
+  if not valid(player) then
+    return nil, "не понял, кто берёт поручение: встаньте у терминала или выберите себя щелчком по имени в строке ввода"
+  end
   local a = { id = id, player = player, t = util.now() }
   if q.type == "visit" then
     local r, err = link.call("locate", { target = q.target, player = player, free = true }, 20)
@@ -70,14 +82,65 @@ function M.abandon()
   return true
 end
 
--- Проверка выполнения (вызывается периодически). Возвращает текст для чата или nil.
+-- Ошибки модуля, после которых повторять выдачу бессмысленно.
+local FINAL = { ["награда за это поручение уже выдана"] = true, ["нет такой награды"] = true, ["ошибка таблицы наград"] = true }
+
+-- Выполненные до очереди наград задания: модуль помнит, за что награда выдана, остальное — в очередь. Один раз.
+local function recover()
+  if state.quests.recovered then return end
+  local r = link.call("rewarded", {})
+  if not r then return end            -- модуль недоступен: спросим в следующий раз
+  local skip = {}
+  for _, id in ipairs(r.quests or {}) do skip[id] = true end
+  for _, e in ipairs(state.quests.unpaid) do skip[e.id] = true end
+  for id in pairs(state.quests.done) do
+    if not skip[id] then state.quests.unpaid[#state.quests.unpaid + 1] = { id = id } end
+  end
+  state.quests.recovered = true
+end
+
+-- Выдать награды из очереди. Возвращает строки для ленты.
+local function pay(out)
+  local u = state.quests.unpaid
+  local i = 1
+  while u[i] do
+    local e = u[i]
+    local q = by_id[e.id]
+    local player = valid(e.player) and e.player or (player_fn and player_fn())
+    if not q or not q.reward or q.reward == "" then
+      table.remove(u, i)
+    elseif not valid(player) then
+      i = i + 1                         -- пока непонятно кому: ждём игрока у терминала
+    else
+      local r, err = link.call("reward", { reward = q.reward, player = player, quest = e.id })
+      if r then
+        table.remove(u, i)
+        out[#out + 1] = string.format("Награда за «%s» выдана %s: %s.", q.title, player, r.desc or q.reward)
+      elseif FINAL[err] then
+        table.remove(u, i)
+      else
+        if not e.told then
+          out[#out + 1] = string.format("Награду за «%s» выдам позже (%s).", q.title, tostring(err))
+          e.told = true
+        end
+        i = i + 1
+      end
+    end
+  end
+end
+
+-- Проверка выполнения и выдача наград (вызывается периодически). Возвращает текст для чата или nil.
 function M.tick()
+  local out = {}
+  recover()
   local a = state.quests.active
-  if not a then return nil end
-  local q = by_id[a.id]
-  if not q then state.quests.active = nil; return nil end
+  local q = a and by_id[a.id]
+  if a and not q then state.quests.active, a = nil, nil end
+  if a and not valid(a.player) and player_fn then a.player = player_fn() or a.player end
   local done = false
-  if q.type == "deliver" then
+  if not a then
+    -- нечего проверять
+  elseif q.type == "deliver" then
     local cargo = cargo_fn()
     if cargo then
       local have, slots = 0, {}
@@ -113,14 +176,14 @@ function M.tick()
       done = n >= q.count
     end
   end
-  if not done then return nil end
-  state.quests.done[a.id] = true
-  state.quests.active = nil
-  local r, err = link.call("reward", { reward = q.reward, player = a.player, quest = a.id })
-  if r then
-    return string.format("Задание «%s» выполнено. Награда выдана: %s.", q.title, r.desc or q.reward)
+  if done then
+    state.quests.done[a.id] = true
+    state.quests.active = nil
+    state.quests.unpaid[#state.quests.unpaid + 1] = { id = a.id, player = a.player }
+    out[#out + 1] = string.format("Задание «%s» выполнено.", q.title)
   end
-  return string.format("Задание «%s» выполнено, но выдать награду не удалось (%s).", q.title, tostring(err))
+  pay(out)
+  return #out > 0 and table.concat(out, " ") or nil
 end
 
 return M

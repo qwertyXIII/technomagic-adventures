@@ -343,13 +343,13 @@ function M.draw_term()
     T.tab_x[#T.tab_x + 1] = { x0 = xx, x1 = xx + text.len(label), id = tb.id }
     xx = xx + text.len(label) + 1
   end
-  -- содержимое: строки 3..h-2 (чат — до h-1)
+  -- содержимое: строки 3..h-2 (h-1 — подсказка/описание, h — ввод); чтение и стройка — до h-1
   local cy, ch = 3, h - 4
   local sel_row
   if T.read then
     draw_reader(t, 1, cy, w, ch + 1)
   elseif T.tab == "chat" then
-    draw_feed(t, 1, cy, w, ch + 1, T.scroll.chat or 0, M.data.busy)
+    draw_feed(t, 1, cy, w, ch, T.scroll.chat or 0, M.data.busy)
   elseif T.tab == "build" then
     draw_build(t, 1, cy, w, ch + 1)
   else

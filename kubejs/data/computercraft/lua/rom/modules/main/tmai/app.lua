@@ -369,7 +369,7 @@ local function worker()
         elseif job.kind == "relay_setup" then handle_relay_setup(job)
         elseif job.kind == "quest_accept" then
           local r, e = quests.accept(job.id, job.player, nav and nav.repair or 0)
-          say(r and ("Поручение «" .. tostring(r.title) .. "» за " .. job.player .. ".") or ("Не взять: " .. tostring(e)), r and "ai" or "warn")
+          say(r and ("Поручение «" .. tostring(r.title) .. "» за " .. tostring(r.player) .. ".") or ("Не взять: " .. tostring(e)), r and "ai" or "warn")
           save_state()
         elseif job.kind == "quest_abandon" then
           quests.abandon(); save_state(); say("Поручение отменено.", "sys")
@@ -394,7 +394,7 @@ end
 local function ui_action(act)
   if act.kind == "say" then
     local player = ui.data.speaker or "Экипаж"
-    state.last_speaker = player
+    if who.valid(player) then state.last_speaker = player end
     who.manual = nil
     local text = u8.truncate(act.text, cfg.max_input * 2)
     feed.add("user", player, text)
@@ -646,7 +646,8 @@ local function device_rows(p)
     rows[#rows + 1] = { text = "Монитор", value = "нет", fg = colors.orange, desc = "Поставьте продвинутый монитор 2×1 (или больше) рядом или подключите модемом." }
   end
   rows[#rows + 1] = { text = "Детектор игроков", value = who.present() and "есть" or "нет", fg = who.present() and colors.white or colors.gray,
-    desc = "По нему ЛОЦМАН узнаёт, кто говорит у терминала. Без него — щёлкните по имени в строке ввода." }
+    desc = who.present() and "По нему ЛОЦМАН узнаёт, кто говорит у терминала."
+      or "Нет в сети: ПКМ дважды по проводному модему рядом с детектором (выкл/вкл). Пока — щёлкните по имени в строке ввода." }
   rows[#rows + 1] = { text = "Колонка", value = peripheral.find("speaker") and "есть" or "нет" }
   rows[#rows + 1] = { text = "Принтер", value = peripheral.find("printer") and "есть" or "нет", desc = "Если есть — печатает восстановленные записи." }
   rows[#rows + 1] = { text = "Ящик памяти", header = true }
@@ -725,7 +726,10 @@ function App.run()
   history.init(cfg.history_chars)
   lore.init(state)
   guard.init(state)
-  quests.init(state, memory_box, core_name)
+  quests.init(state, memory_box, core_name, function()
+    local p = who.resolve(state.last_speaker)
+    return who.valid(p) and p or nil
+  end)
   embed.configure(cfg); tts.configure(cfg)
   prompt.load()
   ui.reader = read_memory
@@ -733,7 +737,8 @@ function App.run()
   math.randomseed(os.epoch("utc"))
   local ok, why = config.check(cfg)
   ui.log_line(ok and "готов" or why)
-  util.log("I", "start: kb=%d sections, memory level=%d, %s", kb.count(), lore.level(), ok and "llm configured" or why)
+  util.log("I", "start: kb=%d sections, memory level=%d, %s, detector=%s, speaker=%s", kb.count(), lore.level(),
+    ok and "llm configured" or why, who.attach() and "yes" or "no", peripheral.find("speaker") and "yes" or "no")
   if not state.greeted or not state.greeted_screen then
     local first = not state.greeted
     state.greeted, state.greeted_screen = true, true

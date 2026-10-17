@@ -130,6 +130,21 @@ disabled_generic_methods = []
 		max_websocket_message = 131072
 		use_proxy = false
 	[[http.rules]]
+		#TechnoMagic: API нейросетей разрешены и тогда, когда DNS домашней сети отдаёт адрес своего прокси
+		#(обход блокировок на роутере: openrouter.ai -> 192.168.x.x). Только эти домены, выше запрета $private.
+		host = "openrouter.ai"
+		action = "allow"
+	[[http.rules]]
+		#TechnoMagic: API нейросетей разрешены и тогда, когда DNS домашней сети отдаёт адрес своего прокси
+		#(обход блокировок на роутере: openrouter.ai -> 192.168.x.x). Только эти домены, выше запрета $private.
+		host = "api.openai.com"
+		action = "allow"
+	[[http.rules]]
+		#TechnoMagic: API нейросетей разрешены и тогда, когда DNS домашней сети отдаёт адрес своего прокси
+		#(обход блокировок на роутере: openrouter.ai -> 192.168.x.x). Только эти домены, выше запрета $private.
+		host = "api.anthropic.com"
+		action = "allow"
+	[[http.rules]]
 		#The magic "$private" host matches all private address ranges, such as localhost and 192.168.0.0/16.
 		#This rule prevents computers accessing internal services, and is strongly recommended.
 		host = "$private"

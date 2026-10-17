@@ -18,6 +18,17 @@ end
 
 function M.present() return det ~= nil end
 
+-- Ник Minecraft: 3–16 латинских букв, цифр и «_». Всё прочее («Экипаж», «minecraft:player») — не игрок.
+function M.valid(name)
+  return type(name) == "string" and #name >= 3 and #name <= 16 and name:match("^[%w_]+$") ~= nil
+end
+
+local function only_valid(list)
+  local out = {}
+  for _, n in ipairs(list) do if M.valid(n) then out[#out + 1] = n end end
+  return out
+end
+
 local function in_range(r)
   local ok, list = pcall(det.getPlayersInRange, r)
   if ok and type(list) == "table" then return list end
@@ -30,25 +41,25 @@ function M.nearest(max)
   max = max or 8
   local all = in_range(max)
   if not all or #all == 0 then return nil end
-  if #all == 1 then return all[1] end
+  if #all == 1 then return M.valid(all[1]) and all[1] or nil end
   local lo, hi, best = 1, max, all[1]
   while lo <= hi do                      -- наименьший радиус, где ещё кто-то есть
     local mid = math.floor((lo + hi) / 2)
     local l = in_range(mid)
     if l and #l > 0 then best = l[1]; hi = mid - 1 else lo = mid + 1 end
   end
-  return best
+  return M.valid(best) and best or nil
 end
 
 -- Обновить список игроков онлайн: детектор, иначе функция-запасной вариант (TM-NAV).
 function M.refresh(fallback)
   if det or M.attach() then
     local ok, list = pcall(det.getOnlinePlayers)
-    if ok and type(list) == "table" then online = list; return online end
+    if ok and type(list) == "table" then online = only_valid(list); return online end
   end
   if fallback then
     local list = fallback()
-    if type(list) == "table" then online = list end
+    if type(list) == "table" then online = only_valid(list) end
   end
   return online
 end
@@ -69,7 +80,7 @@ function M.resolve(last)
   if M.manual then return M.manual end
   local n = M.nearest()
   if n then return n end
-  if last and last ~= "" then return last end
+  if M.valid(last) then return last end
   if #online >= 1 then return online[1] end
   return "Экипаж"
 end
