@@ -9,9 +9,10 @@
 | `mods/*.pw.toml` | Ссылки на моды (Modrinth/CurseForge) с хэшами. Сами jar в репозитории не лежат, кроме исключений из `THIRD_PARTY.md` |
 | `resourcepacks/`, `shaderpacks/` | Пакеты ресурсов и шейдеры (ссылки) |
 | `config/` | Настройки модов, которые раздаются игрокам (перезаписываются при обновлении) |
-| `kubejs/` | Скрипты KubeJS: свои предметы, рецепты, лут, квестовые связки; `kubejs/data/computercraft/lua/rom/` — программы для компьютеров CC: Tweaked (ИИ-компаньон, КПК) |
+| `kubejs/` | Скрипты KubeJS: свои предметы, рецепты, лут, квестовые связки, установка стартового корабля (`server_scripts/tm_world.js`, шаблон — `data/tm/structure/crash_capsule.nbt`); `kubejs/data/computercraft/lua/rom/` — программы для компьютеров CC: Tweaked (ИИ-компаньон, КПК, вышки, прораб `tmbuild`) |
+| `kubejs/assets/` | Перевод модов (`<мод>/lang/ru_ru.json`, только недостающие строки — [ADR-0005](devs/decisions/0005-perevod-tolko-nedostayushchih-klyuchey.md)), шрифт CC с кириллицей (`computercraft/textures/gui/term_font.png` — [ADR-0003](devs/decisions/0003-kirillitsa-v-cc-svoim-shriftom.md)) |
 | `installer/` | Установщики для игроков (в сам пак не входят — `.packwizignore`) |
-| `docs/` | Эта документация (в пак не входит) |
+| `docs/` | Документация (в пак не входит): [для игроков](start.md) и [инструкции](users/how-to/), [журнал изменений](devs/changelog.md), [решения](devs/decisions/), [планы](devs/roadmap.md) |
 
 ## Как игроки получают сборку
 `installer/TechnoMagic-Windows.bat` скачивает свежий `installer/install.ps1` с ветки `main` и запускает его; на macOS — `installer/TechnoMagic-Mac.command`. Установщик:
@@ -87,6 +88,12 @@ packwiz refresh                  # после любых ручных право
 | `Mod entity_model_features requires entity_texture_features` при запуске | В окне необязательных модов включён EMF, а ETF выключен | Режим смены графики: включить оба или выключить оба (установщик предупреждает) |
 | Игрока с «лёгким» набором не пускает в мир хоста | Выключен мод, чей сетевой канал сервер шлёт всем (пример — CreativeCore) | Такой мод не делать необязательным (см. «Необязательные моды») |
 | Генерация мира падает / дыры при быстром полёте | Тяжёлая генерация (много модов на постройки) | Хосту 8–10 ГБ; заранее сгенерировать мир: `/chunky radius 2000`, `/chunky start` |
+
+## Стартовый корабль
+Шаблон генерирует скрипт сопровождающего (`tools/gen/gen_capsule.py` в его рабочей папке, не в репозитории): геометрия в коде, `--preview` рисует изометрию. Он же пишет блок констант в `kubejs/server_scripts/tm_world.js` между маркерами `// <gen:capsule>` — руками этот блок не править. Установка при создании мира (один раз, флаг в данных сервера): поиск ровного места по шуму генератора → установка шаблона → обновление соседей у кабелей и машин → подсыпка грунта → заряд ядра ИИ → точка возрождения. Почему так — [ADR-0004](devs/decisions/0004-startovyy-korabl-shablonom-iz-koda.md). В логе сервера строки `[TM] site search`, `[TM] capsule at …`, `[TM] capsule check: …` показывают, что всё встало.
+
+## Перевод модов
+Новый мод: выписать ключи его `en_us.json`, которых нет в его `ru_ru.json`, перевести по глоссарию (ванильные термины 1.21.1) и положить в `kubejs/assets/<namespace>/lang/ru_ru.json` (UTF-8, отсортированные ключи). Свой `ru_ru` мода не копировать целиком — [ADR-0005](devs/decisions/0005-perevod-tolko-nedostayushchih-klyuchey.md).
 
 ## Экраны CC: Tweaked по-русски
 - Шрифт CC не умеет кириллицу. В сборке он подменён: `kubejs/assets/computercraft/textures/gui/term_font.png` (генерирует `tools/gen/gen_font.py` из оригинала CC: Tweaked). Русские буквы лежат в слотах по схеме CP1251 (А..я — 0xC0..0xFF, Ё/ё — 0xA8/0xB8, № — 0xB9) вместо латинских букв с диакритикой.

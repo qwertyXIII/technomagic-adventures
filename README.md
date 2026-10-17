@@ -3,6 +3,7 @@
 Сборка Minecraft **1.21.1 / NeoForge 21.1.262**: техника, магия, приключения, космос.
 
 👉 **[Как начать играть](docs/start.md)** — установка, новый мир, генерация мира заранее, включение бортового ИИ, что делать, если что-то не так.
+👉 **[Что нового](docs/devs/changelog.md)** — изменения по версиям.
 
 ## Установка и обновление
 
@@ -33,4 +34,4 @@
 
 ## Для разработки
 
-Сборка ведётся в [packwiz](https://packwiz.infra.link/): `packwiz modrinth add <мод>`, `packwiz refresh`.
+Сборка ведётся в [packwiz](https://packwiz.infra.link/): `packwiz modrinth add <мод>`, `packwiz refresh`. Как устроена сборка — [docs/maintaining.md](docs/maintaining.md), решения — [docs/devs/decisions](docs/devs/decisions/), планы — [docs/devs/roadmap.md](docs/devs/roadmap.md).
