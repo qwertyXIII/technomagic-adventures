@@ -91,6 +91,8 @@ function M.forget(index)
   return true
 end
 
+function M.notes() return notes end
+
 function M.notes_text()
   local lines = {}
   for i, n in ipairs(notes) do lines[#lines + 1] = i .. ". " .. n.text end

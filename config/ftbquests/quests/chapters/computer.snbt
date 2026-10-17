@@ -457,5 +457,46 @@
 			x: 6.0d
 			y: 3.5d
 		}
+		{
+			dependencies: ["26525E12408472AA"]
+			hide_until_deps_visible: true
+			id: "063D51FFE64E1D00"
+			optional: true
+			rewards: [
+				{
+					count: 32
+					id: "72C97D9F9518A1EE"
+					item: {
+						count: 1
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "57A1A56714CD2C32"
+					item: {
+						count: 1
+						id: "minecraft:chest"
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "21932E88C69308F4"
+					item: {
+						components: {
+							"ftbfiltersystem:filter": "or(item(computercraft:turtle_normal)item(computercraft:turtle_advanced))"
+						}
+						count: 1
+						id: "ftbfiltersystem:smart_filter"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 5.0d
+		}
 	]
 }

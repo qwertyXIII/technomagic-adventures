@@ -15,7 +15,7 @@
 -- Параллельно работает стандартный rednet-`repeat`: мост между радио (КПК, вышки) и сетью ИИ.
 -- Командные компьютеры работают в одиночной/LAN-игре; на выделенном сервере нужен enable-command-block=true.
 
-if not commands then printError("tmnav: нужен командный компьютер"); return end
+if not commands then printError(require("tmai.text").cc("tmnav: нужен командный компьютер")); return end
 
 local util = require("tmai.util")
 local json = require("tmai.json")

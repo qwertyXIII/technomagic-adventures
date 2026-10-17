@@ -3,12 +3,14 @@
 --   TM-AI       — ЛОЦМАН (продвинутый компьютер в носу капсулы)
 --   TM-NAV      — штурманский модуль (командный компьютер)
 --   TM-RELAY*   — вышка-ретранслятор
+--   TM-BUILD*   — черепашка-строитель (tmbuild; сундук-склад позади неё)
 --   …KPK…       — КПК (карманный компьютер; название предмета, например «КПК [KPK]»)
 local label = os.getComputerLabel() or ""
 local prog
 if label == "TM-AI" then prog = "tmai"
 elseif label == "TM-NAV" then prog = "tmnav"
 elseif label:match("^TM%-RELAY") then prog = "tmrelay"
+elseif turtle and label:match("^TM%-BUILD") then prog = "tmbuild"
 elseif pocket and label:find("KPK", 1, true) then prog = "tmpda"
 end
 if prog == "tmai" or prog == "tmnav" then

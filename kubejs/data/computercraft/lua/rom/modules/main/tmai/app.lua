@@ -1,16 +1,17 @@
 -- tmai.app — главный цикл ЛОЦМАНа (компьютер капсулы, метка TM-AI).
--- Корутины (parallel):
---   listener — все события: чат, rednet (КПК, вышки, агенты программ), модемы, МЭ;
---   worker   — очередь: вопросы к нейросети, чтение находок, исправление программ;
+-- С ЛОЦМАНом говорят только через терминал этого компьютера (вкладка «Чат») и через КПК (rednet) —
+-- игровой чат не используется. Корутины (parallel):
+--   listener — все события: терминал и монитор (tmai.ui), rednet (КПК, вышки, агенты программ), модемы, МЭ;
+--   worker   — очередь: вопросы к нейросети, команды «да КОД»/«стоп», поручения, находки, исправление программ;
 --   poller   — Ящик памяти (находки, ключи слоёв, детали ремонта), поручения, статус штурманского модуля;
+--   watcher  — кто стоит у терминала (детектор игроков), кто онлайн;
 --   ambience — напевание ночью, утренние строки после финала;
---   ui       — экран терминала и монитор;  embedder — фоновое построение векторов базы знаний.
+--   ui       — данные для экранов и перерисовка терминала/монитора;  embedder — векторы базы знаний.
 -- Всё, что модель может «сделать», проходит через tools.lua (белый список) и штурманский модуль TM-NAV.
 
 local config = require("tmai.config")
 local util = require("tmai.util")
 local u8 = require("tmai.u8")
-local chat = require("tmai.chat")
 local power = require("tmai.power")
 local kb = require("tmai.kb")
 local embed = require("tmai.embed")
@@ -26,17 +27,22 @@ local llm = require("tmai.llm")
 local guard = require("tmai.guard")
 local tts = require("tmai.tts")
 local ui = require("tmai.ui")
+local feed = require("tmai.feed")
+local who = require("tmai.who")
 local extras = require("tmai.extras")
+local okb, build = pcall(require, "tmai.build")
+if not okb then build = nil end
 
 local App = {}
 
 local cfg, state
 local queue = {}
+local working = false          -- worker занят заданием (для «ЛОЦМАН думает…»)
 local nav = nil                -- статус TM-NAV: { x,y,z,dim, repair, radio, radios }
 local nav_fail = 0             -- сколько опросов подряд модуль не ответил
 local nav_where = nil          -- где модуль и радио (для записи в лог при переезде)
 local llm_status = "?"
-local last_chat_t = 0          -- когда в последний раз говорили (для напевания)
+local last_talk_t = 0          -- когда в последний раз говорили (для напевания)
 local STATE_PATH = util.DATA_DIR .. "/state.json"
 
 local function save_state() util.save_json(STATE_PATH, state) end
@@ -44,6 +50,7 @@ local function save_state() util.save_json(STATE_PATH, state) end
 local function push(job)
   queue[#queue + 1] = job
   os.queueEvent("tmai_queue")
+  os.queueEvent("tmai_ui", "queue")
 end
 
 -- ---------- имя и голос по режиму ----------
@@ -54,10 +61,22 @@ local function persona_name()
   return "ЛОЦМАН"
 end
 
-local function say(text, player)
-  chat.configure(persona_name(), cfg.chat_bytes)
-  last_chat_t = util.now()
-  return chat.say(text, player)
+-- КПК на связи: кому слать объявления
+local function pdas_recent()
+  local out = {}
+  for id, p in pairs(state.pdas or {}) do
+    if util.now() - (p.t or 0) < 1800 then out[#out + 1] = tonumber(id) end
+  end
+  return out
+end
+
+-- Сказать вслух экипажу: лента (терминал, монитор) + объявление на КПК в зоне радио.
+local function say(text, kind)
+  last_talk_t = util.now()
+  feed.add(kind or "ai", kind == "sys" and "Капсула" or persona_name(), text)
+  if #pdas_recent() > 0 then
+    pcall(rednet.broadcast, { op = "notify", text = text, from = persona_name() }, link.RADIO)
+  end
 end
 
 -- ---------- периферия ----------
@@ -66,18 +85,26 @@ local function core_name()
   return core and peripheral.getName(core) or nil
 end
 
--- Ящик памяти: инвентарь вплотную к компьютеру (не ядро); если такого нет — первый в проводной сети.
--- После переезда в сети ИИ могут оказаться чужие сундуки базы — вплотную стоящий важнее.
+-- Ящик памяти: выбранный во вкладке «Устройства» (tmai.memory_box); иначе инвентарь вплотную к компьютеру
+-- (не ядро); иначе первый в проводной сети. После переезда в сети могут оказаться чужие сундуки базы.
 local SIDE = {}
 for _, s in ipairs(redstone.getSides()) do SIDE[s] = true end
 
-local function memory_box()
-  local remote
+local function inventories()
+  local out = {}
   for _, name in ipairs(peripheral.getNames()) do
-    if peripheral.hasType(name, "inventory") and not peripheral.hasType(name, "kubejs:ai_core") then
-      if SIDE[name] then return peripheral.wrap(name), name end
-      remote = remote or name
-    end
+    if peripheral.hasType(name, "inventory") and not peripheral.hasType(name, "kubejs:ai_core") then out[#out + 1] = name end
+  end
+  return out
+end
+
+local function memory_box()
+  local want = cfg and cfg.memory_box or ""
+  if want ~= "" and peripheral.hasType(want, "inventory") then return peripheral.wrap(want), want end
+  local remote
+  for _, name in ipairs(inventories()) do
+    if SIDE[name] then return peripheral.wrap(name), name end
+    remote = remote or name
   end
   if remote then return peripheral.wrap(remote), remote end
 end
@@ -92,10 +119,9 @@ end
 local function reply(job, text)
   if job.via == "radio" and job.reply_to then
     rednet.send(job.reply_to, { op = "answer", text = text, player = job.player, from = persona_name() }, link.RADIO)
-    say(text, job.player)       -- экран КПК не рисует кириллицу: дублируем лично в чат
-  elseif job.via == "chat" then
-    say(text, job.hidden and job.player or nil)
   end
+  last_talk_t = util.now()
+  feed.add("ai", persona_name(), text)
 end
 
 local function status_text(p)
@@ -110,21 +136,25 @@ local function status_text(p)
   parts[#parts + 1] = ms.connected and "МЭ-сеть подключена (инструменты me_*)" or "МЭ-сеть не подключена (нужен ME-мост у терминала)"
   local q = quests.active()
   if q then parts[#parts + 1] = "активное поручение: " .. q.title .. " (" .. tostring(q.progress or "") .. ")" end
+  if build and build.status_lines then
+    local bl = build.status_lines()
+    if bl and bl[1] then parts[#parts + 1] = "стройка: " .. table.concat(bl, "; ") end
+  end
   parts[#parts + 1] = "время в мире: " .. textutils.formatTime(os.time(), true) .. ", день " .. os.day()
   return table.concat(parts, "\n")
 end
 
-local function players_text(asker)
-  local names = {}
-  local ok, r = pcall(link.call, "players", {}, 3)
-  if ok and r and r.names then names = r.names end
-  return (#names > 0 and table.concat(names, ", ") or "(неизвестно)") .. "\nСейчас спрашивает: " .. tostring(asker)
+local function players_text(asker, via)
+  local names = who.online()
+  return (#names > 0 and table.concat(names, ", ") or "(неизвестно)") ..
+    "\nСейчас спрашивает: " .. tostring(asker) .. (via == "radio" and " (с КПК, издалека)" or " (у терминала капсулы)")
 end
 
 local function ctx_for(player)
   return {
     player = player, cfg = cfg, lore_level = lore.level(), repair = nav and nav.repair or 0,
     has_me = me.attach(), has_nav = nav ~= nil, has_exec = #scripts.list_targets() > 0,
+    has_build = build ~= nil,
   }
 end
 
@@ -143,10 +173,10 @@ local function build_system()
 end
 
 -- Контекст хода (меняется каждый раз) — после истории, чтобы начало запроса оставалось стабильным.
-local function build_context(question, player, p)
+local function build_context(question, player, p, via)
   local kbtext = kb.context_for(question, lore.level(), cfg.kb_chars)
   return "СОСТОЯНИЕ\n" .. status_text(p) ..
-    "\n\nИГРОКИ ОНЛАЙН\n" .. players_text(player) ..
+    "\n\nИГРОКИ ОНЛАЙН\n" .. players_text(player, via) ..
     "\n\nСПРАВКА (подобрана по вопросу)\n" .. (kbtext ~= "" and kbtext or "(по этому вопросу в справочнике ничего не найдено)")
 end
 
@@ -157,10 +187,10 @@ end
 
 -- Ошибки связи — «в образе».
 local function error_phrase(code)
-  if code == 401 or code == 403 then return "[ошибка авторизации логического ядра] Хозяину мира: проверьте ключ на терминале капсулы (set tmai.api_key …)." end
+  if code == 401 or code == 403 then return "[ошибка авторизации логического ядра] Проверьте ключ: терминал капсулы → Настройки → api_key." end
   if code == 429 then return "[канал перегружен] Слишком много запросов — повторите через минуту." end
   if code == 502 or code == 503 or code == 504 or code == nil then return "[помехи] Нет связи с логическим ядром. Повторите позже." end
-  if code == 404 then return "[сбой] Логическое ядро не отвечает на этот адрес — проверьте tmai.model и tmai.base_url." end
+  if code == 404 then return "[сбой] Логическое ядро не отвечает на этот адрес — проверьте model и base_url в Настройках." end
   return "[сбой обработки запроса] Попробуйте сформулировать иначе."
 end
 
@@ -180,22 +210,14 @@ end
 local function handle_ask(job)
   local p = power.status()
   if not p.ok then
-    reply(job, "[аварийный режим] " .. (p.hint or "Питание ядра ниже минимума. Загрузите топливо в генератор под терминалом."))
+    reply(job, "[аварийный режим] " .. (p.hint or "Питание ядра ниже минимума. Загрузите топливо в генератор в полу перед терминалом."))
     return
   end
   local ready, why = config.check(cfg)
   if not ready then
-    reply(job, "[нет связи с логическим ядром] Требуется настройка терминала капсулы.")
+    reply(job, "[нет связи с логическим ядром] Требуется настройка: терминал капсулы → вкладка «Настройки».")
     ui.log_line(why)
     return
-  end
-  if job.via == "chat" then
-    local inside = guard.in_zone(cfg, job.player, nav)
-    if not inside then
-      chat.configure("скафандр", cfg.chat_bytes)
-      chat.say("Нет сигнала капсулы: вы вне зоны связи. Нужна вышка-ретранслятор или КПК.", job.player)
-      return
-    end
   end
   if job.text == "" then
     reply(job, "Слушаю, " .. job.player .. ".")
@@ -206,7 +228,7 @@ local function handle_ask(job)
   if not state.conv_id then new_conv_id() end
   local answer, err, code = llm.ask({
     cfg = cfg, system = build_system(), history = history.messages(),
-    user = job.text, user_name = job.player, context = build_context(job.text, job.player, p),
+    user = job.text, user_name = job.player, context = build_context(job.text, job.player, p, job.via),
     conv_id = state.conv_id, tools = tools.available(ctx),
     run_tool = function(name, args) return tools.run(name, args, ctx) end,
   })
@@ -214,7 +236,7 @@ local function handle_ask(job)
   if not answer then
     llm_status = "error"
     util.log("E", "llm: %s", tostring(err))
-    ui.log_line("LLM error: " .. tostring(err):sub(1, 60))
+    ui.log_line("нейросеть: " .. tostring(err):sub(1, 60))
     reply(job, error_phrase(code))
     return
   end
@@ -243,7 +265,6 @@ local function handle_memory(job)
     if ev.kind == "layer" then
       new_conv_id()   -- системный промпт изменился: новая сессия шлюза
       say("Печать сектора " .. ev.n .. " снята. Восстановленная запись: «" .. ev.title .. "».")
-      sleep(1.1)
       say(ev.record)
       history.add("assistant", nil, ev.record)
       if cfg.print_records then extras.print_record(ev.n, ev.title, ev.record) end
@@ -277,11 +298,11 @@ end
 local function handle_fix(job)
   local ctx = ctx_for(job.player)
   local answer = llm.ask({
-    cfg = cfg, system = build_system(), context = build_context("скрипт lua cc tweaked ошибка", job.player, power.status()),
+    cfg = cfg, system = build_system(), context = build_context("скрипт lua cc tweaked ошибка", job.player, power.status(), "pc"),
     history = {}, user = job.text, user_name = job.player, tools = tools.available(ctx),
     run_tool = function(name, args) return tools.run(name, args, ctx) end,
   })
-  if answer and answer ~= "" then say(answer, job.player) end
+  if answer and answer ~= "" then say(answer) end
 end
 
 local function handle_relay_setup(job)
@@ -290,10 +311,48 @@ local function handle_relay_setup(job)
     guard.relay_register(job.sender, r)
     save_state()
     rednet.send(job.sender, { op = "relay_ok", info = r }, "tmai_relay_setup")
-    say(("Вышка #%d на связи: %s"):format(job.sender, r.ender and "эндер-модем, без ограничений" or ("дальность " .. r.range .. " блоков")), job.player)
+    say(("Вышка #%d на связи: %s"):format(job.sender, r.ender and "эндер-модем, без ограничений" or ("дальность " .. r.range .. " блоков")))
   else
     rednet.send(job.sender, { op = "relay_fail", error = tostring(err) }, "tmai_relay_setup")
   end
+end
+
+-- Детерминированные команды (без нейросети): «да КОД [авто]», «стоп [КОД]». true — команда выполнена.
+local function direct_command(job)
+  local low = u8.lower(u8.trim(job.text))
+  local code, auto = low:match("^да%s+(%d%d%d)%s*(%S*)")
+  local out
+  if code then
+    if scripts.is_job(code) then
+      local j = scripts.confirm(code, auto == "авто")
+      out = j and ("Запускаю " .. j.name .. " на компьютере #" .. j.target .. ".") or "Нет такой программы."
+    elseif build and build.is_job and build.is_job(code) then
+      local r, err = build.confirm(code, job.player)
+      out = r and (type(r) == "string" and r or "Стройка запущена.") or ("Не выполнено: " .. tostring(err))
+    else
+      local r, err = me.confirm(code, job.player)
+      out = r and ("Заказ принят: " .. r.item .. " x" .. r.count .. ".") or ("Не выполнено: " .. tostring(err))
+    end
+  else
+    local stop = low:match("^стоп%s*(%d*)$")
+    if not stop then return false end
+    local n = scripts.stop(stop ~= "" and stop or nil)
+    local nb = 0
+    if build and build.stop and stop == "" then local okb2, r = pcall(build.stop); nb = okb2 and tonumber(r) or 0 end
+    out = "Остановлено программ: " .. n .. (nb > 0 and (", строек: " .. nb) or "")
+  end
+  reply(job, out)
+  return true
+end
+
+local function handle_input(job)
+  if direct_command(job) then return end
+  local ok, why = guard.allow(cfg, job.player, job.text, 0)
+  if not ok then
+    if why ~= "слишком часто" then reply(job, "[" .. why .. "]") else feed.add("sys", "Капсула", "Не так быстро: подождите пару секунд.") end
+    return
+  end
+  handle_ask(job)
 end
 
 local function worker()
@@ -301,77 +360,114 @@ local function worker()
     if #queue == 0 then os.pullEvent("tmai_queue") end
     local job = table.remove(queue, 1)
     if job then
+      working = true
+      os.queueEvent("tmai_ui", "busy")
       local ok, err = pcall(function()
-        if job.kind == "ask" then handle_ask(job)
+        if job.kind == "input" then handle_input(job)
         elseif job.kind == "memory" then handle_memory(job)
         elseif job.kind == "fix" then handle_fix(job)
         elseif job.kind == "relay_setup" then handle_relay_setup(job)
+        elseif job.kind == "quest_accept" then
+          local r, e = quests.accept(job.id, job.player, nav and nav.repair or 0)
+          say(r and ("Поручение «" .. tostring(r.title) .. "» за " .. job.player .. ".") or ("Не взять: " .. tostring(e)), r and "ai" or "warn")
+          save_state()
+        elseif job.kind == "quest_abandon" then
+          quests.abandon(); save_state(); say("Поручение отменено.", "sys")
         end
       end)
       power.thinking(false)
+      working = false
+      os.queueEvent("tmai_ui", "idle")
       if not ok then util.log("E", "job %s failed: %s", tostring(job.kind), tostring(err)) end
       pcall(compact_history)
     end
   end
 end
 
--- ---------- детерминированные команды чата (без нейросети) ----------
-local function direct_command(player, text)
-  local low = u8.lower(text)
-  local code, auto = low:match("^да%s+(%d%d%d)%s*(%S*)")
-  if code then
-    if scripts.is_job(code) then
-      local j = scripts.confirm(code, auto == "авто")
-      say(j and ("Запускаю " .. j.name .. " на компьютере #" .. j.target .. ".") or "Нет такой программы.", player)
-    else
-      local r, err = me.confirm(code, player)
-      say(r and ("Заказ принят: " .. r.item .. " x" .. r.count .. ".") or ("Не выполнено: " .. tostring(err)), player)
-    end
-    return true
-  end
-  local stop = low:match("^стоп%s*(%d*)$")
-  if stop then
-    local n = scripts.stop(stop ~= "" and stop or nil)
-    say("Остановлено программ: " .. n, player)
-    return true
-  end
-  return false
+-- ---------- действия экранов ----------
+local function apply_config()
+  cfg = config.get()
+  util.set_debug(cfg.debug)
+  power.configure(cfg); embed.configure(cfg); tts.configure(cfg)
 end
+
+local function ui_action(act)
+  if act.kind == "say" then
+    local player = ui.data.speaker or "Экипаж"
+    state.last_speaker = player
+    who.manual = nil
+    local text = u8.truncate(act.text, cfg.max_input * 2)
+    feed.add("user", player, text)
+    if #queue >= cfg.queue_limit then feed.add("warn", "Капсула", "Очередь занята — подождите ответа."); return end
+    push({ kind = "input", player = player, text = text, via = "pc" })
+  elseif act.kind == "cycle_speaker" then
+    who.manual = who.cycle(ui.data.speaker)
+    ui.data.speaker = who.manual
+  elseif act.kind == "setting" then
+    local ok, err = config.set(act.key, act.value)
+    if ok then
+      apply_config()
+      ui.log_line("сохранено: " .. act.key)
+      if act.key == "api_key" or act.key == "base_url" or act.key == "model" then llm_status = "?" end
+    else
+      ui.log_line(act.key .. ": " .. tostring(err))
+      feed.add("warn", "Капсула", "Настройка " .. act.key .. " не сохранена: " .. tostring(err))
+    end
+  elseif act.kind == "memory_box" then
+    config.set("memory_box", act.name); apply_config()
+    feed.add("sys", "Капсула", "Ящик памяти теперь: " .. act.name)
+  elseif act.kind == "quest_accept" then
+    push({ kind = "quest_accept", id = act.id, player = ui.data.speaker or "Экипаж" })
+  elseif act.kind == "quest_abandon" then
+    push({ kind = "quest_abandon" })
+  elseif act.kind == "build_show" and build and build.select then
+    build.select(act.id, act.layer)     -- шлёт tmai_ui build → монитор переключится на «Стройку»
+  end
+end
+
+local function on_radio(sender, msg)
+  local player = tostring(msg.player or ("КПК#" .. sender))
+  if not player:match("^[%w_]+$") then player = "КПК" .. sender end
+  state.pdas = state.pdas or {}
+  state.pdas[tostring(sender)] = { player = player, t = util.now() }
+  if msg.op == "ping" then
+    rednet.send(sender, { op = "pong", from = persona_name() }, link.RADIO)
+    return
+  end
+  local text = u8.truncate(msg.text, cfg.max_input * 2)
+  feed.add("user", player .. " (КПК)", text)
+  if #queue >= cfg.queue_limit then
+    rednet.send(sender, { op = "answer", text = "[очередь занята]" }, link.RADIO); return
+  end
+  push({ kind = "input", player = player, text = text, via = "radio", reply_to = sender })
+end
+
+local TERM_EVENTS = { key = true, key_up = true, char = true, paste = true, mouse_click = true, mouse_scroll = true,
+  mouse_drag = true, mouse_up = true, timer = true, term_resize = true }
 
 local function listener()
   while true do
     local ev = { os.pullEvent() }
     local name = ev[1]
-    if name == "chat" then
-      local m = chat.parse(ev)
-      if m then
-        local hit, rest = u8.strip_trigger(m.text, cfg.trigger_list)
-        if hit then
-          last_chat_t = util.now()
-          if not direct_command(m.name, rest) then
-            local ok, why = guard.allow(cfg, m.name, rest, #queue)
-            if ok then
-              push({ kind = "ask", player = m.name, text = u8.truncate(rest, cfg.max_input * 2), via = "chat", hidden = m.hidden })
-            elseif why ~= "слишком часто" then
-              say("[" .. why .. "]", m.name)
-            end
-          end
-        elseif u8.lower(m.text):match("^да%s+%d%d%d") or u8.lower(m.text):match("^стоп") then
-          direct_command(m.name, m.text)
-        end
+    if TERM_EVENTS[name] then
+      local okh, acts, dirty = pcall(ui.handle_term, name, ev[2], ev[3], ev[4])
+      if not okh then util.log("E", "ui: %s", tostring(acts)); acts, dirty = {}, true end
+      for _, a in ipairs(acts or {}) do
+        local ok, err = pcall(ui_action, a)
+        if not ok then util.log("E", "ui action %s: %s", tostring(a.kind), tostring(err)) end
       end
+      if dirty then pcall(ui.draw_term) end
+    elseif name == "tmai_ui" and ev[2] == "build" then
+      ui.follow_build(ev[3], ev[4])
+    elseif name == "monitor_touch" then
+      ui.handle_touch(ev[2], ev[3], ev[4])
+      os.queueEvent("tmai_ui", "touch")
     elseif name == "modem_message" then
       link.on_modem_message(ev[2], ev[3], ev[4], ev[5], ev[6])
     elseif name == "rednet_message" then
       local sender, msg, proto = ev[2], ev[3], ev[4]
-      if proto == link.RADIO and type(msg) == "table" and msg.op == "ask" and type(msg.text) == "string" then
-        local player = tostring(msg.player or ("КПК#" .. sender))
-        if not player:match("^[%w_]+$") then player = "КПК" .. sender end
-        local ok, why = guard.allow(cfg, player, msg.text, #queue)
-        if ok then push({ kind = "ask", player = player, text = u8.truncate(msg.text, cfg.max_input * 2), via = "radio", reply_to = sender })
-        else rednet.send(sender, { op = "answer", text = "[" .. why .. "]" }, link.RADIO) end
-      elseif proto == link.RADIO and type(msg) == "table" and msg.op == "ping" then
-        rednet.send(sender, { op = "pong", from = persona_name() }, link.RADIO)
+      if proto == link.RADIO and type(msg) == "table" and ((msg.op == "ask" and type(msg.text) == "string") or msg.op == "ping") then
+        on_radio(sender, msg)
       elseif proto == "tmai_relay" and type(msg) == "table" and msg.op == "relay_hb" then
         guard.relay_beacon(sender)
       elseif proto == "tmai_relay_setup" and type(msg) == "table" and msg.op == "setup" and type(msg.player) == "string" then
@@ -379,17 +475,22 @@ local function listener()
       elseif proto == scripts.PROTO then
         local j, m = scripts.on_rednet(sender, msg)
         if j and m.state == "error" then
-          say("Программа " .. j.name .. " упала: " .. tostring(m.error):sub(1, 200), j.player)
+          say("Программа " .. j.name .. " упала: " .. tostring(m.error):sub(1, 200), "warn")
           if j.auto and (j.fixes or 0) < 3 then push({ kind = "fix", player = j.player, text = scripts.fix_prompt(j) }) end
         elseif j and m.state == "done" then
-          say("Программа " .. j.name .. " завершена.", j.player)
+          say("Программа " .. j.name .. " завершена.", "sys")
         end
+      elseif build and build.PROTO and proto == build.PROTO then
+        local okr, note = pcall(build.on_rednet, sender, msg)
+        if okr and note then say(note, "sys") end
+        os.queueEvent("tmai_ui", "build")
       end
     elseif name == "ae_crafting" then
       local text = me.on_event(ev[2], ev[3], ev[4])
-      if text then say(text) end
+      if text then say(text, "sys") end
     elseif name == "peripheral" or name == "peripheral_detach" then
-      chat.attach(); power.attach(); me.attach(); link.attach(); open_rednet(); extras.attach()
+      power.attach(); me.attach(); link.attach(); open_rednet(); extras.attach(); who.attach(); ui.reset_monitor()
+      os.queueEvent("tmai_ui", "peripheral")
     end
   end
 end
@@ -428,12 +529,12 @@ local function poller()
         local where = ("NAV at %s %s %s, radios [%s]"):format(tostring(s.x), tostring(s.y), tostring(s.z), table.concat(rs, " "))
         if nav == nil or where ~= nav_where then
           util.log("I", "nav: link ok, %s", where)
-          ui.log_line("NAV: link ok")
+          ui.log_line("штурманский модуль: связь есть")
         end
         nav, nav_fail, nav_where = s, 0, where
       else
         nav_fail = nav_fail + 1
-        if nav_fail == 2 then ui.log_line("NAV: no link"); util.log("W", "nav: %s", tostring(err)) end
+        if nav_fail == 2 then ui.log_line("штурманский модуль: нет связи"); util.log("W", "nav: %s", tostring(err)) end
         if nav_fail >= 2 then nav = nil end   -- модуль упакован или без связи: не держать устаревший статус
       end
     end
@@ -442,6 +543,25 @@ local function poller()
       if msg then say(msg); save_state() end
     end
     sleep(10)
+  end
+end
+
+-- Кто у терминала и кто онлайн (детектор игроков; запасной вариант — TM-NAV).
+local function watcher()
+  local n = 0
+  while true do
+    if n % 10 == 0 then
+      who.refresh(function()
+        local r = link.call("players", {}, 3)
+        return r and r.names
+      end)
+    end
+    if not who.manual then
+      local sp = who.resolve(state.last_speaker)
+      if sp ~= ui.data.speaker then ui.data.speaker = sp; os.queueEvent("tmai_ui", "speaker") end
+    end
+    n = n + 1
+    sleep(1)
   end
 end
 
@@ -455,11 +575,10 @@ local function ambience()
       if t >= 6 and t < 7 and os.day() ~= last_dawn_day then
         last_dawn_day = os.day()
         if math.random() < 0.34 then
-          chat.configure("…", cfg.chat_bytes)
-          chat.say(math.random() < 0.8 and "ДОБРОЕ УТРО. СЕГОДНЯ ВСПОМНИЛИ ЕЩЁ ТРОЕ." or "ОНА ПЕРЕДАЁТ: НЕ ЗАБЫВАЙТЕ ЕСТЬ.")
+          feed.add("ai", "…", math.random() < 0.8 and "ДОБРОЕ УТРО. СЕГОДНЯ ВСПОМНИЛИ ЕЩЁ ТРОЕ." or "ОНА ПЕРЕДАЁТ: НЕ ЗАБЫВАЙТЕ ЕСТЬ.")
         end
       end
-    elseif not ep and cfg.hum and lore.level() >= 4 and (t >= 22 or t < 4) and util.now() - last_chat_t > 300 and #queue == 0 then
+    elseif not ep and cfg.hum and lore.level() >= 4 and (t >= 22 or t < 4) and util.now() - last_talk_t > 300 and #queue == 0 then
       if math.random() < 0.15 and extras.hum(lore.level() >= 9) then
         say("Простите. Задумался.")
       end
@@ -467,17 +586,122 @@ local function ambience()
   end
 end
 
+-- ---------- данные для экранов ----------
+local function memory_rows()
+  local rows = { { text = "Восстановленная память", header = true } }
+  for _, l in ipairs(lore.layers_open()) do
+    rows[#rows + 1] = { text = "Сектор " .. l.n .. ": «" .. l.title .. "»", fg = colors.white, row = { kind = "read", what = "layer", n = l.n } }
+  end
+  local finds = lore.list()
+  rows[#rows + 1] = { text = "Находки в Ящике памяти", header = true }
+  for _, f in ipairs(finds) do
+    rows[#rows + 1] = { text = "«" .. f.title .. "»" .. (f.restored and "" or " — без контекста"),
+      fg = f.restored and colors.white or colors.gray, row = { kind = "read", what = "find", item = f.item } }
+  end
+  if #finds == 0 then rows[#rows + 1] = { text = "пусто: кладите записки и носители в Ящик памяти", fg = colors.gray } end
+  rows[#rows + 1] = { text = "Заметки ЛОЦМАНа", header = true }
+  local notes = history.notes()
+  for i, nt in ipairs(notes) do
+    rows[#rows + 1] = { text = i .. ". " .. nt.text, fg = colors.lightGray, row = { kind = "read", what = "note", i = i } }
+  end
+  if #notes == 0 then rows[#rows + 1] = { text = "нет (попросите: «запомни, что…»)", fg = colors.gray } end
+  return rows
+end
+
+local function read_memory(row)
+  if row.what == "layer" then
+    local rec, title = lore.record(row.n)
+    return "Сектор " .. row.n .. ": «" .. tostring(title) .. "»", rec
+  elseif row.what == "find" then
+    for _, f in ipairs(lore.list()) do
+      if f.item == row.item then return "«" .. f.title .. "»", (lore.memory_read(f.item)) end
+    end
+  elseif row.what == "note" then
+    local nt = history.notes()[row.i]
+    if nt then return "Заметка " .. row.i .. (nt.by and (" (" .. nt.by .. ")") or ""), nt.text end
+  end
+  return "?", "(нет текста)"
+end
+
+local function modem_kind(name)
+  local ok, wl = pcall(peripheral.call, name, "isWireless")
+  if not ok then return "модем" end
+  return wl and "беспроводной/эндер" or "проводной"
+end
+
+local function device_rows(p)
+  local rows = { { text = "Питание", header = true } }
+  if not p.energy then
+    rows[#rows + 1] = { text = "Ядро ИИ", value = "не найдено", fg = colors.red, desc = "Поставьте ядро ИИ вплотную к терминалу (лучше под ним)." }
+  else
+    rows[#rows + 1] = { text = "Ядро ИИ", value = p.far and "не вплотную!" or (p.pct .. "%, " .. p.energy .. " FE"),
+      fg = p.far and colors.red or colors.white, desc = p.far and "Ядро должно стоять вплотную к терминалу: нагрузка «думаю» идёт сигналом." or "Генератор или любой кабель FE подключайте к ядру." }
+  end
+  rows[#rows + 1] = { text = "Экраны и звук", header = true }
+  local mname = ui.monitor_name()
+  if mname then
+    local mw, mh = peripheral.call(mname, "getSize")
+    rows[#rows + 1] = { text = "Монитор", value = mname .. " " .. mw .. "×" .. mh, desc = "Любой продвинутый монитор от 2×1 — вплотную или через проводной модем." }
+  else
+    rows[#rows + 1] = { text = "Монитор", value = "нет", fg = colors.orange, desc = "Поставьте продвинутый монитор 2×1 (или больше) рядом или подключите модемом." }
+  end
+  rows[#rows + 1] = { text = "Детектор игроков", value = who.present() and "есть" or "нет", fg = who.present() and colors.white or colors.gray,
+    desc = "По нему ЛОЦМАН узнаёт, кто говорит у терминала. Без него — щёлкните по имени в строке ввода." }
+  rows[#rows + 1] = { text = "Колонка", value = peripheral.find("speaker") and "есть" or "нет" }
+  rows[#rows + 1] = { text = "Принтер", value = peripheral.find("printer") and "есть" or "нет", desc = "Если есть — печатает восстановленные записи." }
+  rows[#rows + 1] = { text = "Ящик памяти", header = true }
+  local _, boxname = memory_box()
+  for _, inv in ipairs(inventories()) do
+    local cur = inv == boxname
+    rows[#rows + 1] = { text = inv, value = cur and "Ящик памяти" or (SIDE[inv] and "вплотную" or "в сети"),
+      fg = cur and colors.lime or colors.white, row = { kind = "inv" },
+      action = not cur and { kind = "memory_box", name = inv, label = "сделать Ящиком памяти" } or nil,
+      desc = cur and "Сюда кладут записки и детали ремонта." or "Enter — сделать этот инвентарь Ящиком памяти." }
+  end
+  if not boxname then rows[#rows + 1] = { text = "нет: поставьте сундук рядом с терминалом", fg = colors.orange } end
+  rows[#rows + 1] = { text = "Связь", header = true }
+  rows[#rows + 1] = { text = "Штурманский модуль", value = nav and ("на связи, ремонт " .. (nav.repair or 0) .. "/4") or "нет связи",
+    fg = nav and colors.white or colors.orange, desc = "TM-NAV: проводной модем/кабель, беспроводной или эндер-модем." }
+  for _, n in ipairs(peripheral.getNames()) do
+    if peripheral.hasType(n, "modem") then rows[#rows + 1] = { text = "Модем " .. n, value = modem_kind(n) } end
+  end
+  rows[#rows + 1] = { text = "МЭ-мост", value = me.attach() and "в сети" or "нет", desc = "ME Bridge рядом с терминалом или в сети — ЛОЦМАН видит склад и заказывает автокрафт." }
+  rows[#rows + 1] = { text = "КПК на связи", value = tostring(#pdas_recent()) }
+  rows[#rows + 1] = { text = "Компьютеры с tmexec", value = tostring(#scripts.list_targets()) }
+  if build and build.list_builders then
+    local okb2, bl = pcall(build.list_builders)
+    rows[#rows + 1] = { text = "Черепашки-строители", value = tostring(okb2 and bl and #bl or 0),
+      desc = "Черепашка с меткой TM-BUILD-… (или программа tmbuild), сундук с блоками — позади неё." }
+  end
+  return rows
+end
+
 local function ui_loop()
+  local n = 0
   while true do
-    ui.render({
-      power = power.status(), llm = llm_status, llm_ok = llm_status == "ok",
-      tools = llm.tools_supported == false and "unsupported" or (cfg.use_tools and "on" or "off"),
-      search = embed.state == "ready" and "vector+kw" or (embed.state == "building" and ("building " .. embed.progress) or "keywords"),
+    local p = power.status()
+    ui.data.status = {
+      name = persona_name(), power = p, llm = llm_status, llm_ready = config.check(cfg),
+      search = embed.state == "ready" and "по смыслу" or (embed.state == "building" and ("строю " .. embed.progress) or "по словам"),
       me = me.attach(), nav = nav ~= nil, repair = nav and nav.repair,
-      radio = nav and nav.radio and (nav.radio.ender and "ender" or tostring(nav.radio.range)) or "?",
-      queue = #queue,
-    })
-    sleep(2)
+      radio = nav and nav.radio and (nav.radio.ender and "эндер" or (tostring(nav.radio.range) .. " бл.")) or "?",
+      queue = #queue + (working and 1 or 0),
+    }
+    ui.data.busy = working
+    ui.data.quests = { active = quests.active(), available = quests.available(nav and nav.repair or 0) }
+    ui.data.memory = memory_rows()
+    if n % 5 == 0 then
+      local okd, rows = pcall(device_rows, p)
+      ui.data.devices = okd and rows or { { text = "ошибка: " .. tostring(rows), fg = colors.red } }
+    end
+    n = n + 1
+    pcall(ui.draw_term)
+    local okm, err = pcall(ui.draw_monitor, cfg)
+    if not okm then util.log("W", "monitor: %s", tostring(err)) end
+    local t = os.startTimer(working and 0.5 or 2)
+    repeat
+      local e, a = os.pullEvent()
+    until (e == "timer" and a == t) or e == "tmai_ui"
   end
 end
 
@@ -496,27 +720,30 @@ function App.run()
   if not fs.exists(util.DATA_DIR) then fs.makeDir(util.DATA_DIR) end
   state = util.load_json(STATE_PATH, {})
   state.seen_items = state.seen_items or {}
-  chat.configure(persona_name(), cfg.chat_bytes)
-  chat.attach()
   power.configure(cfg); power.attach()
-  me.attach(); link.attach(); open_rednet(); extras.attach()
+  me.attach(); link.attach(); open_rednet(); extras.attach(); who.attach()
   history.init(cfg.history_chars)
   lore.init(state)
   guard.init(state)
   quests.init(state, memory_box, core_name)
   embed.configure(cfg); tts.configure(cfg)
   prompt.load()
+  ui.reader = read_memory
+  ui.build = build
   math.randomseed(os.epoch("utc"))
   local ok, why = config.check(cfg)
-  ui.log_line(ok and "ready" or why)
+  ui.log_line(ok and "готов" or why)
   util.log("I", "start: kb=%d sections, memory level=%d, %s", kb.count(), lore.level(), ok and "llm configured" or why)
-  if not state.greeted then
-    state.greeted = true
+  if not state.greeted or not state.greeted_screen then
+    local first = not state.greeted
+    state.greeted, state.greeted_screen = true, true
     save_state()
-    say("…перезагрузка… " .. (lore.record(0) or ""))
-    say("Экипаж, чтобы говорить со мной, начните сообщение со слова «Лоцман».")
+    if first then say("…перезагрузка… " .. (lore.record(0) or "")) end
+    say("Экипаж, говорить со мной — здесь, на терминале капсулы (ПКМ по компьютеру), или с КПК. " ..
+      "Вкладки сверху: задания, память, стройка, устройства, настройки.", "sys")
   end
-  parallel.waitForAny(listener, worker, poller, ambience, ui_loop, embedder)
+  term.clear()
+  parallel.waitForAny(listener, worker, poller, watcher, ambience, ui_loop, embedder)
 end
 
 return App

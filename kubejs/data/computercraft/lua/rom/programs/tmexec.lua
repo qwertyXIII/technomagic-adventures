@@ -131,7 +131,10 @@ while true do
     if ev[1] == "timer" and ev[2] == timer then break end
     if ev[1] == "rednet_message" and ev[4] == PROTO and type(ev[3]) == "table" then
       local sender, m = ev[2], ev[3]
-      if not owner then owner = sender; settings.set("tmexec.owner", sender); settings.save() end
+      -- владелец — первый, кто прислал КОМАНДУ (компьютер ИИ); «hello» соседних агентов не в счёт
+      if not owner and (m.op == "deploy" or m.op == "run" or m.op == "stop") then
+        owner = sender; settings.set("tmexec.owner", sender); settings.save()
+      end
       if sender == owner then
         if m.op == "deploy" and type(m.code) == "string" and type(m.name) == "string" and m.name:match("^[a-z0-9_]+$") then
           local h = fs.open(DIR .. "/" .. m.name .. ".lua", "w"); h.write(m.code); h.close()

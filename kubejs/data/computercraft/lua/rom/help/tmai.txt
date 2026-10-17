@@ -1,28 +1,32 @@
-tmai - LOCMAN, bortovoy assistent kapsuly (komp'yuter s metkoy TM-AI).
-Zapuskaetsya sam. Ostanovit': Ctrl+T. Snova zapustit': reboot.
+tmai - ЛОЦМАН, бортовой ассистент капсулы (компьютер с меткой TM-AI).
+Запускается сам. Остановить: Ctrl+T. Снова запустить: reboot.
 
-Nastroyka (odin raz, hozyain mira):
-  set tmai.api_key <klyuch shlyuza>       - obyazatel'no
-  set tmai.emb_key <klyuch OpenRouter>    - poisk po smyslu (neobyazatel'no)
-  set tmai.tts true                       - ozvuchka (nuzhen emb_key ili tts_key)
-  reboot
-Uzhe propisano: tmai.base_url = http://192.168.0.113:4111/v1,
-                tmai.model = codex/gpt-6-luna
-Vse parametry s opisaniem: set   (ili: set tmai.model)
-Drugaya model/server: set tmai.base_url http://IP:port/v1 ; set tmai.model <imya>
-  (adres v lokal'noy seti nado razreshit' v config/computercraft-server.toml)
+Говорить с ЛОЦМАНом - только здесь или с КПК (игровой чат он не читает).
+Вкладки сверху (щелчок мышью или Tab):
+  Чат        - вопрос в строке внизу, Enter. Имя слева - кто говорит
+               (по детектору игроков; щелчок по имени - сменить).
+  Задания    - поручения: Enter - взять, Delete - отменить.
+  Память     - восстановленные записи, находки, заметки (Enter - читать).
+  Стройка    - планы прораба (стрелки - план и слой, Enter - на монитор).
+  Устройства - что подключено; Enter на сундуке - сделать Ящиком памяти.
+  Настройки  - ключ, адреса, модели: Enter - изменить, Enter - сохранить.
+PgUp/PgDn или колесо мыши - листать.
 
-V chate: "Locman, ..." (ili "II, ...", "bort, ..."); $ v nachale - lichno.
-Podtverzhdenie: "da 123". Ostanovka programm: "stop".
-Ochistit' istoriyu: tmai reset-history
-Logi: /tmai/log.txt   Sostoyanie: /tmai/state.json
-Vyshka svyazi: label set TM-RELAY-1, reboot. KPK: v nazvanii "KPK".
-Programmy ot LOCMANa na drugom komp'yutere: tmexec
+Настройка (один раз, хозяин мира): Настройки -> api_key -> Enter ->
+  вставить ключ (Ctrl+V) -> Enter. Адрес и модель уже прописаны.
+По-старому тоже можно: set tmai.api_key <ключ>, reboot.
 
-Pereezd (perenos LOCMANa na bazu):
-  komp'yuter TM-AI - slomat' kirkoy: metka i pamyat' sohranyatsya;
-  shturmanskiy modul' (TM-NAV) i yadro - "modulem perenosa" (PKM po bloku),
-  postavit' - Shift+PKM. Yadro - vplotnuyu k TM-AI (luchshe pod nim).
-  Svyaz' TM-AI <-> TM-NAV: provodnoy modem/kabel', besprovodnoy ili ender-modem.
-  Radio (zona chata) - besprovodnoy modem na TM-NAV ili na TM-AI.
-  Esli modul' "ne uznaet" komp'yuter - postav'te TM-AI vplotnuyu k TM-NAV.
+Подтверждение: "да 123". Остановить программы и стройку: "стоп".
+Монитор (продвинутый, от 2x1): слева состояние, справа разделы - касанием.
+Очистить историю: tmai reset-history
+Логи: /tmai/log.txt   Состояние: /tmai/state.json
+Вышка связи: label set TM-RELAY-1, reboot. КПК: в названии "KPK".
+Программы от ЛОЦМАНа на другом компьютере: tmexec. Стройка: tmbuild.
+
+Переезд (перенос ЛОЦМАНа на базу):
+  компьютер TM-AI - сломать киркой: метка и память сохранятся;
+  штурманский модуль (TM-NAV) и ядро - "модулем переноса" (ПКМ по блоку),
+  поставить - Shift+ПКМ. Ядро - вплотную к TM-AI (лучше под ним).
+  Связь TM-AI <-> TM-NAV: проводной модем/кабель, беспроводной или эндер-модем.
+  Монитор, колонка, детектор игроков, Ящик памяти - рядом или в проводной сети.
+  Если модуль "не узнает" компьютер - поставьте TM-AI вплотную к TM-NAV.

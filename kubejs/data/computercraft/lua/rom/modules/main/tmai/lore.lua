@@ -203,6 +203,15 @@ function M.record(n)
   return section(read_dat(layers[n].file), "RECORD"), layers[n].title
 end
 
+-- Открытые слои памяти: { {n=, title=}, … } (для вкладки «Память»; тексты — M.record(n)).
+function M.layers_open()
+  local out = {}
+  for n = 0, M.level() do
+    if layers[n] then out[#out + 1] = { n = n, title = layers[n].title } end
+  end
+  return out
+end
+
 function M.list()
   local L = M.level()
   local out = {}
