@@ -2,8 +2,10 @@
 -- Методы (из jar): isConnected, isOnline, getItems([filter]), getItem(filter),
 --   getCraftableItems([filter]), isCraftable(filter), craftItem(filter[, cpu]) -> job,
 --   getCraftingTasks(), getCraftingCPUs(), cancelCraftingTasks(filter),
---   getStoredEnergy, getEnergyUsage, getUsedItemStorage, getMaxItemStorage ...
--- filter = { name = "minecraft:iron_ingot", count = N, components = ... }
+--   getStoredEnergy, getEnergyUsage, getUsedItemStorage, getMaxItemStorage ...,
+--   exportItem(куда, filter) -> сколько ушло (куда — имя периферии в той же сети или "@up"…; до 64 за вызов),
+--   importItem(откуда, filter) -> сколько пришло; в filter можно fromSlot/toSlot (с 1, мост сам вычитает 1)
+-- filter ={ name = "minecraft:iron_ingot", count = N, components = ... }
 -- job (объект): getId, isDone, isCanceled, isCalculationNotSuccessful, hasErrorOccurred,
 --   getDebugMessage, getMissingItems, getItemProgress, getTotalItems, cancel
 -- Событие по ходу крафта: "ae_crafting", isError, jobId, status
@@ -135,6 +137,88 @@ function M.jobs_summary()
     out[#out + 1] = { job_id = id, item = j.item, count = j.count, state = st }
   end
   return out
+end
+
+-- ---------- для приложения «Склад» (tmai.apps.storage) ----------
+-- МЭ на связи: true | false, причина.
+function M.ready() return online() end
+
+-- Все предметы сети как есть: { {name, count, displayName, isCraftable, …}, … } | nil, ошибка.
+function M.items()
+  local ok, err = online(); if not ok then return nil, err end
+  local pok, items = pcall(bridge.getItems)
+  if not pok or type(items) ~= "table" then return nil, tostring(items) end
+  return items
+end
+
+-- Есть ли шаблон автокрафта.
+function M.craftable(item)
+  if not valid_id(item) then return false end
+  local ok = online(); if not ok then return false end
+  local pok, c = pcall(bridge.isCraftable, { name = item })
+  return pok and c == true
+end
+
+local MOVE_ERR = {
+  INVENTORY_NOT_FOUND = "МЭ-мост не видит этот сундук (подключите мост и сундук к одной проводной сети)",
+  TARGET_NOT_FOUND = "МЭ-мост не видит этот сундук (подключите мост и сундук к одной проводной сети)",
+  NOT_CONNECTED = "МЭ-сеть не отвечает",
+}
+
+-- Один перенос. AP 0.8.2a: exportItem(куда, фильтр) / importItem(откуда, фильтр); у старых версий — (фильтр, куда)
+-- или exportItemToPeripheral / importItemFromPeripheral(фильтр, куда). -> сколько | nil, ошибка
+local function move_once(method, old_method, filter, target)
+  local ok, r, e = pcall(bridge[method], target, filter)
+  if ok and type(r) == "number" then return r end
+  if not ok and tostring(r):find("bad argument", 1, true) then
+    local ok2, r2, e2 = pcall(bridge[method], filter, target)
+    if ok2 and type(r2) == "number" then return r2 end
+    ok, r, e = ok2, r2, e2
+  end
+  if bridge[old_method] then
+    local ok3, r3 = pcall(bridge[old_method], filter, target)
+    if ok3 and type(r3) == "number" then return r3 end
+  end
+  local code = tostring(ok and e or r)
+  if code:find("NOT_FOUND", 1, true) and not code:find("INVENTORY", 1, true) and not code:find("TARGET", 1, true) then
+    return 0   -- ITEM_NOT_FOUND и т.п.: такого предмета нет
+  end
+  return nil, MOVE_ERR[code] or code
+end
+
+local function move(method, old_method, item, count, target, slot_key, slot)
+  local ok, err = online(); if not ok then return 0, err end
+  if not valid_id(item) then return 0, "неверный ID предмета" end
+  count = math.floor(tonumber(count) or 0)
+  if count < 1 then return 0 end
+  if type(target) ~= "string" or target == "" then return 0, "не задан сундук" end
+  local total, calls = 0, 0
+  while total < count and calls < 200 do        -- по стаку за вызов; мелкие стаки (жемчуг) — несколько вызовов
+    calls = calls + 1
+    local filter = { name = item, count = math.min(64, count - total) }
+    if slot then filter[slot_key] = slot end
+    local n, e = move_once(method, old_method, filter, target)
+    if not n then return total, e end
+    if n <= 0 then break end
+    total = total + n
+  end
+  return total
+end
+
+-- Выгрузить count штук item в инвентарь target (имя периферии в той же сети); to_slot — в какой слот (с 1).
+-- -> сколько ушло, ошибка|nil
+function M.export(item, count, target, to_slot)
+  return move("exportItem", "exportItemToPeripheral", item, count, target, "toSlot", to_slot)
+end
+
+-- Забрать в МЭ count штук item из инвентаря source; from_slot — только из этого слота (с 1).
+-- -> сколько пришло, ошибка|nil
+function M.import(item, count, source, from_slot)
+  local n, e = move("importItem", "importItemFromPeripheral", item, count, source, "fromSlot", from_slot)
+  if n == 0 and not e and from_slot then   -- на случай другой нумерации слотов — без слота
+    n, e = move("importItem", "importItemFromPeripheral", item, count, source)
+  end
+  return n, e
 end
 
 -- Обработка события ae_crafting: вернуть текст для чата или nil.

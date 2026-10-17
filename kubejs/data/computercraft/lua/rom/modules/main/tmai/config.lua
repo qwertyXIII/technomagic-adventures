@@ -31,7 +31,7 @@ local DEFS = {
   { "emb_base_url", "https://openrouter.ai/api/v1", "string", "Адрес API эмбеддингов до /embeddings" },
   { "emb_model", "openai/text-embedding-3-small", "string", "Модель эмбеддингов" },
   { "emb_key", "", "string", "Ключ OpenRouter для эмбеддингов (пусто = поиск только по ключевым словам)" },
-  { "emb_dims", 512, "number", "Параметр dimensions (0 = не передавать; 512 экономит диск и время)" },
+  { "emb_dims", 0, "number", "Размерность векторов (параметр dimensions): 0 — родная у модели (лучше качество; у text-embedding-3-small — 1536), меньше — экономит диск и время поиска" },
   { group = "Озвучка" },
   { "tts", false, "boolean", "Озвучивать ответы через колонку капсулы (и КПК с динамиком)" },
   { "tts_base_url", "https://openrouter.ai/api/v1", "string", "Адрес API озвучки до /audio/speech" },

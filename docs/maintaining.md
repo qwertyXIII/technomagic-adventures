@@ -103,5 +103,12 @@ packwiz refresh                  # после любых ручных право
 - Файлы справки (`rom/help/*.txt`) печатаются байт в байт — они хранятся в CP1251; исходники в UTF-8 — `tools/gen/help_src/`, перекодирует `tools/gen/gen_help.py`.
 - Офлайн-тесты: `lua tools/gen/test_lua_text.lua`, `lua tools/gen/test_lua_ui.lua`.
 
+## ЛОЦМАН: программы-приложения
+- Каждая вкладка-программа ЛОЦМАНа (База, Склад, Пульт, Сценарии, Программы, Метки, Почта, Журнал) — модуль `kubejs/data/computercraft/lua/rom/modules/main/tmai/apps/<id>.lua`. Договор (поля, что можно ждать, а что нет, службы `ctx`) — шапка `tmai/apps.lua`. Почему так — [ADR-0009](devs/decisions/0009-locman-os-iz-prilozheniy.md).
+- Операции командного компьютера для приложения — `modules/main/tmnav/<id>.lua`; всё, что уходит в команду сервера, проверяется там.
+- Тревоги — `tmai/alert.lua`; КПК получает их как `notify` с уровнем.
+- Озвучка (`tmai/tts.lua`) — в своей корутине: текст режется по предложениям, куски запрашиваются параллельно (`tts_parallel`) и играются по порядку; голос — `tts_voice` (ID Fish Audio).
+- Офлайн-тесты: свой у каждого приложения (`tools/gen/test_lua_<id>.lua`, подделка CC — `tools/gen/lib_ccfake.lua`), все вместе — `lua tools/gen/test_lua_apps_all.lua` (рисование всех вкладок на терминале и мониторах без выхода за край).
+
 ## Совпадающие клавиши модов
 `kubejs/client_scripts/tm_keys.js` при входе в мир разводит совпадающие клавиши (колесо эмоций Emotecraft и рюкзак Sophisticated Backpacks — обе на B): клавиша Emotecraft переезжает на первую свободную (J, Y, H…). Новые пары — дописать в `TM_KEY_MOVES`.

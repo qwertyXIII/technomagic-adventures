@@ -13,9 +13,11 @@
 --
 --   init(ctx)                        -- один раз при запуске. Не ждать (без периферии и сети)
 --   tick(ctx)                        -- периодически, в корутине приложений: МОЖНО ждать периферию, ctx.nav(...)
+--   cursor(ctx) -> x, y | nil        -- где мигать курсором после рисования своего вида на терминале (строка ввода)
 --   action(ctx, act)                 -- действие со строки вкладки (Enter/Delete/ввод): act = { op=…, value=…
 --                                       (текст из prompt), player=ник у терминала или nil, … поля из action }.
---                                       Выполняется в очереди приложений — МОЖНО ждать
+--                                       Выполняется в очереди приложений — МОЖНО ждать. Поля kind и app в act
+--                                       заняты реестром (kind = "app") — своё называйте иначе (op, mode…)
 --   radio = { <act> = function(ctx, msg, sender, player) -> data[, err] }
 --                                    -- запросы с КПК: КПК шлёт по tmai_radio
 --                                       { op="app", app=<id>, act=<act>, rid=…, player=<ник КПК>, …свои поля }
@@ -24,11 +26,14 @@
 --   run_tool(ctx, name, args, tctx)  -- "<id>_…". tctx.player — кто спросил. МОЖНО ждать. Вернуть таблицу/строку
 --
 --   НЕЛЬЗЯ ждать (вызываются при рисовании и в обработчике событий — только данные из ctx.data и кэша tick):
---   rows(ctx, w) -> rows             -- содержимое вкладки списком (вид как «Устройства»). Строка:
+--   rows(ctx, w, where) -> rows      -- содержимое вкладки списком (вид как «Устройства»); where = "term" | "monitor".
+--                                       Строка:
 --        { text=, value= (справа), fg=colors.*, header=true (заголовок), desc= (подсказка снизу при выборе),
 --          row={…} (строку можно выбрать), action={ op=…, … } (Enter), del={ op=…, … } (Delete),
 --          prompt={ label="Имя метки", op="add", value="", mask=false, max=40, … } (Enter → строка ввода внизу,
---          введённое придёт в action как act.value) }
+--          введённое придёт в action как act.value),
+--          read={ title="…", body="длинный текст" } (Enter → просмотр с листанием, Backspace — назад;
+--          если у строки есть и action — оно тоже уйдёт, например «отметить прочитанным») }
 --   draw(ctx, t, x, y, w, h, where)  -- свой вид вместо rows; where = "term" | "monitor"
 --   key(ctx, ev, a, b, c) -> handled[, act]  -- ввод для своего вида; act — действие в очередь (как со строки)
 --   touch(ctx, x, y, w, h) -> act | nil  -- касание монитора в области вкладки (x, y — от 1 внутри неё)
@@ -232,10 +237,11 @@ function M.event(name, ...)
 end
 
 -- ---------- нейросеть ----------
-function M.tool_defs(tctx)
+-- only — { [id] = true }: только эти приложения (nil — все).
+function M.tool_defs(tctx, only)
   local out = {}
   for _, app in ipairs(M.list) do
-    if app.tools and not app.broken then
+    if app.tools and not app.broken and (not only or only[app.id]) then
       local ok, defs = pcall(app.tools, app.ctx, tctx)
       if ok and type(defs) == "table" then
         for _, d in ipairs(defs) do
@@ -274,10 +280,10 @@ function M.run_tool(name, args, tctx)
 end
 
 -- ---------- для экранов (нельзя ждать) ----------
-function M.rows(app, w)
+function M.rows(app, w, where)
   if app.broken then return { { text = "Приложение не запустилось: " .. app.broken, fg = colors.red } } end
   if not app.rows then return {} end
-  local ok, rows = pcall(app.rows, app.ctx, w)
+  local ok, rows = pcall(app.rows, app.ctx, w, where or "term")
   if not ok then return { { text = "Ошибка: " .. tostring(rows), fg = colors.red } } end
   return type(rows) == "table" and rows or {}
 end

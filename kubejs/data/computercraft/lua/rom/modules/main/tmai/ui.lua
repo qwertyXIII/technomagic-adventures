@@ -292,10 +292,10 @@ local function home_rows()
 end
 
 -- Список строк вкладки-списка: { text=, value=, fg=, header=bool, row=…, action=…, del=…, prompt=…, desc= }
-local function list_rows(tab, w)
+local function list_rows(tab, w, where)
   local out = {}
   local app = app_of(tab)
-  if app then return M.apps.rows(app, w or (term_size())) end
+  if app then return M.apps.rows(app, w or (term_size()), where or "term") end
   if tab == "home" then return home_rows() end
   if tab == "quests" then
     local q = M.data.quests or {}
@@ -339,7 +339,7 @@ end
 
 local function selectable(rows, i)
   local r = rows[i]
-  return r ~= nil and not r.header and (r.row ~= nil or r.action ~= nil or r.prompt ~= nil or r.del ~= nil)
+  return r ~= nil and not r.header and (r.row ~= nil or r.action ~= nil or r.prompt ~= nil or r.del ~= nil or r.read ~= nil)
 end
 
 local function fix_sel(tab, rows)
@@ -524,6 +524,11 @@ function M.draw_term()
     ed:draw()
   else
     put(t, 1, h, text.fit(hint_for(T.tab, sel_row), w), colors.gray, colors.black)
+    -- приложение со своим видом и строкой ввода — вернуть ему курсор
+    if app and app.draw and app.cursor and not T.read and not (T.tab == "settings" and settings_locked()) then
+      local okc, cx, cy2 = pcall(app.cursor, app.ctx)
+      if okc and cx and cy2 then t.setCursorPos(cx, cy2); t.setCursorBlink(true) end
+    end
   end
 end
 
@@ -564,6 +569,11 @@ local function activate(tab, rows)
   if not r then return nil end
   if r.prompt then return start_prompt(tab, r.prompt) end
   if tab == "home" and r.row and r.row.kind == "open" then M.show_tab(r.row.id); return nil end
+  if type(r.read) == "table" then
+    T.read = { title = tostring(r.read.title or r.text or ""), body = tostring(r.read.body or "(пусто)"), top = 1 }
+    if r.action and app_of(tab) then return app_act(tab, r.action) end   -- например, «прочитано»
+    return nil
+  end
   if r.action then return app_of(tab) and app_act(tab, r.action) or r.action end
   if not r.row then return nil end
   if r.row.kind == "setting" then return start_edit(r.row.def)
@@ -772,7 +782,7 @@ local function draw_status_panel(t, x, y, w, h, st)
 end
 
 local function draw_mon_list(t, x, y, w, h, tab)
-  local rows = list_rows(tab, w)
+  local rows = list_rows(tab, w, "monitor")
   local lines = {}
   for _, r in ipairs(rows) do
     local s = r.header and r.text or (((r.row or r.action) and "• " or "  ") .. r.text .. (r.value and ("  " .. tostring(r.value)) or ""))

@@ -100,8 +100,9 @@ end
 local function kpk_send(msg, player)
   if player == nil then return pcall(rednet.broadcast, msg, link.RADIO) end
   local sent = false
+  local want = tostring(player):lower()          -- ник на КПК могли набрать в другом регистре
   for id, p in pairs(state.pdas or {}) do
-    if p.player == player then pcall(rednet.send, tonumber(id), msg, link.RADIO); sent = true end
+    if tostring(p.player or ""):lower() == want then pcall(rednet.send, tonumber(id), msg, link.RADIO); sent = true end
   end
   return sent
 end
@@ -149,6 +150,19 @@ local function reply(job, text)
   end
   last_talk_t = util.now()
   feed.add("ai", persona_name(), text)
+end
+
+-- Фраза-триггер «Сценариев» (tmai/apps/auto.lua): ловится сразу при вводе — до очереди, нейросети и её лимитов.
+-- true — сценарий сработал, ответ уже в ленте/на КПК.
+local function auto_phrase(player, text, via, reply_to)
+  local auto = apps.get("auto")
+  if not (auto and not auto.broken and auto.on_phrase) then return false end
+  if not (cfg.allowed["*"] or cfg.allowed[player]) then return false end
+  local ok, handled, answer = pcall(auto.on_phrase, auto.ctx, text, player, via)
+  if not ok then util.log("W", "auto.on_phrase: %s", tostring(handled)); return false end
+  if not handled then return false end
+  reply({ via = via, reply_to = reply_to, player = player }, answer or "Готово.")
+  return true
 end
 
 local function status_text(p)
@@ -252,6 +266,7 @@ local function handle_ask(job)
   end
   power.thinking(true)
   local ctx = ctx_for(job.player)
+  ctx.text = job.text
   if not state.conv_id then new_conv_id() end
   local answer, err, code = llm.ask({
     cfg = cfg, system = build_system(), history = history.messages(),
@@ -324,6 +339,7 @@ end
 
 local function handle_fix(job)
   local ctx = ctx_for(job.player)
+  ctx.text = job.text
   local answer = llm.ask({
     cfg = cfg, system = build_system(), context = build_context("скрипт lua cc tweaked ошибка", job.player, power.status(), "pc"),
     history = {}, user = job.text, user_name = job.player, tools = tools.available(ctx),
@@ -364,6 +380,8 @@ local function direct_command(job)
     local stop = low:match("^стоп%s*(%d*)$")
     if not stop then return false end
     local n = scripts.stop(stop ~= "" and stop or nil)
+    local auto = apps.get("auto")
+    if stop == "" and auto and auto.stop_runs then pcall(auto.stop_runs, auto.ctx) end   -- сценарии, ждущие на wait
     local nb = 0
     if build and build.stop and stop == "" then local okb2, r = pcall(build.stop); nb = okb2 and tonumber(r) or 0 end
     out = "Остановлено программ: " .. n .. (nb > 0 and (", строек: " .. nb) or "")
@@ -417,6 +435,7 @@ local function apply_config()
   util.set_debug(cfg.debug)
   power.configure(cfg); embed.configure(cfg); tts.configure(cfg)
   os.pullEvent = (cfg.pin or "") ~= "" and os.pullEventRaw or PULL_EVENT
+  os.queueEvent("tmai_embed")          -- ключ/адрес/модель могли смениться — пересобрать поиск по смыслу
 end
 
 local function ui_action(act)
@@ -426,6 +445,7 @@ local function ui_action(act)
     who.manual = nil
     local text = u8.truncate(act.text, cfg.max_input * 2)
     feed.add("user", player, text)
+    if auto_phrase(player, text, "pc") then return end
     if #queue >= cfg.queue_limit then feed.add("warn", "Капсула", "Очередь занята — подождите ответа."); return end
     push({ kind = "input", player = player, text = text, via = "pc" })
   elseif act.kind == "cycle_speaker" then
@@ -470,6 +490,7 @@ local function on_radio(sender, msg)
   end
   local text = u8.truncate(msg.text, cfg.max_input * 2)
   feed.add("user", player .. " (КПК)", text)
+  if auto_phrase(player, text, "radio", sender) then return end
   if #queue >= cfg.queue_limit then
     rednet.send(sender, { op = "answer", text = "[очередь занята]" }, link.RADIO); return
   end
@@ -516,7 +537,8 @@ local function listener()
       elseif proto == scripts.PROTO then
         local j, m = scripts.on_rednet(sender, msg)
         if j and m.state == "error" then
-          say("Программа " .. j.name .. " упала: " .. tostring(m.error):sub(1, 200), "warn")
+          -- о падении сообщает тревога приложения «Программы»; без него — строкой в ленту
+          if not apps.get("programs") then say("Программа " .. j.name .. " упала: " .. tostring(m.error):sub(1, 200), "warn") end
           if j.auto and (j.fixes or 0) < 3 then push({ kind = "fix", player = j.player, text = scripts.fix_prompt(j) }) end
         elseif j and m.state == "done" then
           say("Программа " .. j.name .. " завершена.", "sys")
@@ -552,6 +574,7 @@ local function sync_proxy()
     feed.add("sys", "Капсула", want == "" and "Прокси выключен: в интернет — напрямую."
       or ("Прокси включён: " .. config.proxy_label(want) .. ". Домашняя сеть — напрямую."))
     save_state()
+    os.queueEvent("tmai_embed")        -- поиск по смыслу мог не собраться без прокси
   elseif state.proxy_warned ~= want then
     state.proxy_warned = want
     feed.add("warn", "Капсула", "Прокси пока не включён: " .. tostring(err) .. ". Повторю сам.")
@@ -746,7 +769,8 @@ local function ui_loop()
     local p = power.status()
     ui.data.status = {
       name = persona_name(), power = p, llm = llm_status, llm_ready = config.check(cfg),
-      search = embed.state == "ready" and "по смыслу" or (embed.state == "building" and ("строю " .. embed.progress) or "по словам"),
+      search = embed.state == "ready" and "по смыслу" or (embed.state == "building" and ("строю " .. embed.progress)
+        or (embed.state == "error" and "по словам (сбой)" or "по словам")),
       me = me.attach(), nav = nav ~= nil, repair = nav and nav.repair,
       radio = nav and nav.radio and (nav.radio.ender and "эндер" or (tostring(nav.radio.range) .. " бл.")) or "?",
       queue = #queue + (working and 1 or 0),
@@ -770,12 +794,23 @@ local function ui_loop()
   end
 end
 
+-- Векторы справочника («поиск по смыслу»). Готовый индекс лежит на диске — повторная сборка с тем же
+-- справочником и моделью мгновенная. Не вышло (нет сети, сайт закрыт, прокси ещё не включён) — повтор через
+-- 1, 2, 4… до 15 минут; смена настроек или включение прокси (событие tmai_embed) — сразу.
 local function embedder()
-  if embed.enabled() then
-    local frags, h = kb.fragments()
-    embed.build(frags, h)
+  local wait = 60
+  while true do
+    if embed.enabled() then
+      local frags, h = kb.fragments()
+      embed.build(frags, h)
+      if embed.state == "ready" then wait = 60 end
+    end
+    local t = os.startTimer(embed.state == "error" and wait or 3600)
+    repeat
+      local e, a = os.pullEvent()
+    until (e == "timer" and a == t) or e == "tmai_embed"
+    if embed.state == "error" then wait = math.min(wait * 2, 900) end
   end
-  while true do os.pullEvent("tmai_never") end
 end
 
 function App.run()
@@ -807,6 +842,11 @@ function App.run()
     kpk = kpk_send,
   })
   ui.set_apps(apps)
+  do
+    local names = {}
+    for _, a in ipairs(apps.list) do names[#names + 1] = a.id .. (a.broken and "(!)" or "") end
+    util.log("I", "apps: %s", #names > 0 and table.concat(names, ",") or "нет")
+  end
   os.pullEvent = (cfg.pin or "") ~= "" and os.pullEventRaw or PULL_EVENT
   math.randomseed(os.epoch("utc"))
   local ok, why = config.check(cfg)

@@ -17,6 +17,7 @@ local json = require("tmai.json")
 local okb, build = pcall(require, "tmai.build")
 if not okb then build = nil end
 local apps = require("tmai.apps")
+local u8 = require("tmai.u8")
 
 local M = {}
 
@@ -83,6 +84,51 @@ local DEFS = {
 }
 
 -- Список инструментов под текущее оборудование.
+-- Инструменты программ (приложений и прораба) уходят в запрос не все: их описания весят десятки КБ в каждом
+-- раунде. Берём те, о чём вопрос (основы слов ниже), и те, чем пользовались в последних ответах; остальные
+-- нейросеть подключает сама инструментом apps_tools (список в том же запросе дополняется на ходу).
+M.APP_KEYS = {
+  storage = { "склад", "сундук", "предмет", "выда", "выдай", "дай ", "найди", "сколько", "лежит", "положи", "разлож",
+    "сорт", "переплав", "плав", "печ", "руд", "слит", "конвейер", "приёмк", "приемк", "запас", "следи", "мэ", "ae2",
+    "закончил", "кончает", "собери", "забери", "уголь", "железо", "медь", "алмаз" },
+  base = { "энерги", "заряд", "накопит", "база", "базы", "генератор", "тревог", "порог", "мэ", "fe" },
+  panel = { "двер", "ворот", "свет", "ламп", "включи", "выключи", "переключ", "рычаг", "кнопк", "редстоун", "пульт",
+    "блокир", "открой", "закрой", "ферм", "сигнал" },
+  auto = { "когда", "сценари", "если ", "автомат", "кажд", "ночью", "утром", "вечером", "по слову", "при нажат", "правило" },
+  programs = { "программ", "скрипт", "компьютер", "черепаш", "упал", "запусти", "останови" },
+  wp = { "метк", "точк", "координат", "где ", "куда", "дорог", "путь", "смерт", "умер", "погиб", "вернуться" },
+  mail = { "письм", "почт", "сообщени", "передай", "напиши " },
+  journal = { "журнал", "запиши", "хроник", "дневник", "событи", "что было" },
+  build = { "постро", "стройк", "дом", "домик", "стен", "крыш", "башн", "мост", "черепаш", "план", "прораб" },
+}
+local recent = {}          -- id программы -> сколько ещё вопросов держать её инструменты (после использования)
+local KEEP = 3
+local current              -- список инструментов текущего вопроса (дополняется apps_tools)
+
+local function app_title(id)
+  if id == "build" then return "Стройка (прораб)" end
+  local a = apps.get(id)
+  return a and a.title or id
+end
+
+local function app_defs(id, ctx)
+  if id == "build" then
+    if build and build.tool_defs then
+      local okd, defs = pcall(build.tool_defs, ctx)
+      if okd and type(defs) == "table" then return defs end
+    end
+    return {}
+  end
+  return apps.tool_defs(ctx, { [id] = true })
+end
+
+local function catalog()
+  local ids = {}
+  for _, a in ipairs(apps.list) do if a.tools and not a.broken then ids[#ids + 1] = a.id end end
+  if build and build.tool_defs then ids[#ids + 1] = "build" end
+  return ids
+end
+
 function M.available(ctx)
   local list = {}
   local function add(group) for _, d in ipairs(DEFS[group]) do list[#list + 1] = d end end
@@ -90,18 +136,56 @@ function M.available(ctx)
   if ctx.has_me then add("me") end
   if ctx.has_nav then add("nav") end
   if ctx.has_exec then add("scripts") end
-  for _, d in ipairs(apps.tool_defs(ctx)) do list[#list + 1] = d end
-  if build and build.tool_defs then
-    local okd, defs = pcall(build.tool_defs, ctx)
-    if okd and type(defs) == "table" then for _, d in ipairs(defs) do list[#list + 1] = d end end
+  for id, n in pairs(recent) do recent[id] = n > 1 and n - 1 or nil end
+  local q = " " .. u8.lower(tostring(ctx.text or "")) .. " "
+  local ids = catalog()
+  local names = {}
+  for _, id in ipairs(ids) do
+    local want = recent[id] ~= nil or ctx.all_tools
+    for _, k in ipairs(M.APP_KEYS[id] or {}) do
+      if want then break end
+      if q:find(k, 1, true) then want = true end
+    end
+    if want then
+      for _, d in ipairs(app_defs(id, ctx)) do list[#list + 1] = d end
+    end
+    names[#names + 1] = id .. " — " .. app_title(id)
   end
+  if #ids > 0 then
+    list[#list + 1] = { name = "apps_tools",
+      description = "Подключить инструменты программы ЛОЦМАНа, если нужных для просьбы нет в списке (появятся в следующем шаге). Программы: " .. table.concat(names, "; "),
+      parameters = obj({ app = S("id программы") }, { "app" }) }
+  end
+  current = list
   return list
+end
+
+-- Инструмент программы использован — держать её инструменты ещё несколько вопросов.
+local function touch(name)
+  if type(name) ~= "string" then return end
+  if build and name:sub(1, 6) == "build_" then recent.build = KEEP; return end
+  local a = apps.owns(name)
+  if a then recent[a.id] = KEEP end
 end
 
 local function str(v, max) v = tostring(v or ""); return v:sub(1, max or 200) end
 
 -- Выполнить инструмент. ctx = { player=, lore_level=, repair=, cfg= }
 function M.run(name, a, ctx)
+  if name == "apps_tools" then
+    local id = str(a.app, 24)
+    local defs = app_defs(id, ctx)
+    if #defs == 0 then return "нет такой программы с инструментами; есть: " .. table.concat(catalog(), ", ") end
+    local have = {}
+    for _, d in ipairs(current or {}) do have[d.name] = true end
+    local added = {}
+    for _, d in ipairs(defs) do
+      if not have[d.name] and current then current[#current + 1] = d; added[#added + 1] = d.name end
+    end
+    recent[id] = KEEP
+    return #added > 0 and ("подключены: " .. table.concat(added, ", ")) or "уже подключены"
+  end
+  touch(name)
   if build and type(name) == "string" and name:sub(1, 6) == "build_" then return build.run_tool(name, a, ctx) end
   if apps.owns(name) then return apps.run_tool(name, a, ctx) end
   if name == "kb_search" then return kb.tool_search(str(a.query), ctx.lore_level)
