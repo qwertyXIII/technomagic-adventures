@@ -494,7 +494,8 @@ local function listener()
     elseif name == "tmai_ui" and ev[2] == "build" then
       ui.follow_build(ev[3], ev[4])
     elseif name == "monitor_touch" then
-      ui.handle_touch(ev[2], ev[3], ev[4])
+      local okt, tact = pcall(ui.handle_touch, ev[2], ev[3], ev[4])
+      if okt and tact then pcall(ui_action, tact) end
       os.queueEvent("tmai_ui", "touch")
     elseif name == "modem_message" then
       link.on_modem_message(ev[2], ev[3], ev[4], ev[5], ev[6])

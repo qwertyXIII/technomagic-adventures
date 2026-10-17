@@ -31,6 +31,7 @@
 --          введённое придёт в action как act.value) }
 --   draw(ctx, t, x, y, w, h, where)  -- свой вид вместо rows; where = "term" | "monitor"
 --   key(ctx, ev, a, b, c) -> handled[, act]  -- ввод для своего вида; act — действие в очередь (как со строки)
+--   touch(ctx, x, y, w, h) -> act | nil  -- касание монитора в области вкладки (x, y — от 1 внутри неё)
 --   hint(ctx, sel_row) -> строка     -- подсказка внизу вкладки (или строкой: hint = "…")
 --   status(ctx) -> строка | nil      -- одна строка о себе на «Главной»
 --   event(ctx, name, …)              -- любое событие компьютера (rednet_message, redstone, …); долгое — ctx.later
@@ -43,7 +44,9 @@
 --   ctx.online() — ники онлайн; ctx.kpk(msg[, player]) — сообщение на КПК игрока (или на все);
 --   ctx.later(fn, …) — выполнить в очереди приложений; ctx.redraw() — перерисовать экраны;
 --   ctx.log(level, fmt, …); ctx.peripherals(type) — имена периферии этого типа; ctx.me — tmai.me;
---   ctx.text — tmai.text (всё, что печатается, — через text.cc/put экранов); ctx.util — tmai.util.
+--   ctx.text — tmai.text; ctx.util — tmai.util;
+--   ctx.put(t, x, y, s, fg, bg) — печать строки (UTF-8 → шрифт CC; ВСЁ, что пишется на экран, — через неё
+--   или text.cc), ctx.bar(t, x, y, w, bg) — закрасить полосу.
 
 local util = require("tmai.util")
 local text = require("tmai.text")
@@ -87,6 +90,17 @@ local function make_ctx(app)
   ctx.later = function(fn, ...) M.enqueue(app, fn, ...) end
   ctx.redraw = function() os.queueEvent("tmai_ui", "app") end
   ctx.log = function(level, fmt, ...) util.log(level, "[" .. app.id .. "] " .. tostring(fmt), ...) end
+  ctx.put = function(t, x, y, s, fg, bg)
+    t.setCursorPos(x, y)
+    if fg then t.setTextColor(fg) end
+    if bg then t.setBackgroundColor(bg) end
+    t.write(text.cc(s))
+  end
+  ctx.bar = function(t, x, y, w, bg)
+    t.setCursorPos(x, y)
+    if bg then t.setBackgroundColor(bg) end
+    t.write((" "):rep(math.max(0, w)))
+  end
   ctx.peripherals = function(ptype)
     local out = {}
     for _, n in ipairs(peripheral.getNames()) do if peripheral.hasType(n, ptype) then out[#out + 1] = n end end

@@ -816,6 +816,7 @@ function M.draw_monitor(cfg)
   elseif MON.tab == "build" then
     draw_build(mon, rx, 2, rw, h - 1)
   elseif mapp and mapp.draw then
+    MON.area = { x = rx, y = 2, w = rw, h = h - 1 }
     clear_area(mon, rx, 2, rw, h - 1)
     local okd, err = pcall(mapp.draw, mapp.ctx, mon, rx, 2, rw, h - 1, "monitor")
     if not okd then put(mon, rx, 2, text.fit("Ошибка: " .. tostring(err), rw), colors.red, colors.black) end
@@ -825,13 +826,21 @@ function M.draw_monitor(cfg)
   return true
 end
 
--- Касание монитора: вкладки сверху, листание — верхняя/нижняя половина текста.
+-- Касание монитора: вкладки сверху, листание — верхняя/нижняя половина текста; у приложения со своим
+-- видом и touch — касание ему. Возвращает действие приложения (или nil).
 function M.handle_touch(side, x, y)
   if side ~= MON.name then return end
   if y == 1 then
     for _, tx in ipairs(MON.tab_x or {}) do
       if x >= tx.x0 and x <= tx.x1 then MON.tab = tx.id; MON.scroll = 0; return end
     end
+    return
+  end
+  local tapp = app_of(MON.tab)
+  local ar = MON.area
+  if tapp and tapp.draw and tapp.touch and ar and x >= ar.x and x < ar.x + ar.w and y >= ar.y and y < ar.y + ar.h then
+    local okt, act = pcall(tapp.touch, tapp.ctx, x - ar.x + 1, y - ar.y + 1, ar.w, ar.h)
+    if okt and type(act) == "table" then return app_act(MON.tab, act) end
     return
   end
   local mon = peripheral.wrap(side)
