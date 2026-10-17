@@ -16,6 +16,7 @@ local DEFS = {
   { "context_role", "developer", "string", "Куда класть контекст хода: developer | system | user_prefix (если сервер не терпит второго system)" },
   { "use_name_field", true, "boolean", "Передавать ник игрока полем name у сообщений игроков" },
   { "conversation_header", "X-Conversation-Id", "string", "Заголовок id сессии шлюза (пусто = не слать)" },
+  { "proxy", "", "string", "Прокси, если нейросеть или OpenRouter недоступны напрямую: socks5://хост:порт (или socks4, http, https; можно логин:пароль@). Пусто — напрямую. Домашняя сеть всегда напрямую. Действует на весь мир, ставит штурманский модуль" },
   { "max_answer_bytes", 2400, "number", "Жёсткая обрезка ответа, байт (шлюз игнорирует max_tokens)" },
   { "max_tokens", 700, "number", "Предел длины ответа, токенов (если провайдер учитывает)" },
   { "max_tokens_field", "max_tokens", "string", "Имя поля лимита: max_tokens | max_completion_tokens" },
@@ -92,6 +93,23 @@ function M.list()
 end
 
 -- Сохранить значение из строки (вкладка «Настройки»). Возвращает true или nil, ошибка.
+-- Адрес прокси: socks5|socks4|http|https://[логин:пароль@]хост:порт или "". true или nil, ошибка.
+local PROXY_SCHEMES = { socks5 = true, socks4 = true, http = true, https = true }
+function M.check_proxy(url)
+  if url == "" then return true end
+  local scheme, rest = url:match("^(%a%w*)://([^%s/]+)/?$")
+  if not scheme or not PROXY_SCHEMES[scheme:lower()] then return nil, "формат: socks5://хост:порт (или socks4, http, https)" end
+  local host, port = (rest:gsub("^.*@", "")):match("^([%w%.%-]+):(%d+)$")
+  if not host or tonumber(port) < 1 or tonumber(port) > 65535 then return nil, "формат: socks5://хост:порт" end
+  return true
+end
+
+-- Прокси без логина и пароля — для экранов.
+function M.proxy_label(url)
+  if not url or url == "" then return "нет" end
+  return (url:gsub("//[^@/]*@", "//"))
+end
+
 function M.set(key, raw)
   local def
   for _, d in ipairs(DEFS) do if d[1] == key then def = d end end
@@ -107,6 +125,11 @@ function M.set(key, raw)
     else return nil, "нужно да/нет" end
   else
     v = tostring(raw or "")
+    if key == "proxy" then
+      v = v:match("^%s*(.-)%s*$")
+      local ok, err = M.check_proxy(v)
+      if not ok then return nil, err end
+    end
   end
   settings.set(PREFIX .. key, v)
   settings.save()

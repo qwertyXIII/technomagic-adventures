@@ -208,6 +208,24 @@ function OPS.reward(m)
   return { desc = r.desc }
 end
 
+-- Прокси для интернет-запросов компьютеров (на весь мир): url = "socks5://хост:порт" или "" — выключить.
+-- Строку целиком проверяет команда; здесь — только что это одно «слово» без пробелов. В лог адрес не пишем (пароль).
+function OPS.proxy(m)
+  local url = type(m.url) == "string" and m.url or ""
+  if url ~= "" and not url:match("^%a%w*://[^%s]+$") then return nil, "неверный адрес прокси" end
+  local pok, ok, out = pcall(commands.exec, url == "" and "tmproxy off" or ("tmproxy set " .. url))
+  if not pok then return nil, "команды недоступны" end
+  local text = type(out) == "table" and table.concat(out, " ") or tostring(out or "")
+  text = text:gsub("%[tmproxy%]%s*", "")
+  if not ok then
+    if text:find("disabled", 1, true) then   -- выделенный сервер: командные компьютеры выключены
+      return nil, "на сервере выключены командные блоки (server.properties: enable-command-block=true) — или оп: /tmproxy set …"
+    end
+    return nil, text:match("error: (.*)") or (text ~= "" and text or "команда /tmproxy не сработала")
+  end
+  return { text = text }
+end
+
 -- Поручения, за которые награда уже выдана (ЛОЦМАН сверяет и довыдаёт потерянные).
 function OPS.rewarded()
   local ids = {}

@@ -499,6 +499,24 @@ end
 local REPAIR_PARTS = {}
 for _, r in ipairs(util.read_tsv(util.ROM_DIR .. "/repair.tsv")) do REPAIR_PARTS[r.item] = true end
 
+-- Настройка proxy действует на весь мир: её включает штурманский модуль командой /tmproxy.
+-- Шлём, когда значение изменилось; не вышло — повторяем на следующих кругах, о сбое пишем один раз.
+local function sync_proxy()
+  local want = cfg.proxy or ""
+  if want == (state.proxy_sent or "") then return end
+  local r, err = link.call("proxy", { url = want }, 5)
+  if r then
+    state.proxy_sent, state.proxy_warned = want, nil
+    feed.add("sys", "Капсула", want == "" and "Прокси выключен: в интернет — напрямую."
+      or ("Прокси включён: " .. config.proxy_label(want) .. ". Домашняя сеть — напрямую."))
+    save_state()
+  elseif state.proxy_warned ~= want then
+    state.proxy_warned = want
+    feed.add("warn", "Капсула", "Прокси пока не включён: " .. tostring(err) .. ". Повторю сам.")
+    save_state()
+  end
+end
+
 local function poller()
   local tick = 0
   while true do
@@ -532,6 +550,7 @@ local function poller()
           ui.log_line("штурманский модуль: связь есть")
         end
         nav, nav_fail, nav_where = s, 0, where
+        sync_proxy()
       else
         nav_fail = nav_fail + 1
         if nav_fail == 2 then ui.log_line("штурманский модуль: нет связи"); util.log("W", "nav: %s", tostring(err)) end
@@ -666,6 +685,8 @@ local function device_rows(p)
   for _, n in ipairs(peripheral.getNames()) do
     if peripheral.hasType(n, "modem") then rows[#rows + 1] = { text = "Модем " .. n, value = modem_kind(n) } end
   end
+  rows[#rows + 1] = { text = "Прокси", value = config.proxy_label(state.proxy_sent),
+    desc = "Для запросов в интернет, если сайт недоступен напрямую: «Настройки» → proxy. Домашняя сеть — напрямую." }
   rows[#rows + 1] = { text = "МЭ-мост", value = me.attach() and "в сети" or "нет", desc = "ME Bridge рядом с терминалом или в сети — ЛОЦМАН видит склад и заказывает автокрафт." }
   rows[#rows + 1] = { text = "КПК на связи", value = tostring(#pdas_recent()) }
   rows[#rows + 1] = { text = "Компьютеры с tmexec", value = tostring(#scripts.list_targets()) }

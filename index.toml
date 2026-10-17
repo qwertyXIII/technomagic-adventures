@@ -1142,7 +1142,7 @@ hash = "bbc6db37f91aed692d7de2718a1053ff4e76a38f15bc5e79f0ccaa1e38fe6b6c"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/app.lua"
-hash = "0c375dd25f5461f36286765d582516e3c3560b4b9941531132b55727fde2d799"
+hash = "d2d1941ee4d274fa9fe12de1a1e5ab326a74dabad41350d57c026e20b83246e5"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/build.lua"
@@ -1150,7 +1150,7 @@ hash = "fb69988f9cf9f573e7244974f6eee0f592ba055d78a1b5ae23ecc7fb279f2662"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/config.lua"
-hash = "e4587c883caa49f8bbcd3fe259ee7904717dd8460771952ce79201cc0f4c86a2"
+hash = "084bdd40aeaf652cc1390b042fbfef0b32d43d7a11537e174f14e68fcfbba9e5"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/embed.lua"
@@ -1270,7 +1270,7 @@ hash = "d249000af5f3961b8436c206f88fa39e3d0fda8bbdf397fb59a700ec1e22126b"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/programs/tmnav.lua"
-hash = "595ff9c9db4b8f3102e18288a9adc7fc75d3f06610e29283634de571e95d098b"
+hash = "549b9bf912cb6c4717b41de6f9a5abf0692b5aefda651be2a39e3bc7f9cc9b08"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/programs/tmpda.lua"
@@ -2027,6 +2027,10 @@ hash = "fdf526107e7547c0cf9ffd2e5ba0d511dada536b52043cc1458aa84c7ab273a6"
 [[files]]
 file = "kubejs/server_scripts/tm_loot_story_gen.js"
 hash = "9d8f73729ea367689b3e5c76e1f99e588739e08bd7b379467a8601bcd478e7ef"
+
+[[files]]
+file = "kubejs/server_scripts/tm_proxy.js"
+hash = "65b53dc558ecf4e45fb794a4913df4c1551346844b9179ea6edb1734f3ac3ed0"
 
 [[files]]
 file = "kubejs/server_scripts/tm_recipes.js"
