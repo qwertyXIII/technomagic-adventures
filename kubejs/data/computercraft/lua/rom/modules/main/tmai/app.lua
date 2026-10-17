@@ -822,7 +822,7 @@ function App.run()
       "На «Главной» — тревоги и все программы; вкладки сверху (Tab), начните печатать — и вы в чате.", "sys")
   end
   term.clear()
-  parallel.waitForAny(listener, worker, poller, watcher, ambience, ui_loop, embedder, apps.loop)
+  parallel.waitForAny(listener, worker, poller, watcher, ambience, ui_loop, embedder, apps.loop, tts.loop)
 end
 
 return App
