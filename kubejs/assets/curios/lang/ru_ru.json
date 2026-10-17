@@ -1,0 +1,8 @@
+{
+  "curios.name": "Curios",
+  "curios.networking.failed": "Ошибка сети Curios",
+  "curios.tooltip.inactive": "Неактивный слот",
+  "gui.curios.page": "Страница %d / %d",
+  "gui.curios.toggle.cosmetics": "Переключить косметику",
+  "key.curios.category": "Curios"
+}

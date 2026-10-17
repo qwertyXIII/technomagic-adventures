@@ -1,0 +1,6 @@
+{
+  "cristellib.autoCategoryInfo": "Этот экран создан модом %s. Автоматические экраны можно отключить в конфигурации.\nСоздатели модов могут нажать здесь, чтобы открыть вики и узнать больше.",
+  "cristellib.nameAndSource": "%s (через §d§nCristel Lib§r)",
+  "cristellib.placementCategoryTitle": "Размещение структур",
+  "cristellib.toggleCategoryTitle": "Переключение структур"
+}

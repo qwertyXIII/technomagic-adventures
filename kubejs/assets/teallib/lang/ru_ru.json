@@ -1,0 +1,7 @@
+{
+  "config.teallib.bucket_tooltip": "Подсказка ведра",
+  "config.teallib.bucket_tooltip.tooltip": "Показывать ли существ, помещённых в ведро, в его подсказке.",
+  "config.teallib.section.vanilla_changes": "Изменения ванили",
+  "entity.teallib.mannequin": "Манекен",
+  "item.teallib.mannequin": "Манекен"
+}

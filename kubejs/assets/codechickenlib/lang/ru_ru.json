@@ -1,0 +1,20 @@
+{
+  "ccl.commands.count.fail": "Сущности не найдены.",
+  "ccl.commands.count.total": "Найдено сущностей: %s.",
+  "ccl.commands.gc.after": "После:",
+  "ccl.commands.gc.before": "До:",
+  "ccl.commands.gc.performing": "Выполняется сборка мусора (GC)..",
+  "ccl.commands.killall.fail": "Сущности не найдены.",
+  "ccl.commands.killall.fail.player": "Этой командой нельзя убивать игроков.",
+  "ccl.commands.killall.success": "Убито сущностей: %s.",
+  "ccl.commands.killall.success.line": "Убито: %s",
+  "ccl.energy_bar.capacity": "Ёмкость:",
+  "ccl.energy_bar.energy_storage": "Накопитель энергии",
+  "ccl.energy_bar.rf": "RF",
+  "ccl.energy_bar.stored": "Накоплено:",
+  "ccl.fluid_tank.capacity": "Ёмкость:",
+  "ccl.fluid_tank.contains": "Содержит:",
+  "ccl.fluid_tank.fluid_storage": "Хранилище жидкости",
+  "ccl.fluid_tank.mb": "mB",
+  "ccl.fluid_tank.stored": "Накоплено:"
+}

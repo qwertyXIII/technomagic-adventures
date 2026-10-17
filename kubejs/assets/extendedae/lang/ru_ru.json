@@ -1,0 +1,18 @@
+{
+  "block.extendedae.fishbig": "Fishbig",
+  "block.extendedae.mddyue": "MDDyue",
+  "block.extendedae.vacuum_interface": "МЭ-вакуумный интерфейс",
+  "chat.network_status.highlight": "Подсвечено в мире: %sx %s",
+  "gui.extendedae.config_modifier": "Модификатор конфигурации",
+  "gui.extendedae.network_status.highlight_hint": "Shift+клик, чтобы подсветить",
+  "gui.extendedae.vacuum_interface": "МЭ-вакуумный интерфейс",
+  "gui.extendedae.vacuum_interface.normal": "Обычная скорость",
+  "gui.extendedae.vacuum_interface.offset_config": "Смещение (X Y Z)",
+  "gui.extendedae.vacuum_interface.render_disable": "Скрыть рабочую область",
+  "gui.extendedae.vacuum_interface.render_enable": "Показать рабочую область",
+  "gui.extendedae.vacuum_interface.set_work_area": "Настройка области",
+  "gui.extendedae.vacuum_interface.size_config": "Рабочий радиус (X Y Z)",
+  "gui.extendedae.vacuum_interface.urgent": "Высокая скорость",
+  "itemGroup.extendedae": "Extended AE2",
+  "key.extendedae.category": "Extended AE"
+}

@@ -1,0 +1,12 @@
+{
+  "fc.keybind.ctrl": "Ctrl %s",
+  "fc.keybind.ctrl.alt": "Ctrl Alt %s",
+  "fc.keybind.ctrl.shift": "Ctrl Shift %s",
+  "fc.keybind.ctrl.shift.alt": "Ctrl Shift Alt %s",
+  "fc.keybind.shift": "Shift %s",
+  "fc.keybind.shift.alt": "Shift Alt %s",
+  "fc.search.modifier.CTRL": "Ctrl",
+  "fc.search.modifier.SHIFT": "Shift",
+  "fzzy_config.text.and_2": "%1$s и %2$s",
+  "fzzy_config.text.or_2": "%1$s или %2$s"
+}

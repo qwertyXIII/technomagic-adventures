@@ -1,0 +1,5 @@
+{
+  "text.wc.setting.capemovement.DUNGEONS": "Dungeons",
+  "text.wc.setting.computeGravityVector": "Вычислять вектор гравитации",
+  "text.wc.setting.computeGravityVector.tooltip": "Пытаться вычислить правильное направление гравитации для симуляции плаща. Может вызывать проблемы с некоторыми модами, например шейдерами Iris или PaperDoll."
+}

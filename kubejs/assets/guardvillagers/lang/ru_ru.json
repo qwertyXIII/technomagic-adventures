@@ -1,0 +1,21 @@
+{
+  "guardvillagers.configuration.Allow guards to convert to zombie villagers upon being killed by zombies?": "Разрешить стражникам превращаться в зомби-крестьян, если их убьют зомби?",
+  "guardvillagers.configuration.Allow guards to patrol around villager workstations like golems?": "Разрешить стражникам патрулировать рабочие места крестьян, как это делают големы?",
+  "guardvillagers.configuration.Allow guards to sink temporarily to fight mobs that are under water?": "Разрешить стражникам временно погружаться, чтобы сражаться с мобами под водой?",
+  "guardvillagers.configuration.Angle of how ranged guards determine if a friendly mob is infront of them before firing": "Угол, при котором стражники дальнего боя определяют, стоит ли перед ними дружественный моб, прежде чем стрелять",
+  "guardvillagers.configuration.Chance for guards to lose durability": "Шанс потери прочности у стражников",
+  "guardvillagers.configuration.Depth value for guards fighting underwater mobs": "Значение глубины для сражения стражников с мобами под водой",
+  "guardvillagers.configuration.Display guard health in icons": "Отображать здоровье стражника иконками",
+  "guardvillagers.configuration.Guard crossbow attack radius": "Радиус атаки арбалета стражника",
+  "guardvillagers.configuration.How many guards should spawn in a village?": "Сколько стражников должно появляться в деревне?",
+  "guardvillagers.configuration.How many times a cleric can heal a guard in one day": "Сколько раз в день священник может лечить стражника",
+  "guardvillagers.configuration.How many times a smith villager can heal a golem in one day": "Сколько раз в день крестьянин-кузнец может лечить голема",
+  "guardvillagers.configuration.How many times a villager can heal a guard's equipment in one day": "Сколько раз в день крестьянин может чинить снаряжение стражника",
+  "guardvillagers.configuration.Mobs that guards actively protect when they get hurt": "Мобы, которых стражники активно защищают, когда им наносят урон",
+  "guardvillagers.configuration.Mobs that guards actively protect when they get targeted": "Мобы, которых стражники активно защищают, когда они становятся целью",
+  "guardvillagers.configuration.Profession Whitelist for golem repair ai": "Белый список профессий для ИИ ремонта големов",
+  "guardvillagers.configuration.Profession Whitelist for guard conversion": "Белый список профессий для превращения стражников",
+  "guardvillagers.configuration.Profession Whitelist for guard weaponry repair ai": "Белый список профессий для ИИ ремонта оружия стражников",
+  "guardvillagers.configuration.Profession Whitelist for healing ai for clerics": "Белый список профессий для ИИ лечения священников",
+  "guardvillagers.configuration.Structure pieces that spawn guards": "Элементы структур, в которых появляются стражники"
+}

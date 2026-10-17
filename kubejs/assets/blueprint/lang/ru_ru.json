@@ -1,0 +1,8 @@
+{
+  "biome.blueprint.original_source_marker": "Маркер исходного источника",
+  "blueprint.config.disable_experimental_settings_screen": "Отключить экран экспериментальных настроек",
+  "blueprint.config.max_screen_shakers": "Макс. количество тряски экрана",
+  "blueprint.config.screen_shake_scale": "Масштаб тряски экрана",
+  "entity.blueprint.chest_boat": "Грузовая лодка",
+  "entity.blueprint.falling_block": "Падающий блок"
+}

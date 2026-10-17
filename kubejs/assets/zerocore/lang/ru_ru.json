@@ -1,0 +1,6 @@
+{
+  "item.zerocore.debugtool": "Отладочный инструмент",
+  "zerocore:debugTool.block.tooltip1": "Нажмите ПКМ по блоку, чтобы показать отладочную информацию",
+  "zerocore:debugTool.block.tooltip3a": "Присесть: ",
+  "zerocore:debugTool.block.tooltip3b": "запрос на стороне клиента"
+}

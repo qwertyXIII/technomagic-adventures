@@ -1,0 +1,19 @@
+{
+  "block.undergarden.depthrock_pot": "Глубинный горшок",
+  "config.undergarden.toggle_utheric_infection_number_display": "Переключить отображение числа заражения утерием",
+  "config.undergarden.toggle_utheric_infection_overlay": "Переключить наложение заражения утерием",
+  "entity.undergarden.mysterious_pot": "Таинственный горшок",
+  "item.undergarden.crumbling_catalyst": "Крошащийся катализатор",
+  "item.undergarden.mysterious_pot_spawn_egg": "Яйцо призыва таинственного горшка",
+  "itemGroup.undergarden_group": "The Undergarden",
+  "jukebox_song.undergarden.gloomper_anthem": "Screem - Гимн мрачнушки",
+  "jukebox_song.undergarden.limax_maximus": "Screem - Limax Maximus",
+  "jukebox_song.undergarden.mammoth": "Screem - Мамонт",
+  "jukebox_song.undergarden.relict": "Screem - Реликт",
+  "tooltip.undergarden.cloggrum_boots": "Сквернослизь не замедляет вас, когда вы носите эти ботинки.",
+  "tooltip.undergarden.forgotten_tool": "Добыча блоков Подземья ускоряется в 1.5x.",
+  "tooltip.undergarden.forgotten_weapon": "Наносит 1.5x урона обычным мобам Подземья (не боссам).",
+  "tooltip.undergarden.froststeel_weapon": "Замедляет цели.",
+  "tooltip.undergarden.slingshot_ammo": "Может использоваться как боеприпас для рогатки.",
+  "tooltip.undergarden.utherium_weapon": "Наносит 1.5x урона порождениям гнили."
+}

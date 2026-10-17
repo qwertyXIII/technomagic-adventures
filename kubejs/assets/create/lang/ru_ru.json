@@ -1,0 +1,20 @@
+{
+  "create.command.killTPSCommand": "killtps",
+  "create.gui.stock_keeper.click_to_cycle": "Нажмите, чтобы переключить",
+  "create.gui.stock_keeper.jei_sync.none": "Без синхронизации",
+  "create.gui.stock_keeper.jei_sync.none.description": "Поиски в Кладовщике и просмотрщике рецептов работают независимо",
+  "create.gui.stock_keeper.jei_sync.sync_both": "Синхронизация с просмотрщиком рецептов и обратно ",
+  "create.gui.stock_keeper.jei_sync.sync_both.description": "Поиски в Кладовщике и просмотрщике рецептов будут синхронизированы",
+  "create.gui.stock_keeper.jei_sync.sync_from_jei": "Синхронизация из просмотрщика рецептов",
+  "create.gui.stock_keeper.jei_sync.sync_from_jei.description": "Поиск в просмотрщике рецептов будет повторяться в Кладовщике",
+  "create.gui.stock_keeper.jei_sync.sync_from_stock_keeper": "Синхронизация из Кладовщика",
+  "create.gui.stock_keeper.jei_sync.sync_from_stock_keeper.description": "Поиск в Кладовщике будет повторяться в просмотрщике рецептов",
+  "create.keyinfo.alt_modifier": "Модификатор Alt",
+  "create.keyinfo.ctrl_modifier": "Модификатор Ctrl",
+  "create.keyinfo.shift_modifier": "Модификатор Shift",
+  "create.ponder.mod_name": "Create",
+  "create.tooltip.keyCtrl": "Ctrl",
+  "create.tooltip.keyShift": "Shift",
+  "itemGroup.create.base": "Create",
+  "tag.item.c.foods.dough.wheat": "Пшеничное тесто"
+}

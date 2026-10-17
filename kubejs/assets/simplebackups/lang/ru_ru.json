@@ -1,0 +1,17 @@
+{
+  "simplebackups.backup_errors": "Ошибок при создании резервной копии: %s",
+  "simplebackups.backup_failed_continue": "Создание резервной копии завершилось с ошибкой на раннем этапе, некоторые файлы могут не попасть в копию. Проверьте журнал (лог), чтобы предотвратить потерю данных",
+  "simplebackups.backup_failed_delete": "Не удалось создать резервную копию (незавершённый файл удалён). Подробности смотрите в журнале",
+  "simplebackups.configuration.backupChainsToKeep": "Сколько цепочек резервных копий хранить",
+  "simplebackups.configuration.captureLatestLog": "Включать журнал в резервную копию",
+  "simplebackups.configuration.collectErrors": "Собирать ошибки ввода-вывода",
+  "simplebackups.configuration.deleteUnfinishedBackup": "Удалять незавершённые копии",
+  "simplebackups.configuration.error_handling": "Обработка ошибок",
+  "simplebackups.configuration.mc2discord": "Mc2Discord",
+  "simplebackups.configuration.noPlayerBackupCount": "Количество копий при отсутствии игроков",
+  "simplebackups.configuration.noPlayerBackupTimer": "Интервал копий при отсутствии игроков",
+  "simplebackups.configuration.onlyFavorites": "Избранные миры",
+  "simplebackups.configuration.saveAll": "save-all",
+  "simplebackups.configuration.section.simplebackups.common.experimental.toml": "Экспериментальные настройки",
+  "simplebackups.not_enough_space": "Недостаточно места на диске для создания резервной копии. Операция прервана!"
+}

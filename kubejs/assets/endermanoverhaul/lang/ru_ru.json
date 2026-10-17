@@ -1,0 +1,14 @@
+{
+  "config.endermanoverhaul.client.title": "Клиентские настройки Enderman Overhaul",
+  "config.endermanoverhaul.clientConfig": "Клиентская конфигурация",
+  "config.endermanoverhaul.description": "Enderman Overhaul добавляет эндерменов, специфичных для биомов!",
+  "config.endermanoverhaul.flashScreen": "Мигание экрана",
+  "config.endermanoverhaul.replaceMekanismBabyEnderman": "Заменять детского эндермена из Mekanism",
+  "config.endermanoverhaul.title": "Enderman Overhaul",
+  "itemGroup.endermanoverhaul.main": "Enderman Overhaul",
+  "subtitles.endermanoverhaul.entity.flower_fields_enderman.ambient": "Эндермен цветочных полей издаёт «вуупс»",
+  "subtitles.endermanoverhaul.entity.flower_fields_enderman.death": "Эндермен цветочных полей умирает",
+  "subtitles.endermanoverhaul.entity.flower_fields_enderman.hurt": "Эндермен цветочных полей получает урон",
+  "tooltip.endermanoverhaul.ancient_pearl_1": "Призывает дружелюбного эндермена, который будет сражаться за вас",
+  "tooltip.endermanoverhaul.ancient_pearl_2": "Присядьте и нажмите ПКМ по призванному эндермену, чтобы вернуть жемчуг"
+}

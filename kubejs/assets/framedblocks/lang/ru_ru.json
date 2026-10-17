@@ -1,0 +1,7 @@
+{
+  "config.framedblocks.client.showCamoCraftingInJei": "Показывать рецепты нанесения маскировки в JEI",
+  "desc.framedblocks.framed_axe.retain_camo": "Обрамлённые блоки, сломанные этим топором, сохраняют свою маскировку вместо того, чтобы выпадать отдельно",
+  "framedblocks.key.categories.framedblocks": "FramedBlocks",
+  "item.framedblocks.framed_axe": "Обрамлённый топор",
+  "itemGroup.framed_blocks": "FramedBlocks"
+}

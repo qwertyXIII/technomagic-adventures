@@ -1,0 +1,9 @@
+{
+  "block.createdieselgenerators.andesite_girder_strut": "Андезитовая балочная распорка",
+  "createdieselgenerators.actionbar.distillation_controller.too_short": "Ректификационная колонна слишком низкая! Минимальная высота: %s",
+  "createdieselgenerators.display_source.pumpjack_oil_amount": "Количество нефти",
+  "createdieselgenerators.hint.distiller_full": "Похоже, у этой _ректификационной колонны_ заполнен выходной бак. Убедитесь, что в каждом _баке_ достаточно места для продуктов.",
+  "createdieselgenerators.hint.distiller_full.title": "Выходной бак заполнен",
+  "item.createdieselgenerators.lighter.tooltip.behaviour3": "Меняет _облик_ зажигалки.",
+  "item.createdieselgenerators.lighter.tooltip.condition3": "При переименовании."
+}

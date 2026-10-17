@@ -1,0 +1,22 @@
+{
+  "lootr.configuration.decay_particles": "Частицы разложения",
+  "lootr.configuration.display_toasts": "Всплывающие уведомления",
+  "lootr.configuration.notification_delay": "Задержка уведомлений",
+  "lootr.configuration.particles": "Настройки частиц",
+  "lootr.configuration.refresh_particles": "Частицы обновления",
+  "lootr.configuration.unopened_particles": "Частицы неоткрытых сундуков",
+  "lootr.toast.decay.complete": "Сундук разложился!",
+  "lootr.toast.decay.message": "Осталось %s сек.",
+  "lootr.toast.decay.ongoing": "Сундук разлагается!",
+  "lootr.toast.decay.start": "Сундук разлагается!",
+  "lootr.toast.refresh.complete": "Сундук обновлён!",
+  "lootr.toast.refresh.complete_message": "Доступны новые предметы!",
+  "lootr.toast.refresh.message": "Осталось %s сек.",
+  "lootr.toast.refresh.ongoing": "Сундук обновляется!",
+  "lootr.toast.refresh.start": "Сундук обновляется!",
+  "text.autoconfig.lootr.option.client.decay_particles": "Частицы разложения",
+  "text.autoconfig.lootr.option.client.display_toasts": "Всплывающие уведомления",
+  "text.autoconfig.lootr.option.client.notification_delay": "Задержка уведомлений",
+  "text.autoconfig.lootr.option.client.refresh_particles": "Частицы обновления",
+  "text.autoconfig.lootr.option.client.unopened_particles": "Частицы неоткрытых сундуков"
+}

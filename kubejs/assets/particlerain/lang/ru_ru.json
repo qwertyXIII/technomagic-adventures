@@ -1,0 +1,22 @@
+{
+  "particlerain.FadeType.DISTANCE": "Затухание по расстоянию",
+  "particlerain.FadeType.IN_AND_OUT": "Появление и затухание",
+  "particlerain.FadeType.OUT": "Затухание",
+  "particlerain.ParticleStyle.BLOCK_MODEL": "Модель блока",
+  "particlerain.ParticleStyle.CUSTOM": "Настраиваемый",
+  "particlerain.ParticleStyle.REGISTERED": "Из ванили или других модов",
+  "particlerain.RotationType.HORIZONTAL": "Горизонтальный",
+  "particlerain.RotationType.VERTICAL": "Вертикальный",
+  "particlerain.animateSprites": "Анимировать спрайты",
+  "particlerain.blockId": "Модель блока",
+  "particlerain.distanceScaling": "Масштаб по расстоянию",
+  "particlerain.fadeType": "Тип затухания",
+  "particlerain.heavy_rain": "Сильный дождь",
+  "particlerain.heavy_snow": "Сильный снег",
+  "particlerain.particleStyle": "Стиль частиц",
+  "particlerain.registeredParticleId": "Создаваемая частица",
+  "particlerain.skittering_dust": "Шуршащая пыль",
+  "particlerain.vertical_fog": "Вертикальный туман влажного биома",
+  "particlerain.vertical_fog_after_rain": "Вертикальный туман после дождя",
+  "particlerain.windswept_haze": "Дымка ветреного биома"
+}

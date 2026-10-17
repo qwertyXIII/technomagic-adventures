@@ -1,0 +1,9 @@
+{
+  "iris.keybind.wireframe": "Каркасный режим (только в одиночной игре)",
+  "iris.keybinds": "Iris",
+  "iris.load.failure.generic": "Iris не смог загрузить шейдер; сообщите об этом разработчикам Iris. ",
+  "iris.load.failure.shader": "Не удалось загрузить набор шейдеров! Сообщите об ошибке разработчику шейдера. ",
+  "iris.shaders.debug.restartNoDebug": "Отладка шейдеров включена; отладка OpenGL не поддерживается на NeoForge.",
+  "options.iris.colorSpace": "Цветовое пространство",
+  "options.iris.colorSpace.sodium_tooltip": "Цветовое пространство, в которое будет преобразовано изображение. Работает поверх наборов шейдеров. Если не уверены, используйте SRGB."
+}

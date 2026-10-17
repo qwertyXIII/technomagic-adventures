@@ -1,0 +1,21 @@
+{
+  "biolith.command.describe.biome.moderner_beta": "Биом Moderner Beta: ",
+  "biolith.command.describe.biome.nearest": "ближайший: ",
+  "biolith.command.describe.biome.none": "(нет)",
+  "biolith.command.describe.biome.replacement": "Биом замены: ",
+  "biolith.command.describe.biome.scale": "масштаб",
+  "biolith.command.describe.biome.sub": "Выбран под-биом: ",
+  "biolith.command.describe.biome.terrablender": "Биом TerraBlender: ",
+  "biolith.command.describe.biome.vanilla": "Ванильный/data биом: ",
+  "biolith.command.describe.header": "значения биомов",
+  "biolith.command.describe.nonPlayer": "Вызывающий не является игроком; укажите сущность или позицию.",
+  "biolith.command.describe.notOurs": "Целевое измерение не изменяется Biolith.",
+  "biolith.command.help": "Параметры команды:\n  §9/biolith help§r - информация о команде Biolith\n  §9/biolith describe§r - информация о шуме и биомах",
+  "biolith.command.help.describe": "§9/biolith describe [at (<entity>|<position>)]§r - информация о шуме и выборе биома",
+  "biolith.command.help.missing": "§eДля указанной команды нет справки.",
+  "biolith.command.hint": "§6(Попробуйте \"§9/biolith help§6\" для информации о команде...)",
+  "biolith.world.minecraft.overworld": "Верхний мир",
+  "biolith.world.minecraft.the_end": "Энд",
+  "biolith.world.minecraft.the_nether": "Незер",
+  "modmenu.descriptionTranslation.biolith": "Утилиты генерации мира от Terraformers"
+}

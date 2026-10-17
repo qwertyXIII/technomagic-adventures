@@ -1,0 +1,15 @@
+{
+  "advancements.alexscaves.root.title": "Alex's Caves",
+  "alexscaves.sound.subtitle.licowitch_cast_hex": "Конфедьма накладывает сглаз",
+  "alexscaves.sound.subtitle.licowitch_cast_peppermint": "Конфедьма бросает мятные леденцы",
+  "alexscaves.sound.subtitle.licowitch_cast_summon": "Конфедьма призывает монстра",
+  "alexscaves.sound.subtitle.licowitch_celebrate": "Конфедьма ликует",
+  "alexscaves.sound.subtitle.licowitch_death": "Конфедьма плачет",
+  "alexscaves.sound.subtitle.licowitch_hurt": "Конфедьма кряхтит",
+  "alexscaves.sound.subtitle.licowitch_idle": "Конфедьма хихикает",
+  "item.alexscaves.polarity_armor_trim_smithing_template": "Шаблон для кузнечного стола",
+  "item.minecraft.tipped_arrow.effect.strong_hunger": "Стрела голода",
+  "itemGroup.alexscaves": "Alex's Caves",
+  "jukebox_song.alexscaves.fusion": "Ninni - Слияние",
+  "jukebox_song.alexscaves.tasty": "Ninni - Вкусно"
+}

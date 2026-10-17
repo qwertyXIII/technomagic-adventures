@@ -1,0 +1,18 @@
+{
+  "text.owo.config.button.done": "Готово",
+  "text.owo.config.button.exit_minecraft": "Выйти из Minecraft",
+  "text.owo.config.button.ignore_restart": "Перезапустить позже",
+  "text.owo.config.button.range.edit_as_text": "Изменить текстом",
+  "text.owo.config.button.range.edit_with_slider": "Изменить ползунком",
+  "text.owo.config.button.reload": "Перезагрузить",
+  "text.owo.config.list.add_entry": "Добавить запись",
+  "text.owo.config.must_restart": "Некоторые изменения требуют перезапуска для применения",
+  "text.owo.config.search": "Поиск...",
+  "text.owo.config.search.matches": "%d из %d",
+  "text.owo.config.search.no_matches": "Нет совпадений",
+  "text.owo.config.sections_tooltip": "Разделы",
+  "text.owo.configure_hot_reload.choose_file": "Выбрать файл",
+  "text.owo.configure_hot_reload.reload_from.unset": "Не задано",
+  "text.owo.configure_hot_reload.save": "Сохранить",
+  "text.owo.configure_hot_reload.title": "Настройка горячей перезагрузки"
+}

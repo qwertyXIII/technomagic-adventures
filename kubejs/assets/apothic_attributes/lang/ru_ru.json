@@ -1,0 +1,9 @@
+{
+  "apothic_attributes:cooldown_reduction": "Сокращение перезарядки",
+  "apothic_attributes:cooldown_reduction.desc": "Сокращает перезарядку срабатывающих способностей и эффектов. Перезарядка отображается символом ⌛.",
+  "attribute.name.generic.gravity.desc": "Ускорение к земле, в блоках/с²",
+  "attribute.name.generic.step_height.desc": "Сколько блоков вы можете преодолеть без прыжка.",
+  "attribute.name.player.block_interaction_range.desc": "На каком расстоянии вы можете взаимодействовать с блоками, в блоках.",
+  "attribute.name.player.entity_interaction_range.desc": "На каком расстоянии вы можете взаимодействовать с сущностями, в блоках.",
+  "comment_id": "Источники урона"
+}

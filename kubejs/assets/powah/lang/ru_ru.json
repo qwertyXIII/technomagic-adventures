@@ -1,0 +1,15 @@
+{
+  "block.powah.deepslate_uraninite_ore": "Глубинная уранинитовая руда",
+  "block.powah.deepslate_uraninite_ore_dense": "Богатая глубинная уранинитовая руда",
+  "block.powah.deepslate_uraninite_ore_poor": "Бедная глубинная уранинитовая руда",
+  "gui.powah.jei.category.reactor.fuels": "Топливо реактора",
+  "itemGroup.powah.tab": "Powah",
+  "tag.item.c.blue_ices": "Синий лёд",
+  "tag.item.c.dry_ices": "Сухой лёд",
+  "tag.item.c.ices": "Любой лёд",
+  "tag.item.c.packed_ices": "Плотный лёд",
+  "tag.item.c.raw_uraninite_ores": "Руды неочищенного уранинита",
+  "tag.item.c.regular_ices": "Лёд",
+  "tag.item.c.uraninite_blocks": "Блоки уранинита",
+  "tag.item.c.uraninite_ores": "Уранинитовые руды"
+}

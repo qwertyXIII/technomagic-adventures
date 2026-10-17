@@ -1,0 +1,9 @@
+{
+  "config.tacz.client.sound.first_person_animation_sound_tracking": "Отслеживание звука анимации от первого лица",
+  "config.tacz.client.sound.first_person_animation_sound_tracking.desc": "Использовать источник мирового звука с отслеживанием сущности (не относительный) для звуков ключевых кадров анимации от первого лица. Это может улучшить совместимость с модами физических звуков, но при движении может возникнуть небольшой дрейф стерео.",
+  "itemGroup.tab.tacz.other": "Timeless & Classics Guns: Zero",
+  "key.category.tacz": "Timeless & Classics Guns: Zero",
+  "message.tacz.pre": "§a§l[TACZ]§r ",
+  "painting.tacz.blood_strike_1.author": "Blood Strike",
+  "painting.tacz.blood_strike_2.author": "Blood Strike"
+}

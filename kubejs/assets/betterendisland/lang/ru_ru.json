@@ -1,0 +1,11 @@
+{
+  "text.autoconfig.betterendisland-fabric-1_21.option.general.playBellSound": "Проигрывать звук колокола",
+  "text.autoconfig.betterendisland-fabric-1_21.option.general.playBellSound.@Tooltip": "Проигрывать ли звук колокола перед первым призывом Эндер-дракона и при повторных призывах",
+  "text.autoconfig.betterendisland-fabric-1_21.option.general.spawnCentralTowerInitially": "Изначально создавать центральную башню",
+  "text.autoconfig.betterendisland-fabric-1_21.option.general.spawnCentralTowerInitially.@Tooltip": "Создавать ли центральную башню в Энде при первой генерации мира",
+  "text.autoconfig.betterendisland-fabric-1_21.option.general.spawnCentralTowerOnResummon": "Возрождать центральную башню при повторном призыве",
+  "text.autoconfig.betterendisland-fabric-1_21.option.general.spawnCentralTowerOnResummon.@Tooltip": "Возрождать ли центральную башню в Энде при повторном призыве Эндер-дракона",
+  "text.autoconfig.betterendisland-fabric-1_21.option.general.useVanillaEndGateways": "Создавать ванильные порталы Энда",
+  "text.autoconfig.betterendisland-fabric-1_21.option.general.useVanillaEndGateways.@Tooltip": "Создавать ли ванильные порталы Энда вместо переработанных",
+  "text.autoconfig.betterendisland-fabric-1_21.title": "YUNG's Better End Island"
+}

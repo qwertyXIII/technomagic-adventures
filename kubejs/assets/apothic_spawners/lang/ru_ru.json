@@ -1,0 +1,6 @@
+{
+  "misc.apothic_spawners.off": "%s: выкл.",
+  "misc.apothic_spawners.on": "%s: вкл.",
+  "stat.apothic_spawners.youthful": "Юность",
+  "stat.apothic_spawners.youthful.desc": "Рассадник всегда будет призывать детёнышей, когда это возможно."
+}
