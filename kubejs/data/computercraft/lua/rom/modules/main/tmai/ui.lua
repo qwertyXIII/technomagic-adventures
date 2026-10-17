@@ -304,7 +304,9 @@ local function draw_build(t, x, y, w, h)
     local id, layer = build_current()
     local st = b.status_lines and b.status_lines() or {}
     local rows = h - (#st > 0 and 1 or 0)
-    b.render(window.create(t, x, y, w, rows, true), id, layer, {})
+    -- CC не принимает сам API term родителем окна («try term.current() instead»)
+    local parent = (t == term) and term.current() or t
+    b.render(window.create(parent, x, y, w, rows, true), id, layer, {})
     if #st > 0 then put(t, x, y + h - 1, text.fit(st[1], w), colors.lightGray, colors.black) end
   end)
   if not ok then put(t, x, y, text.fit("Ошибка экрана стройки: " .. tostring(err), w), colors.red, colors.black) end

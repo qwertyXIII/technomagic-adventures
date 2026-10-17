@@ -1246,7 +1246,7 @@ hash = "7c8c50e843a74378f1fdcab4d85d8015372a787dcf9418d0f35842280e358fd3"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/ui.lua"
-hash = "ec763c150290943d921aaff280639468cf2be7197f946309b0eb4b06dd1da9b7"
+hash = "4e91854efcbf2b979b6c5917524653d5db99f8d6af6b1a0b67756ed2591d02b4"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/util.lua"
