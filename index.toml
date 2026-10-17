@@ -2166,7 +2166,7 @@ hash = "3bf33e3d247c145dc5be384c071104dddf6c89981895cd539b27ee9e876a166f"
 
 [[files]]
 file = "kubejs/server_scripts/tm_ai_relocate.js"
-hash = "dee2f1cb60bfe4cce7955f9d989ad066e851b29dbb18d45dce7f1c400e710c60"
+hash = "4f69f796c2eb2cbc19f6836b3bf1f22ca251e90bf9d53784bd33668401617a8a"
 
 [[files]]
 file = "kubejs/server_scripts/tm_fuel.js"

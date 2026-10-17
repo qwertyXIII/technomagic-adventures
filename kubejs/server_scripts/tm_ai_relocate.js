@@ -191,7 +191,7 @@ function tmRelocUnpackTo(uLevel, uTarget, uData, uFacing) {
     uPlaced.entity.setChanged()
   }
   uServer.runCommandSilent(`execute in ${uTarget.dimension} run playsound minecraft:block.beacon.power_select block @a ${uTarget.x} ${uTarget.y} ${uTarget.z} 0.6 1.6`)
-  console.info(`[TM] relocate: unpacked ${uKind} at ${uWhere} token=${uToken}`)
+  console.info(`[TM] relocate: unpacked ${uKind} at ${uWhere} facing=${uFacing} token=${uToken}`)
   return { kind: uKind }
 }
 
@@ -210,11 +210,23 @@ function tmRelocSay(tPlayer, tText) {
   tPlayer.tell(Text.aqua('[Модуль переноса] ').append(Text.white(tText)))
 }
 
+// Куда повернуть штурманский модуль — лицом к игроку. Vanilla getDirection() из Rhino не видна («Cannot find
+// function getDirection» на ServerPlayer) — берём свойство KubeJS facing; не вышло — north (это только внешний вид).
+function tmRelocFacing(fEntity) {
+  let fDir = 'north'
+  try {
+    fDir = String(fEntity.facing.getOpposite().getSerializedName())
+  } catch (fErr) {
+    console.warn(`[TM] relocate: facing unavailable: ${fErr}`)
+  }
+  return fDir
+}
+
 // Shift+ПКМ заряженным модулем: поставить блок на кликнутую грань
 function tmRelocClickUnpack(event, cPlayer, cData) {
   const cClicked = event.block
   const cTarget = cClicked.blockState.canBeReplaced() ? cClicked : cClicked.offset(event.facing)
-  const cFacing = String(cPlayer.getDirection().getOpposite().getSerializedName())
+  const cFacing = tmRelocFacing(cPlayer)
   const cRes = tmRelocSafe('unpack', () => tmRelocUnpackTo(event.level, cTarget, cData, cFacing))
   if (!cRes.error || cRes.spent) cPlayer.setItemInHand(event.hand, Item.of(TM_RELOC.module))
   tmRelocSay(cPlayer, cRes.error ? cRes.error : TM_RELOC.done[cRes.kind])
@@ -324,6 +336,7 @@ function tmRelocCmdPack(ctx, xBlock) {
 function tmRelocCmdUnpack(ctx, yTarget) {
   const yPlayer = ctx.source.player
   const yBox = AABB.of(yTarget.x - 16, yTarget.y - 16, yTarget.z - 16, yTarget.x + 17, yTarget.y + 17, yTarget.z + 17)
+  const yFacing = ctx.source.entity ? tmRelocFacing(ctx.source.entity) : 'north'   // execute as <сущность> — как у игрока
   let yHolder = null, yStack = null, yBest = 1e9, yRes = null
   if (yPlayer && tmRelocPacked(yPlayer.mainHandItem)) yStack = yPlayer.mainHandItem
   else {   // ближайший заряженный модуль на земле
@@ -334,7 +347,7 @@ function tmRelocCmdUnpack(ctx, yTarget) {
     })
   }
   if (!yStack) return tmRelocReply(ctx, 'error: no packed module (main hand or on the ground within 16 blocks)')
-  yRes = tmRelocSafe('unpack', () => tmRelocUnpackTo(ctx.source.level, yTarget, tmRelocPacked(yStack), 'north'))
+  yRes = tmRelocSafe('unpack', () => tmRelocUnpackTo(ctx.source.level, yTarget, tmRelocPacked(yStack), yFacing))
   if (yRes.error && !yRes.spent) return tmRelocReply(ctx, 'error: ' + yRes.error)
   if (yHolder) yHolder.discard()
   else yPlayer.setMainHandItem(Item.of(TM_RELOC.module))
