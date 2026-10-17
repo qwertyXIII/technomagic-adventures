@@ -306,11 +306,10 @@ ServerEvents.recipes(event => {
     V: 'enderio:vibrant_crystal', E: 'mekanism:elite_control_circuit', D: 'draconicevolution:draconium_core', K: 'ae2:cell_component_64k'
   }).id('kubejs:ai/repair_quantum')
 
-  // Модуль переноса (переезд ЛОЦМАНа: штурманский модуль и ядро; tm_ai_relocate.js) — ранне-средний этап:
-  // железные пластины (молот IE / пресс Create), дисковод и проводные модемы CC, эндер-жемчуг, исток Ars Nouveau
-  event.shaped('kubejs:ai_transfer_module', ['PEP', 'MDM', 'PSP'], {
-    P: '#c:plates/iron', E: 'minecraft:ender_pearl', M: 'computercraft:wired_modem', D: 'computercraft:disk_drive',
-    S: 'ars_nouveau:source_gem'
+  // Модуль переноса (переезд ЛОЦМАНа: штурманский модуль и ядро; tm_ai_relocate.js) — ранний этап, без машин и магии:
+  // 2 железных слитка, 2 проводных модема CC, сундук
+  event.shaped('kubejs:ai_transfer_module', [' I ', 'MCM', ' I '], {
+    I: '#c:ingots/iron', M: 'computercraft:wired_modem', C: '#c:chests/wooden'
   }).id('kubejs:ai/transfer_module')
 })
 

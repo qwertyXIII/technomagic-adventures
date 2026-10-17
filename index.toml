@@ -1554,7 +1554,7 @@ hash = "93d73a91e0a6885adf7f467575f7081fdae4730733d1564b5acfe44c34c21274"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/relocation.md"
-hash = "0370322955fad1b8e0f97223a9ab942fc32c3ee73c0b73b4d5f8f71db839d2b5"
+hash = "faf162df065c6ac82ea624ee640485bbae2ddd44a2187a2c5bd49164076e625a"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/start.md"
@@ -2186,7 +2186,7 @@ hash = "65b53dc558ecf4e45fb794a4913df4c1551346844b9179ea6edb1734f3ac3ed0"
 
 [[files]]
 file = "kubejs/server_scripts/tm_recipes.js"
-hash = "f595b095c3899511b54e6f9b7225803d533415cedf430e1384cb0c17b07292b4"
+hash = "7047173446a1c8f3064a6cc76e91f3065ba551aec5d31cb816c14d04d6ea8c05"
 
 [[files]]
 file = "kubejs/server_scripts/tm_tacz.js"
