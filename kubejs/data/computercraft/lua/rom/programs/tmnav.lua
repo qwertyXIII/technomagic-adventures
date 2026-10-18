@@ -21,6 +21,7 @@ if not commands then printError(require("tmai.text").cc("tmnav: нужен ко�
 
 local util = require("tmai.util")
 local json = require("tmai.json")
+local netradio = require("tmai.netradio")
 local sha = require("tmai.sha256")
 
 local CH = 7300
@@ -110,18 +111,74 @@ local function radio_info(r, dim)
   return { x = r.x, y = r.y, z = r.z, dim = dim, ender = r.ender, range = r.ender and nil or range_at(r.y, dim) }
 end
 
-local function status()
+-- Радио через проводную сеть: беспроводной модем на боку проводного модема (ЛОЦМАН открывает его как modem_N).
+-- Место ищет tmai.netradio по данным проводных модемов; найденное запоминается, промах — повтор через 5 минут.
+local SIDE_NAMES = {}
+for _, s in ipairs(redstone.getSides()) do SIDE_NAMES[s] = true end
+local net_cache, net_miss = {}, {}
+local nr_api = {
+  info = function(...) local ok, i = pcall(commands.getBlockInfo, ...); return ok and i or nil end,
+  infos = function(...) local ok, l = pcall(commands.getBlockInfos, ...); return ok and l or nil end,
+}
+
+-- Имена беспроводных модемов сети: свои (модуль видит их через проводной модем) и присланные ИИ (m.radios).
+local function net_names(m)
+  local out, seen = {}, {}
+  local function add(n)
+    if type(n) == "string" and #n <= 64 and not SIDE_NAMES[n] and not seen[n] and #out < 4 then
+      seen[n] = true; out[#out + 1] = n
+    end
+  end
+  for _, n in ipairs(peripheral.getNames()) do
+    if peripheral.hasType(n, "modem") then
+      local ok, w = pcall(peripheral.call, n, "isWireless")
+      if ok and w then add(n) end
+    end
+  end
+  for _, n in ipairs(type(m) == "table" and type(m.radios) == "table" and m.radios or {}) do add(n) end
+  return out
+end
+
+local function net_radio(name, centers)
+  local c = net_cache[name]
+  if c then
+    local info = nr_api.info(c.x, c.y, c.z, c.dim)
+    if type(info) == "table" and netradio.is_wireless(info.name) then return c end
+    net_cache[name] = nil
+  end
+  if net_miss[name] and os.clock() - net_miss[name] < 300 then return nil end
+  for _, ctr in ipairs(centers) do
+    local r = netradio.find(nr_api, name, ctr, ctr.dim)
+    if r then
+      r.dim = ctr.dim
+      net_cache[name], net_miss[name] = r, nil
+      return r
+    end
+  end
+  net_miss[name] = os.clock()
+end
+
+local function status(m)
   local okp, x, y, z = pcall(commands.getBlockPosition)
   if not okp then return { repair = 0 } end
   local dim = commands.getDimension and commands.getDimension() or "minecraft:overworld"
-  -- радио — беспроводной/эндер-модем на самом модуле или на компьютере ИИ (после переезда его могут поставить туда)
-  local radios = {}
-  local r = radio_near(x, y, z, dim)
-  if r then radios[#radios + 1] = radio_info(r, dim) end
+  -- радио — беспроводной/эндер-модем на самом модуле, на компьютере ИИ (после переезда его могут поставить туда)
+  -- или на проводном модеме их сети
+  local radios, seen = {}, {}
+  local function add(r, d)
+    if not r or seen[r.x .. "," .. r.y .. "," .. r.z] then return end
+    seen[r.x .. "," .. r.y .. "," .. r.z] = true
+    radios[#radios + 1] = radio_info(r, d)
+  end
+  add(radio_near(x, y, z, dim), dim)
   local ai = ai_position()
-  if ai then
-    local ra = radio_near(ai.x, ai.y, ai.z, ai.dim)
-    if ra then radios[#radios + 1] = radio_info(ra, ai.dim) end
+  if ai then add(radio_near(ai.x, ai.y, ai.z, ai.dim), ai.dim) end
+  local centers = {}
+  if ai then centers[#centers + 1] = ai end
+  centers[#centers + 1] = { x = x, y = y, z = z, dim = dim }
+  for _, n in ipairs(net_names(m)) do
+    local r = net_radio(n, centers)
+    if r then add(r, r.dim) end
   end
   table.sort(radios, function(a, b) return (a.ender and 1e9 or a.range) > (b.ender and 1e9 or b.range) end)
   return { x = x, y = y, z = z, dim = dim, repair = score("#tm", "tm_ai_repair"), radio = radios[1], radios = radios, ai = ai }
@@ -129,7 +186,7 @@ end
 
 local OPS = {}
 
-function OPS.status() return status() end
+function OPS.status(m) return status(m) end
 
 function OPS.players()
   local names = {}

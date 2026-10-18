@@ -151,6 +151,19 @@ local function memory_box()
   if remote then return peripheral.wrap(remote), remote end
 end
 
+-- Беспроводные модемы, которые компьютер видит через проводную сеть (не на своих гранях): штурманский модуль
+-- найдёт по имени, где они стоят, — от них считается зона радио.
+local function net_radios()
+  local out = {}
+  for _, name in ipairs(peripheral.getNames()) do
+    if not SIDE[name] and peripheral.hasType(name, "modem") then
+      local ok, w = pcall(peripheral.call, name, "isWireless")
+      if ok and w then out[#out + 1] = name end
+    end
+  end
+  return out
+end
+
 local function open_rednet()
   for _, name in ipairs(peripheral.getNames()) do
     if peripheral.hasType(name, "modem") then pcall(rednet.open, name) end
@@ -623,7 +636,7 @@ local function poller()
       end
     end
     if tick % 3 == 1 then
-      local s, err = link.call("status", {}, 3)
+      local s, err = link.call("status", { radios = net_radios() }, 3)
       if s then
         -- связь появилась или модуль/радио переехали: записать, откуда теперь считается зона связи
         local rs = {}

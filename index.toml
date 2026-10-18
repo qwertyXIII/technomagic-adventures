@@ -250,11 +250,11 @@ hash = "936f81d66b88728d0243e382f086a6a96fd8889e733641b0fcb858ec50c6c1a7"
 
 [[files]]
 file = "config/ftbquests/quests/lang/en_us.snbt"
-hash = "979e6ebdb2b2a4a75c92f986374b3da55f140c01552a046d8f9346510a59314c"
+hash = "64a9f192b51208a2d8941ebcb17d8e8a45ac693780f2d7b50609bfb7258d9bbd"
 
 [[files]]
 file = "config/ftbquests/quests/lang/ru_ru.snbt"
-hash = "979e6ebdb2b2a4a75c92f986374b3da55f140c01552a046d8f9346510a59314c"
+hash = "64a9f192b51208a2d8941ebcb17d8e8a45ac693780f2d7b50609bfb7258d9bbd"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/endgame.snbt"
@@ -1154,7 +1154,7 @@ hash = "ef98f2ae444a70af210c572a470a3aa1435c5b70976b37d6f319ab19de8b66a2"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/app.lua"
-hash = "1358408de38ec920f21a213638f10d921224ba4ee39ee5eb435c3d859cac80d0"
+hash = "9f546fa676f9fe3db10882a35f34885bf5f4ad107abddefac2ce95b4836b527c"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/apps.lua"
@@ -1247,6 +1247,10 @@ hash = "8ebc3b8c6b197667b08b726ec8b4dffb243f3b9fe7c5c5625a84ac12f0942183"
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/me.lua"
 hash = "7b0644ffd5bb7458a4f0a9caa01df34f8f8f105ec8efcc383d21fefc31665d22"
+
+[[files]]
+file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/netradio.lua"
+hash = "a8563ba717a585d28d250278367f0f921053a21b78e58645d91a9e07a09ed1f0"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/modules/main/tmai/ore.lua"
@@ -1358,7 +1362,7 @@ hash = "d249000af5f3961b8436c206f88fa39e3d0fda8bbdf397fb59a700ec1e22126b"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/programs/tmnav.lua"
-hash = "a2190372a2ef9dc1bba4a294919efc42ae03dcd409633806b7eb4a546ec56ed8"
+hash = "b817bc8f2c27991b757e71c117b614b94f59ddfd219f1831882f9cab37838fc0"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/programs/tmore.lua"
@@ -1554,7 +1558,7 @@ hash = "93d73a91e0a6885adf7f467575f7081fdae4730733d1564b5acfe44c34c21274"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/relocation.md"
-hash = "8d5d59c3dbbf8513acca47a5f2bba806d21168ce3c4fc86e7f6a6f482259f0c4"
+hash = "2bc0f2a9ab8725b6a49c84bdcc98df33581f48ac6f6a0c259582654bcf8e4e32"
 
 [[files]]
 file = "kubejs/data/computercraft/lua/rom/tmai/kb/pack/start.md"
