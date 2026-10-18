@@ -108,15 +108,29 @@ local function kpk_send(msg, player)
 end
 
 -- ---------- периферия ----------
-local function core_name()
-  local core = peripheral.find("kubejs:ai_core")
-  return core and peripheral.getName(core) or nil
-end
-
 -- Ящик памяти: выбранный во вкладке «Устройства» (tmai.memory_box); иначе инвентарь вплотную к компьютеру
 -- (не ядро); иначе первый в проводной сети. После переезда в сети могут оказаться чужие сундуки базы.
 local SIDE = {}
 for _, s in ipairs(redstone.getSides()) do SIDE[s] = true end
+
+-- Ядро ИИ, в которое можно переложить вещи из инвентаря box (без box — любое). pushItems работает только внутри
+-- одного «места»: оба блока вплотную к компьютеру или оба в одной проводной сети. Ядро с модемом видно под двумя
+-- именами (сторона и сетевое) — берём то, что из того же места, что и ящик. -> имя | nil, почему
+local REACH_HINT = "ядро не видит Ящик памяти: CC перекладывает вещи только между блоками вплотную к терминалу " ..
+  "или внутри одной проводной сети. Поставьте ящик вплотную к терминалу и выберите его во вкладке «Устройства» — " ..
+  "или подключите ядро к той же сети проводным модемом (ПКМ по модему — включить)."
+local function core_name(box)
+  local near, far
+  for _, name in ipairs(peripheral.getNames()) do
+    if peripheral.hasType(name, "kubejs:ai_core") then
+      if SIDE[name] then near = near or name else far = far or name end
+    end
+  end
+  if not near and not far then return nil, "ядро ИИ не подключено" end
+  if not box then return near or far end
+  if SIDE[box] then return near, not near and REACH_HINT or nil end
+  return far, not far and REACH_HINT or nil
+end
 
 local function inventories()
   local out = {}
@@ -584,9 +598,10 @@ end
 
 local function poller()
   local tick = 0
+  local reach_told = false   -- «ядро не видит ящик» уже сказано (до исправления)
   while true do
     tick = tick + 1
-    local box = memory_box()
+    local box, boxname = memory_box()
     if box then
       local ok, items = pcall(box.list)
       if ok and items then
@@ -597,8 +612,12 @@ local function poller()
               push({ kind = "memory", item = it.name, player = "экипаж" })
             end
           elseif REPAIR_PARTS[it.name] then
-            local cn = core_name()
-            if cn then pcall(box.pushItems, cn, slot, 1) end
+            local cn, why = core_name(boxname)
+            if cn then pcall(box.pushItems, cn, slot, 1); reach_told = false
+            elseif not reach_told then
+              reach_told = true
+              feed.add("warn", "Капсула", "Деталь ремонта лежит в Ящике памяти, но " .. why)
+            end
           end
         end
       end
@@ -623,7 +642,8 @@ local function poller()
       end
     end
     if tick % 3 == 0 then
-      local msg = quests.tick()
+      local okq, msg = pcall(quests.tick)
+      if not okq then util.log("E", "quests: %s", tostring(msg)); msg = nil end
       if msg then say(msg); save_state() end
     end
     sleep(10)
@@ -744,6 +764,9 @@ local function device_rows(p)
       desc = cur and "Сюда кладут записки и детали ремонта." or "Enter — сделать этот инвентарь Ящиком памяти." }
   end
   if not boxname then rows[#rows + 1] = { text = "нет: поставьте сундук рядом с терминалом", fg = colors.orange } end
+  if boxname and core_name() and not core_name(boxname) then
+    rows[#rows + 1] = { text = "ядро не видит ящик", fg = colors.orange, desc = select(2, core_name(boxname)) }
+  end
   rows[#rows + 1] = { text = "Связь", header = true }
   rows[#rows + 1] = { text = "Штурманский модуль", value = nav and ("на связи, ремонт " .. (nav.repair or 0) .. "/4") or "нет связи",
     fg = nav and colors.white or colors.orange, desc = "TM-NAV: проводной модем/кабель, беспроводной или эндер-модем." }
@@ -864,5 +887,7 @@ function App.run()
   term.clear()
   parallel.waitForAny(listener, worker, poller, watcher, ambience, ui_loop, embedder, apps.loop, tts.loop)
 end
+
+App.core_name = core_name   -- для офлайн-теста tools/gen/test_lua_quests.lua
 
 return App

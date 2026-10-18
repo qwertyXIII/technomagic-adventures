@@ -1,12 +1,12 @@
 name = "TechnoMagic Adventures"
 author = "DXIII"
-version = "0.4.2"
+version = "0.4.3"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "6f7aafa59d1b8f73b49e03432188fe485068f352193e858c284c4e3d14f7d7d1"
+hash = "a4594d15a145d0c22ea532eaea7db87b51292c3876da0c928a1ee12943ff6c34"
 
 [versions]
 minecraft = "1.21.1"

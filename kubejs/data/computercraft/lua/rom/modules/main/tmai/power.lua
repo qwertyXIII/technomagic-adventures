@@ -39,7 +39,8 @@ function M.status()
   if not core then return { ok = false, reason = "нет ядра", hint = "Ядро ИИ не подключено: поставьте его вплотную к терминалу." } end
   local okE, e = pcall(core.getEnergy)
   local okC, cap = pcall(core.getEnergyCapacity)
-  if not okE or not okC then core = nil; return { ok = false, reason = "ядро недоступно" } end
+  -- ядро упаковано модулем переноса или чанк выгружен: методы отвечают пусто
+  if not okE or not okC or type(e) ~= "number" or type(cap) ~= "number" then core = nil; return { ok = false, reason = "ядро недоступно" } end
   local t = os.epoch("utc")
   if last.t and t > last.t then
     local ticks = (t - last.t) / 50
@@ -57,10 +58,10 @@ function M.status()
   end
   local far = side == nil   -- ядро видно только по проводной сети: нагрузку «думаю» до него не довести
   return {
-    ok = e >= cfg.min and not far, energy = e, capacity = cap, far = far,
+    ok = e >= (cfg.min or 0) and not far, energy = e, capacity = cap, far = far,
     pct = cap > 0 and math.floor(e * 100 / cap) or 0,
     delta = last.rate, flow = flow,
-    reason = far and "ядро не вплотную" or (e < cfg.min and "мало энергии" or nil),
+    reason = far and "ядро не вплотную" or (e < (cfg.min or 0) and "мало энергии" or nil),
     hint = far and "Ядро ИИ стоит не вплотную к терминалу: поставьте его рядом (лучше под ним)." or nil,
   }
 end

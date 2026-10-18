@@ -20,6 +20,7 @@ local function valid(name)
   return type(name) == "string" and #name >= 3 and #name <= 16 and name:match("^[%w_]+$") ~= nil
 end
 
+-- get_cargo() -> инвентарь Ящика памяти, его имя; get_core_name(имя ящика) -> ядро, видимое из ящика | nil, почему;
 -- get_player() — ник того, кто сейчас у терминала, или nil.
 function M.init(st, get_cargo, get_core_name, get_player)
   state = st
@@ -141,23 +142,35 @@ function M.tick()
   if not a then
     -- нечего проверять
   elseif q.type == "deliver" then
-    local cargo = cargo_fn()
-    if cargo then
-      local have, slots = 0, {}
-      for slot, it in pairs(cargo.list()) do
+    local cargo, cargo_name = cargo_fn()
+    local okl, items = false, nil
+    if cargo then okl, items = pcall(cargo.list) end
+    if okl and type(items) == "table" then
+      -- a.paid — уже списано в ядро (перенос мог прерваться на середине: эти вещи не теряются)
+      local have, slots = a.paid or 0, {}
+      for slot, it in pairs(items) do
         if it.name == q.target then have = have + it.count; slots[#slots + 1] = slot end
       end
       a.progress = have .. "/" .. q.count
       if have >= q.count then
-        local need = q.count
-        local core = core_name_fn()
-        for _, slot in ipairs(slots) do
-          if need <= 0 then break end
-          -- списываем в утилизатор ядра (инвентарь kubejs:ai_core очищается его тиком)
-          local moved = core and cargo.pushItems(core, slot, need) or 0
-          need = need - moved
+        local core, why = core_name_fn(cargo_name)
+        if not core then
+          a.progress = a.progress .. " — не могу забрать"
+          if not a.told_reach then
+            a.told_reach = true
+            out[#out + 1] = string.format("Для «%s» всё собрано, но забрать не могу — %s", q.title, why or "нет ядра")
+          end
+        else
+          a.told_reach = nil
+          for _, slot in ipairs(slots) do
+            if (a.paid or 0) >= q.count then break end
+            -- списываем в утилизатор ядра (инвентарь kubejs:ai_core очищается его тиком)
+            local okp, moved = pcall(cargo.pushItems, core, slot, q.count - (a.paid or 0))
+            if not okp then util.log("W", "quests: %s -> %s: %s", tostring(cargo_name), core, tostring(moved)); break end
+            a.paid = (a.paid or 0) + (tonumber(moved) or 0)
+          end
+          done = (a.paid or 0) >= q.count
         end
-        done = need <= 0
       end
     end
   elseif q.type == "visit" then
