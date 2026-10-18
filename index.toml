@@ -2220,6 +2220,11 @@ hash = "73576662287c48ef64866be14445a6e8b52829a1da6e65800d0917f813206220"
 metafile = true
 
 [[files]]
+file = "mods/ae2-jei-integration.pw.toml"
+hash = "491974dc6adba0e893fb755f55dfe833a1076ba49fdf9e4f92b8b9fa069ce9b5"
+metafile = true
+
+[[files]]
 file = "mods/ae2.pw.toml"
 hash = "bcc34f607a107a148928c80c8fdef326170975df392ce7f476a47df956b1fc5c"
 metafile = true
@@ -3056,6 +3061,11 @@ metafile = true
 [[files]]
 file = "mods/polymorph.pw.toml"
 hash = "d935e4ce118d15c88b10809df85e801f0e9577855f870f3c28e5a0bd5e7fecf6"
+metafile = true
+
+[[files]]
+file = "mods/polymorphic-ae2.pw.toml"
+hash = "8f20b460f4e963a30281cae3ac4b8d543ef12a2fb75a05ddfbe0eaebb58204ff"
 metafile = true
 
 [[files]]
